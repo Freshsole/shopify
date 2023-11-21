@@ -3592,8 +3592,10 @@ details-disclosure>details {
 }
 
   .cart-items td {
+    padding: 0;
+    border: none;
+    min-width: 80px;
     border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
 }
-
   
 }
