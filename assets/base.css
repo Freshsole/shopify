@@ -3557,8 +3557,11 @@ details-disclosure>details {
     color: rgba(var(--color-foreground),.85);
 }
 
-/*ahoj*/
-
+.localization-form__currency {
+    font-size: 15px;
+  font-weight: 900;
+  color: black;
+}
 
   
 }
