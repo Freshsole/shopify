@@ -3565,7 +3565,8 @@ details-disclosure>details {
 
   .header__menu-item .icon-caret {
     right: 0.8rem;
-    stroke-width: 10;
+    stroke-width: 2;
+    stroke: black;
 }
   
 }
