@@ -548,8 +548,11 @@
     const checkoutButton = document.querySelector('#CartDrawer-Checkout');
 
     checkoutButton.addEventListener('click', function (event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+
       // Redirect to the cart page when the button is clicked
-      window.location.href = 'https://www.freshsole.cz/cart'; // Update this URL to match your actual cart page URL
+      window.location.href = '/cart'; // Update this URL to match your actual cart page URL
     });
   });
 </script>
