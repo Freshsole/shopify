@@ -727,6 +727,9 @@
       "shipping": {
         "split_cart_ships_date": "Odesílá %{date}"
       }
+    },
+    "links": {
+      "powered_by_shopify": " "
     }
   }
 }
