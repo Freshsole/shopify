@@ -449,7 +449,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".cart-items {border-bottom: 0;}"
+      ".cart-items {border-bottom: 0;}",
+      ".drawer__inner {height: 100%; width: 50rem;}"
     ]
   }
 }
