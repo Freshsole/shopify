@@ -3649,6 +3649,13 @@ details-disclosure>details {
   .cart-drawer .cart-item__totals {
     min-width: 95px;
 }
+
+  .cart-items thead th:nth-child(2) {
+    /* Your styles for the second child go here */
+    width: 40%; /* Adjust the width as needed */
+    /* Additional styles */
+    background-color: red;
+}
   
   /*end cart*/
 
