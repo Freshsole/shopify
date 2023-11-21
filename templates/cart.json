@@ -6,7 +6,8 @@
         ".cart-items td {border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);}",
         ".cart-items {border-bottom: 0;}",
         ".cart__items {border-bottom: 0;}",
-        ".cart-items th {text-align: center;}"
+        ".cart-items th {text-align: center;}",
+        ".price--end {text-align: center;}"
       ],
       "settings": {
         "padding_top": 0,
