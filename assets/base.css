@@ -3597,5 +3597,38 @@ details-disclosure>details {
     min-width: 80px;
     border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
 }
+
+  .cart__checkout-button button {
+  background-color: gray;
+  box-shadow: none;
+}
+.quantity:after {
+  box-shadow: none;
+}
+.quantity__button svg {
+  color: rgba(84, 84, 84, 0.8);
+}
+.tax-note caption-large rte {
+  display: none;
+}
+.cart-item__quantity {
+  background-color: white;
+  max-width: 30%;
+}
+.cart-items *.right {
+  text-align: right;
+}
+.cart-item__totals {
+  background-color: white;
+  width: 20%;
+}
+.Jk692hbroeK5lg6b_t4v usE9L3hgsurjyQqHttzR {
+  display: none;
+}
+.cart-items th {
+  text-align: center;
+  margin-right: 203px;
+  padding-right: 40px;
+}
   
 }
