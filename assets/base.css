@@ -3574,5 +3574,14 @@ details-disclosure>details {
     stroke-width: 1.2;
     stroke: black;
 }
+
+  .header__icon .icon {
+    height: 2rem;
+    width: 2rem;
+    fill: none;
+    vertical-align: middle;
+    stroke-width: 1.2;
+    stroke: black;
+}
   
 }
