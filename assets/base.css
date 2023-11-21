@@ -3640,6 +3640,11 @@ details-disclosure>details {
   .cart__items {
     border-bottom: 0;
 }
+
+  .drawer__inner {
+    height: 100%;
+    width: 50rem;
+}
   
   /*end cart*/
 
