@@ -3650,12 +3650,11 @@ details-disclosure>details {
     min-width: 95px;
 }
 
-.cart-items *.right {
+.cart-items th {
     text-align: center;
-}
-  
-.price--end {
-    text-align: center;
+    padding-bottom: 1.8rem;
+    opacity: .85;
+    font-weight: 400;
 }
   
   /*end cart*/
