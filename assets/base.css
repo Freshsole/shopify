@@ -3583,5 +3583,12 @@ details-disclosure>details {
     stroke-width: 1;
     stroke: black;
 }
+
+  .header__icon--cart {
+    position: relative;
+    margin-right: -1.2rem;
+    stroke-width: 1;
+    stroke: black;
+}
   
 }
