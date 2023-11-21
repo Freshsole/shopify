@@ -519,25 +519,24 @@
         <!-- CTAs -->
 
         <div class="cart__ctas" {{ block.shopify_attributes }}>
-          <noscript>
-            <button type="submit" class="cart__update-button button button--secondary" form="CartDrawer-Form">
-              {{ 'sections.cart.update' | t }}
-            </button>
-          </noscript>
+  <noscript>
+    <button type="submit" class="cart__update-button button button--secondary" form="CartDrawer-Form">
+      {{ 'sections.cart.update' | t }}
+    </button>
+  </noscript>
 
-          <button
-            type="submit"
-            id="CartDrawer-Checkout"
-            class="cart__checkout-button button"
-            name="checkout"
-            form="CartDrawer-Form"
-            {% if cart == empty %}
-              disabled
-            {% endif %}
-          >
-            {{ 'sections.cart.checkout' | t }}
-          </button>
-        </div>
+  <button
+    type="button" <!-- Change the type to "button" to prevent the form submission -->
+    id="CartDrawer-Checkout"
+    class="cart__checkout-button button"
+    name="checkout"
+    {% if cart == empty %}
+      disabled
+    {% endif %}
+  >
+    {{ 'sections.cart.checkout' | t }}
+  </button>
+</div>
       </div>
     </div>
   </div>
