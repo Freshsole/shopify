@@ -3,7 +3,8 @@
     "cart-items": {
       "type": "main-cart-items",
       "custom_css": [
-        ".cart-items td {border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);}"
+        ".cart-items td {border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);}",
+        ".cart-items {border-bottom: 0;}"
       ],
       "settings": {
         "padding_top": 0,
