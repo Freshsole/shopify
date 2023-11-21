@@ -3591,6 +3591,8 @@ details-disclosure>details {
     stroke: black;
 }
 
+  /*cart*/
+
   .cart-items td {
     padding: 0;
     border: none;
@@ -3630,5 +3632,7 @@ details-disclosure>details {
   margin-right: 203px;
   padding-right: 40px;
 }
+  /*end cart*/
+  
   
 }
