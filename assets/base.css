@@ -3591,7 +3591,7 @@ details-disclosure>details {
     stroke: black;
 }
 
-  .cart-items td:not(:last-child) {
+  .cart-items tr:not(:last-child) {
     border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
 }
   
