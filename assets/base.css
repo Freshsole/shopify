@@ -3514,6 +3514,18 @@ details-disclosure>details {
     /* Prevent the border from growing on buttons when this effect is on. */
   }
 
+
+
+
+
+
+
+
+
+
+
+  
+
   .mega-menu .mega-menu__list--condensed {
   display: flex;
 }
@@ -3527,4 +3539,18 @@ details-disclosure>details {
   padding-top: 0px;
   padding-bottom: 0px;
 }
+
+  .header__heading-logo-wrapper {
+    width: 100%;
+    display: inline-block;
+    transition: width .3s cubic-bezier(.52,0,.61,.99);
+    transform: scale(1.35);
+}
+
+
+
+
+
+
+  
 }
