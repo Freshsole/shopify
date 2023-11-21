@@ -3587,7 +3587,7 @@ details-disclosure>details {
   .header__icon--cart {
     position: relative;
     margin-right: -1.2rem;
-    stroke-width: 1;
+    stroke-width: 1.2;
     stroke: black;
 }
   
