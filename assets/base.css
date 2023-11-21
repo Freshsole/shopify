@@ -3591,14 +3591,9 @@ details-disclosure>details {
     stroke: black;
 }
 
-.cart-items td {
+  .cart-items td:not(:last-child) {
     border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
 }
-
-.cart-items td:last-child {
-    border-bottom: none; /* Override the border-bottom for the last td */
-}
-  
 
   
 }
