@@ -3650,7 +3650,7 @@ details-disclosure>details {
     min-width: 95px;
 }
 
-  .cart-items thead th:nth-child(2) {
+cart-items__heading--wide cart-items__heading--quantity small-hide caption-with-letter-spacing {
     /* Your styles for the second child go here */
     width: 40%; /* Adjust the width as needed */
     /* Additional styles */
