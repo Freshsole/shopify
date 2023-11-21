@@ -3650,11 +3650,12 @@ details-disclosure>details {
     min-width: 95px;
 }
 
-cart-items__heading--wide cart-items__heading--quantity small-hide caption-with-letter-spacing {
-    /* Your styles for the second child go here */
-    width: 40%; /* Adjust the width as needed */
-    /* Additional styles */
-    background-color: red;
+.cart-items *.right {
+    text-align: center;
+}
+  
+.price--end {
+    text-align: center;
 }
   
   /*end cart*/
