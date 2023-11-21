@@ -3563,5 +3563,10 @@ details-disclosure>details {
   color: black;
 }
 
+  .header__menu-item .icon-caret {
+    right: 0.8rem;
+    font-weight: 900;
+    color: red;
+}
   
 }
