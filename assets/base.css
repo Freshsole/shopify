@@ -3568,5 +3568,11 @@ details-disclosure>details {
     stroke-width: 1.2;
     stroke: black;
 }
+
+  .header-localization:not(.menu-drawer__localization) .localization-form__select .icon-caret {
+    right: 0.8rem;
+    stroke-width: 1.2;
+    stroke: black;
+}
   
 }
