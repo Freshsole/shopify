@@ -3590,5 +3590,13 @@ details-disclosure>details {
     stroke-width: 1.2;
     stroke: black;
 }
+
+  .cart-items td:not(:last-child) {
+    padding: 0;
+    border: none;
+    min-width: 80px;
+    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
+}
+
   
 }
