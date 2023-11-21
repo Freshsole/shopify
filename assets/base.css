@@ -3632,6 +3632,11 @@ details-disclosure>details {
   margin-right: 203px;
   padding-right: 40px;
 }
+
+  .cart-items {
+    border-bottom: 0;
+}
+  
   /*end cart*/
   
   
