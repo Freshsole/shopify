@@ -3548,9 +3548,9 @@ details-disclosure>details {
 }
 
 .mega-menu__link--level-2 {
-    font-size: 15px;
-    font-weight: 900;
-    color: rgba(var(--color-foreground),.100);
+  font-size: 15px;
+  font-weight: 900;
+  color: rgba(var(--color-foreground), 1);
 }
 
   .mega-menu__link {
