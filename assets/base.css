@@ -3814,10 +3814,12 @@ details-disclosure>details {
     line-height: 24px;
     text-transform: none;
     text-decoration: none;
-    box-shadow: 0;
+    box-shadow: 0 !important;
     color: #000;
     background-color: #ffffff;
     border-style: none;
 }
+
+  
 
 }
