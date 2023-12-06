@@ -3807,4 +3807,16 @@ details-disclosure>details {
     background-color: #f0f0f0;
 }
 
+  .ecom-core.ecom-jp6s1euv9u .ecom-collection__sorting-select {
+    font-size: 14px;
+    font-family: 'Poppins';
+    line-height: 35px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #eaeaea;
+    padding-right: 40px;
+    padding-left: 20px;
+    margin-top: 10%;
+}
+
 }
