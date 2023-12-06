@@ -3802,4 +3802,9 @@ details-disclosure>details {
     list-style: none;
 }
 
+  .password-main {
+    flex-grow: 1;
+    margin-top: 40px;
+}
+
 }
