@@ -451,7 +451,7 @@
     "custom_css": [
       ".cart-items {border-bottom: 0;}",
       ".drawer__inner {height: 100%; width: 50rem;}",
-      ".password-main {margin-top: 40px; background-color: #f0f0f0 !important;}"
+      ".password-main {padding-top: 40px; background-color: #f0f0f0 !important;}"
     ]
   }
 }
