@@ -3798,7 +3798,7 @@ details-disclosure>details {
   .mega-menu__list {
     display: grid;
     gap: 1.8rem 4rem;
-    grid-template-columns: repeat(4,minmax(0,1fr));
+    grid-template-columns: repeat(4,minmax(0,1fr))!important;
     list-style: none;
 }
 
