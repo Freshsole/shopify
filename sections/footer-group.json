@@ -17,12 +17,12 @@
         "4d094522-f90b-446d-b8e7-548eced73366"
       ],
       "custom_css": [
-
+        "h4 {text-decoration: none;}"
       ],
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": false,
-        "newsletter_heading": "Subscribe to newsletter!",
+        "newsletter_heading": "",
         "enable_follow_on_shop": true,
         "show_social": false,
         "enable_country_selector": false,
