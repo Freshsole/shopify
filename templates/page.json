@@ -1,1 +1,67 @@
-{"sections":{"main":{"type":"main-page","settings":{"padding_top":16,"padding_bottom":0}},"235497ed-5196-4df1-8034-9bdae20cd6ef":{"type":"collapsible-content","blocks":{"template--20011967480139__235497ed-5196-4df1-8034-9bdae20cd6ef-collapsible_row-1":{"type":"collapsible_row","settings":{"heading":"Email","icon":"check_mark","row_content":"<p>freshsolecz@gmail.com<\/p>","page":""}},"template--20011967480139__235497ed-5196-4df1-8034-9bdae20cd6ef-collapsible_row-2":{"type":"collapsible_row","settings":{"heading":"Phone","icon":"check_mark","row_content":"<p>+420 776 169 514<\/p>","page":""}},"c7048061-60ef-4825-b2a5-e34ad962ad15":{"type":"collapsible_row","settings":{"heading":"Collapsible row","icon":"check_mark","row_content":"","page":""}}},"block_order":["template--20011967480139__235497ed-5196-4df1-8034-9bdae20cd6ef-collapsible_row-1","template--20011967480139__235497ed-5196-4df1-8034-9bdae20cd6ef-collapsible_row-2","c7048061-60ef-4825-b2a5-e34ad962ad15"],"disabled":true,"settings":{"caption":"","heading":"Contact us directly!","heading_size":"h1","heading_alignment":"center","layout":"none","color_scheme":"","container_color_scheme":"","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":36,"padding_bottom":36}},"6a2ada61-c63c-4836-8a47-e4d56d879a1a":{"type":"contact-form","settings":{"heading":"Any other question?","heading_size":"h1","color_scheme":"","padding_top":36,"padding_bottom":36}}},"order":["main","235497ed-5196-4df1-8034-9bdae20cd6ef","6a2ada61-c63c-4836-8a47-e4d56d879a1a"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "235497ed-5196-4df1-8034-9bdae20cd6ef": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--20011967480139__235497ed-5196-4df1-8034-9bdae20cd6ef-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Email",
+            "icon": "check_mark",
+            "row_content": "<p>freshsolecz@gmail.com<\/p>",
+            "page": ""
+          }
+        },
+        "template--20011967480139__235497ed-5196-4df1-8034-9bdae20cd6ef-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Phone",
+            "icon": "check_mark",
+            "row_content": "<p>+420 776 169 514<\/p>",
+            "page": ""
+          }
+        },
+        "c7048061-60ef-4825-b2a5-e34ad962ad15": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20011967480139__235497ed-5196-4df1-8034-9bdae20cd6ef-collapsible_row-1",
+        "template--20011967480139__235497ed-5196-4df1-8034-9bdae20cd6ef-collapsible_row-2",
+        "c7048061-60ef-4825-b2a5-e34ad962ad15"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "Contact us directly!",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "235497ed-5196-4df1-8034-9bdae20cd6ef"
+  ]
+}

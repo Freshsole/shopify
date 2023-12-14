@@ -10,7 +10,7 @@
     "page_width": 1200,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 16,
-    "spacing_grid_vertical": 16,
+    "spacing_grid_vertical": 12,
     "animations_reveal_on_scroll": true,
     "animations_hover_elements": "default",
     "buttons_border_thickness": 1,
@@ -140,49 +140,6 @@
       "21474836472147483647": {
         "type": "shopify:\/\/apps\/ecomposer-landing-page-builder\/blocks\/app-embed\/a0fc26e1-7741-4773-8b27-39389b4fb4a0",
         "disabled": false,
-        "settings": {
-        }
-      },
-      "8765772171712610185": {
-        "type": "shopify:\/\/apps\/t-lab-ai-language-translate\/blocks\/language_switcher\/b5b83690-efd4-434d-8c6a-a5cef4019faf",
-        "disabled": true,
-        "settings": {
-          "enable_language_switcher": true,
-          "enable_country_region_switcher": true,
-          "use_modal_dialog": false,
-          "use_currency_for_region": false,
-          "switcher_position": "header",
-          "show_flags": true,
-          "language_label": "language-name",
-          "language_country_mapping": "cs:CZ",
-          "countries_filter": "CZ",
-          "custom_css": "",
-          "header_switcher_reference_element": "",
-          "header_switcher_relative_position": "before",
-          "mobile_menu_switcher_reference_element": "",
-          "mobile_switcher_relative_position": "before",
-          "header_switcher_border_width": 0,
-          "switcher_viewport_position": "top-right",
-          "custom_position_spacing_top": "55",
-          "custom_position_spacing_right": "20",
-          "custom_position_spacing_bottom": "20",
-          "custom_position_spacing_left": "20",
-          "custom_switcher_font_size": "14px",
-          "custom_switcher_border_width": 1,
-          "custom_switcher_text_color": "#5c5c5c",
-          "custom_switcher_background_color": "#ffffff",
-          "custom_switcher_border_color": "#000000"
-        }
-      },
-      "12793297677437526120": {
-        "type": "shopify:\/\/apps\/t-lab-ai-language-translate\/blocks\/custom_translations\/b5b83690-efd4-434d-8c6a-a5cef4019faf",
-        "disabled": true,
-        "settings": {
-        }
-      },
-      "6065014864672580889": {
-        "type": "shopify:\/\/apps\/slide-cart-by-amp\/blocks\/app-embed\/0a410b8d-7dc4-4f2d-b4e8-c12d34fd2255",
-        "disabled": true,
         "settings": {
         }
       }
