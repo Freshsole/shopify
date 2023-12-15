@@ -59,7 +59,7 @@
       "type": "contact-form",
       "settings": {
         "heading": "Vrácení",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
