@@ -3824,6 +3824,10 @@ details-disclosure>details {
     display: none;
     text-decoration: none;
 }
+
+  .footer{
+    text-decoration: none;
+  }
   
 .footer__active-menu-item {
 text-decoration: none;
