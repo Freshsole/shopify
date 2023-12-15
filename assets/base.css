@@ -3822,6 +3822,11 @@ details-disclosure>details {
 
   .footer__content-bottom .scroll-trigger .animate--slide-in{
     display: none;
+    text-decoration: none;
+}
+  
+.footer__active-menu-item {
+text-decoration: none;
 }
 
 }
