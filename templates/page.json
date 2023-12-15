@@ -9,40 +9,6 @@
     },
     "235497ed-5196-4df1-8034-9bdae20cd6ef": {
       "type": "collapsible-content",
-      "blocks": {
-        "template--20011967480139__235497ed-5196-4df1-8034-9bdae20cd6ef-collapsible_row-1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Email",
-            "icon": "check_mark",
-            "row_content": "<p>freshsolecz@gmail.com<\/p>",
-            "page": ""
-          }
-        },
-        "template--20011967480139__235497ed-5196-4df1-8034-9bdae20cd6ef-collapsible_row-2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Phone",
-            "icon": "check_mark",
-            "row_content": "<p>+420 776 169 514<\/p>",
-            "page": ""
-          }
-        },
-        "c7048061-60ef-4825-b2a5-e34ad962ad15": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--20011967480139__235497ed-5196-4df1-8034-9bdae20cd6ef-collapsible_row-1",
-        "template--20011967480139__235497ed-5196-4df1-8034-9bdae20cd6ef-collapsible_row-2",
-        "c7048061-60ef-4825-b2a5-e34ad962ad15"
-      ],
       "disabled": true,
       "settings": {
         "caption": "",
@@ -58,10 +24,78 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "5ee7c3a8-d286-4063-a26e-9424b8d5c004": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--20156184789323__5ee7c3a8-d286-4063-a26e-9424b8d5c004-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Hostorie Freshsole<\/strong>",
+            "text": "<p>Vítejte na našem eshopu, kde vášeň pro stylové obuvníky spojuje tři mladé nadšence. Jsme skupina vizionářů, kteří přinášejí do světa módy limitované boty s osobitým přístupem. Naše příběhy spočívají ve snech a odvaze vytvořit nezapomenutelné kousky obuvi.<\/p><p>V každém páru bot naleznete pečlivou ruku řemeslníka a touhu po originalitě. Naše cesty spojené s vášní pro design a kvalitu nás dovedly k vytváření bot, které nejsou pouhým módním doplňkem, ale příběhem, který nosíte na svých nohou.<\/p><p><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--20156184789323__5ee7c3a8-d286-4063-a26e-9424b8d5c004-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sunika-liztnl.webp",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "85387b4c-acc7-49cf-9d57-a7fef7a26a94": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>1. 4. 2020 – spuštění e-shopu<\/strong>",
+            "text": "<p>Plán na spuštění e-shopu byl již od samotného začátku section. Hlavní motivace přišla teprve se začátkem covid krize, kdy jsme byli nuceni dočasně uzavřít naší prodejnu a mohli se plně soustředit na tvorbu nového webu. Pod náporem zákazníků, kteří při spuštění v 8 večer hbitě refreshovali své prohlížeče, web zhruba dvě hodiny nefungoval.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "79ee3b55-561c-4d59-b892-e82973e4fa56": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Plány do budoucna<\/strong>",
+            "text": "<p>Stále dodávat to nejzajímavější a nejlimitovanější ze světa tenisek a streetwearu. Zvětšovat nabídku a dělat hromadu eventů pro naši komunitu, která je na prvním místě. Pokud se nám vše bude dařit podle plánu, chceme pro Vás otevřít další obchod, který v Česku nebude mít obdoby!<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20156184789323__5ee7c3a8-d286-4063-a26e-9424b8d5c004-column-1",
+        "template--20156184789323__5ee7c3a8-d286-4063-a26e-9424b8d5c004-column-3",
+        "85387b4c-acc7-49cf-9d57-a7fef7a26a94",
+        "79ee3b55-561c-4d59-b892-e82973e4fa56"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "235497ed-5196-4df1-8034-9bdae20cd6ef"
+    "235497ed-5196-4df1-8034-9bdae20cd6ef",
+    "5ee7c3a8-d286-4063-a26e-9424b8d5c004"
   ]
 }
