@@ -1,0 +1,56 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "235497ed-5196-4df1-8034-9bdae20cd6ef": {
+      "type": "collapsible-content",
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "Contact us directly!",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "db6098b3-5a5b-4d12-b81a-fca480aa73a4": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20156184789323__db6098b3-5a5b-4d12-b81a-fca480aa73a4-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Podmínky ochrany osobních údajů<\/strong><\/p><p><strong>I. Základní ustanovení<\/strong><\/p><ol><li>Správcem osobních údajů podle čl. 4 bod 7 nařízení Evropského parlamentu a Rady (EU) 2016\/679 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů (dále jen: „<strong>GDPR<\/strong>”) je Section s.r.o. , Praha IČO 09110534, DIČ CZ09110534 se sídlem Jeruzalémská 1782\/11, 110 00 Praha (dále jen: „<strong>správce<\/strong>“).<\/li><li>Kontaktní údaje správce jsou<br\/>adresa: Jeruzalémská 1782\/11, 110 00 Praha<br\/>email: <a>info@sectionstore.cz<br\/><\/a>telefon: +420 722 590 721<\/li><li>Osobními údaji se rozumí veškeré informace o identifikované nebo identifikovatelné fyzické osobě; identifikovatelnou fyzickou osobou je fyzická osoba, kterou lze přímo či nepřímo identifikovat, zejména odkazem na určitý identifikátor, například jméno, identifikační číslo, lokační údaje, síťový identifikátor nebo na jeden či více zvláštních prvků fyzické, fyziologické, genetické, psychické, ekonomické, kulturní nebo společenské identity této fyzické osoby.<\/li><li>Správce nejmenoval pověřence pro ochranu osobních údajů.<\/li><\/ol><p><strong>II. Zdroje a kategorie zpracovávaných osobních údajů<\/strong><\/p><ol><li>Správce zpracovává osobní údaje, které jste mu poskytl\/a nebo osobní údaje, které správce získal na základě plnění Vaší objednávky.<\/li><li>Správce zpracovává Vaše identifikační a kontaktní údaje a údaje nezbytné pro plnění smlouvy.<\/li><\/ol><p><strong>III. Zákonný důvod a účel zpracování osobních údajů<\/strong><\/p><ol><li>Zákonným důvodem zpracování osobních údajů je<\/li><li>Účelem zpracování osobních údajů je<\/li><li>Ze strany správce nedochází automatickému individuálnímu rozhodování ve smyslu čl. 22 GDPR. S takovým zpracováním jste poskytl\/a svůj výslovný souhlas.<\/li><\/ol><p><strong>IV. Doba uchovávání údajů<\/strong><\/p><ol><li>Správce uchovává osobní údaje<\/li><li>Po uplynutí doby uchovávání osobních údajů správce osobní údaje vymaže.<\/li><\/ol><p><strong>V. Příjemci osobních údajů (subdodavatelé správce)<\/strong><\/p><ol><li>Příjemci osobních údajů jsou osoby<\/li><li>Správce má v úmyslu předat osobní údaje do třetí země (do země mimo EU) nebo mezinárodní organizaci. Příjemci osobních údajů ve třetích zemích jsou poskytovatelé mailingových služeb a cloudových služeb.<\/li><\/ol><p><strong>VI. Vaše práva<\/strong><\/p><ol><li>Za podmínek stanovených v GDPR máte<\/li><li>Dále máte právo podat stížnost u Úřadu pro ochranu osobních údajů v případě, že se domníváte, že bylo porušeno Vaší právo na ochranu osobních údajů.<\/li><\/ol><p><strong>VII. Podmínky zabezpečení osobních údajů<\/strong><\/p><ol><li>Správce prohlašuje, že přijal veškerá vhodná technická a organizační opatření k zabezpečení osobních údajů.<\/li><li>Správce přijal technická opatření k zabezpečení datových úložišť a úložišť osobních údajů v listinné podobě, zejména hesla, šifrování, cloudové zálohy a antivirové programy.<\/li><li>Správce prohlašuje, že k osobním údajům mají přístup pouze jím pověřené osoby.<\/li><\/ol><p><strong>VIII. Závěrečná ustanovení<\/strong><\/p><ol><li>Odesláním objednávky z internetového objednávkového formuláře potvrzujete, že jste seznámen\/a s podmínkami ochrany osobních údajů a že je v celém rozsahu přijímáte.<\/li><li>S těmito podmínkami souhlasíte zaškrtnutím souhlasu prostřednictvím internetového formuláře. Zaškrtnutím souhlasu potvrzujete, že jste seznámen\/a s podmínkami ochrany osobních údajů a že je v celém rozsahu přijímáte.<\/li><li>Správce je oprávněn tyto podmínky změnit. Novou verzi podmínek ochrany osobních údajů zveřejní na svých internetových stránkách a zároveň Vám zašle novou verzi těchto podmínek Vaši e-mailovou adresu, kterou jste správci poskytl\/a.<\/li><\/ol><p>Tyto podmínky nabývají účinnosti dnem 04.05.2020.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20156184789323__db6098b3-5a5b-4d12-b81a-fca480aa73a4-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "235497ed-5196-4df1-8034-9bdae20cd6ef",
+    "db6098b3-5a5b-4d12-b81a-fca480aa73a4"
+  ]
+}
