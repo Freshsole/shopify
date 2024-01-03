@@ -39,7 +39,24 @@
  endif
  %}
 
-<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('{{ collection.image | img_url: 'master' }}') no-repeat center center fixed; background-size: cover;">
+{%- capture collection_image -%}
+  {%- if collection.image -%}
+    {{ collection.image | img_url: 'master' }}
+  {%- else -%}
+    {% case collection.title %}
+      {% when 'Nike Dunk Low' %}
+        https://i0.wp.com/sectionstore.cz/wp-content/uploads/2023/12/Nike-SB-Dunk-Low-April-Skateboards-1.jpg?fit=1200%2C1024&ssl=1
+      {% when 'Air Jordan 1 High' %}
+        https://cdn.shopify.com/s/files/1/0786/3379/5915/collections/image.jpg?v=1698654070
+      {% when 'New Balance' %}
+        https://i0.wp.com/sectionstore.cz/wp-content/uploads/2023/12/Nike-SB-Dunk-Low-April-Skateboards-1.jpg?fit=1200%2C1024&ssl=1
+      {% else %}
+        https://placeholder-url.com/placeholder-image.jpg
+    {% endcase %}
+  {%- endif -%}
+{%- endcapture -%}
+
+<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('{{ collection_image }}') no-repeat center center fixed; background-size: cover;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
       <div class="core__column--wrapper">
