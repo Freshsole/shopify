@@ -38,47 +38,7 @@
  endif
  endif
  %}
- 
-{%- capture collection_handle -%}
-  {%- if request.page_type == 'collection' and collection != blank -%}
-    {{ collection.handle }}
-  {%- else -%}
-    'default-collection-handle'
-  {%- endif -%}
-{%- endcapture -%}
-
-{%- capture banner_image -%}
-  {%- case collection_handle -%}
-    {%- when 'nike-dunk-low' -%}
-      https://i0.wp.com/sectionstore.cz/wp-content/uploads/2023/12/Nike-SB-Dunk-Low-April-Skateboards-1.jpg?fit=1200%2C1024&ssl=1
-    {%- when 'air-jordan-1-high' -%}
-      https://www.shelfstore.cz/cdn/shop/products/18316489_43165008_2048.jpg?v=1673029010&width=2048
-    {%- when 'new-balance' -%}
-      https://i0.wp.com/sectionstore.cz/wp-content/uploads/2023/12/Nike-SB-Dunk-Low-April-Skateboards-1.jpg?fit=1200%2C1024&ssl=1
-    {%- else -%}
-      {{ collection.image | img_url: 'master' }}
-  {%- endcase -%}
-{%- endcapture -%}
-
-<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('{{ banner_image }}') no-repeat center center fixed; background-size: cover;">
-  <div data-deep="1" class="core__row--columns">
-    <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
-      <div class="core__column--wrapper">
-        <div class="core__blocks" index="0">
-          <div class="core__blocks--body">
-            <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
-              <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
-                <!-- Your content goes here -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+ <section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block"><div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
  {%- if EComBuilderMode -%}
  {% capture page_type %}collection{% endcapture %}
  {%- else -%}
