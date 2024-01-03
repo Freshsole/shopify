@@ -39,7 +39,26 @@
  endif
  %}
  
-<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('https://i0.wp.com/sectionstore.cz/wp-content/uploads/2023/12/Nike-SB-Dunk-Low-April-Skateboards-1.jpg?fit=1200%2C1024&ssl=1') no-repeat center center fixed; background-size: cover;">
+{%- capture collection_handle -%}
+  {%- if request.page_type == 'collection' and collection != blank -%}
+    {{ collection.handle }}
+  {%- else -%}
+    'default-collection-handle'
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture banner_image -%}
+  {%- case collection_handle -%}
+    {%- when 'air-jordan-1-high' -%}
+      {{ 'path/to/air-jordan-1-high-banner.jpg' | asset_url }}
+    {%- when 'another-collection-handle' -%}
+      {{ 'path/to/another-collection-banner.jpg' | asset_url }}
+    {%- else -%}
+      {{ collection.image | img_url: 'master' }}
+  {%- endcase -%}
+{%- endcapture -%}
+
+<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('{{ banner_image }}') no-repeat center center fixed; background-size: cover;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
       <div class="core__column--wrapper">
@@ -47,6 +66,7 @@
           <div class="core__blocks--body">
             <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
+
 
  {%- if EComBuilderMode -%}
  {% capture page_type %}collection{% endcapture %}
