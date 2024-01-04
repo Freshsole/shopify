@@ -67,7 +67,7 @@
 
                     if (screenWidth < 880 && mobileImageMetafield) {
                       // Extract the image URL from the metafield
-                      var mobileImageUrl = mobileImageMetafield.src || mobileImageMetafield.originalSrc;
+                      var mobileImageUrl = mobileImageMetafield;
 
                       section.style.backgroundImage = "url('" + mobileImageUrl + "')";
                     } else {
@@ -78,9 +78,10 @@
                   // Call the function on page load and window resize
                   window.onload = setBackgroundImage;
                   window.onresize = setBackgroundImage;
+
+                  // Initial call to set the background image
+                  setBackgroundImage();
                 </script>
-
-
 
 
  {%- if EComBuilderMode -%}
