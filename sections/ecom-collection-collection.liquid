@@ -46,6 +46,8 @@
   {% capture collection_image %}https://placeholder-url.com/placeholder-image.jpg{% endcapture %}
 {% endif %}
 
+
+
 <section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" id="customSection" style="z-index: inherit; background: url('{{ collection_image }}') no-repeat center center; background-size: cover;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
@@ -60,8 +62,10 @@
                     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
                     var section = document.getElementById('customSection');
-                    if (screenWidth < 880) {
-                      section.style.backgroundImage = "url('{{ custom.mobile_collection_image }}')";
+                    var customMobileImage = '{{ collection.metafields.custom.mobile_collection_image }}';
+
+                    if (screenWidth < 880 && customMobileImage) {
+                      section.style.backgroundImage = "url('" + customMobileImage + "')";
                     } else {
                       section.style.backgroundImage = "url('{{ collection_image }}')";
                     }
