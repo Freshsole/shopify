@@ -65,7 +65,10 @@
                     var customMobileImage = '{{ collection.metafields.custom.mobile_collection_image }}';
 
                     if (screenWidth < 880 && customMobileImage) {
-                      section.style.backgroundImage = "url('" + customMobileImage + "')";
+                      // Extract the actual URL from the media object
+                      var mobileImageUrl = customMobileImage.originalSrc || customMobileImage.src;
+
+                      section.style.backgroundImage = "url('" + mobileImageUrl + "')";
                     } else {
                       section.style.backgroundImage = "url('{{ collection_image }}')";
                     }
