@@ -62,7 +62,7 @@
                     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
                     var section = document.getElementById('customSection');
-                    var mobileImageMetafield = '{{ collection.metafields.custom.mobile_collection_image }}';
+                    var mobileImageMetafield = JSON.parse('{{ collection.metafields.custom | json }}').mobile_collection_image;
                     var defaultCollectionImage = '{{ collection_image }}';
 
                     if (screenWidth < 880 && mobileImageMetafield) {
