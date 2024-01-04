@@ -48,7 +48,13 @@
 
 
 
-<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" id="customSection" style="z-index: inherit; background: url('{{ collection_image }}') no-repeat center center; background-size: cover;">
+{%- if collection.image -%}
+  {% capture collection_image %}{{ collection.image | img_url: 'master' }}{% endcapture %}
+{% else %}
+  {% capture collection_image %}https://placeholder-url.com/placeholder-image.jpg{% endcapture %}
+{% endif %}
+
+<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('{{ collection_image }}') no-repeat center center fixed; background-size: contain;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
       <div class="core__column--wrapper">
@@ -56,29 +62,7 @@
           <div class="core__blocks--body">
             <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
-                <script>
-                  // Check screen width and set background image accordingly
-                  function setBackgroundImage() {
-                    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-                    var section = document.getElementById('customSection');
-                    var mobileImageMetafield = '{{ collection.metafields.custom.mobile_collection_image }}';
-                    var defaultCollectionImage = '{{ collection_image }}';
-
-                    if (screenWidth < 880 && mobileImageMetafield) {
-                      // Extract the image URL from the metafield
-                      var mobileImageUrl = mobileImageMetafield.src || mobileImageMetafield.originalSrc;
-
-                      section.style.backgroundImage = "url('" + mobileImageUrl + "')";
-                    } else {
-                      section.style.backgroundImage = "url('" + defaultCollectionImage + "')";
-                    }
-                  }
-
-                  // Call the function on page load and window resize
-                  window.onload = setBackgroundImage;
-                  window.onresize = setBackgroundImage;
-                </script>
 
 
 
