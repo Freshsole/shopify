@@ -2,7 +2,7 @@
  EComposer (https://ecomposer.io)
  You SHOULD NOT modify source code in this page because
  It is automatically generated from EComposer
- At 2024-01-03 22:54:36
+ At 2024-01-05 22:27:28
  {% endcomment %} 
  
  {% assign ecom_root_url = routes.root_url %}
@@ -38,48 +38,7 @@
  endif
  endif
  %}
-
-
-{%- if collection.image -%}
-  {% capture collection_image %}{{ collection.image | img_url: 'master' }}{% endcapture %}
-{% else %}
-  {% capture collection_image %}https://placeholder-url.com/placeholder-image.jpg{% endcapture %}
-{% endif %}
-
-<section id="dynamic-background" class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background-size: cover;">
-  <div data-deep="1" class="core__row--columns">
-    <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
-      <div class="core__column--wrapper">
-        <div class="core__blocks" index="0">
-          <div class="core__blocks--body">
-            <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
-              <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
-
-<style>
-  /* Style for larger screens (greater than 880px) */
-  @media only screen and (min-width: 881px) {
-    #dynamic-background {
-      background: url('{{ collection_image }}') no-repeat center center;
-    }
-    .mobile-banner {
-      display: none; /* Hide mobile banner on larger screens */
-    }
-  }
-
-  /* Style for smaller screens (less than or equal to 880px) */
-  @media only screen and (max-width: 880px) {
-    #dynamic-background {
-      background: url('{{ collection.metafields.custom.url }}') no-repeat center center;
-    }
-    .desktop-banner {
-      display: none; /* Hide desktop banner on smaller screens */
-    }
-  }
-</style>
-
-
-
-                
+ <section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block"><div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
  {%- if EComBuilderMode -%}
  {% capture page_type %}collection{% endcapture %}
  {%- else -%}
@@ -942,12 +901,15 @@
  "locales": {
  "cs": {
  "breadcrumbs_home_uc1dqqcx1hm_html": "Home",
+ "buttoncontent_002vav5wtzq47_html": "Do nab\u00eddky",
  "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry",
  "clear_all_title_tpy5db6wzrk_html": "Vymazat v\u0161e",
  "filter_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
  "filters_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
  "reset_filter_tpy5db6wzrk_html": "Resetovat",
  "max_price_text_tpy5db6wzrk_html": "Maxim\u00e1ln\u00ed cena",
+ "filter_title_tpy5db6wzrk_html": "Filter ",
+ "sortting_title_jp6s1euv9u_html": " ",
  "product_option_swatch_up0bxdqndd_html": "Color",
  "added_cart_text_up0bxdqndd_html": "Added to cart",
  "added_cart_message_up0bxdqndd_html": "Added to cart",
@@ -958,9 +920,6 @@
  "sale_badge_up0bxdqndd_html": "-{{sale}}%",
  "countdown_title_up0bxdqndd_html": "Hurry up! The sale will end on",
  "no_product_item_up0bxdqndd_html": "There are no product yet!",
- "buttoncontent_002vav5wtzq47_html": "Do nab\u00eddky",
- "filter_title_tpy5db6wzrk_html": "Filter ",
- "sortting_title_jp6s1euv9u_html": " ",
  "text_week_up0bxdqndd_html": "[%-W] week%!W",
  "text_day_up0bxdqndd_html": "[%-d] day%!D",
  "text_hour_up0bxdqndd_html": "[%-H] hr%!H",
@@ -970,12 +929,15 @@
  },
  "en": {
  "breadcrumbs_home_uc1dqqcx1hm_html": "Home",
+ "buttoncontent_002vav5wtzq47_html": "Do nab\u00eddky",
  "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry",
  "clear_all_title_tpy5db6wzrk_html": "Vymazat v\u0161e",
  "filter_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
  "filters_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
  "reset_filter_tpy5db6wzrk_html": "Resetovat",
  "max_price_text_tpy5db6wzrk_html": "Maxim\u00e1ln\u00ed cena",
+ "filter_title_tpy5db6wzrk_html": "Filter ",
+ "sortting_title_jp6s1euv9u_html": " ",
  "product_option_swatch_up0bxdqndd_html": "Color",
  "added_cart_text_up0bxdqndd_html": "Added to cart",
  "added_cart_message_up0bxdqndd_html": "Added to cart",
@@ -986,9 +948,6 @@
  "sale_badge_up0bxdqndd_html": "-{{sale}}%",
  "countdown_title_up0bxdqndd_html": "Hurry up! The sale will end on",
  "no_product_item_up0bxdqndd_html": "There are no product yet!",
- "buttoncontent_002vav5wtzq47_html": "Do nab\u00eddky",
- "filter_title_tpy5db6wzrk_html": "Filter ",
- "sortting_title_jp6s1euv9u_html": " ",
  "text_week_up0bxdqndd_html": "[%-W] week%!W",
  "text_day_up0bxdqndd_html": "[%-d] day%!D",
  "text_hour_up0bxdqndd_html": "[%-H] hr%!H",
