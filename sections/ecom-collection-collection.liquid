@@ -55,20 +55,11 @@
             <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
 
-{{ collection.metafields.custom.mobile_collection_image }}
-
-
-
 
                 
 
-{% assign collection_image = collection.metafields.your_namespace.image %}
+{{ collection.metafields.custom.mobile_collection_image }}
 
-{% if collection_image %}
-  <img src="{{ collection_image | asset_url }}" alt="Collection Image">
-{% else %}
-  <p>No image available for this collection</p>
-{% endif %}
 
                 
 
