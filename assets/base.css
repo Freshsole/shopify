@@ -3863,3 +3863,8 @@ text-decoration: none;
     background: rgba(0,0,0,.4);
 }
 
+/* Filter mobile */
+.ecom-core.ecom-tpy5db6wzrk #button_menu_block {
+    gap: 4px;
+    border: solid 1px #eaeaea;
+}
