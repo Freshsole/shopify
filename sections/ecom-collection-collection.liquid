@@ -54,36 +54,39 @@
           <div class="core__blocks--body">
             <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
-
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <script>
-  // Add JavaScript to change the background image based on screen width
   document.addEventListener('DOMContentLoaded', function() {
-    var collectionImage = '{{ collection.metafields.custom.url }}';
     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var section = document.querySelector('.ecom-section');
 
-    // Set a different image URL for screens smaller than 880 pixels
-    if (screenWidth < 880) {
-      collectionImage = 'URL_FOR_SMALLER_SCREENS'; // Replace 'URL_FOR_SMALLER_SCREENS' with the actual URL
+    function updateBackgroundImage() {
+      // Set the background image based on screen width
+      if (screenWidth < 880) {
+        section.style.backgroundImage = 'url(URL_FOR_SMALLER_SCREENS)';
+      } else {
+        section.style.backgroundImage = 'url({{ collection.metafields.custom.url }})';
+      }
     }
 
-    // Set the background image
-    document.querySelector('.ecom-section').style.backgroundImage = 'url(' + collectionImage + ')';
-  });
+    // Initial setup
+    updateBackgroundImage();
 
-  // Update the background image on window resize
-  window.addEventListener('resize', function() {
-    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-    // Set a different image URL for screens smaller than 880 pixels
-    if (screenWidth < 880) {
-      document.querySelector('.ecom-section').style.backgroundImage = 'url(URL_FOR_SMALLER_SCREENS)';
-    } else {
-      document.querySelector('.ecom-section').style.backgroundImage = 'url({{ collection.metafields.custom.url }})';
-    }
+    // Update the background image on window resize
+    window.addEventListener('resize', function() {
+      screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      updateBackgroundImage();
+    });
   });
 </script>
-
 
 
                 
