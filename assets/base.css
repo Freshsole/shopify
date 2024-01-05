@@ -3854,3 +3854,9 @@ text-decoration: none;
     padding: 0;
     border-radius: 10px;
 }
+
+.ctumYq .pagination-style-1 button, .dehwrh .pagination-style-1 button, .kvAJUf .pagination-style-1 button {
+    width: 25px;
+    height: 5px;
+    background: rgba(0,0,0,.4);
+}
