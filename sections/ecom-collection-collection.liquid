@@ -40,7 +40,13 @@
  %}
 
 
-<section id="dynamic-background" class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('{{ collection_image }}') no-repeat center center; background-size: cover;">
+{%- if collection.image -%}
+  {% capture collection_image %}{{ collection.image | img_url: 'master' }}{% endcapture %}
+{% else %}
+  {% capture collection_image %}https://placeholder-url.com/placeholder-image.jpg{% endcapture %}
+{% endif %}
+
+<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('{{ collection_image }}') no-repeat center center fixed; background-size: cover;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
       <div class="core__column--wrapper">
@@ -50,27 +56,6 @@
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
 
 
-<script>
-  // Check the screen width and set the background image accordingly
-  function setBackgroundImage() {
-    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    var section = document.getElementById('dynamic-background');
-
-    if (screenWidth < 880) {
-      // Set the background image based on the condition for screen width less than 880px
-      section.style.background = 'url(\'' + collection.metafields.custom.url + '\') no-repeat center center';
-      section.style.backgroundSize = 'cover';
-    } else {
-      // Set the default background image
-      section.style.background = 'url(\'{{ collection_image }}\') no-repeat center center';
-      section.style.backgroundSize = 'cover';
-    }
-  }
-
-  // Call the function initially and add event listener for window resize
-  setBackgroundImage();
-  window.addEventListener('resize', setBackgroundImage);
-</script>
 
 
 
