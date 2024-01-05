@@ -56,23 +56,21 @@
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
 
 
-                
 {% assign collectionHandle = 'air-jordan-1-high' %}
 
 {% assign collection = collections[collectionHandle] %}
 
 {% if collection %}
-  {% assign mobileCollectionImage = collection.metafields.custom.mobile_collection_image %}
+  {% assign mobileCollectionImage = collection.metafields.custom.mobile_collection_image | strip_html | escape %}
   
-  {% if mobileCollectionImage %}
+  {% if mobileCollectionImage != blank %}
     <img src="{{ mobileCollectionImage | asset_url }}" alt="JordanMobileImage">
   {% else %}
     <!-- If the metafield is not set, you can provide a fallback image or message -->
     <img src="{{ 'fallback-image.jpg' | asset_url }}" alt="FallbackImage">
   {% endif %}
 {% endif %}
-
-                
+     
 
  {%- if EComBuilderMode -%}
  {% capture page_type %}collection{% endcapture %}
