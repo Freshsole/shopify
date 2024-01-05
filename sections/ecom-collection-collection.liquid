@@ -56,13 +56,15 @@
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
 
 
-{% assign collection_image = collection.image | default: collection.featured_image %}
+{% assign collection_image = collection.metafields.custom.mobile_collection_image | json %}
 
 {% if collection_image %}
-  <img src="{{ collection_image | img_url: 'master' }}" alt="{{ collection.title }}">
+  {% assign image_url = collection_image.src | asset_url %}
+  <img src="{{ image_url }}" alt="{{ collection.title }}">
 {% else %}
   <p>No image available for {{ collection.title }}</p>
 {% endif %}
+
 
 
                 
