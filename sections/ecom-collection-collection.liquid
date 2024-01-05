@@ -40,6 +40,8 @@
  %}
 
 
+
+  
 {%- if collection.image -%}
   {% capture collection_image %}{{ collection.image | img_url: 'master' }}{% endcapture %}
 {% else %}
@@ -53,14 +55,31 @@
         <div class="core__blocks" index="0">
           <div class="core__blocks--body">
             <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
-              <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
+              <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1" id="background-container">
 
 
+<script>
+  // Check the screen width and set the background image accordingly
+  function setBackgroundImage() {
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var backgroundContainer = document.getElementById('background-container');
 
-                
-{% if collection.metafields.custom.url %}
-   <img src="{{ collection.metafields.custom.url }}" alt="Mobile Banner">
-{% endif %}
+    if (screenWidth < 880) {
+      // Set the background image based on the condition for screen width less than 880px
+      backgroundContainer.style.background = 'url(\'' + collection.metafields.custom.url + '\') no-repeat center center';
+      backgroundContainer.style.backgroundSize = 'cover';
+    } else {
+      // Set the default background image
+      backgroundContainer.style.background = 'url(\'{{ collection_image }}\') no-repeat center center';
+      backgroundContainer.style.backgroundSize = 'cover';
+    }
+  }
+
+  // Call the function initially and add event listener for window resize
+  setBackgroundImage();
+  window.addEventListener('resize', setBackgroundImage);
+</script>
+
 
 
                 
