@@ -46,7 +46,7 @@
   {% capture collection_image %}https://placeholder-url.com/placeholder-image.jpg{% endcapture %}
 {% endif %}
 
-<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('{{ collection_image }}') no-repeat center center; background-size: cover;">
+<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('{{ collection.metafields.custom.url }}') no-repeat center center; background-size: cover;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
       <div class="core__column--wrapper">
@@ -54,6 +54,35 @@
           <div class="core__blocks--body">
             <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
+
+
+<script>
+  // Add JavaScript to change the background image based on screen width
+  document.addEventListener('DOMContentLoaded', function() {
+    var collectionImage = '{{ collection.metafields.custom.url }}';
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    // Set a different image URL for screens smaller than 880 pixels
+    if (screenWidth < 880) {
+      collectionImage = 'URL_FOR_SMALLER_SCREENS'; // Replace 'URL_FOR_SMALLER_SCREENS' with the actual URL
+    }
+
+    // Set the background image
+    document.querySelector('.ecom-section').style.backgroundImage = 'url(' + collectionImage + ')';
+  });
+
+  // Update the background image on window resize
+  window.addEventListener('resize', function() {
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    // Set a different image URL for screens smaller than 880 pixels
+    if (screenWidth < 880) {
+      document.querySelector('.ecom-section').style.backgroundImage = 'url(URL_FOR_SMALLER_SCREENS)';
+    } else {
+      document.querySelector('.ecom-section').style.backgroundImage = 'url({{ collection.metafields.custom.url }})';
+    }
+  });
+</script>
 
 
 
