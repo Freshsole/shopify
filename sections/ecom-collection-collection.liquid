@@ -56,7 +56,25 @@
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
 
 
+{% assign collection_image = collection.metafields.custom.mobile_collection_image %}
 
+{% if collection_image %}
+  <img src="{{ collection_image | asset_url }}" alt="{{ collection.title }}">
+{% else %}
+  <p>No image available for {{ collection.title }}</p>
+{% endif %}
+
+                
+
+{% assign collection_image = collection.metafields.your_namespace.image %}
+
+{% if collection_image %}
+  <img src="{{ collection_image | asset_url }}" alt="Collection Image">
+{% else %}
+  <p>No image available for this collection</p>
+{% endif %}
+
+                
 
  {%- if EComBuilderMode -%}
  {% capture page_type %}collection{% endcapture %}
