@@ -3867,4 +3867,5 @@ text-decoration: none;
 .ecom-core.ecom-tpy5db6wzrk #button_menu_block {
     gap: 4px;
     border: solid 1px #eaeaea;
+    width: auto;
 }
