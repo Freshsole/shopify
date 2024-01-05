@@ -3848,12 +3848,13 @@ text-decoration: none;
 .ctumYq .pagination-style-1 button.active, .ctumYq .pagination-style-1 button:hover, .dehwrh .pagination-style-1 button.active, .dehwrh .pagination-style-1 button:hover, .kvAJUf .pagination-style-1 button.active, .kvAJUf .pagination-style-1 button:hover {
     background: #000;
     border-radius: 10px;
-  width: 25px;
+    width: 25px;
 }
 
 .ctumYq .pf-slider-nav button {
     padding: 0;
     border-radius: 10px;
+    width: 25px;
 }
 
 .ctumYq .pagination-style-1 button, .dehwrh .pagination-style-1 button, .kvAJUf .pagination-style-1 button {
