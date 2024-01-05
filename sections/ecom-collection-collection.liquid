@@ -40,7 +40,13 @@
  %}
 
 
-<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs">
+{%- if collection.image -%}
+  {% capture collection_image %}{{ collection.image | img_url: 'master' }}{% endcapture %}
+{% else %}
+  {% capture collection_image %}https://placeholder-url.com/placeholder-image.jpg{% endcapture %}
+{% endif %}
+
+<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('{{ collection_image }}') no-repeat center center; background-size: cover;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
       <div class="core__column--wrapper">
@@ -48,29 +54,30 @@
           <div class="core__blocks--body">
             <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
-                <script>
-                  // Get the collection image URL and metafield URL
-                  var collectionImage = '{{ collection_image }}';
-                  var metafieldUrl = '{{ collection.metafields.custom.url }}';
 
-                  // Check the screen width
-                  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-                  
-                  // Set the background image URL based on the screen width
-                  var backgroundImageUrl = (screenWidth > 880) ? collectionImage : metafieldUrl;
+<script>
+  // Check the screen width and set the background image accordingly
+  function setBackgroundImage() {
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-                  // Set the background image dynamically
-                  document.querySelector('.ecom-row[data-id="ecom-31t0x5y2zvs"]').style.backgroundImage = 'url(' + backgroundImageUrl + ')';
-                </script>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    if (screenWidth < 880) {
+      {% if collection.metafields.custom.url %}
+       document.querySelector('.ecom-row[data-id="ecom-31t0x5y2zvs"]').style.backgroundImage = 'url(' + collection.metafields.custom.url + ')';
+      {% endif %}
+      
+    } else {
+      // Set the default background image
+      section.style.background = 'url(\'{{ collection_image }}\') no-repeat center center';
+      section.style.backgroundSize = 'cover';
+    }
+  }
 
+  // Call the function initially and add event listener for window resize
+  setBackgroundImage();
+  window.addEventListener('resize', setBackgroundImage);
+</script>
+
+                
 
 
                 
