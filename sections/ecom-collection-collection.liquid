@@ -57,9 +57,20 @@
 
 
                 
+{% assign collectionHandle = 'air-jordan-1-high' %}
 
-{{ collection.metafields.custom.mobile_collection_image }}
+{% assign collection = collections[collectionHandle] %}
 
+{% if collection %}
+  {% assign mobileCollectionImage = collection.metafields.custom.mobile_collection_image %}
+  
+  {% if mobileCollectionImage %}
+    <img src="{{ mobileCollectionImage | asset_url }}" alt="JordanMobileImage">
+  {% else %}
+    <!-- If the metafield is not set, you can provide a fallback image or message -->
+    <img src="{{ 'fallback-image.jpg' | asset_url }}" alt="FallbackImage">
+  {% endif %}
+{% endif %}
 
                 
 
