@@ -3869,3 +3869,8 @@ text-decoration: none;
     border: solid 1px #eaeaea;
     width: auto;
 }
+
+@media screen and (max-width: 767px) and (min-width: 101px)
+.ecom-core.ecom-tpy5db6wzrk .ecom-collection__filters-container > button {
+    width: 100px;
+}
