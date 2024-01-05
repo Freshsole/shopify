@@ -40,13 +40,7 @@
  %}
 
 
-{%- if collection.image -%}
-  {% capture collection_image %}{{ collection.image | img_url: 'master' }}{% endcapture %}
-{% else %}
-  {% capture collection_image %}https://placeholder-url.com/placeholder-image.jpg{% endcapture %}
-{% endif %}
-
-<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('{{ collection_image }}') no-repeat center center; background-size: cover;">
+<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
       <div class="core__column--wrapper">
@@ -54,13 +48,22 @@
           <div class="core__blocks--body">
             <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
+                <script>
+                  // Get the collection image URL and metafield URL
+                  var collectionImage = '{{ collection_image }}';
+                  var metafieldUrl = '{{ collection.metafields.custom.url }}';
+
+                  // Check the screen width
+                  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                  
+                  // Set the background image URL based on the screen width
+                  var backgroundImageUrl = (screenWidth > 880) ? collectionImage : metafieldUrl;
+
+                  // Set the background image dynamically
+                  document.querySelector('.ecom-row[data-id="ecom-31t0x5y2zvs"]').style.backgroundImage = 'url(' + backgroundImageUrl + ')';
+                </script>
 
 
-
-                
-{% if collection.metafields.custom.url %}
-   <img src="{{ collection.metafields.custom.url }}" alt="Mobile Banner">
-{% endif %}
 
 
                 
