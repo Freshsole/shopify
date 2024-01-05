@@ -3849,3 +3849,8 @@ text-decoration: none;
     background: #000;
     border-radius: 10px;
 }
+
+.ctumYq .pf-slider-nav button {
+    padding: 0;
+    border-radius: 10px;
+}
