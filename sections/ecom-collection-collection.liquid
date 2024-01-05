@@ -56,12 +56,16 @@
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
 
 
-{% assign collectionHandle = 'air-jordan-1-high' %}
+
+                
+{% assign collectionHandle = 'nike-dunk-low-wmns-cacao-wow_20628849_46720329_2048' %}
 
 {% assign collection = collections[collectionHandle] %}
 
 {% if collection %}
   {% assign mobileCollectionImage = collection.metafields.custom.mobile_collection_image | strip_html | escape %}
+  
+  {{ mobileCollectionImage | json }}
   
   {% if mobileCollectionImage != blank %}
     <img src="{{ mobileCollectionImage | asset_url }}" alt="JordanMobileImage">
@@ -70,8 +74,9 @@
     <img src="{{ 'fallback-image.jpg' | asset_url }}" alt="FallbackImage">
   {% endif %}
 {% endif %}
-     
 
+
+                
  {%- if EComBuilderMode -%}
  {% capture page_type %}collection{% endcapture %}
  {%- else -%}
