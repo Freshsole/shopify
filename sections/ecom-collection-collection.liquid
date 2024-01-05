@@ -46,7 +46,7 @@
   {% capture collection_image %}https://placeholder-url.com/placeholder-image.jpg{% endcapture %}
 {% endif %}
 
-<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('{{ collection.metafields.custom.url }}') no-repeat center center; background-size: cover;">
+<section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background: url('{{ collection_image }}') no-repeat center center; background-size: cover;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
       <div class="core__column--wrapper">
@@ -55,31 +55,6 @@
             <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
 
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    var section = document.querySelector('.ecom-section');
-
-    function updateBackgroundImage() {
-      // Set the background image based on screen width
-      if (screenWidth < 880) {
-        section.style.backgroundImage = 'url(URL_FOR_SMALLER_SCREENS)';
-      } else {
-        section.style.backgroundImage = 'url({{ collection.metafields.custom.url }})';
-      }
-    }
-
-    // Initial setup
-    updateBackgroundImage();
-
-    // Update the background image on window resize
-    window.addEventListener('resize', function() {
-      screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      updateBackgroundImage();
-    });
-  });
-</script>
 
 
                 
