@@ -113,12 +113,14 @@
                 class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
                 tabindex="-1"
               >
-                {%- if link.handle == 'velikosti' -%}
+                
+                <article class="sizestorow">
+
+                  {%- if link.handle == 'velikosti' -%}
                   <section class="vyfiltrujcolumn">
                     <a class="Vyfiltruj">vyfiltruj si svou velikost!</a>
                   </section>
                 {%- endif -%}
-                <article class="sizestorow">
                       <!-- Your sizestorow content goes here -->
                     
                 <section class="megamenusection">
