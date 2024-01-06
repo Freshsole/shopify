@@ -3884,7 +3884,7 @@ text-decoration: none;
     color: black;
 
 }
-
+/* cart neviditelny obrazek */ 
 #WebPixelsManagerSandboxContainer{
     display: none;
 
