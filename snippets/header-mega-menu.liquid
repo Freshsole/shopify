@@ -45,7 +45,11 @@
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
+    {%- assign column_counter = 1 -%}
     {%- for link in section.settings.menu.links -%}
+      {%- if column_counter == 1 -%}
+        <div class="list-menu__column">
+      {%- endif -%}
       <li>
         {%- if link.links != blank -%}
           <header-menu>
@@ -72,7 +76,6 @@
                   class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                   role="list"
                 >
-                  {%- assign item_counter = 0 -%}
                   {%- for childlink in link.links -%}
                     <li>
                       <a
@@ -104,11 +107,6 @@
                         </ul>
                       {%- endif -%}
                     </li>
-                    {%- assign item_counter = item_counter | plus: 1 -%}
-                    {%- if item_counter == 5 and forloop.last == false -%}
-                      </ul><ul class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
-                      {%- assign item_counter = 0 -%}
-                    {%- endif -%}
                   {%- endfor -%}
                 </ul>
               </div>
@@ -133,6 +131,11 @@
           </a>
         {%- endif -%}
       </li>
+      {%- assign column_counter = column_counter | plus: 1 -%}
+      {%- if column_counter == 5 or forloop.last -%}
+        </div>
+        {%- assign column_counter = 1 -%}
+      {%- endif -%}
     {%- endfor -%}
   </ul>
 </nav>
