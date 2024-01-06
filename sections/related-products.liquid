@@ -36,7 +36,7 @@
 
 
 {% for recommendation in recommendations.products %}
-  {% unless recommendation.collections contains 'new-in-store' %}
+  {% unless recommendation.collections contains 'new-in-store' or 'all-products'  %}
     <li class="grid__item">
       {% render 'card-product',
         card_product: recommendation,
