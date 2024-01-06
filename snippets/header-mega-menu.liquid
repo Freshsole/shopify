@@ -108,28 +108,11 @@
                   <section class="vyfiltrujcolumn">
                     <a class="Vyfiltruj">vyfiltruj si svou velikost!</a>
                     <section class="sizestorow">
-                      <!-- Your sizestorow content goes here -->
-                    </section>
-                  </section>
-                {%- endif -%}
-                
-                <section class="megamenusection">
-                  <ul class="mega-menu__list page-width" role="list">
-                    {%- assign item_counter = 0 -%}
-                    {%- for childlink in link.links -%}
-                      <li>
-                        <a
-                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                          href="{{ childlink.url }}"
-                          class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                          {% if childlink.current %}
-                            aria-current="page"
-                          {% endif %}
-                        >
-                          {{ childlink.title | escape }}
-                        </a>
-                        {%- if childlink.links != blank -%}
-                          <ul class="list-unstyled" role="list">
+                      <!-- Start sizestorow content -->
+                      {%- assign item_counter = 0 -%}
+                      {%- for childlink in link.links -%}
+                        <ul class="mega-menu__list page-width" role="list">
+                          {%- if childlink.links != blank -%}
                             {%- for grandchildlink in childlink.links -%}
                               <li>
                                 <a
@@ -144,22 +127,23 @@
                                 </a>
                               </li>
                             {%- endfor -%}
-                          </ul>
-                        {%- endif -%}
-                      </li>
-                      {%- assign item_counter = item_counter | plus: 1 -%}
-                      {%- if item_counter == 4 and forloop.last == false -%}
+                          {%- endif -%}
                         </ul>
-                        <!-- Close the existing section -->
-                        </section>
-                        <!-- Open a new section -->
-                        <section class="megamenusection">
-                        <ul class="mega-menu__list page-width" role="list">
-                        {%- assign item_counter = 0 -%}
-                      {%- endif -%}
-                    {%- endfor -%}
-                  </ul>
-                </section>
+                        {%- assign item_counter = item_counter | plus: 1 -%}
+                        {%- if item_counter == 4 and forloop.last == false -%}
+                          <!-- Close the existing sizestorow -->
+                          </section>
+                          <!-- Open a new sizestorow -->
+                          <section class="sizestorow">
+                          {%- assign item_counter = 0 -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                      <!-- Close the last sizestorow -->
+                      </section>
+                      <!-- End sizestorow content -->
+                    </section>
+                  </section>
+                {%- endif -%}
               </div>
             </details>
           </header-menu>
