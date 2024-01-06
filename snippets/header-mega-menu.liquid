@@ -86,7 +86,11 @@
                     class="header__active-menu-item"
                   {% endif %}
                 >
-                  {{- link.title | escape -}}
+                  {%- if link.handle == 'novinky' -%}
+                    <span class="novinky">{{- link.title | escape -}}</span>
+                  {%- else -%}
+                    {{- link.title | escape -}}
+                  {%- endif -%}
                 </span>
                 {% render 'icon-caret' %}
               </summary>
@@ -178,6 +182,7 @@
     {%- endfor -%}
   </ul>
 </nav>
+
 
 
 
