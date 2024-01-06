@@ -84,11 +84,11 @@
 }
 
 
-  .procent25 {
-  flex: 1;
-  box-sizing: border-box;
+  .25procent{
+    display: flex;
+    width: 25%;
+    justify-content: center;
 }
-
 
   
 </style>
@@ -130,12 +130,12 @@
 
                   {%- if link.handle == 'velikosti' -%}
   <section class="vyfiltrujcolumn">
-    <div class="procent25">
+    <section class="procent25">
       <a class="Vyfiltruj">vyfiltruj si svou velikost!</a>
-    </div>
-    <div class="procent25"><a href=""></a></div>
-    <div class="procent25"><a href=""></a></div>
-    <div class="procent25"><a href=""></a></div>
+    </section>
+    <section class="procent25"><a href=""></a></section>
+    <section class="procent25"><a href=""></a></section>
+    <section class="procent25"><a href=""></a></section>
   </section>
 {%- endif -%}
                       <!-- Your sizestorow content goes here -->
