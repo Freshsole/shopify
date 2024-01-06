@@ -39,11 +39,12 @@
  endif
  %}
 
+
+
  
 {%- if collection.image -%}
   {% capture collection_image %}{{ collection.image | img_url: 'master' }}{% endcapture %}
 {% else %}
-  {% capture collection_image %}https://placeholder-url.com/placeholder-image.jpg{% endcapture %}
 {% endif %}
 
  <section id="dynamic-background" class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background-size: cover;">
@@ -54,9 +55,6 @@
           <div class="core__blocks--body">
             <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
-
-{{ "Collection Image URL: " | append: collection_image | json }}
-
                 
 <style>
   /* Style for larger screens (greater than 880px) */
