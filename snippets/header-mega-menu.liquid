@@ -71,7 +71,7 @@
                 tabindex="-1"
               >
                 <ul
-                  class="mega-menu__list page-width mega-menu__list--condensed"
+                  class="mega-menu__list page-width"
                   role="list"
                 >
                   {%- assign item_counter = 0 -%}
@@ -80,15 +80,18 @@
                       <a
                         id="HeaderMenu-{{ link.handle }}-{{ size_link.handle }}"
                         href="{{ size_link.url }}"
-                        class="mega-menu__link mega-menu__link--level-2 link"
+                        class="mega-menu__link link"
                       >
                         {{ size_link.title | escape }}
                       </a>
                     </li>
                     {%- assign item_counter = item_counter | plus: 1 -%}
-                    {%- if item_counter == 5 and forloop.last == false -%}
-                      </ul><ul class="mega-menu__list page-width mega-menu__list--condensed" role="list">
+                    {%- if item_counter == 4 or forloop.last -%}
+                      </ul>
                       {%- assign item_counter = 0 -%}
+                      {%- if forloop.last == false -%}
+                        <ul class="mega-menu__list page-width" role="list">
+                      {%- endif -%}
                     {%- endif -%}
                   {%- endfor -%}
                 </ul>
