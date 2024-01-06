@@ -109,26 +109,40 @@
                     <a class="Vyfiltruj">vyfiltruj si svou velikost!</a>
                     <section class="sizestorow">
                       <!-- Start sizestorow content -->
+                      {%- assign item_counter = 0 -%}
                       {%- for childlink in link.links -%}
                         <section class="megamenusection">
                           <ul class="mega-menu__list page-width" role="list">
-                            {%- for grandchildlink in childlink.links -%}
-                              <li>
-                                <a
-                                  id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                  href="{{ grandchildlink.url }}"
-                                  class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                  {% if grandchildlink.current %}
-                                    aria-current="page"
-                                  {% endif %}
-                                >
-                                  {{ grandchildlink.title | escape }}
-                                </a>
-                              </li>
-                            {%- endfor -%}
+                            {%- if childlink.links != blank -%}
+                              {%- for grandchildlink in childlink.links -%}
+                                <li>
+                                  <a
+                                    id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                    href="{{ grandchildlink.url }}"
+                                    class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                    {% if grandchildlink.current %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    {{ grandchildlink.title | escape }}
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+                            {%- endif -%}
                           </ul>
                         </section>
+                        {%- assign item_counter = item_counter | plus: 1 -%}
+                        {%- if item_counter == 4 and forloop.last == false -%}
+                          </section>
+                          <!-- Close the existing sizestorow -->
+                          </section>
+                          <!-- Open a new sizestorow -->
+                          <section class="sizestorow">
+                          {%- assign item_counter = 0 -%}
+                        {%- endif -%}
                       {%- endfor -%}
+                      <!-- Close the last sizestorow -->
+                      </section>
                       <!-- End sizestorow content -->
                     </section>
                   </section>
