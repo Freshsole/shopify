@@ -80,7 +80,11 @@
                 tabindex="-1"
               >
                 <section class="megamenusection">
-                  <ul class="mega-menu__list page-width{% if link.handle != 'velikosti' %} notcolumn{% endif %}" role="list">
+                  {%- assign ul_classes = "mega-menu__list page-width" -%}
+                  {%- if link.handle != 'velikosti' -%}
+                    {%- assign ul_classes = ul_classes | append: ' notcolumn' -%}
+                  {%- endif -%}
+                  <ul class="{{ ul_classes }}" role="list">
                     {%- assign item_counter = 0 -%}
                     {%- for childlink in link.links -%}
                       <li>
@@ -120,7 +124,7 @@
                         </section>
                         <!-- Open a new section -->
                         <section class="megamenusection">
-                        <ul class="mega-menu__list page-width{% if link.handle == 'sizes' %} mega-menu__list--condensed{% endif %}" role="list">
+                        <ul class="{{ ul_classes }}" role="list">
                         {%- assign item_counter = 0 -%}
                       {%- endif -%}
                     {%- endfor -%}
@@ -151,6 +155,7 @@
     {%- endfor -%}
   </ul>
 </nav>
+
 
 
 
