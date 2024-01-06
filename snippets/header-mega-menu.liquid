@@ -1,55 +1,57 @@
 <style>
-        nav {
-            margin: 20px;
-        }
+    nav.header__inline-menu {
+        margin: 20px;
+    }
 
-        .list-menu {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px; /* Adjust the gap between columns */
-            justify-content: space-between;
-        }
+    .list-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* Adjust the gap between columns */
+        justify-content: space-between;
+    }
 
-        .list-menu__column {
-            flex: 0 1 calc(25% - 20px); /* Adjust the width of each column */
-        }
+    .list-menu__column {
+        flex: 0 1 calc(25% - 20px); /* Adjust the width of each column */
+    }
 
-        .mega-menu {
-            margin: 20px;
-        }
+    .list-menu:nth-child(4) {
+        /* Styles for the 4th list-menu (sizes) */
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
 
-        .mega-menu__content {
-            display: flex;
-            justify-content: center;
-        }
+    .mega-menu {
+        margin: 20px;
+    }
 
-        .mega-menu__list {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-        }
+    .mega-menu__content {
+        display: flex;
+        justify-content: center;
+    }
 
-        .mega-menu__list li {
-            box-sizing: border-box;
-            margin-bottom: 10px;
-            background-color: #f0f0f0;
-            padding: 10px;
-            width: 100%; /* Make each li take full width */
-            text-align: center;
-        }
-    </style>
+    .mega-menu__list {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .mega-menu__list li {
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        background-color: #f0f0f0;
+        padding: 10px;
+        width: 100%; /* Make each li take full width */
+        text-align: center;
+    }
+</style>
 
 
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
-    {%- assign column_counter = 1 -%}
     {%- for link in section.settings.menu.links -%}
-      {%- if column_counter == 1 -%}
-        <div class="list-menu__column">
-      {%- endif -%}
       <li>
         {%- if link.links != blank -%}
           <header-menu>
@@ -76,6 +78,7 @@
                   class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                   role="list"
                 >
+                  {%- assign item_counter = 0 -%}
                   {%- for childlink in link.links -%}
                     <li>
                       <a
@@ -107,6 +110,11 @@
                         </ul>
                       {%- endif -%}
                     </li>
+                    {%- assign item_counter = item_counter | plus: 1 -%}
+                    {%- if item_counter == 5 and forloop.last == false -%}
+                      </ul><ul class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
+                      {%- assign item_counter = 0 -%}
+                    {%- endif -%}
                   {%- endfor -%}
                 </ul>
               </div>
@@ -131,11 +139,6 @@
           </a>
         {%- endif -%}
       </li>
-      {%- assign column_counter = column_counter | plus: 1 -%}
-      {%- if column_counter == 5 or forloop.last -%}
-        </div>
-        {%- assign column_counter = 1 -%}
-      {%- endif -%}
     {%- endfor -%}
   </ul>
 </nav>
