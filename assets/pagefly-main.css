@@ -7,13 +7,17 @@
   padding: 0 15px;
   width: 100%;
   margin: auto;
-  max-width: var(--cw); /* default max-width value */
+}
 
-  /* Adjust max-width for screens larger than 1200px */
-  @media (min-width: 1201px) {
+@media (min-width: 1201px) {
+  .__pf[style*="--cw"] {
     max-width: 80vw;
   }
+  .__pf[style*="--cw"][style*="max-width"] {
+    max-width: 80vw !important; /* Add !important to override inline style */
+  }
 }
+
 
 
 
