@@ -9,10 +9,7 @@
   margin: auto;
   max-width: var(--cw); /* default max-width value */
 
-  /* Adjust max-width for screens larger than 1200px */
-  @media (min-width: 1201px) {
-    max-width: 80vw;
-  }
+ 
 }
 
 
