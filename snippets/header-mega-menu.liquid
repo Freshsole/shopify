@@ -128,9 +128,6 @@
                           <ul class="list-unstyled" role="list">
                             {%- for grandchildlink in childlink.links -%}
                               <li>
-                                {%- if link.handle == 'velikosti' -%}
-                    <a class="Vyfiltruj">Vyfiltruj si svou velikost</a>
-                  {%- endif -%}
                                 <a
                                   id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
                                   href="{{ grandchildlink.url }}"
