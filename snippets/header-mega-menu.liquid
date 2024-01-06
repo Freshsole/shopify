@@ -105,16 +105,13 @@
                 tabindex="-1"
               >
                 {%- if link.handle == 'velikosti' -%}
-                    <a class="Vyfiltruj">Vyfiltruj si svou velikost</a>
-                  {%- endif -%}
-                <div class="mega-menu__content2">
+                  <section class="vyfiltrujcolumn">
+                    <a class="Vyfiltruj">vyfiltruj si svou velikost!</a>
+                  </section>
+                {%- endif -%}
                 
                 <section class="megamenusection">
-                  {%- assign ul_classes = "mega-menu__list page-width" -%}
-                  {%- if link.handle != 'velikosti' -%}
-                    {%- assign ul_classes = ul_classes | append: ' notcolumn' -%}
-                  {%- endif -%}
-                  <ul class="{{ ul_classes }}" role="list">
+                  <ul class="mega-menu__list page-width" role="list">
                     {%- assign item_counter = 0 -%}
                     {%- for childlink in link.links -%}
                       <li>
@@ -154,13 +151,12 @@
                         </section>
                         <!-- Open a new section -->
                         <section class="megamenusection">
-                        <ul class="{{ ul_classes }}" role="list">
+                        <ul class="mega-menu__list page-width" role="list">
                         {%- assign item_counter = 0 -%}
                       {%- endif -%}
                     {%- endfor -%}
                   </ul>
                 </section>
-                </div>
               </div>
             </details>
           </header-menu>
@@ -186,6 +182,7 @@
     {%- endfor -%}
   </ul>
 </nav>
+
 
 
 
