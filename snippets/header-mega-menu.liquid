@@ -84,12 +84,11 @@
 }
 
 
-  .25procent {
-  width: 25%;
-  float: left; /* This ensures that each div is on the same row */
-  box-sizing: border-box; /* This includes padding and border in the element's total width and height */
+  .procent25{
+    display: flex;
+    width: 25%;
+    justify-content: center;
 }
-
 
   
 </style>
@@ -130,16 +129,13 @@
                 <article class="sizestorow">
 
                   {%- if link.handle == 'velikosti' -%}
- 
-                    <section class="vyfiltrujcolumn">
-                    <div class="25procent"><a class="Vyfiltruj">vyfiltruj si svou velikost!</a></div>
-                    <div class="25procent"><a href=""></a></div>
-                    <div class="25procent"><a href=""></a></div>
-                    <div class="25procent"><a href=""></a></div>
-                  </section>
-    
-                  
-                {%- endif -%}
+  <section class="vyfiltrujcolumn">
+    <div class="procent25"><a class="Vyfiltruj">vyfiltruj si svou velikost!</a></div>
+    <div class="procent25"><a href=""></a></div>
+    <div class="procent25"><a href=""></a></div>
+    <div class="procent25"><a href=""></a></div>
+  </section>
+{%- endif -%}
                       <!-- Your sizestorow content goes here -->
                     
                 <section class="megamenusection">
