@@ -109,11 +109,11 @@
                     <a class="Vyfiltruj">vyfiltruj si svou velikost!</a>
                     <section class="sizestorow">
                       <!-- Start sizestorow content -->
-                      {%- assign item_counter = 0 -%}
-                      {%- for childlink in link.links -%}
-                        <ul class="mega-menu__list page-width" role="list">
-                          {%- if childlink.links != blank -%}
-                            {%- for grandchildlink in childlink.links -%}
+                      <ul class="mega-menu__list page-width" role="list">
+                        {%- for childlink in link.links -%}
+                          {%- assign grandchildLinks = childlink.links -%}
+                          {%- if grandchildLinks.size > 0 -%}
+                            {%- for grandchildlink in grandchildLinks -%}
                               <li>
                                 <a
                                   id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
@@ -128,18 +128,8 @@
                               </li>
                             {%- endfor -%}
                           {%- endif -%}
-                        </ul>
-                        {%- assign item_counter = item_counter | plus: 1 -%}
-                        {%- if item_counter == 4 and forloop.last == false -%}
-                          <!-- Close the existing sizestorow -->
-                          </section>
-                          <!-- Open a new sizestorow -->
-                          <section class="sizestorow">
-                          {%- assign item_counter = 0 -%}
-                        {%- endif -%}
-                      {%- endfor -%}
-                      <!-- Close the last sizestorow -->
-                      </section>
+                        {%- endfor -%}
+                      </ul>
                       <!-- End sizestorow content -->
                     </section>
                   </section>
