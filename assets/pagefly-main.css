@@ -5,16 +5,16 @@
 
 .__pf[style*="--cw"] {
   padding: 0 15px;
-  width: 50%;
+  width: 100%;
   margin: auto;
 }
 
 @media (min-width: 1201px) {
   .__pf[style*="--cw"] {
-    max-width: 80vw;
+    max-width: 60vw;
   }
   .__pf[style*="--cw"][style*="max-width"] {
-    max-width: 80vw !important; /* Add !important to override inline style */
+    max-width: 60vw !important; /* Add !important to override inline style */
   }
 }
 
