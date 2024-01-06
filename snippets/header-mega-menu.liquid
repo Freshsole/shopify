@@ -1,3 +1,48 @@
+<style>
+        nav {
+            margin: 20px;
+        }
+
+        .list-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Adjust the gap between columns */
+            justify-content: space-between;
+        }
+
+        .list-menu__column {
+            flex: 0 1 calc(25% - 20px); /* Adjust the width of each column */
+        }
+
+        .mega-menu {
+            margin: 20px;
+        }
+
+        .mega-menu__content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .mega-menu__list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .mega-menu__list li {
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            width: 100%; /* Make each li take full width */
+            text-align: center;
+        }
+    </style>
+
+
+
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
