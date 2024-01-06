@@ -38,7 +38,43 @@
  endif
  endif
  %}
- <section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block"><div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
+
+ 
+
+
+ <section id="dynamic-background" class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background-size: cover;">
+  <div data-deep="1" class="core__row--columns">
+    <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
+      <div class="core__column--wrapper">
+        <div class="core__blocks" index="0">
+          <div class="core__blocks--body">
+            <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
+              <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
+
+<style>
+  /* Style for larger screens (greater than 880px) */
+  @media only screen and (min-width: 881px) {
+    #dynamic-background {
+      background: url('{{ collection_image }}') no-repeat center center;
+    }
+    .mobile-banner {
+      display: none; /* Hide mobile banner on larger screens */
+    }
+  }
+
+  /* Style for smaller screens (less than or equal to 880px) */
+  @media only screen and (max-width: 880px) {
+    #dynamic-background {
+      background: url('{{ collection.metafields.custom.url }}') no-repeat center center;
+    }
+    .desktop-banner {
+      display: none; /* Hide desktop banner on smaller screens */
+    }
+  }
+</style>
+ 
+ 
+ 
  {%- if EComBuilderMode -%}
  {% capture page_type %}collection{% endcapture %}
  {%- else -%}
