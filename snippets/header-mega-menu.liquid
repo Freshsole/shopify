@@ -77,7 +77,7 @@
                 class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
                 tabindex="-1"
               >
-                <section class="megamenusection">
+                <section class="{% if link.handle != 'velikosti' %}notcolumn{% endif %} megamenusection">
                   <ul class="mega-menu__list page-width{% if link.handle == 'sizes' %} mega-menu__list--condensed{% endif %}" role="list">
                     {%- assign item_counter = 0 -%}
                     {%- for childlink in link.links -%}
@@ -117,7 +117,7 @@
                         <!-- Close the existing section -->
                         </section>
                         <!-- Open a new section -->
-                        <section class="megamenusection">
+                        <section class="{% if link.handle != 'velikosti' %}notcolumn{% endif %} megamenusection">
                         <ul class="mega-menu__list page-width{% if link.handle == 'sizes' %} mega-menu__list--condensed{% endif %}" role="list">
                         {%- assign item_counter = 0 -%}
                       {%- endif -%}
@@ -149,4 +149,5 @@
     {%- endfor -%}
   </ul>
 </nav>
+
 
