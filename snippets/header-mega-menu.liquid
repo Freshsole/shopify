@@ -77,50 +77,53 @@
                 class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
                 tabindex="-1"
               >
-                <ul class="mega-menu__list page-width{% if link.handle == 'sizes' %} mega-menu__list--condensed{% endif %}" role="list">
-                  {%- assign item_counter = 0 -%}
-                  {%- for childlink in link.links -%}
-                    <li>
-                      <a
-                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                        href="{{ childlink.url }}"
-                        class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                        {% if childlink.current %}
-                          aria-current="page"
-                        {% endif %}
-                      >
-                        {{ childlink.title | escape }}
-                      </a>
-                      {%- if childlink.links != blank -%}
-                        <ul class="list-unstyled" role="list">
-                          {%- for grandchildlink in childlink.links -%}
-                            <li>
-                              <a
-                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                href="{{ grandchildlink.url }}"
-                                class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                {% if grandchildlink.current %}
-                                  aria-current="page"
-                                {% endif %}
-                              >
-                                {{ grandchildlink.title | escape }}
-                              </a>
-                            </li>
-                          {%- endfor -%}
+                <section class="megamenusection">
+                  <ul class="mega-menu__list page-width{% if link.handle == 'sizes' %} mega-menu__list--condensed{% endif %}" role="list">
+                    {%- assign item_counter = 0 -%}
+                    {%- for childlink in link.links -%}
+                      <li>
+                        <a
+                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                          href="{{ childlink.url }}"
+                          class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                          {% if childlink.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          {{ childlink.title | escape }}
+                        </a>
+                        {%- if childlink.links != blank -%}
+                          <ul class="list-unstyled" role="list">
+                            {%- for grandchildlink in childlink.links -%}
+                              <li>
+                                <a
+                                  id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                  href="{{ grandchildlink.url }}"
+                                  class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                  {% if grandchildlink.current %}
+                                    aria-current="page"
+                                  {% endif %}
+                                >
+                                  {{ grandchildlink.title | escape }}
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                      </li>
+                      {%- assign item_counter = item_counter | plus: 1 -%}
+                      {%- if item_counter == 4 and forloop.last == false -%}
                         </ul>
+                        <!-- Close the existing section -->
+                        </section>
+                        <!-- Open a new section -->
+                        <section class="megamenusection">
+                        <ul class="mega-menu__list page-width{% if link.handle == 'sizes' %} mega-menu__list--condensed{% endif %}" role="list">
+                        {%- assign item_counter = 0 -%}
                       {%- endif -%}
-                    </li>
-                    {%- assign item_counter = item_counter | plus: 1 -%}
-                    {%- if item_counter == 4 and forloop.last == false -%}
-                      </ul>
-                      <section class="nameofclass">
-                        <!-- Your section content goes here -->
-                      </section>
-                      <ul class="mega-menu__list page-width{% if link.handle == 'sizes' %} mega-menu__list--condensed{% endif %}" role="list">
-                      {%- assign item_counter = 0 -%}
-                    {%- endif -%}
-                  {%- endfor -%}
-                </ul>
+                    {%- endfor -%}
+                  </ul>
+                </section>
               </div>
             </details>
           </header-menu>
