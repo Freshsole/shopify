@@ -78,43 +78,44 @@
                   class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                   role="list"
                 >
-                  {%- if link.handle == 'sizes' -%}
-                    {%- assign item_counter = 0 -%}
-                    {%- for childlink in link.links -%}
-                      <li>
-                        <a
-                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                          href="{{ childlink.url }}"
-                          class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                          {% if childlink.current %}
-                            aria-current="page"
-                          {% endif %}
-                        >
-                          {{ childlink.title | escape }}
-                        </a>
-                      </li>
-                      {%- assign item_counter = item_counter | plus: 1 -%}
-                      {%- if item_counter == 4 and forloop.last == false -%}
-                        </ul><ul class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
-                        {%- assign item_counter = 0 -%}
+                  {%- assign item_counter = 0 -%}
+                  {%- for childlink in link.links -%}
+                    <li>
+                      <a
+                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                        href="{{ childlink.url }}"
+                        class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                        {% if childlink.current %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        {{ childlink.title | escape }}
+                      </a>
+                      {%- if childlink.links != blank -%}
+                        <ul class="list-unstyled" role="list">
+                          {%- for grandchildlink in childlink.links -%}
+                            <li>
+                              <a
+                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                href="{{ grandchildlink.url }}"
+                                class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                {% if grandchildlink.current %}
+                                  aria-current="page"
+                                {% endif %}
+                              >
+                                {{ grandchildlink.title | escape }}
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
                       {%- endif -%}
-                    {%- endfor -%}
-                  {%- else -%}
-                    {%- for childlink in link.links -%}
-                      <li>
-                        <a
-                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                          href="{{ childlink.url }}"
-                          class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                          {% if childlink.current %}
-                            aria-current="page"
-                          {% endif %}
-                        >
-                          {{ childlink.title | escape }}
-                        </a>
-                      </li>
-                    {%- endfor -%}
-                  {%- endif -%}
+                    </li>
+                    {%- assign item_counter = item_counter | plus: 1 -%}
+                    {%- if item_counter == 4 and forloop.last == false -%}
+                      </ul><ul class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
+                      {%- assign item_counter = 0 -%}
+                    {%- endif -%}
+                  {%- endfor -%}
                 </ul>
               </div>
             </details>
