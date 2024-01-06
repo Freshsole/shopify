@@ -60,7 +60,7 @@
                       {%- endif -%}
                     </li>
                     {%- assign item_counter = item_counter | plus: 1 -%}
-                    {%- if item_counter == 4 and not forloop.last -%}
+                    {%- if item_counter == 4 and forloop.last == false -%}
                       </ul><ul class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
                       {%- assign item_counter = 0 -%}
                     {%- endif -%}
