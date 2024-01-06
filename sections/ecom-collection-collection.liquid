@@ -52,27 +52,33 @@
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
 
 <style>
-  /* Style for larger screens (greater than 880px) */
-  @media only screen and (min-width: 881px) {
-    #dynamic-background {
-      background: url('{{ collection_image }}') no-repeat center center;
-    }
-    .mobile-banner {
-      display: none; /* Hide mobile banner on larger screens */
-    }
-  }
+/* Debugging */
+{{ "Collection Image URL: " | append: collection_image | json }}
+{{ "Custom URL: " | append: collection.metafields.custom.url | json }}
 
-  /* Style for smaller screens (less than or equal to 880px) */
-  @media only screen and (max-width: 880px) {
-    #dynamic-background {
-      background: url('{{ collection.metafields.custom.url }}') no-repeat center center;
-    }
-    .desktop-banner {
-      display: none; /* Hide desktop banner on smaller screens */
-    }
+/* Style for larger screens (greater than 880px) */
+@media only screen and (min-width: 881px) {
+  #dynamic-background {
+    background: url('{{ collection_image }}') no-repeat center center;
   }
+  .mobile-banner {
+    display: none; /* Hide mobile banner on larger screens */
+  }
+}
+
+/* Style for smaller screens (less than or equal to 880px) */
+@media only screen and (max-width: 880px) {
+  #dynamic-background {
+    background: url('{{ collection.metafields.custom.url }}') no-repeat center center;
+  }
+  .desktop-banner {
+    display: none; /* Hide desktop banner on smaller screens */
+  }
+}
+
 </style>
- 
+
+                
  
  
  {%- if EComBuilderMode -%}
