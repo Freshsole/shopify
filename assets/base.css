@@ -3886,3 +3886,12 @@ text-decoration: none;
 }
 
 
+/*85% widthy products home*/
+
+.__pf {
+    padding: 0 15px;
+    width: 100%;
+    margin: auto;
+    max-width: var(--cw);
+}
+
