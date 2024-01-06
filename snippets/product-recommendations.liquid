@@ -1,3 +1,4 @@
 <div class="product-recommendations">
-  <!-- Your product recommendations code goes here -->
+  {% assign recommended_products = all_products | where: 'tags', 'dunk-low' %}
+  <!-- Your code to display recommended products goes here -->
 </div>
