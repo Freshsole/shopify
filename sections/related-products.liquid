@@ -36,7 +36,14 @@
 
 
 {% for recommendation in recommendations.products %}
-  {% unless recommendation.collections contains 'new-in-store' or 'all-products'  %}
+  {% assign exclude_collection = false %}
+  {% for collection in recommendation.collections %}
+    {% if collection.handle == 'new-in store' %}
+      {% assign exclude_collection = true %}
+    {% endif %}
+  {% endfor %}
+
+  {% unless exclude_collection %}
     <li class="grid__item">
       {% render 'card-product',
         card_product: recommendation,
