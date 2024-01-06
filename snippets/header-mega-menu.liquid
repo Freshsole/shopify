@@ -104,10 +104,11 @@
               >
                 
                 <div class="mega-menu__content2">
-                {%- if link.handle == 'velikosti' -%}
+                
+                <section class="megamenusection">
+                  {%- if link.handle == 'velikosti' -%}
                     <a class="Vyfiltruj">Vyfiltruj si svou velikost</a>
                   {%- endif -%}
-                <section class="megamenusection">
                   {%- assign ul_classes = "mega-menu__list page-width" -%}
                   {%- if link.handle != 'velikosti' -%}
                     {%- assign ul_classes = ul_classes | append: ' notcolumn' -%}
