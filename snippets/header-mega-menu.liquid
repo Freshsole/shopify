@@ -114,7 +114,9 @@
     width: 100%;
     text-align: left;
 }
-  
+  .pica{
+    width:25%;
+}
   
 </style>
 
@@ -170,7 +172,7 @@
                   <ul class="mega-menu__list page-width" role="list">
                     {%- assign item_counter = 0 -%}
                     {%- for childlink in link.links -%}
-                      <li class="mega-menu_li">
+                      <li class="pica">
                         <a
                           id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                           href="{{ childlink.url }}"
