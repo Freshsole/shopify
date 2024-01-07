@@ -178,7 +178,7 @@
                         {%- if childlink.links != blank -%}
                           <ul class="list-unstyled" role="list">
                             {%- for grandchildlink in childlink.links -%}
-                              <li>
+                              <li class ="list-li">
                                 <a
                                   id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
                                   href="{{ grandchildlink.url }}"
