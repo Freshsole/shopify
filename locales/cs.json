@@ -408,7 +408,14 @@
       "text_hour_up0bxdqndd_html": "[%-H] hr%!H",
       "text_minute_up0bxdqndd_html": "[%-M] min%!M",
       "text_second_up0bxdqndd_html": "[%-S] sec%!S",
-      "sale_up0bxdqndd_html": "-{{sale}}%"
+      "sale_up0bxdqndd_html": "-{{sale}}%",
+      "applied_title_o1gs0g2p44c_html": "Applied filters",
+      "clear_all_title_o1gs0g2p44c_html": "Clear all",
+      "filter_selected_text_o1gs0g2p44c_html": "{{count}} selected",
+      "filters_selected_text_o1gs0g2p44c_html": "{{count}} selected",
+      "reset_filter_o1gs0g2p44c_html": "Reset",
+      "max_price_text_o1gs0g2p44c_html": "Max price",
+      "filter_title_o1gs0g2p44c_html": "Filter by"
     },
     "ecom-default-template-quickview": {
       "textcontent_hej9vk0uggt_html": "(100+ hodnocení)",
