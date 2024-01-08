@@ -3895,4 +3895,11 @@ text-decoration: none;
     border-bottom: 1px solid #eaeaea;
 }
 
+/* footer smazane podtrzeni */
+.rte a {
+
+    text-decoration: none !important;
+
+}
+
 
