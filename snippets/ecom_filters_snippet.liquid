@@ -1,4 +1,4 @@
-{% assign EComBuilderMode = true %}<!--EComposer-custom-liquid-filters-tpy5db6wzrk-->
+{% assign EComBuilderMode = true %}<!--EComposer-custom-liquid-filters-o1gs0g2p44c-->
                         {% if template contains '.' %}
                             <input type="hidden" name="view" value="{{template | split: '.' | last }}" />
                         {% endif %}
@@ -23,7 +23,7 @@
                                 {% if EComBuilderMode %}
                                     <div class="ecom-collection__filters-applied-block">
                                         <h3 class="ecom-collection__filters-applied-heading">
-                                            Použité filtry
+                                            Applied filters
                                         </h3>
                                         <div class="ecom-collection-filters--active_values">
                                             <ul class="ecom-collection-filters--active_values-list" role="list">
@@ -51,7 +51,7 @@
                                 {%- if has_filter -%}
                                 <div class="ecom-collection__filters-applied-block">
                                     <h3 class="ecom-collection__filters-applied-heading">
-                                        Použité filtry
+                                        Applied filters
                                     </h3>
                                     <div class="ecom-collection-filters--active_values">
                                         <ul class="ecom-collection-filters--active_values-list" role="list">
@@ -77,7 +77,7 @@
                                             {% endif %}
                                             {% endfor %}
                                             <li class="ecom-collection__filters-group-list-item ecom-al_center">
-                                                <a href="{{collection.url}}" title="Vymazat vše" class="ecom-collection__filters-group-list-item-clear">Vymazat vše{{close_icon}}</a>
+                                                <a href="{{collection.url}}" title="Clear all" class="ecom-collection__filters-group-list-item-clear">Clear all{{close_icon}}</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -98,7 +98,7 @@
                                         {%- if size > 0 -%}
                                         <div
                                         data-name="{{filter.param_name}}"
-                                         open 
+                                        
                                         class="ecom-js-filter ecom-collection__filters-group-dropdown ecom-collection__filters-group ecom-collection__filters-group-lists ecom-d-none" data-index="{{ forloop.index }}" data-attrs-max="5">
 
                                             <summary class="ecom-collection__filters-group-summary">
@@ -110,31 +110,15 @@
                                             </summary>
                                             <div class="ecom-collection__filters-group--display ">
                                                 
-                                                    <div class="ecom-collection__filters-group--header">
-                                                        <span class="ecom-collection__filters-group--selected no-js-hidden">
-                                                            {% assign count = filter.active_values.size %}
-                                                            {% if count == 1%}
-                                                                {{ count}} vybráno
-                                                            {% else %}
-                                                                {{ count}} vybráno
-                                                            {% endif %}
-                                                        </span>
-                                                        <a href="{{ filter.url_to_remove }}" class="ecom-collection__filters-group-reset-filter" >Resetovat</a>
-                                                    </div>
 
                                                 {% assign check_is_filter_color = false %}
                                                 
-                                                        {% assign current_option_name = filter.param_name  | split: '.' | last | handleize %}
-                                                        {% if  color_option_name  ==  current_option_name %}
-                                                            {% assign check_is_filter_color = true %}
-                                                        {% endif %}
-                                                    
                                                 <ul
                                                     class="ecom-collection__filters-group-list  ecom-scroll_bar{% if check_is_filter_color %} ecom-collection__filters-enable-colors{% endif %}" data-param-name="{{filter.param_name}}" role="list" data-index="{{ forloop.index }}"
                                                 >
                                                 {%- for value in filter.values -%}
                                                     {%- if false == false or value.count > 0 and false == true -%}
-                                                    <li class="ecom-collection__filters-group-list-item  ecom-filter-hide-checkbox" >
+                                                    <li class="ecom-collection__filters-group-list-item " >
                                                         <label for="ecom-filter-{{ filter.label | escape  | strip }}-{{ forloop.index }}" class="ecom-collection__filters-group-checkbox{% if value.count == 0 and value.active == false %} ecom-collection__filters-group-checkbox--disabled{% endif %}">
 
                                                             <input type="checkbox"
@@ -181,7 +165,7 @@
                                             %}
 
                                             <div
-                                             open 
+                                            
                                             class="ecom-collection__filters-group ecom-collection__filters-group-dropdown ecom-collection__filters-group-price-range" data-index="{{ forloop.index }}">
                                                 <summary class="ecom-collection__filters-group-summary">
                                                     <div class="ecom-collection__filters-group-header">
@@ -193,11 +177,7 @@
                                                 </summary>
                                                 <div class="ecom-collection__filters-group--display ">
                                                     {%- comment -%}
-                                                    <div class="ecom-collection__filters-group--header">
-                                                            {%- assign max_price_amount = filter.range_max | money -%}
-                                                            <span class="ecom-collection__filters-group--selected">Maximální cena {{max_price_amount}}</span>
-                                                            <a href="{{ filter.url_to_remove }}" class="ecom-collection__filters-group-reset-filter" >Resetovat</a>
-                                                        </div>
+                                                    
                                                     {%- endcomment -%}
                                                     <price-range class="ecom-collection__filters-group-price">
                                                             <div class="ecom-collection__filters-group-field">
@@ -276,4 +256,4 @@
                                 </div>
                             </div>
                         </div>
-                        <!--/EComposer-custom-liquid-filters-tpy5db6wzrk-->
+                        <!--/EComposer-custom-liquid-filters-o1gs0g2p44c-->
