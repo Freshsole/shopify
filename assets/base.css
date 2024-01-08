@@ -3892,10 +3892,7 @@ text-decoration: none;
 
 /* header podtrzeni */
 .header-wrapper {
-    display: block;
-    position: relative;
     border-bottom: 1px solid #eaeaea;
-    background-color: rgb(var(--color-background));
 }
 
 
