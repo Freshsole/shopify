@@ -42,6 +42,9 @@
       "block_order": [
         "template--20156184789323__db6098b3-5a5b-4d12-b81a-fca480aa73a4-text-1"
       ],
+      "custom_css": [
+        "strong{font-size:18px;}"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
