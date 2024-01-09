@@ -3904,9 +3904,5 @@ text-decoration: none;
 /* Cookies border */
 
 .Avada-CookiesBar__OuterWrapper .Avada-CookiesFloat_Bar {
-    width: 350px;
-    min-height: 120px;
-    max-height: fit-content;
-    border-radius: 5px;
     border: solid 2px #eaeaea;
 }
