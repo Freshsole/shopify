@@ -3972,8 +3972,8 @@ text-decoration: none;
 }
 
 /* filtry up */
-.ecom-collection__filters-form {
-    margin-top: 15% !importnant;
+.ecom-core.ecom-tpy5db6wzrk .ecom-collection__filters-dropdown .ecom-container-filter-list {
+    margin-top: -35px !important;
 }
 
 /* pagination */
