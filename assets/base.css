@@ -3925,6 +3925,17 @@ text-decoration: none;
     min-height: 40px !important;
 }
 
+.ecom-collection__product-item-information-title:hover {
+    color:black !important;
+    text-decoration:none !important
+}
+
+.ecom-collection__filters-group-summary--title
+{
+    font-family: Poppins !important;
+}
+
+
 /* pagination */
 
 .QUCIb .pf-slider-nav button {
