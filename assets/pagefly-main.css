@@ -26,6 +26,14 @@
         padding-left: 10%;
         padding-right: 10%;
     }
+
+  .QUCIb .nav-style-3.pf-slider-next {
+        right: 20px !important;
+    }
+
+  .QUCIb .nav-style-3.pf-slider-prev {
+    left: 20px !important;
+}
 }
 
 
