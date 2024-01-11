@@ -10,14 +10,9 @@
     
 
 @media (max-width: 1200px) {
-    .pf-slider-next .nav-style-3 {
+    .pf-slider-next {
         left: -10px;
     }
-
-    .QUCIb .pf-slider-next, .QUCIb:hover .nav-style-3:not(.disabled).pf-slider-next, .bZdKpM .pf-slider-next, .bZdKpM:hover .nav-style-3:not(.disabled).pf-slider-next, .jkMBeP .pf-slider-next, .jkMBeP:hover .nav-style-3:not(.disabled).pf-slider-next, .kYHThe .pf-slider-next, .klaLlZ:hover .nav-style-3:not(.disabled).pf-slider-next {
-    right: -10px;
-}
-  
 }
 
   
