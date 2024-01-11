@@ -13,6 +13,11 @@
     .QUCIb .nav-style-3.pf-slider-next {
         right: -10px !important;
     }
+
+  .QUCIb .nav-style-3.pf-slider-prev {
+    left: -10px;
+}
+  
 }
 
   
