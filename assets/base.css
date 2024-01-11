@@ -3925,20 +3925,22 @@ text-decoration: none;
     min-height: 40px !important;
 }
 
+/* Ecom no hover on product title */
 .ecom-collection__product-item-information-title:hover {
     color:black !important;
     text-decoration:none !important
 }
 
+/* Ecom filtr styl */
 .ecom-collection__filters-group-summary--title
 {
     font-family: Poppins !important;
     font-weight: 600 !important;
 }
-
+ /* Ecom propagovano styl */
 .ecom-core.ecom-jp6s1euv9u .ecom-collection__sorting-select {
     font-size: 16px !important;
-    font-family: 'Poppins' !important;
+    font-family: Poppins !important;
     font-weight: 600 !important;
     line-height: 35px;
     border-style: solid;
@@ -3949,6 +3951,7 @@ text-decoration: none;
     background-color: white;
     height: 40px;
     margin-bottom: 10px !important;
+    border-radius: 5px !important;
 }
 
 /* pagination */
