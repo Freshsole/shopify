@@ -3937,6 +3937,12 @@ text-decoration: none;
     font-family: Poppins !important;
     font-weight: 600 !important;
 }
+
+/* Ecom filtr styl */
+.ecom-core.ecom-tpy5db6wzrk .ecom-collection__filters-group-header {
+    border-radius: 5px !important;
+}
+
  /* Ecom propagovano styl */
 .ecom-core.ecom-jp6s1euv9u .ecom-collection__sorting-select {
     font-size: 16px !important;
