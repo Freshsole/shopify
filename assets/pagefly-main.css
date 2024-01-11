@@ -10,7 +10,7 @@
     
 
 @media (max-width: 1200px) {
-    .QUCIb:hover .nav-style-3:not(.disabled).pf-slider-prev, .bZdKpM:hover .nav-style-3:not(.disabled).pf-slider-prev, .jkMBeP:hover .nav-style-3:not(.disabled).pf-slider-prev, .klaLlZ:hover .nav-style-3:not(.disabled).pf-slider-prev {
+    .pf-slider-next .nav-style-3 {
         left: -10px;
     }
 
