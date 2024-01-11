@@ -3916,12 +3916,10 @@ text-decoration: none;
 
 .ecom-collection__product-item-information-title {
     font-size: 16px;
-    margin-bottom: 15px;
     text-transform: initial;
     font-family: Poppins;
     font-weight: 700;
     text-align: left;
-    margin-top: 0px;
 }
 
 /* pagination */
