@@ -3921,6 +3921,7 @@ text-decoration: none;
     font-weight: 700 !important;
     text-align: left !important;
     margin-top: -15px !important;
+    min-height: 40px !important;
 }
 
 /* pagination */
