@@ -19,7 +19,6 @@
 }
   
 }
-
   
 @media (min-width: 1200px) {
     .__pf [style*="--cw"] {
@@ -28,11 +27,11 @@
     }
 
   .QUCIb .nav-style-3.pf-slider-next {
-        right: 20px !important;
+        right: -10px !important;
     }
 
   .QUCIb .nav-style-3.pf-slider-prev {
-    left: 20px !important;
+    left: -10px !important;
 }
 }
 
