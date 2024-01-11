@@ -27,11 +27,11 @@
     }
 
   .QUCIb .nav-style-3.pf-slider-next {
-        right: -15px !important;
+        right: -10px !important;
     }
 
   .QUCIb .nav-style-3.pf-slider-prev {
-    left: -10px !important;
+    left: -15px !important;
 }
 }
 
