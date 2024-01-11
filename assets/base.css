@@ -3972,10 +3972,7 @@ text-decoration: none;
 }
 
 /* filtry up */
-.ecom-core.ecom-tpy5db6wzrk .ecom-modal-content--mobile.ecom-modal-content .ecom-collection__filters-form {
-    width: 100%;
-    margin-top: 20%;
-} {
+.ecom-collection__filters-form {
     margin-top: 15% !importnant;
 }
 
