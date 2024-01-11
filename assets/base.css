@@ -3915,12 +3915,12 @@ text-decoration: none;
 }
 
 .ecom-collection__product-item-information-title {
-    font-size: 16px;
-    text-transform: initial;
-    font-family: Poppins;
-    font-weight: 700;
-    text-align: left;
-    margin-top: -15px;
+    font-size: 16px !important;
+    text-transform: initial !important;
+    font-family: Poppins !important;
+    font-weight: 700 !important;
+    text-align: left !important;
+    margin-top: -15px !important;
 }
 
 /* pagination */
