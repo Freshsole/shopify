@@ -15,7 +15,7 @@
     }
 
   .QUCIb .nav-style-3.pf-slider-prev {
-    left: -10px;
+    left: -10px !important;
 }
   
 }
