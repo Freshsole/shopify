@@ -11,7 +11,7 @@
 
 @media (max-width: 1200px) {
     .QUCIb .nav-style-3.pf-slider-next {
-        right: 0px !;
+        right: 0px !important;
     }
 }
 
