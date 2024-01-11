@@ -3940,7 +3940,7 @@ text-decoration: none;
 
 /* Ecom filtr styl */
 .ecom-core.ecom-tpy5db6wzrk .ecom-collection__filters-group-header {
-    border-radius: 5px !important;
+    border-radius: 4px !important;
 }
 
  /* Ecom propagovano styl */
@@ -3957,7 +3957,7 @@ text-decoration: none;
     background-color: white;
     height: 40px;
     margin-bottom: 10px !important;
-    border-radius: 5px !important;
+    border-radius: 4px !important;
 }
 
 /* pagination */
