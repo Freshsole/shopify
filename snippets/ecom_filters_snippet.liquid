@@ -1,4 +1,4 @@
-{% assign EComBuilderMode = true %}<!--EComposer-custom-liquid-filters-qka458qfh6o-->
+{% assign EComBuilderMode = true %}<!--EComposer-custom-liquid-filters-tpy5db6wzrk-->
                         {% if template contains '.' %}
                             <input type="hidden" name="view" value="{{template | split: '.' | last }}" />
                         {% endif %}
@@ -88,7 +88,86 @@
                             <div class="ecom-container-filter-list-wrapper">
                                 
                                 <div class="ecom-container-filter-list" >
-                                    
+                                    <div class="ecom-shopify_menu" data-show-all="false">
+                    <div
+                                 open 
+                                class=" ecom-collection__filters-group-dropdown ecom-collection__filters-group ecom-collection__filters-group-lists" data-attrs-max="5">
+                        <summary class="ecom-collection__filters-group-summary">
+                            <div class="ecom-collection__filters-group-header">
+                                <span class="ecom-collection__filters-group-summary--title">Collection</span>
+                                <div class="ecom-icon-filter-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><path d="M360.5 217.5l-152 143.1C203.9 365.8 197.9 368 192 368s-11.88-2.188-16.5-6.562L23.5 217.5C13.87 208.3 13.47 193.1 22.56 183.5C31.69 173.8 46.94 173.5 56.5 182.6L192 310.9l135.5-128.4c9.562-9.094 24.75-8.75 33.94 .9375C370.5 193.1 370.1 208.3 360.5 217.5z"></path></svg></div>
+                                     <div class="ecom-icon-filter-open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><path d="M23.5 294.5l152-143.1C180.1 146.2 186.1 144 192 144s11.88 2.188 16.5 6.562l152 143.1c9.625 9.125 10.03 24.31 .9375 33.93c-9.125 9.688-24.38 10.03-33.94 .9375l-135.5-128.4l-135.5 128.4c-9.562 9.094-24.75 8.75-33.94-.9375C13.47 318.9 13.87 303.7 23.5 294.5z"></path></svg></div>
+                            </div>
+                        </summary>
+                        <div class="ecom-collection__filters-group--display">
+                            {%- capture link_handle -%}shop-furniture{%- endcapture -%}
+                            {%- unless link_handle == empty -%}
+                                {%- assign menu = linklists[link_handle] -%}
+                                <ul class="ecom-shopify__menu-list">
+                                    {% if menu and menu.links.size %}
+                                        {% for link in menu.links %}
+                                            {% assign child_link = link.links %}
+                                            <li class="ecom-shopify__menu-item ecom-shopify__menu-item-type--{{link.type}} {% if child_link.size > 0 %}ecom-shopify__menu-item--has-children{% endif %} {% if link.active or link.child_active %} ecom-shopify__menu-item--active ecom-text-active {% endif %}">
+                                                <div class="ecom-menu_item ecom-items {% if link.child_active %} ecom-item-active {% endif %}">
+                                                    <a class="ecom-menu_title ecom-items--text" href="{{link.url}}" title="{{link.title | escape }}">
+                                                        {{link.title}}
+                                                    </a>
+                                                    {%- if link.levels > 0 -%}
+                                                        <div class="ecom-menu_icon">
+                                                            <div class="ecom-items--icon ecom-menu_icon--normal">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M432 256C432 269.3 421.3 280 408 280h-160v160c0 13.25-10.75 24.01-24 24.01S200 453.3 200 440v-160h-160c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h160v-160c0-13.25 10.75-23.99 24-23.99S248 58.75 248 72v160h160C421.3 232 432 242.8 432 256z"></path></svg>
+                                                            </div>
+                                                            <div class="ecom-items--icon ecom-menu_icon--active">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M432 256C432 269.3 421.3 280 408 280H40c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h368C421.3 232 432 242.8 432 256z"></path></svg>
+                                                            </div>
+                                                        </div>
+                                                    {%- endif -%}
+                                                </div>
+                                                {% if child_link.size > 0 %}
+                                                    <ul class="ecom-shopify__menu-sub-menu" data-menu-size="{{child_link.size}}" data-menu-level="{{child_link.level}}"  style="{% if link.child_active %} max-height: 100%; {% endif %}">
+                                                        {% for child in child_link %}
+                                                            {% assign grand_link = child.links %}
+                                                            <li class="ecom-shopify__menu-child-link-item ecom-shopify__menu-child-link-item-type--{{child.type}} {% if grand_link.size > 0 %}ecom-shopify__menu-child-link-item--has-children{% endif %} {% if child.active or child.child_active%} ecom-shopify__menu-child-link-item--active ecom-text-active{% endif %}" >
+                                                                <div class="ecom-menu_item ecom-items">
+                                                                    <a class="ecom-menu_title ecom-items--text" href="{{child.url}}" title="{{child.title | escape }}">
+                                                                        {{child.title}}
+                                                                    </a>
+                                                                    {%- if child.levels > 0 -%}
+                                                                        <div class="ecom-menu_icon">
+                                                                            <div class="ecom-items--icon ecom-menu_icon--normal">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M432 256C432 269.3 421.3 280 408 280h-160v160c0 13.25-10.75 24.01-24 24.01S200 453.3 200 440v-160h-160c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h160v-160c0-13.25 10.75-23.99 24-23.99S248 58.75 248 72v160h160C421.3 232 432 242.8 432 256z"></path></svg>
+                                                                            </div>
+                                                                            <div class="ecom-items--icon ecom-menu_icon--active">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M432 256C432 269.3 421.3 280 408 280H40c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h368C421.3 232 432 242.8 432 256z"></path></svg>
+                                                                            </div>
+                                                                        </div>
+                                                                    {%- endif -%}
+                                                                </div>
+                                                                {% if grand_link.size > 0 %}
+                                                                    <ul class="ecom-shopify__menu-sub-menu" data-menu-size="{{grand_link.size}}" data-menu-level="{{child_link.level}}">
+                                                                        {% for grand in grand_link %}
+                                                                            <li class="ecom-shopify__menu-grand-link-item ecom-menu_item ecom-items ecom-shopify__menu-grand-link-item-type--{{grand.type}} {% if grand.active or grand.child_active %}ecom-shopify__menu-grand-link-item--active ecom-text-active{% endif %}">
+                                                                                <a class="ecom-menu_title ecom-items--text" href="{{grand.url}}" title="{{grand.title | escape }}">
+                                                                                    {{grand.title}}
+                                                                                </a>
+                                                                            </li>
+                                                                        {% endfor %}
+                                                                    </ul>
+                                                                {%- endif -%}
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                {% endif %}
+                                            </li>
+                                        {% endfor %}
+                                    {% endif %}
+                                </ul>
+                            {% else %}
+                                <p>Select a menu to show</p>
+                            {%- endunless -%}
+                        </div>
+                    </div>
+                </div>
                                 {%- for filter in collection.filters -%}
                                     {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
                                     {% case filter.type %}
@@ -134,7 +213,7 @@
                                                 >
                                                 {%- for value in filter.values -%}
                                                     {%- if false == false or value.count > 0 and false == true -%}
-                                                    <li class="ecom-collection__filters-group-list-item  ecom-filter-hide-checkbox" >
+                                                    <li class="ecom-collection__filters-group-list-item " >
                                                         <label for="ecom-filter-{{ filter.label | escape  | strip }}-{{ forloop.index }}" class="ecom-collection__filters-group-checkbox{% if value.count == 0 and value.active == false %} ecom-collection__filters-group-checkbox--disabled{% endif %}">
 
                                                             <input type="checkbox"
@@ -276,4 +355,4 @@
                                 </div>
                             </div>
                         </div>
-                        <!--/EComposer-custom-liquid-filters-qka458qfh6o-->
+                        <!--/EComposer-custom-liquid-filters-tpy5db6wzrk-->
