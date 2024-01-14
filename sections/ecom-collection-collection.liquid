@@ -2,7 +2,7 @@
  EComposer (https://ecomposer.io)
  You SHOULD NOT modify source code in this page because
  It is automatically generated from EComposer
- At 2024-01-14 22:35:33
+ At 2024-01-14 21:57:36
  {% endcomment %} 
  
  {% assign ecom_root_url = routes.root_url %}
@@ -38,7 +38,44 @@
  endif
  endif
  %}
- <section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block"><div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
+
+  {%- if collection.image -%}
+  {% capture collection_image %}{{ collection.image | img_url: 'master' }}{% endcapture %}
+{% else %}
+  {% capture collection_image %}https://placeholder-url.com/placeholder-image.jpg{% endcapture %}
+{% endif %}
+
+ <section id="dynamic-background" class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background-size: cover;">
+  <div data-deep="1" class="core__row--columns">
+    <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
+      <div class="core__column--wrapper">
+        <div class="core__blocks" index="0">
+          <div class="core__blocks--body">
+            <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
+              <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
+                
+<style>
+  /* Style for larger screens (greater than 880px) */
+  @media only screen and (min-width: 881px) {
+    #dynamic-background {
+      background: url('{{ collection_image }}') no-repeat center center;
+    }
+    .mobile-banner {
+      display: none; /* Hide mobile banner on larger screens */
+    }
+  }
+
+  /* Style for smaller screens (less than or equal to 880px) */
+  @media only screen and (max-width: 880px) {
+    #dynamic-background {
+      background: url('{{ collection.metafields.custom.url }}') no-repeat center center;
+    }
+    .desktop-banner {
+      display: none; /* Hide desktop banner on smaller screens */
+    }
+  }
+</style>
+ 
  {%- if EComBuilderMode -%}
  {% capture page_type %}collection{% endcapture %}
  {%- else -%}
@@ -840,13 +877,13 @@
  {%- if paginate.previous -%}
  <li class="ecom-prev" style="">
  <a class="ecom-pagination-item ecom-paginate-action" href="{{ paginate.previous.url }}">
- <span class="ecom-paginate-action--icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" fill="currentColor"><path d="M166.5 424.5l-143.1-152c-4.375-4.625-6.562-10.56-6.562-16.5c0-5.938 2.188-11.88 6.562-16.5l143.1-152c9.125-9.625 24.31-10.03 33.93-.9375c9.688 9.125 10.03 24.38 .9375 33.94l-128.4 135.5l128.4 135.5c9.094 9.562 8.75 24.75-.9375 33.94C190.9 434.5 175.7 434.1 166.5 424.5z"></path></svg></span>
+ <span class="ecom-paginate-action--icon"><svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8.25 10.5V6H15V4.5H8.25V0L0 5.25L8.25 10.5ZM6.75 7.7625L2.79375 5.25L6.75 2.7375V7.7625Z"></path></svg></span>
  
  </a>
  </li>
  {%- else -%}
  <li class="ecom-pagination-item ecom-prev ecom-paginate-action disabled" style="">
- <span class="ecom-paginate-action--icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" fill="currentColor"><path d="M166.5 424.5l-143.1-152c-4.375-4.625-6.562-10.56-6.562-16.5c0-5.938 2.188-11.88 6.562-16.5l143.1-152c9.125-9.625 24.31-10.03 33.93-.9375c9.688 9.125 10.03 24.38 .9375 33.94l-128.4 135.5l128.4 135.5c9.094 9.562 8.75 24.75-.9375 33.94C190.9 434.5 175.7 434.1 166.5 424.5z"></path></svg></span>
+ <span class="ecom-paginate-action--icon"><svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8.25 10.5V6H15V4.5H8.25V0L0 5.25L8.25 10.5ZM6.75 7.7625L2.79375 5.25L6.75 2.7375V7.7625Z"></path></svg></span>
  
  </li>
  {%- endif -%}
@@ -873,13 +910,13 @@
  <li class="ecom-next" style="">
  <a class="ecom-paginate-action ecom-pagination-item" href="{{ paginate.next.url }}">
  
- <span class="ecom-paginate-action--icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" fill="currentColor"><path d="M89.45 87.5l143.1 152c4.375 4.625 6.562 10.56 6.562 16.5c0 5.937-2.188 11.87-6.562 16.5l-143.1 152C80.33 434.1 65.14 434.5 55.52 425.4c-9.688-9.125-10.03-24.38-.9375-33.94l128.4-135.5l-128.4-135.5C45.49 110.9 45.83 95.75 55.52 86.56C65.14 77.47 80.33 77.87 89.45 87.5z"></path></svg></span>
+ <span class="ecom-paginate-action--icon"><svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.75 10.5V6H0V4.5H6.75V0L15 5.25L6.75 10.5ZM8.25 7.7625L12.2062 5.25L8.25 2.7375V7.7625Z"></path></svg></span>
  </a>
  </li>
  {%- else -%}
  <li class="ecom-pagination-item ecom-next ecom-paginate-action ecom-collection__pagination--disabled" style="">
  
- <span class="ecom-paginate-action--icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" fill="currentColor"><path d="M89.45 87.5l143.1 152c4.375 4.625 6.562 10.56 6.562 16.5c0 5.937-2.188 11.87-6.562 16.5l-143.1 152C80.33 434.1 65.14 434.5 55.52 425.4c-9.688-9.125-10.03-24.38-.9375-33.94l128.4-135.5l-128.4-135.5C45.49 110.9 45.83 95.75 55.52 86.56C65.14 77.47 80.33 77.87 89.45 87.5z"></path></svg></span>
+ <span class="ecom-paginate-action--icon"><svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.75 10.5V6H0V4.5H6.75V0L15 5.25L6.75 10.5ZM8.25 7.7625L12.2062 5.25L8.25 2.7375V7.7625Z"></path></svg></span>
  </li>
  {%- endif -%}
  </ol>
@@ -901,12 +938,6 @@
  "locales": {
  "cs": {
  "breadcrumbs_home_uc1dqqcx1hm_html": "Home",
- "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry",
- "clear_all_title_tpy5db6wzrk_html": "Vymazat v\u0161e",
- "filter_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
- "filters_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
- "reset_filter_tpy5db6wzrk_html": "Resetovat",
- "max_price_text_tpy5db6wzrk_html": "Maxim\u00e1ln\u00ed cena",
  "product_option_swatch_up0bxdqndd_html": "Color",
  "added_cart_text_up0bxdqndd_html": "Added to cart",
  "added_cart_message_up0bxdqndd_html": "Added to cart",
@@ -917,6 +948,12 @@
  "sale_badge_up0bxdqndd_html": "-{{sale}}%",
  "countdown_title_up0bxdqndd_html": "Hurry up! The sale will end on",
  "no_product_item_up0bxdqndd_html": "There are no product yet!",
+ "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry",
+ "clear_all_title_tpy5db6wzrk_html": "Vymazat v\u0161e",
+ "filter_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
+ "filters_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
+ "reset_filter_tpy5db6wzrk_html": "Resetovat",
+ "max_price_text_tpy5db6wzrk_html": "Maxim\u00e1ln\u00ed cena",
  "filter_title_tpy5db6wzrk_html": "Filter ",
  "sortting_title_jp6s1euv9u_html": " ",
  "text_week_up0bxdqndd_html": "[%-W] week%!W",
@@ -928,12 +965,6 @@
  },
  "en": {
  "breadcrumbs_home_uc1dqqcx1hm_html": "Home",
- "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry",
- "clear_all_title_tpy5db6wzrk_html": "Vymazat v\u0161e",
- "filter_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
- "filters_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
- "reset_filter_tpy5db6wzrk_html": "Resetovat",
- "max_price_text_tpy5db6wzrk_html": "Maxim\u00e1ln\u00ed cena",
  "product_option_swatch_up0bxdqndd_html": "Color",
  "added_cart_text_up0bxdqndd_html": "Added to cart",
  "added_cart_message_up0bxdqndd_html": "Added to cart",
@@ -944,6 +975,12 @@
  "sale_badge_up0bxdqndd_html": "-{{sale}}%",
  "countdown_title_up0bxdqndd_html": "Hurry up! The sale will end on",
  "no_product_item_up0bxdqndd_html": "There are no product yet!",
+ "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry",
+ "clear_all_title_tpy5db6wzrk_html": "Vymazat v\u0161e",
+ "filter_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
+ "filters_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
+ "reset_filter_tpy5db6wzrk_html": "Resetovat",
+ "max_price_text_tpy5db6wzrk_html": "Maxim\u00e1ln\u00ed cena",
  "filter_title_tpy5db6wzrk_html": "Filter ",
  "sortting_title_jp6s1euv9u_html": " ",
  "text_week_up0bxdqndd_html": "[%-W] week%!W",
