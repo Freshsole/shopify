@@ -4004,6 +4004,8 @@ text-decoration: none;
 }
 
 /* Ecom no hover */
-.ecom-collection__product-media-image {
+.ecom-collection__product-media-image:hover {
   pointer-events: none !important;
+  transition: none !important;
+  /* Add any additional styles to override hover effects if necessary */
 }
