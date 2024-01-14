@@ -3956,7 +3956,7 @@ text-decoration: none;
     padding-left: 20px;
     background-color: white;
     height: 40px;
-    margin-bottom: 50px !important;
+    /*margin-bottom: 50px !important;*/
     border-radius: 4px !important;
 }
 
@@ -3972,9 +3972,9 @@ text-decoration: none;
 }
 
 /* filtry up */
-/*.ecom-core.ecom-tpy5db6wzrk .ecom-collection__filters-dropdown .ecom-container-filter-list {
+.ecom-core.ecom-tpy5db6wzrk .ecom-collection__filters-dropdown .ecom-container-filter-list {
     margin-top: -50px !important;
-}*/
+}
 
 /* Ecom filtry up */
 .ecom-core.ecom-tpy5db6wzrk .ecom-modal-content--mobile.ecom-modal-content .ecom-collection__filters-form {
