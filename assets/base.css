@@ -4005,5 +4005,5 @@ text-decoration: none;
 
 /* Ecom no hover */
 .ecom-collection__product-media-image {
-  pointer-events: none;
+  pointer-events: none !important;
 }
