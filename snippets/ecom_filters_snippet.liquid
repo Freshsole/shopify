@@ -1,4 +1,4 @@
-{% assign EComBuilderMode = true %}<!--EComposer-custom-liquid-filters-tpy5db6wzrk-->
+{% assign EComBuilderMode = true %}<!--EComposer-custom-liquid-filters-qka458qfh6o-->
                         {% if template contains '.' %}
                             <input type="hidden" name="view" value="{{template | split: '.' | last }}" />
                         {% endif %}
@@ -134,7 +134,7 @@
                                                 >
                                                 {%- for value in filter.values -%}
                                                     {%- if false == false or value.count > 0 and false == true -%}
-                                                    <li class="ecom-collection__filters-group-list-item " >
+                                                    <li class="ecom-collection__filters-group-list-item  ecom-filter-hide-checkbox" >
                                                         <label for="ecom-filter-{{ filter.label | escape  | strip }}-{{ forloop.index }}" class="ecom-collection__filters-group-checkbox{% if value.count == 0 and value.active == false %} ecom-collection__filters-group-checkbox--disabled{% endif %}">
 
                                                             <input type="checkbox"
@@ -276,4 +276,4 @@
                                 </div>
                             </div>
                         </div>
-                        <!--/EComposer-custom-liquid-filters-tpy5db6wzrk-->
+                        <!--/EComposer-custom-liquid-filters-qka458qfh6o-->
