@@ -4002,3 +4002,8 @@ text-decoration: none;
 .ecom-collection__sorting-select{
   margin-bottom:25px !important;
 }
+
+/* Ecom no hover */
+.ecom-collection__product-media-image {
+  pointer-events: none;
+}
