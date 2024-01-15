@@ -444,9 +444,9 @@
  -%}
  
  
- {%- capture limit-%}12{% endcapture %}
+ {%- capture limit-%}15{% endcapture %}
  {%- if limit == blank -%}
- {% assign limit = 12 %}
+ {% assign limit = 15 %}
  {% else %}
  {% assign limit = limit | plus: 0 %}
  {%- endif-%}
