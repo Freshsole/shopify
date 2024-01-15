@@ -4009,3 +4009,7 @@ text-decoration: none;
   transition: none !important;
   /* Add any additional styles to override hover effects if necessary */
 }
+
+.ecom-collection__product-secondary-media {
+    display: none;
+}
