@@ -2,7 +2,7 @@
  EComposer (https://ecomposer.io)
  You SHOULD NOT modify source code in this page because
  It is automatically generated from EComposer
- At 2024-01-14 23:01:28
+ At 2024-01-15 19:42:45
  {% endcomment %} 
  
  {% assign ecom_root_url = routes.root_url %}
@@ -38,43 +38,8 @@
  endif
  endif
  %}
- {%- if collection.image -%}
-  {% capture collection_image %}{{ collection.image | img_url: 'master' }}{% endcapture %}
-{% else %}
-  {% capture collection_image %}https://cdn.myshoptet.com/usr/www.bbns.cz/user/shop/big/3708_snimek-obrazovky-2023-02-03-v--20-58-38.png?63dd8eac{% endcapture %}
-{% endif %}
-
- <section id="dynamic-background" class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background-size: cover;">
-  <div data-deep="1" class="core__row--columns">
-    <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
-      <div class="core__column--wrapper">
-        <div class="core__blocks" index="0">
-          <div class="core__blocks--body">
-            <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
-              <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
-                
-<style>
-  /* Style for larger screens (greater than 880px) */
-  @media only screen and (min-width: 881px) {
-    #dynamic-background {
-      background: url('{{ collection_image }}') no-repeat center center;
-    }
-    .mobile-banner {
-      display: none; /* Hide mobile banner on larger screens */
-    }
-  }
-
-  /* Style for smaller screens (less than or equal to 880px) */
-  @media only screen and (max-width: 880px) {
-    #dynamic-background {
-      background: url('{{ collection.metafields.custom.url }}') no-repeat center center;
-    }
-    .desktop-banner {
-      display: none; /* Hide desktop banner on smaller screens */
-    }
-  }
-</style>
-{%- if EComBuilderMode -%}
+ <section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block"><div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
+ {%- if EComBuilderMode -%}
  {% capture page_type %}collection{% endcapture %}
  {%- else -%}
  {%- assign page_type = request.page_type %}
@@ -570,14 +535,10 @@
  assign featured_media_aspect_ratio = 1
  endif
  -%}
-
-
-
-   
  <div class="ecom-collection__product-media--container">
  <div
  class="ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
- {% if product.media[1] != nil %}{% endif %}"
+ {% if product.media[1] != nil %}ecom-collection__product-media--hover-effect{% endif %}"
  style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"
  
  >
@@ -597,27 +558,24 @@
  />
  
  {%- if product.media[1] != nil -%}
- <img srcset="{%- if product.featured_media.width >= 165 -%}{{ product.featured_media | img_url: '165x' }} 165w,{%- endif -%}
- {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | img_url: '360x' }} 360w,{%- endif -%}
- {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | img_url: '533x' }} 533w,{%- endif -%}
- {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | img_url: '720x' }} 720w,{%- endif -%}
- {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | img_url: '940x' }} 940w,{%- endif -%}
- {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | img_url: '1066x' }} 1066w{%- endif -%}"
- src="{{ product.featured_media | img_url: '533x' }}"
+ <img srcset="{%- if product.media[1].width >= 165 -%}{{ product.media[1] | img_url: '165x' }} 165w,{%- endif -%}
+ {%- if product.media[1].width >= 360 -%}{{ product.media[1] | img_url: '360x' }} 360w,{%- endif -%}
+ {%- if product.media[1].width >= 533 -%}{{ product.media[1] | img_url: '533x' }} 533w,{%- endif -%}
+ {%- if product.media[1].width >= 720 -%}{{ product.media[1] | img_url: '720x' }} 720w,{%- endif -%}
+ {%- if product.media[1].width >= 940 -%}{{ product.media[1] | img_url: '940x' }} 940w,{%- endif -%}
+ {%- if product.media[1].width >= 1066 -%}{{ product.media[1] | img_url: '1066x' }} 1066w{%- endif -%}"
+ src="{{ product.media[1] | img_url: '533x' }}"
  sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
- alt="{{ product.featured_media.alt | escape }}"
+ alt="{{ product.media[1].alt | escape }}"
  loading='lazy'
- class="ecom-collection__product-media-image"
- width="{{ product.featured_media.width }}"
- height="{{ product.featured_media.height }}"
+ class="ecom-collection__product-secondary-media"
+ width="{{ product.media[1].width }}"
+ height="{{ product.media[1].height }}"
  />
  {%- endif -%}
  
  </div>
  </div>
-
-
-   
  {% else %}
  <div class="ecom-collection__product-media--container">
  <div class="ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt"
@@ -949,6 +907,8 @@
  "filters_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
  "reset_filter_tpy5db6wzrk_html": "Resetovat",
  "max_price_text_tpy5db6wzrk_html": "Maxim\u00e1ln\u00ed cena",
+ "filter_title_tpy5db6wzrk_html": "Filter ",
+ "sortting_title_jp6s1euv9u_html": " ",
  "product_option_swatch_up0bxdqndd_html": "Color",
  "added_cart_text_up0bxdqndd_html": "Added to cart",
  "added_cart_message_up0bxdqndd_html": "Added to cart",
@@ -959,8 +919,6 @@
  "sale_badge_up0bxdqndd_html": "-{{sale}}%",
  "countdown_title_up0bxdqndd_html": "Hurry up! The sale will end on",
  "no_product_item_up0bxdqndd_html": "There are no product yet!",
- "filter_title_tpy5db6wzrk_html": "Filter ",
- "sortting_title_jp6s1euv9u_html": " ",
  "text_week_up0bxdqndd_html": "[%-W] week%!W",
  "text_day_up0bxdqndd_html": "[%-d] day%!D",
  "text_hour_up0bxdqndd_html": "[%-H] hr%!H",
@@ -976,6 +934,8 @@
  "filters_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
  "reset_filter_tpy5db6wzrk_html": "Resetovat",
  "max_price_text_tpy5db6wzrk_html": "Maxim\u00e1ln\u00ed cena",
+ "filter_title_tpy5db6wzrk_html": "Filter ",
+ "sortting_title_jp6s1euv9u_html": " ",
  "product_option_swatch_up0bxdqndd_html": "Color",
  "added_cart_text_up0bxdqndd_html": "Added to cart",
  "added_cart_message_up0bxdqndd_html": "Added to cart",
@@ -986,8 +946,6 @@
  "sale_badge_up0bxdqndd_html": "-{{sale}}%",
  "countdown_title_up0bxdqndd_html": "Hurry up! The sale will end on",
  "no_product_item_up0bxdqndd_html": "There are no product yet!",
- "filter_title_tpy5db6wzrk_html": "Filter ",
- "sortting_title_jp6s1euv9u_html": " ",
  "text_week_up0bxdqndd_html": "[%-W] week%!W",
  "text_day_up0bxdqndd_html": "[%-d] day%!D",
  "text_hour_up0bxdqndd_html": "[%-H] hr%!H",
