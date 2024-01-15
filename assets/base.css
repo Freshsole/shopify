@@ -4009,17 +4009,3 @@ text-decoration: none;
   transition: none !important;
   /* Add any additional styles to override hover effects if necessary */
 }
-
-.ecom-collection__product-media-image:hover{
-  display:block !important;
-  pointer-events: none;
-}
-
-.ecom-collection__product-secondary-media {
-    display: none !important;
-  pointer-events: none;
-}
-
-.ecom-collection__product-media:hover {
-    pointer-events: none;
-}
