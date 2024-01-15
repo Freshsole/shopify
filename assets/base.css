@@ -4010,6 +4010,10 @@ text-decoration: none;
   /* Add any additional styles to override hover effects if necessary */
 }
 
+.ecom-collection__product-media {
+    pointer-events: none;
+}
+
 .ecom-collection__product-secondary-media {
     visibility: hidden;
 }
