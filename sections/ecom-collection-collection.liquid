@@ -2,7 +2,7 @@
  EComposer (https://ecomposer.io)
  You SHOULD NOT modify source code in this page because
  It is automatically generated from EComposer
- At 2024-01-15 20:52:37
+ At 2024-01-14 23:01:28
  {% endcomment %} 
  
  {% assign ecom_root_url = routes.root_url %}
@@ -38,8 +38,43 @@
  endif
  endif
  %}
- <section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block"><div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
- {%- if EComBuilderMode -%}
+ {%- if collection.image -%}
+  {% capture collection_image %}{{ collection.image | img_url: 'master' }}{% endcapture %}
+{% else %}
+  {% capture collection_image %}https://placeholder-url.com/placeholder-image.jpg{% endcapture %}
+{% endif %}
+
+ <section id="dynamic-background" class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background-size: cover;">
+  <div data-deep="1" class="core__row--columns">
+    <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
+      <div class="core__column--wrapper">
+        <div class="core__blocks" index="0">
+          <div class="core__blocks--body">
+            <div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block">
+              <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
+                
+<style>
+  /* Style for larger screens (greater than 880px) */
+  @media only screen and (min-width: 881px) {
+    #dynamic-background {
+      background: url('{{ collection_image }}') no-repeat center center;
+    }
+    .mobile-banner {
+      display: none; /* Hide mobile banner on larger screens */
+    }
+  }
+
+  /* Style for smaller screens (less than or equal to 880px) */
+  @media only screen and (max-width: 880px) {
+    #dynamic-background {
+      background: url('{{ collection.metafields.custom.url }}') no-repeat center center;
+    }
+    .desktop-banner {
+      display: none; /* Hide desktop banner on smaller screens */
+    }
+  }
+</style>
+{%- if EComBuilderMode -%}
  {% capture page_type %}collection{% endcapture %}
  {%- else -%}
  {%- assign page_type = request.page_type %}
@@ -124,7 +159,7 @@
  endif
  endif
  %}
- <section class="ecom-row ecom-core ecom-section ecom-waiksxax8i" data-id="ecom-waiksxax8i" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-2uxpfzmd"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-dudtfsd3hhi" data-core-is="row"><div class="ecom-row ecom-core core__block ecom-iqzw6e0xzbs" data-id="ecom-iqzw6e0xzbs" style="z-index: inherit;"><div data-deep="2" class="core__row--columns"><div class="ecom-column ecom-core core__column--first ecom-dse3p9tbixp"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block ecom-tpy5db6wzrk" data-core-is="block" id="#filters"><div class="ecom-element ecom-collection ecom-collection__filters" deep="2"><div class="ecom-collection__filters-wrapper"><div class="ecom-collection__filters-container ecom-collection__filters-dropdown"><button id="button_menu_block" class="ecom-button-filter-collapse button_menu_block--mobile" type="button"><span class="ecom-filter-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M 5 4 L 5 6.34375 L 5.21875 6.625 L 13 16.34375 L 13 28 L 14.59375 26.8125 L 18.59375 23.8125 L 19 23.5 L 19 16.34375 L 26.78125 6.625 L 27 6.34375 L 27 4 Z M 7.28125 6 L 24.71875 6 L 17.53125 15 L 14.46875 15 Z M 15 17 L 17 17 L 17 22.5 L 15 24 Z"></path></svg></span><span>Filter </span></button><div id="ecom-modal-block" class="ecom-modal-block--mobile"><div class="ecom-modal-content--mobile ecom-scroll_bar ecom-modal-content"><div class="modal-header"><span id="ecom-modal-close" class="ecom-collapse-close ecom-collapse-close--mobile"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></span></div><h3 class="ecom-collection__filters-heading">{{ 'sections.ecom-collection-collection.filter_title_tpy5db6wzrk_html' | t }}</h3><form method="GET" class="ecom-collection__filters-form ecom-click" data-stopdrag="true">
+ <section class="ecom-row ecom-core ecom-section ecom-mwhw84s4lag" data-id="ecom-mwhw84s4lag" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-2uxpfzmd"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-dudtfsd3hhi" data-core-is="row"><div class="ecom-row ecom-core core__block ecom-iqzw6e0xzbs" data-id="ecom-iqzw6e0xzbs" style="z-index: inherit;"><div data-deep="2" class="core__row--columns"><div class="ecom-column ecom-core core__column--first ecom-dse3p9tbixp"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block ecom-tpy5db6wzrk" data-core-is="block" id="#filters"><div class="ecom-element ecom-collection ecom-collection__filters" deep="2"><div class="ecom-collection__filters-wrapper"><div class="ecom-collection__filters-container ecom-collection__filters-dropdown"><button id="button_menu_block" class="ecom-button-filter-collapse button_menu_block--mobile" type="button"><span class="ecom-filter-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M 5 4 L 5 6.34375 L 5.21875 6.625 L 13 16.34375 L 13 28 L 14.59375 26.8125 L 18.59375 23.8125 L 19 23.5 L 19 16.34375 L 26.78125 6.625 L 27 6.34375 L 27 4 Z M 7.28125 6 L 24.71875 6 L 17.53125 15 L 14.46875 15 Z M 15 17 L 17 17 L 17 22.5 L 15 24 Z"></path></svg></span><span>Filter </span></button><div id="ecom-modal-block" class="ecom-modal-block--mobile"><div class="ecom-modal-content--mobile ecom-scroll_bar ecom-modal-content"><div class="modal-header"><span id="ecom-modal-close" class="ecom-collapse-close ecom-collapse-close--mobile"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></span></div><h3 class="ecom-collection__filters-heading">{{ 'sections.ecom-collection-collection.filter_title_tpy5db6wzrk_html' | t }}</h3><form method="GET" class="ecom-collection__filters-form ecom-click" data-stopdrag="true">
  
  {% if template contains '.' %}
  <input type="hidden" name="view" value="{{template | split: '.' | last }}" />
@@ -409,7 +444,7 @@
  -%}
  
  
- {%- capture limit-%}15{% endcapture %}
+ {%- capture limit-%}12{% endcapture %}
  {%- if limit == blank -%}
  {% assign limit = 12 %}
  {% else %}
@@ -535,10 +570,14 @@
  assign featured_media_aspect_ratio = 1
  endif
  -%}
+
+
+
+   
  <div class="ecom-collection__product-media--container">
  <div
  class="ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
- {% if product.media[1] != nil %}ecom-collection__product-media--hover-effect{% endif %}"
+ {% if product.media[1] != nil %}{% endif %}"
  style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"
  
  >
@@ -558,24 +597,27 @@
  />
  
  {%- if product.media[1] != nil -%}
- <img srcset="{%- if product.media[1].width >= 165 -%}{{ product.media[1] | img_url: '165x' }} 165w,{%- endif -%}
- {%- if product.media[1].width >= 360 -%}{{ product.media[1] | img_url: '360x' }} 360w,{%- endif -%}
- {%- if product.media[1].width >= 533 -%}{{ product.media[1] | img_url: '533x' }} 533w,{%- endif -%}
- {%- if product.media[1].width >= 720 -%}{{ product.media[1] | img_url: '720x' }} 720w,{%- endif -%}
- {%- if product.media[1].width >= 940 -%}{{ product.media[1] | img_url: '940x' }} 940w,{%- endif -%}
- {%- if product.media[1].width >= 1066 -%}{{ product.media[1] | img_url: '1066x' }} 1066w{%- endif -%}"
- src="{{ product.media[1] | img_url: '533x' }}"
+ <img srcset="{%- if product.featured_media.width >= 165 -%}{{ product.featured_media | img_url: '165x' }} 165w,{%- endif -%}
+ {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | img_url: '360x' }} 360w,{%- endif -%}
+ {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | img_url: '533x' }} 533w,{%- endif -%}
+ {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | img_url: '720x' }} 720w,{%- endif -%}
+ {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | img_url: '940x' }} 940w,{%- endif -%}
+ {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | img_url: '1066x' }} 1066w{%- endif -%}"
+ src="{{ product.featured_media | img_url: '533x' }}"
  sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
- alt="{{ product.media[1].alt | escape }}"
+ alt="{{ product.featured_media.alt | escape }}"
  loading='lazy'
- class="ecom-collection__product-secondary-media"
- width="{{ product.media[1].width }}"
- height="{{ product.media[1].height }}"
+ class="ecom-collection__product-media-image"
+ width="{{ product.featured_media.width }}"
+ height="{{ product.featured_media.height }}"
  />
  {%- endif -%}
  
  </div>
  </div>
+
+
+   
  {% else %}
  <div class="ecom-collection__product-media--container">
  <div class="ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt"
@@ -901,7 +943,7 @@
  "locales": {
  "cs": {
  "breadcrumbs_home_uc1dqqcx1hm_html": "Home",
- "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry:",
+ "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry",
  "clear_all_title_tpy5db6wzrk_html": "Vymazat v\u0161e",
  "filter_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
  "filters_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
@@ -928,7 +970,7 @@
  },
  "en": {
  "breadcrumbs_home_uc1dqqcx1hm_html": "Home",
- "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry:",
+ "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry",
  "clear_all_title_tpy5db6wzrk_html": "Vymazat v\u0161e",
  "filter_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
  "filters_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
