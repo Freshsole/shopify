@@ -272,10 +272,9 @@
   
   {% render 'shogun-head' %}
 {% render 'gp-head' %}
-{% include 'mezereon-header-script' %}
 </head>
 
-  <body class="{% if content_for_header contains '.mezereon' and shop.metafields.mezereon.status == 'enabled' %} mezereon {% endif %}gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -341,6 +340,5 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  {%- render "ecom_footer"-%}{% include 'mezereon-end-of-body' %}
-</body>
+  {%- render "ecom_footer"-%}</body>
 </html>
