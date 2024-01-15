@@ -4017,3 +4017,7 @@ text-decoration: none;
 .ecom-collection__product-secondary-media {
     display: none !important;
 }
+
+.ecom-collection__product-media:hover {
+    pointer-events: none;
+}
