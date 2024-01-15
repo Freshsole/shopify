@@ -3899,6 +3899,8 @@ text-decoration: none;
 .rte a {
 
     text-decoration: none !important;
+    font-size:16px !important;
+    font-weight: 600 !important;
 }
 
 /* Cookies border */
