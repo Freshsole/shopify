@@ -41,10 +41,10 @@
  {%- if collection.image -%}
   {% capture collection_image %}{{ collection.image | img_url: 'master' }}{% endcapture %}
 {% else %}
-  {% capture collection_image %}https://placeholder-url.com/placeholder-image.jpg{% endcapture %}
+  {% capture collection_image %}https://cdn.myshoptet.com/usr/www.bbns.cz/user/shop/big/3708_snimek-obrazovky-2023-02-03-v--20-58-38.png?63dd8eac{% endcapture %}
 {% endif %}
 
-<section id="dynamic-background" class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background-size: cover;">
+ <section id="dynamic-background" class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit; background-size: cover;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od">
       <div class="core__column--wrapper">
@@ -54,13 +54,11 @@
               <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
                 
 <style>
-  #dynamic-background {
-    background: url('{{ collection_image | default: 'https://cdn.myshoptet.com/usr/www.bbns.cz/user/shop/big/3708_snimek-obrazovky-2023-02-03-v--20-58-38.png?63dd8eac' }}') no-repeat center center;
-    background-size: cover;
-  }
-
   /* Style for larger screens (greater than 880px) */
   @media only screen and (min-width: 881px) {
+    #dynamic-background {
+      background: url('{{ collection_image }}') no-repeat center center;
+    }
     .mobile-banner {
       display: none; /* Hide mobile banner on larger screens */
     }
@@ -69,15 +67,13 @@
   /* Style for smaller screens (less than or equal to 880px) */
   @media only screen and (max-width: 880px) {
     #dynamic-background {
-      background: url('{{ collection.metafields.custom.url | default: 'https://cdn.myshoptet.com/usr/www.bbns.cz/user/shop/big/3708_snimek-obrazovky-2023-02-03-v--20-58-38.png?63dd8eac' }}') no-repeat center center;
+      background: url('{{ collection.metafields.custom.url }}') no-repeat center center;
     }
     .desktop-banner {
       display: none; /* Hide desktop banner on smaller screens */
     }
   }
 </style>
-
-
 {%- if EComBuilderMode -%}
  {% capture page_type %}collection{% endcapture %}
  {%- else -%}
