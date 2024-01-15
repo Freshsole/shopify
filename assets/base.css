@@ -4011,3 +4011,8 @@ text-decoration: none;
   transition: none !important;
   /* Add any additional styles to override hover effects if necessary */
 }
+
+/* Ecom margin filtry top */
+.ecom-core.ecom-iqzw6e0xzbs div.core__row--columns {
+    margin-top: 15px;
+}
