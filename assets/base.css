@@ -4013,3 +4013,7 @@ text-decoration: none;
 .ecom-collection__product-secondary-media {
     display: none;
 }
+
+.ecom-collection__product-media:hover .ecom-collection__product-secondary-media {
+    display: block; /* or any other display value you want */
+}
