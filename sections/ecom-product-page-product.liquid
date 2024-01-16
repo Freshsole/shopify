@@ -1096,11 +1096,8 @@
                               {% if targetCollection %}
                                 {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
                                 <div
-                                  class="ecom-items tabs__nav number4"
+                                  class="ecom-items tabs__nav number4{% unless imageChartText != '' %} ProductHidden{% endunless %}"
                                   data-target=""
-                                  {% unless imageChartText != '' %}
-                                    style="display: none;"
-                                  {% endunless %}
                                 >
                                   <div class="tabs_nav--content_right">
                                     <div class="tabs_nav--content">
