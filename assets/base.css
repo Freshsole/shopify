@@ -4085,6 +4085,10 @@ text-decoration: none;
     margin-right: 10px !important;
 }
 
+.facet-filters__label {
+    margin-top: -10px;
+}
+
 .facet-filters__sort+.icon-caret {
     right: calc(var(--inputs-border-width) + 1.5rem) !important;
 }
