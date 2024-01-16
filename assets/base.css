@@ -4123,10 +4123,6 @@ text-decoration: none;
     font-weight: 700!important;
     text-align: left!important;
     margin-top: -15px!important;
-}
-
-
-.card card--standard .card--media{
     pointer-events:none
 }
 
