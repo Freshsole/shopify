@@ -1348,7 +1348,7 @@
                                         class="ecom__element ecom-element element__text"
                                         data-stopdrag=""
                                         deep="1"
-                                        style="white-space: nowrap; overflow-x: auto;"
+                                        style="white-space: nowrap; overflow-x: auto; display: flex;"
                                       >
                                         {% if targetCollection %}
                                           {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
@@ -1356,7 +1356,11 @@
 
                                           {% for imageLink in imageLinks %}
                                             {% if imageLink != '' %}
-                                              <img src="{{ imageLink }}" alt="Image" style="margin-right: 10px;">
+                                              <img
+                                                src="{{ imageLink }}"
+                                                alt="Image"
+                                                style="max-width: 100%; height: auto; margin-right: 10px;"
+                                              >
                                             {% endif %}
                                           {% endfor %}
                                         {% else %}
