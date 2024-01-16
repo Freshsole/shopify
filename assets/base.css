@@ -4085,10 +4085,13 @@ text-decoration: none;
     margin-right: 10px !important;
 }
 
-.facet-filters__field .select__select, .mobile-facets__sort .select__select {
-    padding-right: 10;
-}
-
 .facet-filters__sort+.icon-caret {
     right: calc(var(--inputs-border-width) + 1.5rem) !important;
+}
+
+.facet-filters__field .select__select, .mobile-facets__sort .select__select {
+    padding-right: 10;
+    font-size: 16px;
+    font-weight: 600;
+    color: black !important;
 }
