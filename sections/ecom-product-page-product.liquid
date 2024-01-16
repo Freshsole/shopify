@@ -1109,7 +1109,7 @@
                                   var number4Element = document.querySelector('.ecom-items.number4');
 
                                   // Check if the metafield is empty and add the class dynamically
-                                  var imageChartText = "{{ targetCollection.metafields.custom.imagechart | escape }}";
+                                  var imageChartText = "{{ targetCollection.metafields.custom.imagechart | json | replace: '"', '\"' }}";
                                   if (imageChartText.trim() === '') {
                                     number4Element.classList.add('ProductHidden');
                                   }
