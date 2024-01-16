@@ -4084,3 +4084,7 @@ text-decoration: none;
     font-family: 'Poppins';
     margin-right: 10px !important;
 }
+
+.facet-filters__field .select__select, .mobile-facets__sort .select__select {
+    padding-right: 0;
+}
