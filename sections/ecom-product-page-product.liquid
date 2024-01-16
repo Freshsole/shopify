@@ -1257,32 +1257,49 @@
                                 <div class="core__blocks" index="2">
                                   <div class="core__blocks--body">
                                     {% assign targetCollectionTag = collection.metafields.custom.brand_tag %}
+                                    {% assign brandProduct = null %}
 
                                     {% for product in collection.products %}
                                       {% if product.tags contains targetCollectionTag %}
-                                        <!-- Add your brand information here for the product with matching tags -->
-                                        <div
-                                          class="ecom-block ecom-core core__block elmspace ecom-brand-info"
-                                          data-core-is="block"
-                                        >
-                                          <div
-                                            class="ecom__element element__heading ecom-element ecom-html"
-                                            data-stopdrag="true"
-                                            deep="1"
-                                          >
-                                            <h3 class="ecom__heading ecom-db">{{ product.title }}</h3>
-                                          </div>
-                                          <div
-                                            class="ecom__element ecom-element element__text"
-                                            data-stopdrag=""
-                                            deep="1"
-                                          >
-                                            Brand: {{ targetCollectionTag }}
-                                          </div>
-                                        </div>
-                                        <!-- End of brand information -->
+                                        {% assign brandProduct = product %}
+                                        {% break %}
                                       {% endif %}
                                     {% endfor %}
+
+                                    {% if brandProduct %}
+                                      <!-- Add your brand information here for the product with matching tags -->
+                                      <div
+                                        class="ecom-block ecom-core core__block elmspace ecom-brand-info"
+                                        data-core-is="block"
+                                      >
+                                        <div
+                                          class="ecom__element element__heading ecom-element ecom-html"
+                                          data-stopdrag="true"
+                                          deep="1"
+                                        >
+                                          <h3 class="ecom__heading ecom-db">{{ brandProduct.title }}</h3>
+                                        </div>
+                                        <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
+                                          Brand: {{ targetCollectionTag }}
+                                        </div>
+                                      </div>
+                                      <!-- End of brand information -->
+                                    {% else %}
+                                      <!-- Display this if no matching product is found -->
+                                      <div
+                                        class="ecom-block ecom-core core__block elmspace ecom-brand-info"
+                                        data-core-is="block"
+                                      >
+                                        <div
+                                          class="ecom__element element__heading ecom-element ecom-html"
+                                          data-stopdrag="true"
+                                          deep="1"
+                                        >
+                                          <h3 class="ecom__heading ecom-db">No brand information found</h3>
+                                        </div>
+                                      </div>
+                                      <!-- End of no brand information -->
+                                    {% endif %}
                                   </div>
                                 </div>
                               </div>
@@ -1655,7 +1672,7 @@
                                                             <div class="ecom-collection__product-media--container">
                                                               <div
                                                                 class="
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
                                                                 "
                                                                 style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"
                                                               >
