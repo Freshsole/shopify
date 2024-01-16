@@ -1345,8 +1345,9 @@
                                       data-core-is="block"
                                     >
                                       <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
-                                        {% assign sizeChart = targetCollection.metafields.custom.sizechart %}
-                                        {{ sizeChart | json }}
+                                        {% assign sizeChart = targetCollection.metafields.custom.sizechart
+                                          | json_parse
+                                        %}
                                         {% if sizeChart %}
                                           <table>
                                             <thead>
@@ -1358,14 +1359,12 @@
                                               </tr>
                                             </thead>
                                             <tbody>
-                                              {% for row in sizeChart %}
-                                                {% if forloop.first %}
-                                                  {% assign columns = row | keys %}
-                                                {% endif %}
+                                              {% for size in sizeChart.mens %}
                                                 <tr>
-                                                  {% for column in columns %}
-                                                    <td>{{ row[column] }}</td>
-                                                  {% endfor %}
+                                                  <td>{{ size.eur }}</td>
+                                                  <td>{{ size.us }}</td>
+                                                  <td>{{ size.uk }}</td>
+                                                  <td>{{ size.cm }}</td>
                                                 </tr>
                                               {% endfor %}
                                             </tbody>
