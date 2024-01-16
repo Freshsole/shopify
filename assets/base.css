@@ -4090,5 +4090,5 @@ text-decoration: none;
 }
 
 .facet-filters__sort+.icon-caret {
-    right: 3 !important;
+    right: none !important;
 }
