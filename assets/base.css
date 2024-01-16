@@ -4090,5 +4090,5 @@ text-decoration: none;
 }
 
 .facet-filters__sort+.icon-caret {
-    right: none !important;
+    right: calc(var(--inputs-border-width) + 1.5rem) !important;
 }
