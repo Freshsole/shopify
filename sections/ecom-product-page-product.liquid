@@ -1143,6 +1143,7 @@
                               </div>
                             </div>
 
+                            {% if isTabActive %}
                             <div
                               id="ecom-5of0211gh7r"
                               class="core__group--item tab__item"
@@ -1189,6 +1190,15 @@
                                     </div>
                                   </div>
                                 </div>
+                                {% else %}
+  <style>
+    #ecom-5of0211gh7r {
+      display: none;
+    }
+  </style>
+{% endif %}
+
+                                
 
                                 <div
                                   class="core__blocks"
