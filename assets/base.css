@@ -4125,7 +4125,8 @@ text-decoration: none;
     margin-top: -15px!important;
 }
 
-.full-unstyled-link:hover {
+
+.card card--standard .card--media{
     pointer-events:none
 }
 
