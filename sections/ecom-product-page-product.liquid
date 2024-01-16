@@ -1095,18 +1095,22 @@
 
                               {% if targetCollection %}
                                 {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
-                                {% if imageChartText != '' %}
-                                  <div class="ecom-items tabs__nav number4" data-target="">
-                                    <div class="tabs_nav--content_right">
-                                      <div class="tabs_nav--content">
-                                        <h3 class="tabs_nav--text ecom-items--text">
-                                          {{ 'sections.ecom-product-page-product.tabtitle3_xbg78kqex4f_html' | t }}
-                                        </h3>
-                                      </div>
-                                      <div class="tabs_nav--sub-text"></div>
+                                <div
+                                  class="ecom-items tabs__nav number4"
+                                  data-target=""
+                                  {% unless imageChartText != '' %}
+                                    style="display: none;"
+                                  {% endunless %}
+                                >
+                                  <div class="tabs_nav--content_right">
+                                    <div class="tabs_nav--content">
+                                      <h3 class="tabs_nav--text ecom-items--text">
+                                        {{ 'sections.ecom-product-page-product.tabtitle3_xbg78kqex4f_html' | t }}
+                                      </h3>
                                     </div>
+                                    <div class="tabs_nav--sub-text"></div>
                                   </div>
-                                {% endif %}
+                                </div>
                               {% else %}
                                 <p>No target collection found.</p>
                               {% endif %}
