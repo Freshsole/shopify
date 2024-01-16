@@ -1352,7 +1352,7 @@
                                             <p>Debug: {{ targetCollection.metafields.custom.sizechart }}</p>
                                             <!-- Display the size chart for debugging -->
                                             {% assign sizeChart = targetCollection.metafields.custom.sizechart %}
-                                            {% if sizeChart and sizeChart.mens %}
+                                            {% if sizeChart.mens != null %}
                                               <table>
                                                 <thead>
                                                   <tr>
