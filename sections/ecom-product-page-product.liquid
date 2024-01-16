@@ -1348,29 +1348,16 @@
                                         <!-- Debugging: Output the structure of the sizechart field -->
                                         <pre>{{ targetCollection.metafields.custom.sizechart | inspect }}</pre>
 
-                                        <table>
-                                          <thead>
-                                            <tr>
-                                              <th>EUR</th>
-                                              <th>US</th>
-                                              <th>UK</th>
-                                              <th>CM</th>
-                                            </tr>
-                                          </thead>
-                                          <tbody>
-                                            {% assign sizeChart = targetCollection.metafields.custom.sizechart.data %}
-                                            {% for group in sizeChart %}
-                                              {% for size in group.data %}
-                                                <tr>
-                                                  <td>{{ size.EUR }}</td>
-                                                  <td>{{ size.US }}</td>
-                                                  <td>{{ size.UK }}</td>
-                                                  <td>{{ size.CM }}</td>
-                                                </tr>
-                                              {% endfor %}
-                                            {% endfor %}
-                                          </tbody>
-                                        </table>
+                                        {% assign sizeChart = targetCollection.metafields.custom.sizechart.data %}
+                                        {% for group in sizeChart %}
+                                          {% for size in group.data %}
+                                            {{ size.EUR }}
+                                            {{ size.US }}
+                                            {{ size.UK }}
+                                            {{ size.CM }}
+                                            <br>
+                                          {% endfor %}
+                                        {% endfor %}
                                       </div>
                                     </div>
                                   </div>
