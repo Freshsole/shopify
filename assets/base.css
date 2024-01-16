@@ -4086,5 +4086,9 @@ text-decoration: none;
 }
 
 .facet-filters__field .select__select, .mobile-facets__sort .select__select {
-    padding-right: 0;
+    padding-right: 10;
+}
+
+.facet-filters__sort+.icon-caret {
+    right: 3 !important;
 }
