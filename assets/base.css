@@ -4186,5 +4186,5 @@ text-decoration: none;
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
-    border: 1px solid #eaeaea;
+    border: 1px solid #eaeaea !important;
 }
