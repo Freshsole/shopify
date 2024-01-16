@@ -1322,41 +1322,62 @@
                               {% endif %}
                             {% endfor %}
 
-                            <div class="size-chart">
-                              {% assign sizeChartText = targetCollection.metafields.custom.sizechart %}
-                              {% assign rows = sizeChartText | newline_to_br | split: '<br />' %}
+                            <div id="ecom-pbm6uh13e39" class="core__group--item tab__item" data-id="ecom-pbm6uh13e39">
+                              <div class="core__group--body tabs__body">
+                                <div class="core__blocks" index="3">
+                                  <div class="core__blocks--body">
+                                    <div
+                                      class="ecom-block ecom-core core__block elmspace ecom-c5bg033ijpl"
+                                      data-core-is="block"
+                                    >
+                                      <div
+                                        class="ecom__element element__heading ecom-element ecom-html"
+                                        data-stopdrag="true"
+                                        deep="1"
+                                      >
+                                        <h3 class="ecom__heading ecom-db">
+                                          {{ 'sections.ecom-product-page-product.headingtext_c5bg033ijpl_html' | t }}
+                                        </h3>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="ecom-block ecom-core core__block elmspace ecom-fb43t1cm325"
+                                      data-core-is="block"
+                                    >
+                                      <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
+                                        {% assign sizeChartText = targetCollection.metafields.custom.sizechart %}
+                                        {% assign rows = sizeChartText | newline_to_br | split: '<br />' %}
 
-                              {% assign gender = '' %}
-
-                              <table>
-                                <thead>
-                                  <tr>
-                                    <th>Size</th>
-                                    <th>EUR</th>
-                                    <th>US</th>
-                                    <th>UK</th>
-                                    <th>CM</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  {% for row in rows %}
-                                    {% assign columns = row | split: ' ' %}
-                                    {% if columns.size > 1 %}
-                                      {% if columns[0] == 'EUR' %}
-                                        {% assign gender = columns[1] %}
-                                      {% else %}
-                                        <tr>
-                                          <td>{{ gender }} - {{ productBrand }}</td>
-                                          <td>{{ columns[0] }}</td>
-                                          <td>{{ columns[1] }}</td>
-                                          <td>{{ columns[2] }}</td>
-                                          <td>{{ columns[3] }}</td>
-                                        </tr>
-                                      {% endif %}
-                                    {% endif %}
-                                  {% endfor %}
-                                </tbody>
-                              </table>
+                                        <table>
+                                          <thead>
+                                            <tr>
+                                              <th>Gender</th>
+                                              <th>EUR</th>
+                                              <th>US</th>
+                                              <th>UK</th>
+                                              <th>CM</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            {% for row in rows %}
+                                              {% assign columns = row | split: ' ' %}
+                                              {% if columns.size > 1 %}
+                                                <tr>
+                                                  <td>{{ targetCollection.gender }}</td>
+                                                  <td>{{ columns[0] }}</td>
+                                                  <td>{{ columns[1] }}</td>
+                                                  <td>{{ columns[2] }}</td>
+                                                  <td>{{ columns[3] }}</td>
+                                                </tr>
+                                              {% endif %}
+                                            {% endfor %}
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <a></a>
