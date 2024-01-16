@@ -4020,3 +4020,22 @@ text-decoration: none;
 .ecom-core.ecom-tpy5db6wzrk .ecom-modal-content {
     margin-top: 20px!important;
 }
+ /* SEARCH PAGE */
+
+/* filtry left */
+
+.facets__disclosure {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    margin-top: -10px;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins';
+}
+
