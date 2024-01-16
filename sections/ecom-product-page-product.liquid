@@ -1346,6 +1346,7 @@
                                     >
                                       <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
                                         {% assign sizeChart = targetCollection.metafields.custom.sizechart %}
+                                        {{ sizeChart | json }}
                                         {% if sizeChart %}
                                           <table>
                                             <thead>
