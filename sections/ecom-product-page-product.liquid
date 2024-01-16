@@ -1359,13 +1359,15 @@
                                           </thead>
                                           <tbody>
                                             {% assign sizeChart = targetCollection.metafields.custom.sizechart.data %}
-                                            {% for size in sizeChart %}
-                                              <tr>
-                                                <td>{{ size.EUR }}</td>
-                                                <td>{{ size.US }}</td>
-                                                <td>{{ size.UK }}</td>
-                                                <td>{{ size.CM }}</td>
-                                              </tr>
+                                            {% for group in sizeChart %}
+                                              {% for size in group.data %}
+                                                <tr>
+                                                  <td>{{ size.EUR }}</td>
+                                                  <td>{{ size.US }}</td>
+                                                  <td>{{ size.UK }}</td>
+                                                  <td>{{ size.CM }}</td>
+                                                </tr>
+                                              {% endfor %}
                                             {% endfor %}
                                           </tbody>
                                         </table>
