@@ -1345,39 +1345,31 @@
                                       data-core-is="block"
                                     >
                                       <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
-                                        <div class="text-content ecom-html has-drop-cap-view-default">
-                                          {% if targetCollection %}
-                                            <p>Brand: {{ productBrand }}</p>
-                                            <p>Target Collection: {{ targetCollection.title }}</p>
-                                            {% assign sizeChart = targetCollection.metafields.custom.sizechart %}
-                                            {% if sizeChart.mens != null %}
-                                              <table>
-                                                <thead>
-                                                  <tr>
-                                                    <th>EUR</th>
-                                                    <th>US</th>
-                                                    <th>UK</th>
-                                                    <th>CM</th>
-                                                  </tr>
-                                                </thead>
-                                                <tbody>
-                                                  {% for size in sizeChart.mens %}
-                                                    <tr>
-                                                      <td>{{ size.eur }}</td>
-                                                      <td>{{ size.us }}</td>
-                                                      <td>{{ size.uk }}</td>
-                                                      <td>{{ size.cm }}</td>
-                                                    </tr>
-                                                  {% endfor %}
-                                                </tbody>
-                                              </table>
-                                            {% else %}
-                                              No size chart available for men.
-                                            {% endif %}
-                                          {% else %}
-                                            No brand information found.
-                                          {% endif %}
-                                        </div>
+                                        {% assign sizeChart = targetCollection.metafields.custom.sizechart %}
+                                        {% if sizeChart %}
+                                          <table>
+                                            <thead>
+                                              <tr>
+                                                <th>EUR</th>
+                                                <th>US</th>
+                                                <th>UK</th>
+                                                <th>CM</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              {% for size in sizeChart.mens %}
+                                                <tr>
+                                                  <td>{{ size.eur }}</td>
+                                                  <td>{{ size.us }}</td>
+                                                  <td>{{ size.uk }}</td>
+                                                  <td>{{ size.cm }}</td>
+                                                </tr>
+                                              {% endfor %}
+                                            </tbody>
+                                          </table>
+                                        {% else %}
+                                          No size chart available.
+                                        {% endif %}
                                       </div>
                                     </div>
                                   </div>
@@ -1720,7 +1712,7 @@
                                                             <div class="ecom-collection__product-media--container">
                                                               <div
                                                                 class="
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
                                                                 "
                                                                 style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"
                                                               >
