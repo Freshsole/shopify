@@ -4169,6 +4169,7 @@ text-decoration: none;
     font-size: 22px;
     font-weight: 600;
     text-decoration:underline 2px solid black;
+    margin-bottom: 5px;
 }
 
 .ProductBrandDescription
