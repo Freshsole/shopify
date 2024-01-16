@@ -1083,37 +1083,16 @@
                                   <div class="tabs_nav--sub-text"></div>
                                 </div>
                               </div>
-                              {% assign productBrand = product.tags | first %}
-                              {% assign targetCollection = null %}
-
-                              {% for collection in collections %}
-                                {% if collection.metafields.custom.brand_tag == productBrand %}
-                                  {% assign targetCollection = collection %}
-                                  {% break %}
-                                {% endif %}
-                              {% endfor %}
-
-                              {% if targetCollection %}
-                                {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
-                                <div
-                                  class="ecom-items tabs__nav number4"
-                                  data-target=""
-                                  {% unless imageChartText != '' %}
-                                    style="display: none;"
-                                  {% endunless %}
-                                >
-                                  <div class="tabs_nav--content_right">
-                                    <div class="tabs_nav--content">
-                                      <h3 class="tabs_nav--text ecom-items--text">
-                                        {{ 'sections.ecom-product-page-product.tabtitle3_xbg78kqex4f_html' | t }}
-                                      </h3>
-                                    </div>
-                                    <div class="tabs_nav--sub-text"></div>
+                              <div class="ecom-items tabs__nav number4" data-target="">
+                                <div class="tabs_nav--content_right">
+                                  <div class="tabs_nav--content">
+                                    <h3 class="tabs_nav--text ecom-items--text">
+                                      {{ 'sections.ecom-product-page-product.tabtitle3_xbg78kqex4f_html' | t }}
+                                    </h3>
                                   </div>
+                                  <div class="tabs_nav--sub-text"></div>
                                 </div>
-                              {% else %}
-                                <p>No target collection found.</p>
-                              {% endif %}
+                              </div>
                             </div>
                           </div>
                           <div class="core__group--items">
