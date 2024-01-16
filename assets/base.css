@@ -4022,6 +4022,14 @@ text-decoration: none;
 }
  /* SEARCH PAGE */
 
+/* Filtrovat */
+.facets__heading {
+    color: black !important;
+    font-size: 16px !important;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
 /* filtry left */
 
 .facets__disclosure {
