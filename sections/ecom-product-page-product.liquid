@@ -1344,25 +1344,15 @@
                                       class="ecom-block ecom-core core__block elmspace ecom-fb43t1cm325"
                                       data-core-is="block"
                                     >
-                                      <div
-                                        class="ecom__element ecom-element element__text"
-                                        data-stopdrag=""
-                                        deep="1"
-                                        style="display: flex;"
-                                      >
+                                      <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
                                         {% if targetCollection %}
                                           {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
                                           {% assign imageLinks = imageChartText | newline_to_br | split: '<br />' %}
 
                                           {% for imageLink in imageLinks %}
                                             {% if imageLink != '' %}
-                                              <div style="flex: 0 0 33.3333%; max-width: 33.3333%; box-sizing: border-box; margin-right: 10px;">
-                                                <img
-                                                  src="{{ imageLink }}"
-                                                  alt="Image"
-                                                  style="width: 100%; height: auto;"
-                                                >
-                                              </div>
+                                              <img src="{{ imageLink }}" alt="Image">
+                                              <br>
                                             {% endif %}
                                           {% endfor %}
                                         {% else %}
