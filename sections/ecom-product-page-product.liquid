@@ -1348,7 +1348,7 @@
                                         class="ecom__element ecom-element element__text"
                                         data-stopdrag=""
                                         deep="1"
-                                        style="white-space: nowrap; overflow-x: auto; display: flex;"
+                                        style="display: flex;"
                                       >
                                         {% if targetCollection %}
                                           {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
@@ -1356,11 +1356,13 @@
 
                                           {% for imageLink in imageLinks %}
                                             {% if imageLink != '' %}
-                                              <img
-                                                src="{{ imageLink }}"
-                                                alt="Image"
-                                                style="max-width: 100%; height: auto; margin-right: 10px;"
-                                              >
+                                              <div style="flex: 0 0 33.3333%; max-width: 33.3333%; box-sizing: border-box; margin-right: 10px;">
+                                                <img
+                                                  src="{{ imageLink }}"
+                                                  alt="Image"
+                                                  style="width: 100%; height: auto;"
+                                                >
+                                              </div>
                                             {% endif %}
                                           {% endfor %}
                                         {% else %}
