@@ -1053,7 +1053,7 @@
                         >
                           <div class="tabs__navs tabs__navs--horizontal">
                             <div class="tabs__navs--items">
-                              <div class="ecom-items tabs__nav ecom-item-active" data-target="">
+                              <div class="ecom-items tabs__nav ecom-item-active number 1" data-target="">
                                 <div class="tabs_nav--content_right">
                                   <div class="tabs_nav--content">
                                     <h3 class="tabs_nav--text ecom-items--text">
@@ -1063,7 +1063,7 @@
                                   <div class="tabs_nav--sub-text"></div>
                                 </div>
                               </div>
-                              <div class="ecom-items tabs__nav" data-target="">
+                              <div class="ecom-items tabs__nav number2" data-target="">
                                 <div class="tabs_nav--content_right">
                                   <div class="tabs_nav--content">
                                     <h3 class="tabs_nav--text ecom-items--text">
@@ -1073,7 +1073,7 @@
                                   <div class="tabs_nav--sub-text"></div>
                                 </div>
                               </div>
-                              <div class="ecom-items tabs__nav" data-target="">
+                              <div class="ecom-items tabs__nav number3" data-target="">
                                 <div class="tabs_nav--content_right">
                                   <div class="tabs_nav--content">
                                     <div class="tabs_nav--text ecom-items--text">
@@ -1083,16 +1083,33 @@
                                   <div class="tabs_nav--sub-text"></div>
                                 </div>
                               </div>
-                              <div class="ecom-items tabs__nav" data-target="">
-                                <div class="tabs_nav--content_right">
-                                  <div class="tabs_nav--content">
-                                    <h3 class="tabs_nav--text ecom-items--text">
-                                      {{ 'sections.ecom-product-page-product.tabtitle3_xbg78kqex4f_html' | t }}
-                                    </h3>
+                              {% assign productBrand = product.tags | first %}
+                              {% assign targetCollection = null %}
+
+                              {% for collection in collections %}
+                                {% if collection.metafields.custom.brand_tag == productBrand %}
+                                  {% assign targetCollection = collection %}
+                                  {% break %}
+                                {% endif %}
+                              {% endfor %}
+
+                              {% if targetCollection %}
+                                {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
+                                {% if imageChartText != '' %}
+                                  <div class="ecom-items tabs__nav number4" data-target="">
+                                    <div class="tabs_nav--content_right">
+                                      <div class="tabs_nav--content">
+                                        <h3 class="tabs_nav--text ecom-items--text">
+                                          {{ 'sections.ecom-product-page-product.tabtitle3_xbg78kqex4f_html' | t }}
+                                        </h3>
+                                      </div>
+                                      <div class="tabs_nav--sub-text"></div>
+                                    </div>
                                   </div>
-                                  <div class="tabs_nav--sub-text"></div>
-                                </div>
-                              </div>
+                                {% endif %}
+                              {% else %}
+                                <p>No target collection found.</p>
+                              {% endif %}
                             </div>
                           </div>
                           <div class="core__group--items">
@@ -1706,7 +1723,7 @@
                                                             <div class="ecom-collection__product-media--container">
                                                               <div
                                                                 class="
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
                                                                 "
                                                                 style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"
                                                               >
