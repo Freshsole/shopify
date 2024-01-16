@@ -1347,33 +1347,26 @@
                                       <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
                                         {% assign sizeChart = targetCollection.metafields.custom.sizechart %}
                                         {% if sizeChart %}
-                                          <table id="sizeTable">
+                                          <table>
                                             <thead>
                                               <tr>
-                                                <th>EUR</th>
-                                                <th>US</th>
-                                                <th>UK</th>
-                                                <th>CM</th>
+                                                {% for column in sizeChart[0] %}
+                                                  <th>{{ column[1] }}</th>
+                                                {% endfor %}
                                               </tr>
                                             </thead>
-                                            <tbody id="sizeTableBody">
-                                              <!-- Table content will be added here using JavaScript -->
+                                            <tbody>
+                                              {% assign reversedSizeChart = sizeChart | reverse %}
+                                              {% assign droppedSizeChart = reversedSizeChart | drop: 1 %}
+                                              {% for row in droppedSizeChart %}
+                                                <tr>
+                                                  {% for value in row %}
+                                                    <td>{{ value[1] }}</td>
+                                                  {% endfor %}
+                                                </tr>
+                                              {% endfor %}
                                             </tbody>
                                           </table>
-                                          <script>
-                                            var sizeTableBody = document.getElementById('sizeTableBody');
-                                            {% for size in sizeChart.mens %}
-                                              var row = sizeTableBody.insertRow();
-                                              var cell1 = row.insertCell(0);
-                                              var cell2 = row.insertCell(1);
-                                              var cell3 = row.insertCell(2);
-                                              var cell4 = row.insertCell(3);
-                                              cell1.innerHTML = "{{ size.eur }}";
-                                              cell2.innerHTML = "{{ size.us }}";
-                                              cell3.innerHTML = "{{ size.uk }}";
-                                              cell4.innerHTML = "{{ size.cm }}";
-                                            {% endfor %}
-                                          </script>
                                         {% else %}
                                           No size chart available.
                                         {% endif %}
