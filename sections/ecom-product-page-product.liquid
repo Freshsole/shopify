@@ -1350,16 +1350,20 @@
                                           <table>
                                             <thead>
                                               <tr>
-                                                {% for column in sizeChart[0] %}
-                                                  <th>{{ column[2] }}</th>
-                                                {% endfor %}
+                                                <th>EUR</th>
+                                                <th>US</th>
+                                                <th>UK</th>
+                                                <th>CM</th>
                                               </tr>
                                             </thead>
                                             <tbody>
-                                              {% for i in (1..sizeChart.size) %}
+                                              {% for row in sizeChart %}
+                                                {% if forloop.first %}
+                                                  {% assign columns = row | keys %}
+                                                {% endif %}
                                                 <tr>
-                                                  {% for column in sizeChart[0] %}
-                                                    <td>{{ sizeChart[i][column[1]] }}</td>
+                                                  {% for column in columns %}
+                                                    <td>{{ row[column] }}</td>
                                                   {% endfor %}
                                                 </tr>
                                               {% endfor %}
