@@ -1,1413 +1,618 @@
 {% comment %}
-  EComposer (https://ecomposer.io)
-  You SHOULD NOT modify source code in this page because
-  It is automatically generated from EComposer
-  At 2024-01-16 16:04:28
-{% endcomment %}
-
-{% assign ecom_root_url = routes.root_url %}
-{% if ecom_root_url != '/' %}
-  {% assign ecom_root_url = routes.root_url | append: '/' %}
-{% endif %}
-<link
-  rel="stylesheet"
-  media="print"
-  onload="this.media='all'"
-  id="ecom-vendors-slider_css"
-  href="https://cdn.ecomposer.app/vendors/css/ecom-swiper@11.css"
-
-><link
-  rel="stylesheet"
-  media="print"
-  onload="this.media='all'"
-  id="ecom-vendors-modal_css"
-  href="https://cdn.ecomposer.app/vendors/css/ecom_modal.css"
-
-><link
-  rel="stylesheet"
-  media="all"
-  id="ecom-vendors-css_ecomposer_base"
-  href="https://cdn.ecomposer.app/vendors/css/ecom-base.css?v=1.6"
-
-><noscript
-  ><link
-    rel="stylesheet"
-    media="all"
-    onload="this.media='all'"
-    id="ecom-vendors-slider_css"
-    href="https://cdn.ecomposer.app/vendors/css/ecom-swiper@11.css"
-  ><link
-    rel="stylesheet"
-    media="all"
-    onload="this.media='all'"
-    id="ecom-vendors-modal_css"
-    href="https://cdn.ecomposer.app/vendors/css/ecom_modal.css"
-  ><link
-    rel="stylesheet"
-    media="all"
-    id="ecom-vendors-css_ecomposer_base"
-    href="https://cdn.ecomposer.app/vendors/css/ecom-base.css?v=1.6"
-></noscript>
-<script
-  type="text/javascript"
-  asyc="async"
-  id="ecom-vendors-slider_js"
-  src="https://cdn.ecomposer.app/vendors/js/ecom-swiper@11.0.5.js"
-></script>
-<script
-  type="text/javascript"
-  asyc="async"
-  id="ecom-vendors-modal_js"
-  src="https://cdn.ecomposer.app/vendors/js/ecom_modal.js"
-></script>
-<script
-  type="text/javascript"
-  asyc="async"
-  id="ecom-vendors-zoom_js"
-  src="https://cdn.ecomposer.app/vendors/js/ecom_zoom.js"
-></script>
-<script
-  type="text/javascript"
-  asyc="async"
-  id="ecom-vendors-shopify_option_selection_js"
-  src="https://cdn.ecomposer.app/vendors/js/ecomposer_option_selection.js"
-></script>
-<script
-  type="text/javascript"
-  asyc="async"
-  id="ecom-vendors-countdown_js"
-  src="https://cdn.ecomposer.app/vendors/js/ecom-countdown.js?ver=2.0"
-></script>
-{% capture section_id %}ecom-product-page-product{% endcapture -%}
-{%- if section and section_id == section.id and headless == true %}
-  {{ content_for_header }}
-  {% render 'ecom_header', ECOM_THEME: true -%}
-{%- endif -%}
-<link
-  href="https://fonts.googleapis.com/css?family=Outfit:100,200,300,400,500,600,700,800,900&display=swap"
-  rel="stylesheet"
-
-><link
-  href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900&display=swap"
-  rel="stylesheet"
-
-><link
-  href="https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:100,200,300,400,500,600,700,800,900&display=swap"
-  rel="stylesheet"
-
-><link
-  href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-  rel="stylesheet"
-
-><link
-  href="https://fonts.googleapis.com/css?family=Albert+Sans:100,200,300,400,500,600,700,800,900&display=swap"
-  rel="stylesheet"
->
-{{ 'ecom-654015535e74ca20540cb582.css' | asset_url | stylesheet_tag }}
+ EComposer (https://ecomposer.io)
+ You SHOULD NOT modify source code in this page because
+ It is automatically generated from EComposer
+ At 2024-01-16 16:04:28
+ {% endcomment %} 
+ 
+ {% assign ecom_root_url = routes.root_url %}
+ {% if ecom_root_url != '/'%}
+ {% assign ecom_root_url = routes.root_url | append: '/' %}
+ {% endif %}
+ <link rel="stylesheet" media="print" onload="this.media='all'" id="ecom-vendors-slider_css" href="https://cdn.ecomposer.app/vendors/css/ecom-swiper@11.css" /><link rel="stylesheet" media="print" onload="this.media='all'" id="ecom-vendors-modal_css" href="https://cdn.ecomposer.app/vendors/css/ecom_modal.css" /><link rel="stylesheet" media="all" id="ecom-vendors-css_ecomposer_base" href="https://cdn.ecomposer.app/vendors/css/ecom-base.css?v=1.6" /><noscript><link rel="stylesheet" media="all" onload="this.media='all'" id="ecom-vendors-slider_css" href="https://cdn.ecomposer.app/vendors/css/ecom-swiper@11.css" /><link rel="stylesheet" media="all" onload="this.media='all'" id="ecom-vendors-modal_css" href="https://cdn.ecomposer.app/vendors/css/ecom_modal.css" /><link rel="stylesheet" media="all" id="ecom-vendors-css_ecomposer_base" href="https://cdn.ecomposer.app/vendors/css/ecom-base.css?v=1.6" /></noscript><script type="text/javascript" asyc="async" id="ecom-vendors-slider_js" src="https://cdn.ecomposer.app/vendors/js/ecom-swiper@11.0.5.js" ></script><script type="text/javascript" asyc="async" id="ecom-vendors-modal_js" src="https://cdn.ecomposer.app/vendors/js/ecom_modal.js" ></script><script type="text/javascript" asyc="async" id="ecom-vendors-zoom_js" src="https://cdn.ecomposer.app/vendors/js/ecom_zoom.js" ></script><script type="text/javascript" asyc="async" id="ecom-vendors-shopify_option_selection_js" src="https://cdn.ecomposer.app/vendors/js/ecomposer_option_selection.js" ></script><script type="text/javascript" asyc="async" id="ecom-vendors-countdown_js" src="https://cdn.ecomposer.app/vendors/js/ecom-countdown.js?ver=2.0" ></script>
+{%capture section_id %}ecom-product-page-product{% endcapture%}{% if section and section_id == section.id and headless == true %}
+{{ content_for_header }}
+{% render 'ecom_header', ECOM_THEME: true %}{% endif %}<link href="https://fonts.googleapis.com/css?family=Outfit:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css?family=Albert+Sans:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"/>
+{{'ecom-654015535e74ca20540cb582.css' | asset_url | stylesheet_tag }}
 <script src="{{'ecom-654015535e74ca20540cb582.js' | asset_url }}" defer="defer"></script>
 <script type="text/javascript" class="ecom-page-info">
-  window.EComposer = window.EComposer || {};
-  window.EComposer.TEMPLATE_ID="654015535e74ca20540cb582";
-  window.EComposer.TEMPLATE = {"template_id":"654015535e74ca20540cb582","title":"Product page","type":"product","slug":"ecom-product-page","plan_id":1};
-</script>
-<div class="ecom-builder" id="ecom-product-page">
-  <div class="ecom-sections" data-section-id="{{section.id}}">
-    {% comment %}
-      // Reactive
-      * this.data.settings.product
-    {% endcomment %}
-    {% liquid
-      if request.page_type != 'product' or product == blank
-        assign selected_product = ''
-        if selected_product == blank or selected_product == '' or all_products[selected_product] == blank
-          assign product = collections.all.products.first
-        else
-          assign product = all_products[selected_product]
-          if product.id == blank
-            assign product = collections.all.products.last
-          endif
-        endif
-      endif
-    %}
-    {%- if product != blank -%}
-      {%- capture ec_form_id -%}product_form_{{ product.id }}_ecom-1vlaqflcmh7{%- endcapture -%}
-      {%- form 'product',
-        product,
-        id: ec_form_id,
-        class: 'ecom-product-form ecom-product-form--single ecom-click',
-        product_id: product.id,
-        data-product_id: product.id,
-        data-product-id: product.id,
-        data-handle: product['handle-']
-      %}
-        <section
-          class="ecom-row ecom-core ecom-section ecom-1vlaqflcmh7"
-          data-id="ecom-1vlaqflcmh7"
-          style="z-index: inherit;"
-        >
-          <div data-deep="1" class="core__row--columns">
-            <div class="ecom-column ecom-core core__column--first core__column--last ecom-hmsf52d4">
-              <div class="core__column--wrapper">
-                <div class="core__blocks" index="0">
-                  <div class="core__blocks--body">
-                    <div class="ecom-block ecom-core core__block elmspace ecom-0ggabt2r" data-core-is="row">
-                      <div
-                        class="ecom-row ecom-core core__block ecom-7cdjky4u"
-                        data-id="ecom-7cdjky4u"
-                        style="z-index: inherit;"
-                      >
-                        <div data-deep="2" class="core__row--columns">
-                          <div class="ecom-column ecom-core core__column--first ecom-c8yjbpabc5f">
-                            <div class="core__column--wrapper">
-                              <div class="core__blocks" index="0">
-                                <div class="core__blocks--body">
-                                  <div
-                                    class="ecom-block ecom-core core__block elmspace ecom-tkwq2j1k5ke"
-                                    data-core-is="block"
-                                  >
-                                    <div class="ecom-element ecom-product-single ecom-product-single__media" deep="2">
-                                      <div
-                                        class="
-                                          ecom-product-single__media-wrapper
-                                          {% if product.media.size == 1 %}
-                                          ecom-dont-has-many-images
-                                          {% endif %}
-                                        "
-                                      >
-                                        <div class="ecom-product-single__media-container ecom-product-single__media--slider ecom-product-single__media--horizontal ecom-product-single__media-tablet--horizontal ecom-product-single__media-mobile--horizontal">
-                                          <div
-                                            class="ecom-product-single__media--featured ecom-swiper-container"
-                                            data-breakpoints="{&quot;0&quot;:{&quot;__screen_name&quot;:&quot;mobile&quot;,&quot;spaceBetween&quot;:10},&quot;768&quot;:{&quot;__screen_name&quot;:&quot;tablet&quot;},&quot;1025&quot;:{&quot;__screen_name&quot;:&quot;desktop&quot;}}"
-                                            data-priority="variant"
-                                          >
-                                            {% comment %}
-                                              Reactivity
-                                              *this.data.settings.image_action
-                                              *this.data.settings.enable_zoom
-                                            {% endcomment %}
-
-                                            {%- liquid
-                                              if product.has_only_default_variant
-                                                assign target = product
-                                              else
-                                                assign target = product.selected_or_first_available_variant
-                                              endif
-                                            -%}
-
-                                            {% assign img_padding = 1 | times: 1 %}
-                                            {% assign img_padding__tablet = 1 | times: 1 %}
-                                            {% assign img_padding__mobile = 1 | times: 1 %}
-                                            <div class="ecom-swiper-wrapper ecom-product-single__media--images ecom-swiper-wrapper ecom-product-single__media--images-layout__slider">
-                                              {% for image in product.images %}
-                                                {% assign fetchpriority = 'low' %}
-                                                {% if forloop.first %}
-                                                  {% assign fetchpriority = 'high' %}
-                                                {% endif %}
-                                                {% assign img_ration = 1
-                                                  | divided_by: image.aspect_ratio
-                                                  | times: 100
-                                                %}
-
-                                                <div
-                                                  class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-product-single__media--image"
-                                                  data-index="{{forloop.index0}}"
-                                                  data-variant_id="{{ image.variants | map:'id' | join: ',' }}"
-                                                  style="--img_padding: {{ img_ration | divided_by: img_padding }}%;--img_padding__tablet: {{ img_ration | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ img_ration | divided_by: img_padding__mobile }}%;"
-                                                >
-                                                  {%- assign img_master = image | img_url: 'master' -%}
-                                                  {{
-                                                    image
-                                                    | image_url: width: 1946
-                                                    | image_tag:
-                                                      sizes: sizes,
-                                                      widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
-                                                      class: 'ecom-image-default',
-                                                      loading: 'lazy',
-                                                      fetchpriority: fetchpriority,
-                                                      alt: image.alt
-                                                    | escape
-                                                  }}
-                                                </div>
-                                              {% endfor %}
-                                              {%- for media in product.media -%}
-                                                {% assign media_ration = 1
-                                                  | divided_by: media.aspect_ratio
-                                                  | times: 100
-                                                %}
-                                                {% case media.media_type %}
-                                                  {% when 'image' %}
-                                                    {% continue %}
-                                                  {% when 'external_video' %}
-                                                    <div
-                                                      class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-product-single__media---external-video ecom-product-single__media--full"
-                                                      data-position="{{media.position}}"
-                                                      style="--img_padding: {{ media_ration | divided_by: img_padding }}%;--img_padding__tablet: {{ media_ration | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ media_ration | divided_by: img_padding__mobile }}%;"
-                                                    >
-                                                      {{ media | external_video_tag: image_size: 'master' }}
-                                                    </div>
-                                                  {% when 'video' %}
-                                                    <div
-                                                      data-stopdrag="true"
-                                                      class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-product-single__media--video ecom-product-single__media--full ecom-swiper-no-swiping"
-                                                      data-position="{{media.position}}"
-                                                      style="--img_padding: {{ media_ration | divided_by: img_padding }}%;--img_padding__tablet: {{ media_ration | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ media_ration | divided_by: img_padding__mobile }}%;"
-                                                    >
-                                                      {{
-                                                        media
-                                                        | video_tag:
-                                                          image_size: 'master',
-                                                          class: 'ecom-media-video',
-                                                          controls: undefined,
-                                                          autoplay: undefined,
-                                                          mute: undefined,
-                                                          loop: undefined
-                                                      }}
-
-                                                      <button
-                                                        class="ecom-product-single__media--play-control"
-                                                        type="button"
-                                                      >
-                                                        <span class="ecom-product-single__media--play-control-wrapper">
-                                                          <span class="visually-hidden">Play video</span>
-                                                          <svg
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 512 512"
-                                                            fill="currentColor"
-                                                          >
-                                                            <path d="M356.5 235.5C363.6 239.9 368 247.6 368 256C368 264.4 363.6 272.1 356.5 276.5L212.5 364.5C205.1 369 195.8 369.2 188.3 364.9C180.7 360.7 176 352.7 176 344V167.1C176 159.3 180.7 151.3 188.3 147.1C195.8 142.8 205.1 142.1 212.5 147.5L356.5 235.5zM208 182.3V329.7L328.7 255.1L208 182.3zM0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 480C379.7 480 480 379.7 480 256C480 132.3 379.7 32 256 32C132.3 32 32 132.3 32 256C32 379.7 132.3 480 256 480z"></path>
-                                                          </svg>
-                                                        </span>
-                                                      </button>
-                                                    </div>
-                                                  {% when 'model' %}
-                                                    <div
-                                                      class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-swiper-no-swiping ecom-product-single__media--model ecom-product-single__media--full"
-                                                      data-stopdrag="true"
-                                                      data-position="{{media.position}}"
-                                                    >
-                                                      <div
-                                                        class="ecom-product-single__media--model-wrapper"
-                                                        style="padding-top: 100%"
-                                                      >
-                                                        {{
-                                                          media
-                                                          | model_viewer_tag:
-                                                            image_size: 'master',
-                                                            reveal: 'interaction',
-                                                            toggleable: true,
-                                                            data-model-id: media.id
-                                                        }}
-                                                      </div>
-                                                    </div>
-                                                  {% else %}
-                                                    <div
-                                                      data-media-type="{{media.media_type}}"
-                                                      class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-swiper-no-swiping ecom-product-single__media--full"
-                                                      data-position="{{media.position}}"
-                                                    >
-                                                      <div
-                                                        class="ecom-product-single__media"
-                                                        style="--img_padding: {{ media_ration | divided_by: img_padding }}%;--img_padding__tablet: {{ media_ration | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ media_ration | divided_by: img_padding__mobile }}%;"
-                                                      >
-                                                        {{
-                                                          media
-                                                          | media_tag:
-                                                            image_size: 'master',
-                                                            class: 'ecom-product-single__media--item'
-                                                        }}
-                                                      </div>
-                                                    </div>
-                                                {% endcase %}
-                                              {%- endfor -%}
-                                            </div>
-
-                                            <div class="ecom-swiper-pagination"></div>
-                                            <div
-                                              class="ecom-swiper-button-next ecom-swiper-controls"
-                                              style="display: none"
-                                            >
-                                              <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                class="w-6 h-6"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                              >
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                              </svg>
-                                            </div>
-                                            <div
-                                              class="ecom-swiper-button-prev ecom-swiper-controls"
-                                              style="display: none"
-                                            >
-                                              <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                class="w-6 h-6"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                              >
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                                              </svg>
-                                            </div>
-                                          </div>
-                                          <div
-                                            class="ecom-product-single__media--thumbs ecom-product-single__init-thumb-hidden ecom-swiper-container"
-                                            data-breakpoints="{&quot;0&quot;:{&quot;__screen_name&quot;:&quot;mobile&quot;,&quot;slidesPerView&quot;:4,&quot;spaceBetween&quot;:10,&quot;thumbnail_position&quot;:&quot;column&quot;},&quot;768&quot;:{&quot;__screen_name&quot;:&quot;tablet&quot;,&quot;slidesPerView&quot;:4,&quot;thumbnail_position&quot;:&quot;column&quot;},&quot;1025&quot;:{&quot;__screen_name&quot;:&quot;desktop&quot;,&quot;slidesPerView&quot;:4,&quot;spaceBetween&quot;:15,&quot;thumbnail_position&quot;:&quot;column&quot;}}"
-                                          >
-                                            {%- if product.media.size > 1 -%}
-                                              <div class="ecom-swiper-wrapper">
-                                                {% for image in product.images %}
-                                                  {% assign fetchpriority = 'low' %}
-                                                  {% if forloop.first %}
-                                                    {% assign fetchpriority = 'high' %}
-                                                  {% endif %}
-                                                  <div
-                                                    class="ecom-product-single__media--thumbnail ecom-swiper-slide"
-                                                    data-variant_id="{{ image.variants | map:'id' | join:',' }}"
-                                                  >
-                                                    <img
-                                                      class="ecom-product-thumbnail"
-                                                      src="{{ image | img_url: '600x600none' }}"
-                                                      alt="{{ image.alt }}"
-                                                      ,
-                                                      fetchpriority="{{ fetchpriority }}"
-                                                      ,loading="lazy"
-                                                    >
-                                                  </div>
-                                                {% endfor %}
-                                                {%- for media in product.media -%}
-                                                  {% if media.media_type != 'image' %}
-                                                    <div class="ecom-product-single__media--thumbnail ecom-swiper-slide">
-                                                      <div class="ecom-product-single__media--thumbnail--icon">
-                                                        {% if media.media_type == 'model' %}
-                                                        {% else %}
-
-                                                        {% endif %}
-                                                      </div>
-                                                      <img
-                                                        src="{{ media.preview_image | img_url: '600x600none' }}"
-                                                        alt="{{ media.alt }}"
-                                                        loading="lazy"
-                                                      >
-                                                    </div>
-                                                  {% endif %}
-                                                {%- endfor -%}
-                                              </div>
-
-                                              <div
-                                                class="ecom-swiper-button-next ecom-swiper-controls-thumb"
-                                                style="display: none"
-                                              >
-                                                <svg
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                  class="w-6 h-6"
-                                                  fill="none"
-                                                  viewBox="0 0 24 24"
-                                                  stroke="currentColor"
-                                                >
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                                </svg>
-                                              </div>
-                                              <div
-                                                class="ecom-swiper-button-prev ecom-swiper-controls-thumb"
-                                                style="display: none"
-                                              >
-                                                <svg
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                  class="w-6 h-6"
-                                                  fill="none"
-                                                  viewBox="0 0 24 24"
-                                                  stroke="currentColor"
-                                                >
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                                                </svg>
-                                              </div>
-                                            {%- endif -%}
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="ecom-hidden-content">
-                                        <script type="application/json" id="Product-model-{{ product.id }}">
-                                          {{ product.media | where: 'media_type', 'model' | json }}
-                                        </script>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="ecom-column__overlay"><div class="ecom-overlay"></div></div>
-                          </div>
-                          <div class="ecom-column ecom-core core__column--last ecom-qy87xiqg">
-                            <div class="core__column--wrapper">
-                              <div class="core__blocks" index="1">
-                                <div class="core__blocks--body">
-                                  <div
-                                    class="ecom-animation ecom-block ecom-core core__block elmspace ecom-70g27z4fas"
-                                    data-core-is="block"
-                                  >
-                                    <div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="2">
-                                      {%- if EComBuilderMode -%}
-                                        {% capture page_type %}product{% endcapture %}
-                                      {%- else -%}
-                                        {%- assign page_type = request.page_type %}
-                                      {%- endif %}
-                                      {%- capture icon_parent -%}
+ window.EComposer = window.EComposer || {};
+ window.EComposer.TEMPLATE_ID="654015535e74ca20540cb582";
+ window.EComposer.TEMPLATE = {"template_id":"654015535e74ca20540cb582","title":"Product page","type":"product","slug":"ecom-product-page","plan_id":1};
+ </script>
+<div class="ecom-builder" id="ecom-product-page"><div class="ecom-sections" data-section-id="{{section.id}}">
+ {% comment %}
+ // Reactive
+ * this.data.settings.product
+ {% endcomment %}
+ {% liquid
+ if request.page_type != 'product' or product == blank
+ assign selected_product = ''
+ if selected_product == blank or selected_product == '' or all_products[selected_product] == blank
+ assign product = collections['all'].products.first
+ else
+ assign product = all_products[selected_product]
+ if product.id == blank
+ assign product = collections['all'].products.last
+ endif
+ endif
+ endif
+ %}
+ {%- if product != blank -%}
+ {%- capture ec_form_id -%}product_form_{{ product.id }}_ecom-1vlaqflcmh7{%- endcapture -%}
+ {%- form 'product', product, id: ec_form_id, class: "ecom-product-form ecom-product-form--single ecom-click", product_id: product.id, data-product_id: product.id,data-product-id: product.id, data-handle: product.handle-%}
+ <section class="ecom-row ecom-core ecom-section ecom-1vlaqflcmh7" data-id="ecom-1vlaqflcmh7" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-hmsf52d4"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-0ggabt2r" data-core-is="row"><div class="ecom-row ecom-core core__block ecom-7cdjky4u" data-id="ecom-7cdjky4u" style="z-index: inherit;"><div data-deep="2" class="core__row--columns"><div class="ecom-column ecom-core core__column--first ecom-c8yjbpabc5f"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-tkwq2j1k5ke" data-core-is="block"><div class="ecom-element ecom-product-single ecom-product-single__media" deep="2"><div class="ecom-product-single__media-wrapper 
+ {% if product.media.size == 1 %}
+ ecom-dont-has-many-images
+ {% endif %}
+ "><div class="ecom-product-single__media-container ecom-product-single__media--slider ecom-product-single__media--horizontal ecom-product-single__media-tablet--horizontal ecom-product-single__media-mobile--horizontal"><div class="ecom-product-single__media--featured ecom-swiper-container" data-breakpoints="{&quot;0&quot;:{&quot;__screen_name&quot;:&quot;mobile&quot;,&quot;spaceBetween&quot;:10},&quot;768&quot;:{&quot;__screen_name&quot;:&quot;tablet&quot;},&quot;1025&quot;:{&quot;__screen_name&quot;:&quot;desktop&quot;}}" data-priority="variant">
+ {% comment %}
+ Reactivity
+ *this.data.settings.image_action
+ *this.data.settings.enable_zoom
+ {% endcomment %}
+ 
+ {%- liquid
+ if product.has_only_default_variant
+ assign target = product
+ else
+ assign target = product.selected_or_first_available_variant
+ endif
+ -%}
+ 
+ 
+ 
+ {% assign img_padding = 1 | times: 1 %}
+ {% assign img_padding__tablet = 1 | times: 1 %}
+ {% assign img_padding__mobile = 1 | times: 1 %}
+ <div class="ecom-swiper-wrapper ecom-product-single__media--images ecom-swiper-wrapper ecom-product-single__media--images-layout__slider">
+ {% for image in product.images %}
+ {% assign fetchpriority = 'low'%}
+ {% if forloop.first %}
+ {% assign fetchpriority = 'high'%}
+ {% endif %}
+ {% assign img_ration = 1 | divided_by: image.aspect_ratio | times: 100 %}
+ 
+ <div class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-product-single__media--image" data-index="{{forloop.index0}}" data-variant_id="{{ image.variants | map:'id' | join: ',' }}" style="--img_padding: {{ img_ration | divided_by: img_padding }}%;--img_padding__tablet: {{ img_ration | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ img_ration | divided_by: img_padding__mobile }}%;">
+ 
+ {%- assign img_master = image | img_url: 'master' -%}
+ {{ image | image_url: width: 1946 | image_tag:
+ sizes: sizes,
+ widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+ class: 'ecom-image-default'
+ 
+ ,loading: 'lazy'
+ ,fetchpriority: fetchpriority
+ ,alt: image.alt | escape
+ }}
+ 
+ </div>
+ {% endfor %}
+ {%- for media in product.media -%}
+ {% assign media_ration = 1 | divided_by: media.aspect_ratio | times: 100 %}
+ {% case media.media_type %}
+ {% when 'image' %}
+ {% continue %}
+ {% when 'external_video'%}
+ <div class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-product-single__media---external-video ecom-product-single__media--full" data-position="{{media.position}}" style="--img_padding: {{ media_ration | divided_by: img_padding }}%;--img_padding__tablet: {{ media_ration | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ media_ration | divided_by: img_padding__mobile }}%;">
+ {{ media | external_video_tag: image_size:'master' }}
+ </div>
+ {% when 'video' %}
+ <div data-stopdrag="true" class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-product-single__media--video ecom-product-single__media--full ecom-swiper-no-swiping" data-position="{{media.position}}" style="--img_padding: {{ media_ration | divided_by: img_padding }}%;--img_padding__tablet: {{ media_ration | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ media_ration | divided_by: img_padding__mobile }}%;">
+ {{ media | video_tag: image_size:'master', class: 'ecom-media-video', controls: undefined, autoplay: undefined, mute: undefined,loop: undefined }}
+ 
+ <button class="ecom-product-single__media--play-control" type="button">
+ <span class="ecom-product-single__media--play-control-wrapper">
+ <span class="visually-hidden">Play video</span>
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M356.5 235.5C363.6 239.9 368 247.6 368 256C368 264.4 363.6 272.1 356.5 276.5L212.5 364.5C205.1 369 195.8 369.2 188.3 364.9C180.7 360.7 176 352.7 176 344V167.1C176 159.3 180.7 151.3 188.3 147.1C195.8 142.8 205.1 142.1 212.5 147.5L356.5 235.5zM208 182.3V329.7L328.7 255.1L208 182.3zM0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 480C379.7 480 480 379.7 480 256C480 132.3 379.7 32 256 32C132.3 32 32 132.3 32 256C32 379.7 132.3 480 256 480z"></path></svg>
+ </span>
+ </button>
+ 
+ </div>
+ {% when 'model' %}
+ <div class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-swiper-no-swiping ecom-product-single__media--model ecom-product-single__media--full" data-stopdrag="true" data-position="{{media.position}}">
+ <div class="ecom-product-single__media--model-wrapper" style="padding-top: 100%">
+ {{ media | model_viewer_tag: image_size:'master', reveal: 'interaction', toggleable: true, data-model-id: media.id }}
+ </div>
+ </div>
+ {% else %}
+ <div data-media-type="{{media.media_type}}" class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-swiper-no-swiping ecom-product-single__media--full" data-position="{{media.position}}">
+ <div class="ecom-product-single__media" style="--img_padding: {{ media_ration | divided_by: img_padding }}%;--img_padding__tablet: {{ media_ration | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ media_ration | divided_by: img_padding__mobile }}%;">
+ {{ media | media_tag: image_size:'master', class: 'ecom-product-single__media--item' }}
+ </div>
+ </div>
+ {% endcase %}
+ {%- endfor -%}
+ </div>
+ 
+ <div class="ecom-swiper-pagination"></div>
+ <div class="ecom-swiper-button-next ecom-swiper-controls" style="display: none">
+ <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+ </svg>
+ </div>
+ <div class="ecom-swiper-button-prev ecom-swiper-controls" style="display: none">
+ <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+ </svg>
+ </div>
+ 
+ </div><div class="ecom-product-single__media--thumbs ecom-product-single__init-thumb-hidden ecom-swiper-container" data-breakpoints="{&quot;0&quot;:{&quot;__screen_name&quot;:&quot;mobile&quot;,&quot;slidesPerView&quot;:4,&quot;spaceBetween&quot;:10,&quot;thumbnail_position&quot;:&quot;column&quot;},&quot;768&quot;:{&quot;__screen_name&quot;:&quot;tablet&quot;,&quot;slidesPerView&quot;:4,&quot;thumbnail_position&quot;:&quot;column&quot;},&quot;1025&quot;:{&quot;__screen_name&quot;:&quot;desktop&quot;,&quot;slidesPerView&quot;:4,&quot;spaceBetween&quot;:15,&quot;thumbnail_position&quot;:&quot;column&quot;}}">
+ {%- if product.media.size > 1 -%}
+ <div class="ecom-swiper-wrapper">
+ {% for image in product.images%}
+ {% assign fetchpriority = 'low'%}
+ {% if forloop.first %}
+ {% assign fetchpriority = 'high'%}
+ {% endif %}
+ <div class="ecom-product-single__media--thumbnail ecom-swiper-slide" data-variant_id="{{ image.variants | map:'id' | join:',' }}">
+ <img
+ class="ecom-product-thumbnail"
+ src="{{ image | img_url: '600x600none' }}"
+ alt="{{ image.alt }}",
+ fetchpriority="{{ fetchpriority }}"
+ ,loading="lazy"
+ />
+ </div>
+ {% endfor %}
+ {%- for media in product.media -%}
+ {% if media.media_type != 'image' %}
+ <div class="ecom-product-single__media--thumbnail ecom-swiper-slide">
+ <div class="ecom-product-single__media--thumbnail--icon">
+ {% if media.media_type == 'model' %}
+ 
+ {% else %}
+ 
+ {% endif %}
+ </div>
+ <img src="{{ media.preview_image | img_url: '600x600none' }}" alt="{{ media.alt }}" loading="lazy"/>
+ </div>
+ {% endif %}
+ {%- endfor -%}
+ </div>
+ 
+ <div class="ecom-swiper-button-next ecom-swiper-controls-thumb" style="display: none">
+ <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+ </svg>
+ </div>
+ <div class="ecom-swiper-button-prev ecom-swiper-controls-thumb" style="display: none">
+ <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+ </svg>
+ </div>
+ 
+ {%- endif -%}
+ </div></div></div><div class="ecom-hidden-content">
+ <script type="application/json" id="Product-model-{{ product.id }}">
+ {{ product.media | where: 'media_type', 'model' | json }}
+ </script>
+ </div></div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> <div class="ecom-column ecom-core core__column--last ecom-qy87xiqg"><div class="core__column--wrapper"><div class="core__blocks" index="1"><div class="core__blocks--body"><div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-70g27z4fas" data-core-is="block"><div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="2">
+ {%- if EComBuilderMode -%}
+ {% capture page_type %}product{% endcapture %}
+ {%- else -%}
+ {%- assign page_type = request.page_type %}
+ {%- endif %}
+ {%- capture icon_parent -%}
  
  {%- endcapture -%}
-                                      {%- capture icon_breadcrumbs -%}
+ {%- capture icon_breadcrumbs -%}
  <span class="ecom-base__breadcrumbs--icon">
  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor"><path d="M23.97 512c-4.125 0-8.281-1.062-12.09-3.297C.4375 502-3.406 487.3 3.281 475.9l272-464c6.688-11.45 21.38-15.3 32.84-8.562c11.44 6.703 15.28 21.41 8.594 32.84l-272 464C40.25 507.8 32.22 512 23.97 512z"></path></svg>
  </span>
  
  {%- endcapture -%}
-                                      {%- unless page_type == 'index'
-                                        or page_type == 'list-collections'
-                                        or page_type == '404'
-                                      -%}
-                                        <nav
-                                          class="ecom-base__breadcrumbs ecom-flex"
-                                          role="navigation"
-                                          aria-label="breadcrumbs"
-                                        >
-                                          <div class="ecom-base__breadcrumbs__list">
-                                            {{ icon_parent -}}
-                                            <a class="ecom-base__breadcrumbs__link" href="/">
-                                              {{-
-                                                'sections.ecom-product-page-product.breadcrumbs_home_70g27z4fas_html'
-                                                | t
-                                              -}}
-                                            </a>
-                                            {%- case page_type -%}
-                                              {%- when 'page' -%}
-                                                {{ icon_breadcrumbs }}
-                                                {%- if EComBuilderMode -%}
-                                                  <a class="ecom-base__breadcrumbs__link" href="#" aria-current="page"
-                                                    >Untitled</a
-                                                  >
-                                                {%- else -%}
-                                                  <a
-                                                    class="ecom-base__breadcrumbs__link"
-                                                    href="{{ page.url }}"
-                                                    aria-current="page"
-                                                  >
-                                                    {{- page.title -}}
-                                                  </a>
-                                                {%- endif -%}
-                                              {%- when 'cart' -%}
-                                                {{ icon_breadcrumbs }}
-                                                <a
-                                                  class="ecom-base__breadcrumbs__link"
-                                                  href="{{ routes.cart_url }}"
-                                                  aria-current="cart"
-                                                >
-                                                  {{-
-                                                    'sections.ecom-product-page-product.cart_page_title_70g27z4fas_html'
-                                                    | t
-                                                  -}}
-                                                </a>
-                                              {%- when 'product' -%}
-                                                {%- if collection.url -%}
-                                                  {{ icon_breadcrumbs -}}
-                                                  {{- collection.title | link_to: collection.url }}
-                                                {%- endif -%}
-                                                {{ icon_breadcrumbs -}}
-                                                <a
-                                                  class="ecom-base__breadcrumbs__link"
-                                                  href="{{ product.url }}"
-                                                  aria-current="page"
-                                                >
-                                                  {{- product.title -}}
-                                                </a>
-                                              {%- when 'collection' and collection.handle -%}
-                                                {%- if current_tags -%}
-                                                  {{ icon_breadcrumbs -}}
-                                                  {{- collection.title | link_to: collection.url }}
-                                                  {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
-                                                  {{ icon_breadcrumbs -}}
-                                                  <a
-                                                    class="ecom-base__breadcrumbs__link"
-                                                    href="{{ tag_url }}"
-                                                    aria-current="page"
-                                                  >
-                                                    {{- current_tags | join: ' + ' -}}
-                                                  </a>
-                                                {%- else -%}
-                                                  {{ icon_breadcrumbs -}}
-                                                  <a
-                                                    class="ecom-base__breadcrumbs__link"
-                                                    href="{{ collection.url }}"
-                                                    aria-current="page"
-                                                  >
-                                                    {{- collection.title -}}
-                                                  </a>
-                                                {%- endif -%}
-                                              {%- when 'blog' -%}
-                                                {%- if current_tags -%}
-                                                  {{ icon_breadcrumbs -}}
-                                                  {{- blog.title | link_to: blog.url }}
-                                                  {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
-                                                  {{ icon_breadcrumbs -}}
-                                                  <a
-                                                    class="ecom-base__breadcrumbs__link"
-                                                    href="{{ tag_url }}"
-                                                    aria-current="page"
-                                                  >
-                                                    {{- current_tags | join: ' + ' -}}
-                                                  </a>
-                                                {%- else -%}
-                                                  {{ icon_breadcrumbs -}}
-                                                  <a
-                                                    class="ecom-base__breadcrumbs__link"
-                                                    href="{{ blog.url }}"
-                                                    aria-current="page"
-                                                  >
-                                                    {{- blog.title -}}
-                                                  </a>
-                                                {%- endif -%}
-                                              {%- when 'article' -%}
-                                                {{ icon_breadcrumbs -}}
-                                                {{- blog.title | link_to: blog.url }}
-                                                {{ icon_breadcrumbs -}}
-                                                <a
-                                                  class="ecom-base__breadcrumbs__link"
-                                                  href="{{ article.url }}"
-                                                  aria-current="page"
-                                                >
-                                                  {{- article.title -}}
-                                                </a>
-                                              {%- else -%}
-                                                {{ icon_breadcrumbs -}}
-                                                <a
-                                                  class="ecom-base__breadcrumbs__link"
-                                                  href="{{ request.path }}"
-                                                  aria-current="page"
-                                                >
-                                                  {{- page_title -}}
-                                                </a>
-                                            {%- endcase -%}
-                                          </div>
-                                        </nav>
-                                      {%- endunless -%}
-                                      {%- assign page_type = request.page_type %}
-                                      {%- if page_type == 'index' -%}
-                                        {%- if EComBuilderMode -%}
-                                          <a class="ecom-base__breadcrumbs__link" href="#" aria-current="index">Home</a>
-                                        {%- else -%}
-                                          <a class="ecom-base__breadcrumbs__link" href="/" aria-current="index">Home</a>
-                                        {%- endif -%}
-                                      {%- endif -%}
-                                    </div>
-                                  </div>
-                                  <div class="ecom-block ecom-core core__block ecom-dt42jnu3eiv" data-core-is="block">
-                                    <div class="ecom-element ecom-product-single ecom-product-single__title" deep="2">
-                                      <div class="ecom-product-single__title-wrapper">
-                                        <div class="ecom-product-single__title-container">
-                                          <h1
-                                            class="ecom-product__heading"
-                                            href="{{ product.url }}"
-                                            title="{{ product.title }}"
-                                          >
-                                            {{ product.title }}
-                                          </h1>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="ecom-block ecom-core core__block elmspace ecom-bokihj9gjy"
-                                    data-core-is="block"
-                                  >
-                                    <div class="ecom-element ecom-product-single ecom-product-single__price" deep="2">
-                                      <div class="ecom-product-single__price-wrapper">
-                                        <div class="ecom-product-single__price-container">
-                                          <div class="ecom-product-single__price-container-grid">
-                                            <div class="ecom-product-single ecom-product-single__price--prices">
-                                              {%- liquid
-                                                if product.has_only_default_variant
-                                                  assign target = product
-                                                else
-                                                  assign target = product.selected_or_first_available_variant
-                                                endif
-                                              -%}
-                                              <div
-                                                class="ecom-product-single__price--sale {% if target.compare_at_price == nil or target.compare_at_price < target.price %} ecom-product-single__price-normal {% endif %}"
-                                                data-price="{{target.price}}"
-                                              >
-                                                {%- if settings.currency_code_enabled -%}
-                                                  {{ target.price | money_with_currency }}
-                                                {%- else -%}
-                                                  {{ target.price | money }}
-                                                {%- endif -%}
-                                              </div>
-
-                                              <div
-                                                class="ecom-product-single__price--regular"
-                                                {%- if target.compare_at_price == null
-                                                  or target.compare_at_price < target.price
-                                                -%}
-                                                  style="display:none"
-                                                {% endif %}
-                                              >
-                                                {%- if settings.currency_code_enabled -%}
-                                                  {{ target.compare_at_price | money_with_currency }}
-                                                {%- else -%}
-                                                  {{ target.compare_at_price | money }}
-                                                {%- endif -%}
-                                              </div>
-
-                                              {%- capture taxes_text -%}{%- endcapture -%}
-                                              {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
-                                                {% if taxes_text %}
-                                                  <div class="ec-product__tax caption rte">
-                                                    {%- if shop.taxes_included -%}
-                                                    {%- endif -%}
-                                                    {%- if shop.shipping_policy.body != blank -%}
-                                                      {{
-                                                        'sections.ecom-product-page-product.shipping_policy_bokihj9gjy_html'
-                                                        | t: link: shop.shipping_policy.url
-                                                      }}
-                                                    {%- endif -%}
-                                                  </div>
-                                                {%- endif -%}
-                                              {%- endif -%}
-                                            </div>
-                                            <div class="ecom-product-single__price--badges-wrapper">
-                                              <div class="ecom-product-single__price--badges">
-                                                {%- assign savings = target.compare_at_price
-                                                  | minus: target.price
-                                                  | times: 100.0
-                                                  | divided_by: target.compare_at_price
-                                                  | round
-                                                -%}
-
-                                                {%- if target.compare_at_price != null
-                                                  and target.compare_at_price > target.price
-                                                  and target.available == true
-                                                -%}
-                                                  <span
-                                                    class="ecom-product-single__price--badges-sale"
-                                                    data-text=" {{ 'sections.ecom-product-page-product.product_single_sale_text_bokihj9gjy_html' | t }}"
-                                                    data-sale="{{savings}}"
-                                                    data-type="percent"
-                                                  >
-                                                    {{
-                                                      'sections.ecom-product-page-product.product_single_sale_text_bokihj9gjy_html'
-                                                      | t
-                                                    }}
-                                                  </span>
-                                                {% endif %}
-                                                <span
-                                                  class="ecom-product-single__price--badges-sold-out"
-                                                  {% if target.available %}
-                                                    style="display:none"
-                                                  {% endif %}
-                                                >
-                                                  {{
-                                                    'sections.ecom-product-page-product.product_single_sold_text_bokihj9gjy_html'
-                                                    | t
-                                                  }}
-                                                </span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="ecom-product-single-afterpay"></div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="ecom-block ecom-core core__block ecom-94rgdjzwo2j" data-core-is="block">
-                                    <div
-                                      class="ecom-element ecom-product-single ecom-product-single__description"
-                                      deep="2"
-                                    >
-                                      <div class="ecom-product-single__description-wrapper">
-                                        <div class="ecom-product-single__description-container" data-show-type="full">
-                                          <div class="ecom-product-single__description--paragraph">
-                                            <div>{{ product.description | strip_html }}</div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="ecom-block ecom-core core__block elmspace ecom-k7v1wt37"
-                                    data-core-is="block"
-                                  >
-                                    <div
-                                      class="ecom-row ecom-core core__block ecom-u3jfg87a"
-                                      data-id="ecom-u3jfg87a"
-                                      style="z-index: inherit;"
-                                    >
-                                      <div data-deep="3" class="core__row--columns"></div>
-                                      <div class="ecom-section__overlay"><div class="ecom-overlay"></div></div>
-                                    </div>
-                                  </div>
-                                  <div class="ecom-block ecom-core core__block ecom-jhuufdr221g" data-core-is="block">
-                                    <div
-                                      class="ecom-element ecom-product-single ecom-product-single__variant-picker"
-                                      deep="2"
-                                    >
-                                      <div class="ecom-product-single__variant-picker-wrapper ecom_not_hide_dropdown_arrow">
-                                        <div
-                                          class="ecom-product-single__variant-picker-container {% if product.has_only_default_variant%} ecom-product-single__variant-picker--only-default{% endif%}"
-                                          data-picker-type="radio"
-                                          data-ecom-placeholder=""
-                                        >
-                                          {% assign ecom_has_variant_picker = true %}
-                                          {% assign variant_selected = product.selected_or_first_available_variant %}
-                                          <div class="ecom-product-single__variant-picker--main">
-                                            {% unless product.has_only_default_variant %}
-                                              {%- for option in product.options_with_values -%}
-                                                {%- assign index = option.position | prepend: 'option' -%}
-                                                {% assign option_index = option.position | minus: 1 %}
-                                                <div class="ecom-product-single__picker-option-{{option.name | handleize }}">
-                                                  <span
-                                                    class="ecom-product-single__picker-radio-label ecom-product-single__picker--option-label"
-                                                    data-option-index="{{option_index}}"
-                                                  >
-                                                    <span class="ecom-product-variant--option-label-text">
-                                                      {{- option.name -}}
-                                                    </span>
-                                                  </span>
-                                                  <ul class="ecom-product-single__picker-radio-list">
-                                                    {% for value in option.values %}
-                                                      <li
-                                                        class="ecom-product-single__swatch-item ecom-product-single__picker-radio-list-item {% if value == variant_selected[index] %}ecom-button-active{% endif %}"
-                                                        data-option-index="{{ option_index }}"
-                                                        data-value="{{ value | escape }}"
-                                                      >
-                                                        {{ value }}
-                                                      </li>
-                                                    {% endfor %}
-                                                  </ul>
-                                                </div>
-                                              {%- endfor -%}
-                                            {% endunless %}
-                                          </div>
-                                          <div class="ecom-product-single__variant-picker--options">
-                                            <select
-                                              name="id"
-                                              class="ecom-product-single-select-id{%-if product.has_only_default_variant-%}ecom-product-single__picker-default-variant{% endif %}"
-                                              data-product-id="{{product.id}}"
-                                              data-json-product="product-json-{{product.id}}-ecom-jhuufdr221g"
-                                              id="ecom-variant-selector-{{product.id}}-ecom-jhuufdr221g"
-                                            >
-                                              {% for variant in product.variants %}
-                                                <option
-                                                  value="{{variant.id}}"
-                                                  {% if variant_selected.id == variant.id %}
-                                                    selected="selected"
-                                                  {% endif %}
-                                                >
-                                                  {{ variant.title }}
-                                                </option>
-                                              {% endfor %}
-                                            </select>
-                                          </div>
-                                          <div class="ecom-product-single__variant-picker--json">
-                                            <script
-                                              type="application/json"
-                                              id="product-json-{{product.id}}-ecom-jhuufdr221g"
-                                            >
-                                              {%- render "ecom_product_json", product: product -%}
-                                            </script>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="ecom-block ecom-core core__block elmspace ecom-xjksegmq4x8"
-                                    data-core-is="block"
-                                  >
-                                    <div
-                                      class="ecom-element ecom-product-single ecom-product-single__add-to-cart"
-                                      deep="2"
-                                    >
-                                      <div class="ecom-product-single__add-to-cart-wrapper">
-                                        <div class="ecom-product-single__add-to-cart-container">
-                                          <div class="ecom-product-single__add-to-cart-buttons">
-                                            <div class="ecom-product-single__add-to-cart-buttons-wrapper">
-                                              <button
-                                                type="submit"
-                                                class="ecom-product-single__add-to-cart--submit ecom-flex animated"
-                                                data-text-add-cart="{{ 'sections.ecom-product-page-product.add_to_cart_xjksegmq4x8_html' | t }}"
-                                                data-text-pre-order="{{ 'sections.ecom-product-page-product.pre_order_xjksegmq4x8_html' | t }}"
-                                                data-text-unavailable="{{ 'sections.ecom-product-page-product.product_unavailable_xjksegmq4x8_html' | t }}"
-                                                data-text-outstock="{{ 'sections.ecom-product-page-product.out_stock_xjksegmq4x8_html' | t }}"
-                                                data-text-added-cart="{{ 'sections.ecom-product-page-product.added_cart_text_xjksegmq4x8_html' | t }}"
-                                                data-message-added-cart="{{ 'sections.ecom-product-page-product.added_cart_message_xjksegmq4x8_html' | t }}"
-                                                data-href="#"
-                                                data-target=""
-                                                data-action="cart"
-                                                data-variant-id="{{product.first_available_variant.id}}"
-                                              >
-                                                <span class="ecom-add-to-cart-text">
-                                                  {{-
-                                                    'sections.ecom-product-page-product.add_to_cart_xjksegmq4x8_html'
-                                                    | t
-                                                  -}}</span
-                                                ><span class="ecom__element--button-icon"></span>
-                                              </button>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="ecom-block ecom-core core__block elmspace ecom-lmcl36qz"
-                                    data-core-is="block"
-                                  >
-                                    <div
-                                      class="ecom-row ecom-core core__block ecom-pzw9w41p"
-                                      data-id="ecom-pzw9w41p"
-                                      style="z-index: inherit;"
-                                    >
-                                      <div data-deep="3" class="core__row--columns"></div>
-                                      <div class="ecom-section__overlay"><div class="ecom-overlay"></div></div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="ecom-block ecom-core core__block elmspace ecom-1cnqaweecps"
-                                    data-core-is="block"
-                                  >
-                                    <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
-                                      <div class="text-content ecom-html has-drop-cap-view-default">
-                                        {{ 'sections.ecom-product-page-product.textcontent_1cnqaweecps_html' | t }}
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="ecom-block ecom-core core__block elmspace ecom-f2om6pvcutr ec-custom-position"
-                                    data-core-is="block"
-                                  >
-                                    <div class="ecom-element ecom-base-elements ecom-element__lightbox" deep="2">
-                                      <div class="ecom-element__lightbox-wrapper">
-                                        <div
-                                          class="ecom-element__lightbox-container ecom-flex"
-                                          data-ecom-placeholder=""
-                                        >
-                                          {%- capture show_when -%}all{%- endcapture -%}
-                                          {%- capture value -%}Size{%- endcapture -%}
-                                          {%- assign check = false -%}
-                                          {%- case show_when- %}
-                                            {%- when 'all' -%}
-                                              {% assign check = true %}
-                                            {%- when 'option'- %}
-                                              {% if value and product.options contains value %}
-                                                {% assign check = true %}
-                                              {% endif %}
-                                            {%- when 'tag' -%}
-                                              {%- if value and product.tags contains value -%}
-                                                {% assign check = true %}
-                                              {%- endif -%}
-                                            {% when 'type' %}
-                                              {%- if value and product.type contains value -%}
-                                                {% assign check = true %}
-                                              {%- endif -%}
-                                            {% when 'vendor' %}
-                                              {%- if value and product.vendor contains value -%}
-                                                {% assign check = true %}
-                                              {%- endif -%}
-                                          {%- endcase -%}
-                                          {%- if check -%}
-                                            {%- capture type -%}image_metafield{%- endcapture -%}
-
-                                            <button
-                                              type="button"
-                                              ecom-modal="inline"
-                                              class="ecom__element--button ecom-elements__lightbox-button ecom-flex ecom-fl_cener ecom-al_center"
-                                              ecom-modal-source="#ecom-elements__lightbox-content-ecom-f2om6pvcutr"
-                                            >
-                                              <span class="ecom-elements__lightbox-button-text">
-                                                {{
-                                                  'sections.ecom-product-page-product.lightbox_button_title_f2om6pvcutr_html'
-                                                  | t
-                                                }}
-                                              </span>
-                                              <span class="ecom-button-icon ecom-elements__lightbox-button-icon">
-                                              </span>
-                                            </button>
-
-                                            {%- if type != 'page' -%}
-                                              <div style="display:none">
-                                                {%- if type == 'custom' -%}
-                                                  <div
-                                                    class="ecom-html"
-                                                    id="ecom-elements__lightbox-content-ecom-f2om6pvcutr"
-                                                  >
-                                                    <div class="ecom-elements__lightbox-content-heading">
-                                                      {{
-                                                        'sections.ecom-product-page-product.UnderstandaboutEComposer_f2om6pvcutr_html'
-                                                        | t
-                                                      }}
-                                                    </div>
-                                                    <div class="ecom-elements__lightbox-content-body">
-                                                      {{
-                                                        'sections.ecom-product-page-product.s001p0l2hycpSwwapkW8dea5ttnltwycbDEfftasbtsyaw_f2om6pvcutr_html'
-                                                        | t
-                                                      }}
-                                                    </div>
-                                                  </div>
-                                                {%- elsif type == 'video' -%}
-                                                  <div
-                                                    id="ecom-elements__lightbox-content-ecom-f2om6pvcutr"
-                                                    style="height:100%"
-                                                  >
-                                                    <iframe
-                                                      class="ecom_iframe"
-                                                      frameborder="0"
-                                                      allowfullscreen="1"
-                                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                      style="border: 0; width: 100%; height:100%; display: flex !important"
-                                                      src=""
-                                                    >
-                                                    </iframe>
-                                                  </div>
-                                                {%- elsif type == 'video_metafield' -%}
-                                                  <div
-                                                    id="ecom-elements__lightbox-content-ecom-f2om6pvcutr"
-                                                    style="height:100%"
-                                                  >
-                                                    {% assign video = collection.meafields.custom.size_chart.value.sources %}
-                                                    {%- if video.size > 1 -%}
-                                                      {% assign video_url = video[1].url %}
-                                                    {%- else -%}
-                                                      {% assign video_url = video[0].url %}
-                                                    {%- endif -%}
-                                                    <video
-                                                      style="display: flex !important;width: 100%; height:100%;"
-                                                      class="ecom_video"
-                                                      controls
-                                                    >
-                                                      <source src="{{ video_url }}">
-                                                    </video>
-                                                  </div>
-                                                {%- elsif type == 'image_metafield' -%}
-                                                  {% assign image = collection.meafields.custom.size_chart %}
-                                                  <div
-                                                    id="ecom-elements__lightbox-content-ecom-f2om6pvcutr"
-                                                    style="height:100%; width: 100%; display:flex;"
-                                                  >
-                                                    <img
-                                                      src="{{ image | img_url: 'master'}}"
-                                                      alt=""
-                                                      style="object-fit: cover; width: 100%;"
-                                                    >
-                                                  </div>
-                                                {%- else -%}
-                                                  <div
-                                                    id="ecom-elements__lightbox-content-ecom-f2om6pvcutr"
-                                                    style="height:100%; width: 100%; display:flex;"
-                                                  >
-                                                    <picture style="height:100%; width: 100%; display:flex;">
-                                                      <img
-                                                        loading="lazy"
-                                                        fetchpriority="low"
-                                                        src="/images/placeholder.png"
-                                                        alt="undefined"
-                                                        style="object-fit:cover;width:100%;"
-                                                      >
-                                                    </picture>
-                                                  </div>
-                                                {%- endif -%}
-                                              </div>
-                                            {%- else -%}
-                                              <div
-                                                class="ecom-elements__lightbox-content ecom-html"
-                                                id="ecom-elements__lightbox-content-ecom-f2om6pvcutr"
-                                                style="display:none"
-                                              >
-                                                <div>
-                                                  {%- capture page_handle -%}
- size-guide
- {%- endcapture -%}
-                                                  {% assign p = pages[page_handle] %}
-                                                  {% if p %}{{ p.content }}{% endif %}
-                                                </div>
-                                              </div>
-                                            {%- endif -%}
-                                          {%- endif -%}
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="ecom-column__overlay">
-                              <div class="ecom-overlay"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="ecom-section__overlay">
-                          <div class="ecom-overlay"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ecom-block ecom-core core__block elmspace ecom-6tmsuc0db89" data-core-is="group">
-                      <div class="ecom-core ecom-group core__block ecom-xbg78kqex4f">
-                        <div
-                          class="core__group--wrapper tabs__wrapper ecom__element ecom__tabs tabs__wrapper--horizontal"
-                          data-r=""
-                          style=""
-                        >
-                          <div class="tabs__navs tabs__navs--horizontal">
-                            <div class="tabs__navs--items">
-                              <div class="ecom-items tabs__nav ecom-item-active" data-target="">
-                                <div class="tabs_nav--content_right">
-                                  <div class="tabs_nav--content">
-                                    <h3 class="tabs_nav--text ecom-items--text">
-                                      {{ 'sections.ecom-product-page-product.tabtitle0_xbg78kqex4f_html' | t }}
-                                    </h3>
-                                  </div>
-                                  <div class="tabs_nav--sub-text"></div>
-                                </div>
-                              </div>
-                              <div class="ecom-items tabs__nav" data-target="">
-                                <div class="tabs_nav--content_right">
-                                  <div class="tabs_nav--content">
-                                    <h3 class="tabs_nav--text ecom-items--text">
-                                      {{ 'sections.ecom-product-page-product.tabtitle1_xbg78kqex4f_html' | t }}
-                                    </h3>
-                                  </div>
-                                  <div class="tabs_nav--sub-text"></div>
-                                </div>
-                              </div>
-                              <div class="ecom-items tabs__nav" data-target="">
-                                <div class="tabs_nav--content_right">
-                                  <div class="tabs_nav--content">
-                                    <div class="tabs_nav--text ecom-items--text">
-                                      {{ 'sections.ecom-product-page-product.tabtitle2_xbg78kqex4f_html' | t }}
-                                    </div>
-                                  </div>
-                                  <div class="tabs_nav--sub-text"></div>
-                                </div>
-                              </div>
-                              <div class="ecom-items tabs__nav" data-target="">
-                                <div class="tabs_nav--content_right">
-                                  <div class="tabs_nav--content">
-                                    <h3 class="tabs_nav--text ecom-items--text">
-                                      {{ 'sections.ecom-product-page-product.tabtitle3_xbg78kqex4f_html' | t }}
-                                    </h3>
-                                  </div>
-                                  <div class="tabs_nav--sub-text"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="core__group--items">
-                            <div
-                              id="ecom-ddda2wkmcv9"
-                              class="core__group--item tab__item ecom-item-active"
-                              data-id="ecom-ddda2wkmcv9"
-                            >
-                              <div class="core__group--body tabs__body">
-                                <div class="core__blocks" index="0">
-                                  <div class="core__blocks--body">
-                                    <div
-                                      class="ecom-block ecom-core core__block elmspace ecom-gu6g4c0g08n"
-                                      data-core-is="block"
-                                    >
-                                      <div
-                                        class="ecom__element element__heading ecom-element ecom-html"
-                                        data-stopdrag="true"
-                                        deep="1"
-                                      >
-                                        <h3 class="ecom__heading ecom-db"></h3>
-                                      </div>
-                                    </div>
-                                    <div class="ecom-block ecom-core core__block ecom-wffte78kdh" data-core-is="block">
-                                      <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
-                                        <div class="text-content ecom-html has-drop-cap-view-default">
-                                          {{ 'sections.ecom-product-page-product.textcontent_wffte78kdh_html' | t }}
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div id="ecom-5of0211gh7r" class="core__group--item tab__item" data-id="ecom-5of0211gh7r">
-                              <div class="core__group--body tabs__body">
-                                <div class="core__blocks" index="1">
-                                  <div class="core__blocks--body">
-                                    <div
-                                      class="ecom-block ecom-core core__block elmspace ecom-kybxwmasdyf"
-                                      data-core-is="block"
-                                    >
-                                      <div
-                                        class="ecom__element element__heading ecom-element ecom-html"
-                                        data-stopdrag="true"
-                                        deep="1"
-                                      >
-                                        <h3 class="ecom__heading ecom-db">
-                                          {{ 'sections.ecom-product-page-product.headingtext_kybxwmasdyf_html' | t }}
-                                        </h3>
-                                      </div>
-                                    </div>
-                                    <div
-                                      class="ecom-block ecom-core core__block elmspace ecom-4y5vqmswl4v"
-                                      data-core-is="block"
-                                    >
-                                      <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
-                                        <div class="text-content ecom-html has-drop-cap-view-default">
-                                          {{ 'sections.ecom-product-page-product.textcontent_4y5vqmswl4v_html' | t }}
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div id="ecom-hzybmoj1cpo" class="core__group--item tab__item" data-id="ecom-hzybmoj1cpo">
-                              <div class="core__group--body tabs__body"><div class="core__blocks" index="2"></div></div>
-                            </div>
-                            <div id="ecom-pbm6uh13e39" class="core__group--item tab__item" data-id="ecom-pbm6uh13e39">
-                              <div class="core__group--body tabs__body">
-                                <div class="core__blocks" index="3">
-                                  <div class="core__blocks--body">
-                                    <div
-                                      class="ecom-block ecom-core core__block elmspace ecom-c5bg033ijpl"
-                                      data-core-is="block"
-                                    >
-                                      <div
-                                        class="ecom__element element__heading ecom-element ecom-html"
-                                        data-stopdrag="true"
-                                        deep="1"
-                                      >
-                                        <h3 class="ecom__heading ecom-db">
-                                          {{ 'sections.ecom-product-page-product.headingtext_c5bg033ijpl_html' | t }}
-                                        </h3>
-                                      </div>
-                                    </div>
-                                    <div
-                                      class="ecom-block ecom-core core__block elmspace ecom-fb43t1cm325"
-                                      data-core-is="block"
-                                    >
-                                      <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
-                                        <div class="text-content ecom-html has-drop-cap-view-default">
-                                          {{ 'sections.ecom-product-page-product.textcontent_fb43t1cm325_html' | t }}
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="ecom-column__overlay"><div class="ecom-overlay"></div></div>
-            </div>
-          </div>
-          <div class="ecom-section__overlay"><div class="ecom-overlay"></div></div>
-        </section>
-
-        {% unless ecom_has_variant_picker %}
-          <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
-          <script type="application/json" id="product-json-{{product.id}}-ecom-1vlaqflcmh7">
-            {%- render "ecom_product_json", product: product -%}
-          </script>
-        {% endunless %}
-      {%- endform -%}
-      {% assign ecom_has_variant_picker = false %}
-    {%- endif -%}
-
-    {% comment %}
-      // Reactive
-      * this.data.settings.product
-    {% endcomment %}
-    {% liquid
-      if request.page_type != 'product' or product == blank
-        assign selected_product = ''
-        if selected_product == blank or selected_product == '' or all_products[selected_product] == blank
-          assign product = collections.all.products.first
-        else
-          assign product = all_products[selected_product]
-          if product.id == blank
-            assign product = collections.all.products.last
-          endif
-        endif
-      endif
-    %}
-    {%- if product != blank -%}
-      {%- capture ec_form_id -%}product_form_{{ product.id }}_ecom-i8xdggf8hj{%- endcapture -%}
-      {%- form 'product',
-        product,
-        id: ec_form_id,
-        class: 'ecom-product-form ecom-product-form--single ecom-click',
-        product_id: product.id,
-        data-product_id: product.id,
-        data-product-id: product.id,
-        data-handle: product['handle-']
-      %}
-        <section
-          class="ecom-row ecom-core ecom-section ecom-i8xdggf8hj"
-          data-id="ecom-i8xdggf8hj"
-          style="z-index: inherit;"
-        >
-          <div data-deep="1" class="core__row--columns">
-            <div class="ecom-column ecom-core core__column--first core__column--last ecom-trbushc8">
-              <div class="core__column--wrapper">
-                <div class="core__blocks" index="0">
-                  <div class="core__blocks--body">
-                    <div class="ecom-block ecom-core core__block ecom-tgzuq6h6xu" data-core-is="block">
-                      <div class="ecom__element element__heading ecom-element ecom-html" data-stopdrag="true" deep="1">
-                        <h2 class="ecom__heading ecom-db">
-                          {{ 'sections.ecom-product-page-product.headingtext_tgzuq6h6xu_html' | t }}
-                        </h2>
-                      </div>
-                    </div>
-                    <div class="ecom-block ecom-core core__block ecom-zr5ofu4xcwf" data-core-is="block">
-                      <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
-                        <div class="text-content ecom-html has-drop-cap-view-default">
-                          {{ 'sections.ecom-product-page-product.textcontent_zr5ofu4xcwf_html' | t }}
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ecom-block ecom-core core__block elmspace ecom-63na21mw" data-core-is="row">
-                      <div
-                        class="ecom-row ecom-core core__block ecom-cl9o5zkbaon"
-                        data-id="ecom-cl9o5zkbaon"
-                        style="z-index: inherit;"
-                      >
-                        <div data-deep="2" class="core__row--columns">
-                          <div class="ecom-column ecom-core core__column--first core__column--last ecom-p38g79du">
-                            <div class="core__column--wrapper">
-                              <div class="core__blocks" index="0">
-                                <div class="core__blocks--body">
-                                  <div class="ecom-block ecom-core core__block ecom-hh6crmh17g" data-core-is="block">
-                                    <div class="ecom-element ecom-collection ecom-collection__product" deep="2">
-                                      <div class="ecom-collection__product-wrapper">
-                                        <div class="ecom-collection__product-container ecom-collection__product-container_product">
-                                          <div
-                                            class="ecom-collection__product-main ecom-collection_product_template_product"
-                                            data-option-swiper="{&quot;direction&quot;:&quot;horizontal&quot;,&quot;freeMode&quot;:false,&quot;breakpoints&quot;:{&quot;0&quot;:{&quot;slidesPerView&quot;:1},&quot;768&quot;:{&quot;slidesPerView&quot;:2},&quot;1025&quot;:{&quot;slidesPerView&quot;:4}},&quot;autoplay&quot;:{&quot;enabled&quot;:false,&quot;delay&quot;:0,&quot;pauseOnMouseEnter&quot;:false,&quot;disableOnInteraction&quot;:false,&quot;reverseDirection&quot;:false},&quot;speed&quot;:200,&quot;grabCursor&quot;:true,&quot;slideActiveClass&quot;:&quot;ecom-box-active&quot;,&quot;centeredSlides&quot;:false,&quot;watchOverflow&quot;:true,&quot;autoHeight&quot;:true,&quot;cubeEffect&quot;:{&quot;slideShadows&quot;:true,&quot;shadowOffset&quot;:20},&quot;creativeEffect&quot;:{},&quot;fadeEffect&quot;:{&quot;crossFade&quot;:true},&quot;pagination&quot;:{&quot;el&quot;:&quot;.ecom-swiper-pagination&quot;,&quot;type&quot;:&quot;bullets&quot;,&quot;clickable&quot;:true},&quot;navigation&quot;:{&quot;nextEl&quot;:&quot;.ecom-swiper-button-next&quot;,&quot;prevEl&quot;:&quot;.ecom-swiper-button-prev&quot;},&quot;spaceBetween&quot;:10}"
-                                            data-week="{{ 'sections.ecom-product-page-product.text_week_hh6crmh17g_html' | t }}"
-                                            data-day="{{ 'sections.ecom-product-page-product.text_day_hh6crmh17g_html' | t }}"
-                                            data-hour="{{ 'sections.ecom-product-page-product.text_hour_hh6crmh17g_html' | t }}"
-                                            data-minute="{{ 'sections.ecom-product-page-product.text_minute_hh6crmh17g_html' | t }}"
-                                            data-second="{{ 'sections.ecom-product-page-product.text_second_hh6crmh17g_html' | t }}"
-                                            data-sale="{{ 'sections.ecom-product-page-product.sale_hh6crmh17g_html' | t }}"
-                                            data-review-platform="{%- assign review_platform = shop.metafields.ecomposer.app_review.value -%}{{-review_platform-}}"
-                                            data-countdown-shows="day,hour,minute,second"
-                                            data-translate="true"
-                                          >
-                                            {%- capture badge_tags -%}Hot{%- endcapture -%}
-                                            {%- liquid
-                                              assign colors = shop.metafields.ecomposer.colors
-                                              assign badge_tags = badge_tags | strip | split: ','
-                                              assign tmp_collection = collection
-                                              assign tmp_product = product
-                                              assign enable_hook = shop.metafields.ecomposer.enable_hook.value
-                                            -%}
-
-                                            {% assign ecom_related_type = '' %}
-                                            {% assign is_collection = false %}
-                                            {% assign current_product = blank %}
-                                            {% assign current_product = product %}
-
-                                            {% if current_product != blank %}
-                                              {%- assign products = '' | split: '' -%}
-
-                                              {%- capture limit- %}4{% endcapture %}
-                                              {%- if limit == blank -%}
-                                                {% assign limit = 12 %}
-                                              {% else %}
-                                                {% assign limit = limit | plus: 0 %}
-                                              {%- endif -%}
-
-                                              {% if product.type
-                                                and product.type != blank
-                                                and products.size < 2
-                                                or products == blank
-                                              %}
-                                                {% paginate collections.all.products by 1000 %}
-                                                  {% assign products = collection.all.products
-                                                    | where: 'type', product.type
-                                                    | where: 'available'
-                                                  %}
-                                                {% endpaginate %}
-                                                {% assign ecom_related_type = 'ecom-product-related-shopify-type' %}
-                                              {% endif %}
-                                              {% if product.vendor
-                                                and product.vendor != blank
-                                                and products == blank
-                                                or products.size < 2
-                                              %}
-                                                {% paginate collections.all.products by 1000 %}
-                                                  {% assign products = collection.all.products
-                                                    | where: 'vendor', product.vendor
-                                                    | where: 'available'
-                                                  %}
-                                                {% endpaginate %}
-                                                {% assign ecom_related_type = 'ecom-product-related-shopify-vendor' %}
-                                              {% endif %}
-                                              {% if product.collections.size > 0
-                                                and products.size < 2
-                                                or products == blank
-                                              %}
-                                                {% for c in product.collections %}
-                                                  {% if c.handle == 'all'
-                                                    or c.handle == 'frontpage'
-                                                    or c.products_count < 1
-                                                  -%}
-                                                    {%- continue -%}
-                                                  {%- endif %}
-                                                  {% assign products = c.products | where: 'available' %}
-                                                  {% assign ecom_related_type = 'ecom-product-related-shopify-collection' %}
-                                                  {% assign is_collection = true %}
-                                                  {% assign collection = c %}
-                                                  {%- break -%}
-                                                {% endfor %}
-                                              {% endif %}
-                                            {% endif %}
-
-                                            {% capture quickshop_layout %}lite{% endcapture %}
-                                            {% capture product_style %}absolute{% endcapture %}
-                                            {%- assign view_more_only = undefined -%}
-                                            {% capture product_layout %}grid{% endcapture %}
-                                            {% assign check_min = 1 %}
-                                            {% if products and products.size > check_min and products != blank %}
-                                              <div
-                                                class="
-                                                  ecom-collection__product--wrapper-items ecom-collection-product__layout-grid
-                                                  {{ecom_related_type}}
-                                                "
-                                                data-grid-column="4"
-                                                data-grid-column-tablet="2"
-                                                data-grid-column-mobile="1"
-                                              >
-                                                {% assign ecom_count = 0 %}
-                                                {% for p in products %}
-                                                  {% assign product = p %}
-                                                  {% if p.handle %}
-                                                    {% assign product = p %}
-                                                  {% else %}
-                                                    {% assign product = all_products[p] %}
-                                                  {% endif %}
-                                                  {% if product.url == blank %} {% continue %} {% endif %}
-                                                  {% if ecom_count >= limit %}{% break %}{% endif %}
-                                                  {%- if product.handle == current_product.handle -%}
-                                                    {% continue %}
-                                                  {%- endif -%}
-                                                  {% assign ecom_count = ecom_count | plus: 1 %}
-                                                  {%- capture swatch_option -%}{{ 'sections.ecom-product-page-product.product_option_swatch_hh6crmh17g_html' | t }}{%- endcapture -%}
-                                                  {% assign hide_quickshop = true %}
-                                                  {% assign other_option_layout = 'dropdown' %}
-                                                  {% capture product_picker %}
+ {%- unless page_type == 'index' or page_type == 'list-collections' or page_type == '404' -%}
+ <nav class="ecom-base__breadcrumbs ecom-flex" role="navigation" aria-label="breadcrumbs">
+ <div class="ecom-base__breadcrumbs__list">
+ {{ icon_parent }}<a class="ecom-base__breadcrumbs__link" href="/">{{ 'sections.ecom-product-page-product.breadcrumbs_home_70g27z4fas_html' | t }}</a>
+ {%- case page_type -%}
+ {%- when 'page' -%}
+ {{ icon_breadcrumbs }}
+ {%- if EComBuilderMode -%}
+ <a class="ecom-base__breadcrumbs__link" href="#" aria-current="page">Untitled</a>
+ {%- else -%}
+ <a class="ecom-base__breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
+ {%- endif -%}
+ {%- when 'cart' -%}
+ {{ icon_breadcrumbs }}
+ <a class="ecom-base__breadcrumbs__link" href="{{ routes.cart_url }}" aria-current="cart">{{ 'sections.ecom-product-page-product.cart_page_title_70g27z4fas_html' | t }}</a>
+ {%- when 'product' -%}
+ {%- if collection.url -%}
+ {{ icon_breadcrumbs }}{{ collection.title | link_to: collection.url }}
+ {%- endif -%}
+ {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
+ {%- when 'collection' and collection.handle -%}
+ {%- if current_tags -%}
+ {{ icon_breadcrumbs }}{{ collection.title | link_to: collection.url }}
+ {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+ {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
+ {%- else -%}
+ {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
+ {%- endif -%}
+ {%- when 'blog' -%}
+ {%- if current_tags -%}
+ {{ icon_breadcrumbs }}{{ blog.title | link_to: blog.url }}
+ {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
+ {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
+ {%- else -%}
+ {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ blog.url }}" aria-current="page">{{ blog.title }}</a>
+ {%- endif -%}
+ {%- when 'article' -%}
+ {{ icon_breadcrumbs }}{{ blog.title | link_to: blog.url }}
+ {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ article.url }}" aria-current="page">{{ article.title }}</a>
+ {%- else -%}
+ {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
+ {%- endcase -%}
+ </div>
+ </nav>
+ {%- endunless -%}{%- assign page_type = request.page_type %}
+ {%- if page_type == 'index' -%}
+ {%- if EComBuilderMode -%}
+ <a class="ecom-base__breadcrumbs__link" href="#" aria-current="index">Home</a>
+ {%- else -%}
+ <a class="ecom-base__breadcrumbs__link" href="/" aria-current="index">Home</a>
+ {%- endif -%}
+ {%- endif -%}
+ </div></div> <div class="ecom-block ecom-core core__block ecom-dt42jnu3eiv" data-core-is="block"><div class="ecom-element ecom-product-single ecom-product-single__title" deep="2"><div class="ecom-product-single__title-wrapper"><div class="ecom-product-single__title-container"><h1 class="ecom-product__heading" href="{{ product.url }}" title="{{ product.title }}">{{ product.title }}</h1></div></div></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-bokihj9gjy" data-core-is="block"><div class="ecom-element ecom-product-single ecom-product-single__price" deep="2"><div class="ecom-product-single__price-wrapper"><div class="ecom-product-single__price-container"><div class="ecom-product-single__price-container-grid"><div class="ecom-product-single ecom-product-single__price--prices">
+ {%- liquid
+ if product.has_only_default_variant
+ assign target = product
+ else
+ assign target = product.selected_or_first_available_variant
+ endif
+ -%}
+ <div class="ecom-product-single__price--sale {% if target.compare_at_price == nil or target.compare_at_price < target.price %} ecom-product-single__price-normal {% endif %}" data-price="{{target.price}}">
+ {%- if settings.currency_code_enabled -%}
+ {{target.price | money_with_currency}}
+ {%- else -%}
+ {{target.price| money }}
+ {%- endif -%}
+ </div>
  
- {% endcapture %}
-                                                  {% capture product_actions %}
+ <div class="ecom-product-single__price--regular" {%- if target.compare_at_price == nil or target.compare_at_price < target.price -%} style="display:none" {% endif %}>
+ {%- if settings.currency_code_enabled -%}
+ {{target.compare_at_price | money_with_currency}}
+ {%- else -%}
+ {{target.compare_at_price | money }}
+ {%- endif -%}
+ </div>
+ 
+ {%- capture taxes_text -%}{%- endcapture -%}
+ {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+ {% if taxes_text %}
+ <div class="ec-product__tax caption rte">
+ {%- if shop.taxes_included -%}
+ 
+ {%- endif -%}
+ {%- if shop.shipping_policy.body != blank -%}
+ {{ 'sections.ecom-product-page-product.shipping_policy_bokihj9gjy_html' | t: link:shop.shipping_policy.url }}
+ {%- endif -%}
+ </div>
+ {%- endif -%}
+ {%- endif -%}
+ </div><div class="ecom-product-single__price--badges-wrapper">
+ <div class="ecom-product-single__price--badges">
+ {%- assign savings = target.compare_at_price | minus: target.price | times: 100.0 | divided_by: target.compare_at_price | round -%}
+ 
+ {%- if target.compare_at_price != nil and target.compare_at_price > target.price and target.available == true -%}
+ <span class="ecom-product-single__price--badges-sale" data-text=" {{ 'sections.ecom-product-page-product.product_single_sale_text_bokihj9gjy_html' | t }}" data-sale="{{savings}}" data-type="percent">
+ {{ 'sections.ecom-product-page-product.product_single_sale_text_bokihj9gjy_html' | t }}
+ </span>
+ {% endif %}
+ <span class="ecom-product-single__price--badges-sold-out" {% if target.available %} style="display:none" {% endif %}>
+ {{ 'sections.ecom-product-page-product.product_single_sold_text_bokihj9gjy_html' | t }}
+ </span>
+ </div>
+ </div></div><div class="ecom-product-single-afterpay">
+ 
+ </div></div></div></div></div> <div class="ecom-block ecom-core core__block ecom-94rgdjzwo2j" data-core-is="block"><div class="ecom-element ecom-product-single ecom-product-single__description" deep="2"><div class="ecom-product-single__description-wrapper"><div class="ecom-product-single__description-container" data-show-type="full"><div class="ecom-product-single__description--paragraph"><div>{{product.description | strip_html }}</div></div></div></div></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-k7v1wt37" data-core-is="block"><div class="ecom-row ecom-core core__block ecom-u3jfg87a" data-id="ecom-u3jfg87a" style="z-index: inherit;"><div data-deep="3" class="core__row--columns"></div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </div></div> <div class="ecom-block ecom-core core__block ecom-jhuufdr221g" data-core-is="block"><div class="ecom-element ecom-product-single ecom-product-single__variant-picker" deep="2"><div class="ecom-product-single__variant-picker-wrapper ecom_not_hide_dropdown_arrow"><div class="ecom-product-single__variant-picker-container {% if product.has_only_default_variant%} ecom-product-single__variant-picker--only-default{% endif%}" data-picker-type="radio" data-ecom-placeholder="">
+ {% assign ecom_has_variant_picker = true%}
+ {% assign variant_selected = product.selected_or_first_available_variant%}
+ <div class="ecom-product-single__variant-picker--main">
+ {% unless product.has_only_default_variant%}
+ {%- for option in product.options_with_values -%}
+ {%- assign index = option.position | prepend: 'option' -%}
+ {% assign option_index = option.position | minus: 1 %}
+ <div class="ecom-product-single__picker-option-{{option.name | handleize }}">
+ <span class="ecom-product-single__picker-radio-label ecom-product-single__picker--option-label" data-option-index="{{option_index}}">
+ <span class="ecom-product-variant--option-label-text">{{option.name}}</span>
+ </span>
+ <ul class="ecom-product-single__picker-radio-list">
+ {% for value in option.values %}
+ <li class="ecom-product-single__swatch-item ecom-product-single__picker-radio-list-item {% if value == variant_selected[index] %}ecom-button-active{% endif %}" data-option-index="{{ option_index }}" data-value="{{ value | escape }}">
+ {{value}}
+ </li>
+ {% endfor %}
+ </ul>
+ </div>
+ {%- endfor -%}
+ {% endunless %}
+ </div><div class="ecom-product-single__variant-picker--options">
+ <select name="id" class="ecom-product-single-select-id{%-if product.has_only_default_variant-%}ecom-product-single__picker-default-variant{% endif %}" data-product-id="{{product.id}}" data-json-product="product-json-{{product.id}}-ecom-jhuufdr221g" id="ecom-variant-selector-{{product.id}}-ecom-jhuufdr221g">
+ {% for variant in product.variants%}
+ <option value="{{variant.id}}" {% if variant_selected.id == variant.id %} selected="selected" {% endif %}>{{variant.title}}</option>
+ {% endfor %}
+ </select>
+ </div><div class="ecom-product-single__variant-picker--json">
+ <script type="application/json" id="product-json-{{product.id}}-ecom-jhuufdr221g">
+ {%- render "ecom_product_json", product: product -%}
+ </script>
+ </div></div></div></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-xjksegmq4x8" data-core-is="block"><div class="ecom-element ecom-product-single ecom-product-single__add-to-cart" deep="2"><div class="ecom-product-single__add-to-cart-wrapper"><div class="ecom-product-single__add-to-cart-container"><div class="ecom-product-single__add-to-cart-buttons"><div class="ecom-product-single__add-to-cart-buttons-wrapper"><button type="submit" class="ecom-product-single__add-to-cart--submit ecom-flex animated" data-text-add-cart="{{ 'sections.ecom-product-page-product.add_to_cart_xjksegmq4x8_html' | t }}" data-text-pre-order="{{ 'sections.ecom-product-page-product.pre_order_xjksegmq4x8_html' | t }}" data-text-unavailable="{{ 'sections.ecom-product-page-product.product_unavailable_xjksegmq4x8_html' | t }}" data-text-outstock="{{ 'sections.ecom-product-page-product.out_stock_xjksegmq4x8_html' | t }}" data-text-added-cart="{{ 'sections.ecom-product-page-product.added_cart_text_xjksegmq4x8_html' | t }}" data-message-added-cart="{{ 'sections.ecom-product-page-product.added_cart_message_xjksegmq4x8_html' | t }}" data-href="#" data-target="" data-action="cart" data-variant-id="{{product.first_available_variant.id}}"><span class="ecom-add-to-cart-text">{{ 'sections.ecom-product-page-product.add_to_cart_xjksegmq4x8_html' | t }}</span><span class="ecom__element--button-icon"></span></button></div></div></div></div></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-lmcl36qz" data-core-is="block"><div class="ecom-row ecom-core core__block ecom-pzw9w41p" data-id="ecom-pzw9w41p" style="z-index: inherit;"><div data-deep="3" class="core__row--columns"></div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </div></div> <div class="ecom-block ecom-core core__block elmspace ecom-1cnqaweecps" data-core-is="block"><div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2"><div class="text-content ecom-html has-drop-cap-view-default">{{ 'sections.ecom-product-page-product.textcontent_1cnqaweecps_html' | t }}</div></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-f2om6pvcutr ec-custom-position" data-core-is="block"><div class="ecom-element ecom-base-elements ecom-element__lightbox" deep="2"><div class="ecom-element__lightbox-wrapper"><div class="ecom-element__lightbox-container ecom-flex" data-ecom-placeholder="">
+ {%- capture show_when -%}all{%- endcapture -%}
+ {%- capture value -%}Size{%- endcapture -%}
+ {%- assign check = false -%}
+ {%- case show_when-%}
+ {%- when 'all' -%}
+ {% assign check = true %}
+ {%- when 'option'- %}
+ {% if value and product.options contains value %}
+ {% assign check = true %}
+ {% endif %}
+ {%- when 'tag'-%}
+ {%- if value and product.tags contains value -%}
+ {% assign check = true %}
+ {%- endif -%}
+ {% when 'type' %}
+ {%- if value and product.type contains value -%}
+ {% assign check = true %}
+ {%- endif -%}
+ {% when 'vendor' %}
+ {%- if value and product.vendor contains value -%}
+ {% assign check = true %}
+ {%- endif -%}
+ {%- endcase -%}
+ {%- if check -%}
+ {%- capture type -%}image_metafield{%- endcapture -%}
+ 
+ <button type="button" ecom-modal="inline" class="ecom__element--button ecom-elements__lightbox-button ecom-flex ecom-fl_cener ecom-al_center" ecom-modal-source="#ecom-elements__lightbox-content-ecom-f2om6pvcutr">
+ <span class="ecom-elements__lightbox-button-text" >
+ {{ 'sections.ecom-product-page-product.lightbox_button_title_f2om6pvcutr_html' | t }}
+ </span>
+ <span class="ecom-button-icon ecom-elements__lightbox-button-icon">
+ 
+ </span>
+ </button>
+ 
+ 
+ {%- if type != 'page' -%}
+ <div style="display:none" >
+ {%- if type == 'custom' -%}
+ <div class="ecom-html" id="ecom-elements__lightbox-content-ecom-f2om6pvcutr">
+ <div class="ecom-elements__lightbox-content-heading">{{ 'sections.ecom-product-page-product.UnderstandaboutEComposer_f2om6pvcutr_html' | t }}</div>
+ <div class="ecom-elements__lightbox-content-body">{{ 'sections.ecom-product-page-product.s001p0l2hycpSwwapkW8dea5ttnltwycbDEfftasbtsyaw_f2om6pvcutr_html' | t }}</div>
+ </div>
+ {%- elsif type == 'video' -%}
+ <div id="ecom-elements__lightbox-content-ecom-f2om6pvcutr" style="height:100%">
+ 
+ <iframe
+ class="ecom_iframe"
+ frameborder="0"
+ allowfullscreen="1"
+ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+ style="border: 0; width: 100%; height:100%; display: flex !important"
+ src=""
+ >
+ </iframe>
+ 
+ </div>
+ {%- elsif type == 'video_metafield' -%}
+ <div id="ecom-elements__lightbox-content-ecom-f2om6pvcutr" style="height:100%">
+ {% assign video = collection.meafields.custom.size_chart.value.sources %}
+ {%- if video.size > 1 -%}
+ {% assign video_url = video[1].url %}
+ {%- else -%}
+ {% assign video_url = video[0].url %}
+ {%- endif -%}
+ <video
+ style="display: flex !important;width: 100%; height:100%;"
+ class="ecom_video"
+ controls
+ >
+ <source src="{{ video_url }}" />
+ </video>
+ </div>
+ {%- elsif type == 'image_metafield' -%}
+ {% assign image = collection.meafields.custom.size_chart %}
+ <div id="ecom-elements__lightbox-content-ecom-f2om6pvcutr" style="height:100%; width: 100%; display:flex;">
+ <img src="{{ image | img_url: 'master'}}" alt="" style="object-fit: cover; width: 100%;">
+ </div>
+ {%- else -%}
+ <div id="ecom-elements__lightbox-content-ecom-f2om6pvcutr" style="height:100%; width: 100%; display:flex;">
+ <picture style="height:100%; width: 100%; display:flex;">
+ <img loading="lazy" fetchpriority="low" src="/images/placeholder.png" alt="undefined" style="object-fit:cover;width:100%;">
+ </picture>
+ </div>
+ {%- endif -%}
+ </div>
+ {%- else -%}
+ <div class="ecom-elements__lightbox-content ecom-html" id="ecom-elements__lightbox-content-ecom-f2om6pvcutr" style="display:none">
+ <div>
+ {%- capture page_handle -%}
+ size-guide
+ {%- endcapture-%}
+ {% assign p = pages[page_handle] %}
+ {% if p %}{{p.content}}{% endif %}
+ </div>
+ </div>
+ {%- endif -%}
+ {%- endif -%}
+ </div></div></div></div> </div></div></div>
+   
+   
+   
+   <div class="ecom-column__overlay">
+   <div class="ecom-overlay">
+   </div></div></div> </div><div class="ecom-section__overlay">
+   <div class="ecom-overlay"></div></div> </div></div> 
+   <div class="ecom-block ecom-core core__block elmspace ecom-6tmsuc0db89" data-core-is="group">
+   <div class="ecom-core ecom-group core__block ecom-xbg78kqex4f"> 
+   <div class="core__group--wrapper tabs__wrapper ecom__element ecom__tabs tabs__wrapper--horizontal" data-r="" style="">
+   <div class="tabs__navs tabs__navs--horizontal"><div class="tabs__navs--items">
+   <div class="ecom-items tabs__nav ecom-item-active" data-target="">
+   <div class="tabs_nav--content_right"><div class="tabs_nav--content"><h3 class="tabs_nav--text ecom-items--text">{{ 'sections.ecom-product-page-product.tabtitle0_xbg78kqex4f_html' | t }}</h3>
+   </div><div class="tabs_nav--sub-text"></div></div></div>
+   <div class="ecom-items tabs__nav" data-target=""><div class="tabs_nav--content_right">
+   <div class="tabs_nav--content"><h3 class="tabs_nav--text ecom-items--text">{{ 'sections.ecom-product-page-product.tabtitle1_xbg78kqex4f_html' | t }}</h3></div>
+   <div class="tabs_nav--sub-text"></div></div></div><div class="ecom-items tabs__nav" data-target="">
+   <div class="tabs_nav--content_right"><div class="tabs_nav--content">
+   <div class="tabs_nav--text ecom-items--text">{{ 'sections.ecom-product-page-product.tabtitle2_xbg78kqex4f_html' | t }}</div></div>
+   <div class="tabs_nav--sub-text"></div></div></div><div class="ecom-items tabs__nav" data-target="">
+   <div class="tabs_nav--content_right">
+   <div class="tabs_nav--content"><h3 class="tabs_nav--text ecom-items--text">{{ 'sections.ecom-product-page-product.tabtitle3_xbg78kqex4f_html' | t }}</h3></div>
+   <div class="tabs_nav--sub-text"></div></div></div></div></div>
+
+
+   
+ <div id="ecom-ddda2wkmcv9" class="core__group--item tab__item ecom-item-active" data-id="ecom-ddda2wkmcv9">
+    <div class="core__group--body tabs__body">
+        <div class="core__blocks" index="0">
+            <div class="core__blocks--body">
+                <div class="ecom-block ecom-core core__block elmspace ecom-gu6g4c0g08n" data-core-is="block">
+                    <div class="ecom__element element__heading ecom-element ecom-html" data-stopdrag="true" deep="1">
+                        <h3 class="ecom__heading ecom-db">{{ 'sections.ecom-product-page-product.textcontent_wffte78kdh_html' | t }}</h3>
+                    </div>
+                </div>
+                <div class="ecom-block ecom-core core__block ecom-wffte78kdh" data-core-is="block">
+                    <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
+                        <div class="text-content ecom-html has-drop-cap-view-default">
+                            Název: {{ product.name }}<br>
+                            SKU: {{ product.sku }}<br>
+                            Materiál: Kuže
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+   <div id="ecom-hzybmoj1cpo" class="core__group--item tab__item" data-id="ecom-hzybmoj1cpo"><div class="core__group--body tabs__body"><div class="core__blocks" index="2"></div></div></div>
+   <div id="ecom-pbm6uh13e39" class="core__group--item tab__item" data-id="ecom-pbm6uh13e39"><div class="core__group--body tabs__body"><div class="core__blocks" index="3"><div class="core__blocks--body">
+   <div class="ecom-block ecom-core core__block elmspace ecom-c5bg033ijpl" data-core-is="block">
+   <div class="ecom__element element__heading ecom-element ecom-html" data-stopdrag="true" deep="1"><h3 class="ecom__heading ecom-db">{{ 'sections.ecom-product-page-product.headingtext_c5bg033ijpl_html' | t }}</h3></div></div> 
+   <div class="ecom-block ecom-core core__block elmspace ecom-fb43t1cm325" data-core-is="block">
+   <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
+   <div class="text-content ecom-html has-drop-cap-view-default">{{ 'sections.ecom-product-page-product.textcontent_fb43t1cm325_html' | t }}</div></div></div> </div></div></div></div></div></div> </div></div> </div></div></div>
+   <div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div>
+   <div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </section>
+ 
+   
+   {% unless ecom_has_variant_picker %}
+ <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}" />
+ <script type="application/json" id="product-json-{{product.id}}-ecom-1vlaqflcmh7">
+ {%- render "ecom_product_json", product: product -%}
+ </script>
+ {% endunless %}
+ {%- endform -%}
+ {% assign ecom_has_variant_picker = false %}
+ {%- endif -%}
+ 
+ {% comment %}
+ // Reactive
+ * this.data.settings.product
+ {% endcomment %}
+ {% liquid
+ if request.page_type != 'product' or product == blank
+ assign selected_product = ''
+ if selected_product == blank or selected_product == '' or all_products[selected_product] == blank
+ assign product = collections['all'].products.first
+ else
+ assign product = all_products[selected_product]
+ if product.id == blank
+ assign product = collections['all'].products.last
+ endif
+ endif
+ endif
+ %}
+ {%- if product != blank -%}
+ {%- capture ec_form_id -%}product_form_{{ product.id }}_ecom-i8xdggf8hj{%- endcapture -%}
+ {%- form 'product', product, id: ec_form_id, class: "ecom-product-form ecom-product-form--single ecom-click", product_id: product.id, data-product_id: product.id,data-product-id: product.id, data-handle: product.handle-%}
+ <section class="ecom-row ecom-core ecom-section ecom-i8xdggf8hj" data-id="ecom-i8xdggf8hj" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-trbushc8"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block ecom-tgzuq6h6xu" data-core-is="block"><div class="ecom__element element__heading ecom-element ecom-html" data-stopdrag="true" deep="1"><h2 class="ecom__heading ecom-db">{{ 'sections.ecom-product-page-product.headingtext_tgzuq6h6xu_html' | t }}</h2></div></div> <div class="ecom-block ecom-core core__block ecom-zr5ofu4xcwf" data-core-is="block"><div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1"><div class="text-content ecom-html has-drop-cap-view-default">{{ 'sections.ecom-product-page-product.textcontent_zr5ofu4xcwf_html' | t }}</div></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-63na21mw" data-core-is="row"><div class="ecom-row ecom-core core__block ecom-cl9o5zkbaon" data-id="ecom-cl9o5zkbaon" style="z-index: inherit;"><div data-deep="2" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-p38g79du"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block ecom-hh6crmh17g" data-core-is="block"><div class="ecom-element ecom-collection ecom-collection__product" deep="2"><div class="ecom-collection__product-wrapper"><div class="ecom-collection__product-container ecom-collection__product-container_product"><div class="ecom-collection__product-main ecom-collection_product_template_product" data-option-swiper="{&quot;direction&quot;:&quot;horizontal&quot;,&quot;freeMode&quot;:false,&quot;breakpoints&quot;:{&quot;0&quot;:{&quot;slidesPerView&quot;:1},&quot;768&quot;:{&quot;slidesPerView&quot;:2},&quot;1025&quot;:{&quot;slidesPerView&quot;:4}},&quot;autoplay&quot;:{&quot;enabled&quot;:false,&quot;delay&quot;:0,&quot;pauseOnMouseEnter&quot;:false,&quot;disableOnInteraction&quot;:false,&quot;reverseDirection&quot;:false},&quot;speed&quot;:200,&quot;grabCursor&quot;:true,&quot;slideActiveClass&quot;:&quot;ecom-box-active&quot;,&quot;centeredSlides&quot;:false,&quot;watchOverflow&quot;:true,&quot;autoHeight&quot;:true,&quot;cubeEffect&quot;:{&quot;slideShadows&quot;:true,&quot;shadowOffset&quot;:20},&quot;creativeEffect&quot;:{},&quot;fadeEffect&quot;:{&quot;crossFade&quot;:true},&quot;pagination&quot;:{&quot;el&quot;:&quot;.ecom-swiper-pagination&quot;,&quot;type&quot;:&quot;bullets&quot;,&quot;clickable&quot;:true},&quot;navigation&quot;:{&quot;nextEl&quot;:&quot;.ecom-swiper-button-next&quot;,&quot;prevEl&quot;:&quot;.ecom-swiper-button-prev&quot;},&quot;spaceBetween&quot;:10}" data-week="{{ 'sections.ecom-product-page-product.text_week_hh6crmh17g_html' | t }}" data-day="{{ 'sections.ecom-product-page-product.text_day_hh6crmh17g_html' | t }}" data-hour="{{ 'sections.ecom-product-page-product.text_hour_hh6crmh17g_html' | t }}" data-minute="{{ 'sections.ecom-product-page-product.text_minute_hh6crmh17g_html' | t }}" data-second="{{ 'sections.ecom-product-page-product.text_second_hh6crmh17g_html' | t }}" data-sale="{{ 'sections.ecom-product-page-product.sale_hh6crmh17g_html' | t }}" data-review-platform="{%- assign review_platform = shop.metafields.ecomposer.app_review.value -%}{{-review_platform-}}" data-countdown-shows="day,hour,minute,second" data-translate="true">
+ {%- capture badge_tags -%}Hot{%- endcapture -%}
+ {%- liquid
+ assign colors = shop.metafields.ecomposer.colors
+ assign badge_tags = badge_tags | strip | split: ','
+ assign tmp_collection = collection
+ assign tmp_product = product
+ assign enable_hook = shop.metafields.ecomposer.enable_hook.value
+ -%}
+ 
+ {% assign ecom_related_type = '' %}
+ {% assign is_collection = false%}
+ {% assign current_product = blank %}
+ {% assign current_product = product %}
+ 
+ 
+ {% if current_product != blank %}
+ {%- assign products = '' | split: '' -%}
+ 
+ {%- capture limit-%}4{% endcapture %}
+ {%- if limit == blank -%}
+ {% assign limit = 12 %}
+ {% else %}
+ {% assign limit = limit | plus: 0 %}
+ {%- endif-%}
+ 
+ 
+ {% if product.type and product.type != blank and products.size < 2 or products == blank %}
+ {% paginate collections.all.products by 1000 %}
+ {% assign products = collection.all.products | where: 'type', product.type | where: "available" %}
+ {% endpaginate %}
+ {% assign ecom_related_type = 'ecom-product-related-shopify-type' %}
+ {% endif %}
+ {% if product.vendor and product.vendor != blank and products == blank or products.size < 2%}
+ {% paginate collections.all.products by 1000 %}
+ {% assign products = collection.all.products | where: 'vendor', product.vendor | where: "available" %}
+ {% endpaginate %}
+ {% assign ecom_related_type = 'ecom-product-related-shopify-vendor' %}
+ {% endif %}
+ {% if product.collections.size > 0 and products.size < 2 or products == blank %}
+ {% for c in product.collections %}
+ {% if c.handle == 'all' or c.handle == 'frontpage' or c.products_count < 1 %}{% continue%}{% endif%}
+ {% assign products = c.products | where: "available" %}
+ {% assign ecom_related_type = 'ecom-product-related-shopify-collection' %}
+ {% assign is_collection = true%}
+ {% assign collection = c %}
+ {%- break -%}
+ {% endfor %}
+ {% endif %}
+ 
+ {% endif %}
+ 
+ {% capture quickshop_layout%}lite{% endcapture %}
+ {% capture product_style%}absolute{% endcapture%}
+ {%- assign view_more_only = undefined -%}
+ {% capture product_layout %}grid{% endcapture %}
+ {% assign check_min = 1 %}
+ {% if products and products.size > check_min and products != blank %}
+ <div class="
+ ecom-collection__product--wrapper-items ecom-collection-product__layout-grid
+ {{ecom_related_type}}"
+ data-grid-column="4"
+ data-grid-column-tablet="2"
+ data-grid-column-mobile="1"
+ >
+ {% assign ecom_count = 0 %}
+ {% for p in products %}
+ {% assign product = p %}
+ {% if p.handle %}
+ {% assign product = p %}
+ {% else %}
+ {% assign product = all_products[p] %}
+ {% endif %}
+ {% if product.url == blank %} {% continue %} {% endif %}
+ {% if ecom_count >= limit %}{% break %}{% endif %}
+ {%- if product.handle == current_product.handle -%}{% continue %}{%-endif -%}
+ {% assign ecom_count = ecom_count | plus: 1 %}
+ {%- capture swatch_option -%}{{ 'sections.ecom-product-page-product.product_option_swatch_hh6crmh17g_html' | t }}{%- endcapture -%}
+ {% assign hide_quickshop = true %}
+ {% assign other_option_layout = 'dropdown' %}
+ {% capture product_picker%}
+ 
+ {% endcapture%}
+ {% capture product_actions%}
  <div class="ecom-collection__product--actions" data-layout="{{quickshop_layout}}">
  
  
@@ -1502,513 +707,324 @@
  </div>
  </div>
  {% endcapture %}
-                                                  <div
-                                                    class="ecom-collection__product-item "
-                                                    data-product-handle="{{product.handle}}"
-                                                    data-style="{{product_style}}"
-                                                  >
-                                                    <div
-                                                      class="ecom-collection__product-item--wrapper {% if product_style == 'horizontal'%} ecom-d-flex {% else %} ecom-flex-column {% endif %}"
-                                                    >
-                                                      <div class="ecom-collection__product-media-wrapper {% if product_style == 'horizontal'%} ecom-d-flex{% endif %} ">
-                                                        {%- if enable_hook -%}
-                                                          {% capture the_ecom_hook %}
+ <div class="ecom-collection__product-item " data-product-handle="{{product.handle}}" data-style="{{product_style}}">
+ <div
+ class="ecom-collection__product-item--wrapper {% if product_style == 'horizontal'%} ecom-d-flex {% else %} ecom-flex-column {% endif %}">
+ <div class="ecom-collection__product-media-wrapper {% if product_style == 'horizontal'%} ecom-d-flex{% endif %} "
+ >
+ {%- if enable_hook -%}
+ {% capture the_ecom_hook %}
  {% render 'ecom_product_loop_before', product: product %}
  {% endcapture %}
-                                                          {% unless the_ecom_hook contains 'Liquid error' %}
-                                                            {{ the_ecom_hook }}
-                                                          {% endunless %}
-                                                        {%- endif -%}
-                                                        <a
-                                                          href="{%- if is_collection-%}{{- product.url | within: collection -}}{% else %}{{- product.url -}}{%-endif-%}"
-                                                          target=""
-                                                          title="{{product.title | escape }}"
-                                                          class="ecom-collection__product-item--inner ecom-image-default"
-                                                        >
-                                                          {%- if product.featured_media -%}
-                                                            {%- liquid
-                                                              assign featured_media_aspect_ratio = product.featured_media.aspect_ratio
-                                                              if product.featured_media.aspect_ratio == null
-                                                                assign featured_media_aspect_ratio = 1
-                                                              endif
-                                                            -%}
-                                                            <div class="ecom-collection__product-media--container">
-                                                              <div
-                                                                class="
-                                                                  ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
-                                                                "
-                                                                style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"
-                                                              >
-                                                                <img
-                                                                  srcset="
-                                                                    {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | img_url: '165x' }} 165w,{%- endif -%}
-                                                                    {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | img_url: '360x' }} 360w,{%- endif -%}
-                                                                    {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | img_url: '533x' }} 533w,{%- endif -%}
-                                                                    {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | img_url: '720x' }} 720w,{%- endif -%}
-                                                                    {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | img_url: '940x' }} 940w,{%- endif -%}
-                                                                    {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | img_url: '1066x' }} 1066w{%- endif -%}
-                                                                  "
-                                                                  src="{{ product.featured_media | img_url: '533x' }}"
-                                                                  sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                                                                  alt="{{ product.featured_media.alt | escape }}"
-                                                                  loading="lazy"
-                                                                  class="ecom-collection__product-media-image"
-                                                                  width="{{ product.featured_media.width }}"
-                                                                  height="{{ product.featured_media.height }}"
-                                                                >
-                                                              </div>
-                                                            </div>
-                                                          {% else %}
-                                                            <div class="ecom-collection__product-media--container">
-                                                              <div
-                                                                class="ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt"
-
-                                                                style="padding-bottom: 85%;"
-                                                              >
-                                                                {{
-                                                                  'product-1'
-                                                                  | placeholder_svg_tag: 'ecom-colection__product-svg-placeholder'
-                                                                }}
-                                                              </div>
-                                                            </div>
-                                                          {% endif %}
-
-                                                          <div class="ecom-collection__product-badge">
-                                                            {%- if product.available == false -%}
-                                                              <span
-                                                                class="ecom-collection__product-badge--sold-out"
-                                                                aria-hidden="true"
-                                                              >
-                                                                {{
-                                                                  'sections.ecom-product-page-product.sold_text_hh6crmh17g_html'
-                                                                  | t
-                                                                }}
-                                                              </span>
-                                                            {%- elsif product.compare_at_price > product.price
-                                                              and product.available
-                                                            -%}
-                                                              <span
-                                                                class="ecom-collection__product-badge--sale"
-                                                                aria-hidden="true"
-                                                              >
-                                                                {{
-                                                                  'sections.ecom-product-page-product.sale_text_hh6crmh17g_html'
-                                                                  | t
-                                                                }}
-                                                              </span>
-                                                            {%- endif -%}
-                                                            {% if badge_tags %}
-                                                              {% for badge in badge_tags %}
-                                                                {% for original_tag in product.tags %}
-                                                                  {% assign tag = original_tag | replace: ' ', ' ' %}
-                                                                  {% if tag == badge %}
-                                                                    <span
-                                                                      class="ecom-collection__product-badge--custom ecom-collection__product-badge--{{ badge | handleize}}"
-                                                                      aria-hidden="true"
-                                                                    >
-                                                                      {{ badge }}
-                                                                    </span>
-                                                                  {% endif %}
-                                                                {% endfor %}
-                                                                {%- assign bad = badge | strip -%}
-                                                              {% endfor %}
-                                                            {% endif %}
-
-                                                            {%- if product.has_only_default_variant -%}
-                                                              {%- if product.compare_at_price != null
-                                                                and product.compare_at_price > product.price
-                                                              -%}
-                                                                {%- assign sale = product.compare_at_price
-                                                                  | minus: product.price
-                                                                  | times: 100.0
-                                                                  | divided_by: product.compare_at_price
-                                                                  | round
-                                                                -%}
-                                                                <span class="ecom-collection__product-price--bage-sale">
-                                                                  {{
-                                                                    'sections.ecom-product-page-product.sale_badge_hh6crmh17g_html'
-                                                                    | t: sale: sale
-                                                                  }}
-                                                                </span>
-                                                              {%- endif -%}
-                                                            {%- else -%}
-                                                              {%- if product.selected_or_first_available_variant.compare_at_price
-                                                                  != null
-                                                                and product.selected_or_first_available_variant.compare_at_price
-                                                                  > product.selected_or_first_available_variant.price
-                                                              -%}
-                                                                {%- assign sale = product.selected_or_first_available_variant.compare_at_price
-                                                                  | minus: product.selected_or_first_available_variant.price
-                                                                  | times: 100.0
-                                                                  | divided_by: product.selected_or_first_available_variant.compare_at_price
-                                                                  | round
-                                                                -%}
-                                                                <span class="ecom-collection__product-price--bage-sale">
-                                                                  {{
-                                                                    'sections.ecom-product-page-product.sale_badge_hh6crmh17g_html'
-                                                                    | t: sale: sale
-                                                                  }}
-                                                                </span>
-                                                              {%- endif -%}
-                                                            {%- endif -%}
-                                                          </div>
-                                                        </a>
-                                                      </div>
-                                                      <div class="ecom-collection__product-item--information">
-                                                        <div class="ecom-collection__product-item--information-wrapper ecom-flex ecom-column">
-                                                          {% if product_style == 'absolute' %}
-                                                            {{ product_actions }}
-                                                            {{ product_picker }}
-                                                          {% endif %}
-
-                                                          {%- if enable_hook -%}
-                                                            {% capture the_ecom_hook %}
+ {% unless the_ecom_hook contains 'Liquid error' %}
+ {{ the_ecom_hook }}
+ {% endunless %}
+ {%- endif -%}
+ <a href="{%- if is_collection-%}{{- product.url | within: collection -}}{% else %}{{- product.url -}}{%-endif-%}" target="" title="{{product.title | escape }}" class="ecom-collection__product-item--inner ecom-image-default">
+ {%- if product.featured_media -%}
+ {%- liquid
+ assign featured_media_aspect_ratio = product.featured_media.aspect_ratio
+ if product.featured_media.aspect_ratio == nil
+ assign featured_media_aspect_ratio = 1
+ endif
+ -%}
+ <div class="ecom-collection__product-media--container">
+ <div
+ class="ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
+ "
+ style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"
+ 
+ >
+ <img srcset="{%- if product.featured_media.width >= 165 -%}{{ product.featured_media | img_url: '165x' }} 165w,{%- endif -%}
+ {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | img_url: '360x' }} 360w,{%- endif -%}
+ {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | img_url: '533x' }} 533w,{%- endif -%}
+ {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | img_url: '720x' }} 720w,{%- endif -%}
+ {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | img_url: '940x' }} 940w,{%- endif -%}
+ {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | img_url: '1066x' }} 1066w{%- endif -%}"
+ src="{{ product.featured_media | img_url: '533x' }}"
+ sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+ alt="{{ product.featured_media.alt | escape }}"
+ loading='lazy'
+ class="ecom-collection__product-media-image"
+ width="{{ product.featured_media.width }}"
+ height="{{ product.featured_media.height }}"
+ />
+ 
+ </div>
+ </div>
+ {% else %}
+ <div class="ecom-collection__product-media--container">
+ <div class="ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt"
+ 
+ style="padding-bottom: 85%;"
+ >
+ {{ 'product-1' | placeholder_svg_tag: 'ecom-colection__product-svg-placeholder' }}
+ </div>
+ </div>
+ {% endif %}
+ 
+ <div class="ecom-collection__product-badge">
+ 
+ {%- if product.available == false -%}
+ <span class="ecom-collection__product-badge--sold-out" aria-hidden="true">
+ {{ 'sections.ecom-product-page-product.sold_text_hh6crmh17g_html' | t }}
+ </span>
+ {%- elsif product.compare_at_price > product.price and product.available -%}
+ <span class="ecom-collection__product-badge--sale" aria-hidden="true">
+ {{ 'sections.ecom-product-page-product.sale_text_hh6crmh17g_html' | t }}
+ </span>
+ {%- endif -%}
+ {% if badge_tags %}
+ {% for badge in badge_tags %}
+ {% for original_tag in product.tags %}
+ {% assign tag = original_tag | replace: ' ', ' ' %}
+ {% if tag == badge %}
+ <span class="ecom-collection__product-badge--custom ecom-collection__product-badge--{{ badge | handleize}}" aria-hidden="true">
+ {{ badge }}
+ </span>
+ {% endif %}
+ {% endfor %}
+ {%- assign bad = badge | strip -%}
+ {% endfor %}
+ {% endif %}
+ 
+ {%- if product.has_only_default_variant -%}
+ {%- if product.compare_at_price != null and product.compare_at_price > product.price -%}
+ {%- assign sale = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round -%}
+ <span class="ecom-collection__product-price--bage-sale">
+ {{ 'sections.ecom-product-page-product.sale_badge_hh6crmh17g_html' | t: sale:sale }}
+ </span>
+ {%- endif -%}
+ {%- else -%}
+ {%- if product.selected_or_first_available_variant.compare_at_price != null and product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
+ {%- assign sale = product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 | divided_by: product.selected_or_first_available_variant.compare_at_price | round -%}
+ <span class="ecom-collection__product-price--bage-sale">
+ {{ 'sections.ecom-product-page-product.sale_badge_hh6crmh17g_html' | t: sale:sale }}
+ </span>
+ {%- endif -%}
+ {%- endif -%}
+ </div>
+ </a>
+ 
+ 
+ 
+ 
+ </div>
+ <div class="ecom-collection__product-item--information">
+ <div class="ecom-collection__product-item--information-wrapper ecom-flex ecom-column">
+ {% if product_style == 'absolute' %}
+ {{product_actions}}
+ {{ product_picker}}
+ {% endif %}
+ 
+ 
+ 
+ {%- if enable_hook -%}
+ {% capture the_ecom_hook %}
  {% render 'ecom_product_loop_before_title', product: product %}
  {% endcapture %}
-                                                            {% unless the_ecom_hook contains 'Liquid error' %}
-                                                              {{ the_ecom_hook }}
-                                                            {% endunless %}
-                                                          {%- endif -%}
-                                                          <h3
-                                                            class="ecom-collection__product-title-tag {% if review_platform and review_platform == 'vital-reviews' %}card__heading{% endif %} ecom-child-element"
-                                                          >
-                                                            <a
-                                                              href="{%- if is_collection-%}{{- product.url | within: collection -}}{% else %}{{- product.url -}}{%-endif-%}"
-                                                              title="{{product.title | escape }}"
-                                                              target=""
-                                                              class="ecom-collection__product-item-information-title "
-                                                            >
-                                                              {{ product.title }}
-                                                            </a>
-                                                          </h3>
-                                                          {%- if enable_hook -%}
-                                                            {% capture the_ecom_hook %}
+ {% unless the_ecom_hook contains 'Liquid error' %}
+ {{ the_ecom_hook }}
+ {% endunless %}
+ {%- endif -%}
+ <h3
+ class="ecom-collection__product-title-tag {% if review_platform and review_platform == 'vital-reviews' %}card__heading{% endif %} ecom-child-element"
+ 
+ >
+ <a
+ href="{%- if is_collection-%}{{- product.url | within: collection -}}{% else %}{{- product.url -}}{%-endif-%}"
+ title="{{product.title | escape }}"
+ target=""
+ class="ecom-collection__product-item-information-title "
+ >
+ {{ product.title }}
+ </a>
+ </h3>
+ {%- if enable_hook -%}
+ {% capture the_ecom_hook %}
  {% render 'ecom_product_loop_after_title', product: product %}
  {% endcapture %}
-                                                            {% unless the_ecom_hook contains 'Liquid error' %}
-                                                              {{ the_ecom_hook }}
-                                                            {% endunless %}
-                                                          {%- endif -%}
-
-                                                          <div
-                                                            class="ecom-collection__product-rating-wrapper ecom-child-element"
-
-                                                            data-rating-platform="{{review_platform}}"
-                                                          >
-                                                            {%- if review_platform -%}
-                                                              {%- case review_platform -%}
-                                                                {%- when 'none' -%}
-                                                                {%- when 'ali-reviews' -%}
-                                                                  <div
-                                                                    product-id="{{ product.id }}"
-                                                                    product-handle="{{ product.handle }}"
-                                                                    class="alireviews-review-star-rating"
-                                                                  ></div>
-                                                                {%- when 'opinew-reviews' -%}
-                                                                  <div class="opinew-stars-plugin-product-list">
-                                                                    {% render 'opinew_review_stars_lists',
-                                                                      product: product
-                                                                    %}
-                                                                  </div>
-                                                                {%- when 'judgeme' -%}
-                                                                  <div
-                                                                    style="{{ jm_style }}"
-                                                                    class="jdgm-widget jdgm-preview-badge"
-                                                                    data-id="{{ product.id }}"
-                                                                  >
-                                                                    {{ product.metafields.judgeme.badge }}
-                                                                  </div>
-                                                                {%- when 'product-reviews-addon' -%}
-                                                                  <span
-                                                                    class=" stamped-product-reviews-badge"
-                                                                    data-product-sku="{{ product.handle }}"
-                                                                    data-id="{{ product.id }}"
-                                                                    style="display:block;"
-                                                                  >
-                                                                    {{- product.metafields.stamped.badge -}}
-                                                                  </span>
-                                                                {%- when 'areviews-aliexpress' -%}
-                                                                  <div
-                                                                    class="areviews_product_item areviews_stars{{ product.id }}"
-                                                                    data-product-id="{{ product.id }}"
-                                                                  ></div>
-                                                                {%- when 'loox' -%}
-                                                                  <div
-                                                                    class="loox-rating"
-                                                                    data-id="{{ product.id }}"
-                                                                    data-rating="{{ product.metafields.loox.avg_rating }}"
-                                                                    data-raters="{{ product.metafields.loox.num_reviews }}"
-                                                                  ></div>
-                                                                {% when 'ryviu' %}
-                                                                  <div class="ryviu-collection">
-                                                                    <ryviu-widget-total
-                                                                      collection="1"
-                                                                      reviews_data="{{product.metafields.ryviu.product_reviews_info | escape }}"
-                                                                      product_id="{{product.id}}"
-                                                                      handle="{{product.handle}}"
-                                                                    >
-                                                                    </ryviu-widget-total>
-                                                                  </div>
-                                                                {%- when 'yotpo-social-reviews' -%}
-                                                                  <div
-                                                                    class="yotpo bottomLine"
-                                                                    style="display:inline-block"
-                                                                    data-product-id="{{ product.id }}"
-                                                                  ></div>
-                                                                {%- when 'vital-reviews' -%}
-                                                                  <div></div>
-                                                                {%- when 'aliexpress-reviews-importer' -%}
-                                                                  <div
-                                                                    class="shop-booster-content shop-booster-col-rat"
-                                                                    id="shop-booster-pid-d-{{ product.id }}"
-                                                                  ></div>
-                                                                {%- when 'rivyo-product-review' -%}
-                                                                  <div
-                                                                    class="wc_product_review_badge"
-                                                                    data-handle="{{ product.handle }}"
-                                                                    data-product_id="{{ product.id }}"
-                                                                  ></div>
-                                                                {%- when 'growave' -%}
-                                                                  {% capture the_snippet_review_avg %}{% render 'ssw-widget-avg-rate-listing', product: product %}{% endcapture %}
-                                                                  {% unless the_snippet_review_avg
-                                                                      contains 'Liquid error'
-                                                                  %}
-                                                                    {{ the_snippet_review_avg }}
-                                                                  {% endunless %}
-                                                                {%- when 'smart-aliexpress-reviews' -%}
-                                                                  <div
-                                                                    class="scm-reviews-rate"
-                                                                    data-rate-version2="{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo | json}}"
-                                                                  ></div>
-                                                                {%- when 'photo-reviews' -%}
-                                                                  <div class="opinew-stars-plugin-product-list">
-                                                                    {% render 'opinew_review_stars_lists',
-                                                                      product: product
-                                                                    %}
-                                                                  </div>
-                                                                {%- when 'product-reviews' -%}
-                                                                  <span
-                                                                    class="shopify-product-reviews-badge"
-                                                                    data-id="{{ product.id }}"
-                                                                  ></span>
-                                                                {%- when 'lai-reviews' -%}
-                                                                  {%- if EComBuilderMode -%}
-                                                                    <div
-                                                                      class="ecom-placeholder-on-builder-mode"
-                                                                      data-ecom-placeholder="Lai star rating"
-                                                                    ></div>
-                                                                  {%- endif -%}
-                                                                  <div
-                                                                    class="scm-reviews-rate"
-                                                                    data-rate-version2="{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo | json | escape }}"
-                                                                    data-product-id="{{ product.id }}"
-                                                                  ></div>
-                                                                {%- when 'sealapps-product-review' -%}
-                                                                  <div
-                                                                    class="ecom-star-rating-sealapp"
-                                                                    product-id="{{ product.id }}"
-                                                                  ></div>
-                                                                {%- when 'rivyo' -%}
-                                                                  <div
-                                                                    class="wc_product_review_badge"
-                                                                    data-handle="{{ product.handle }}"
-                                                                    data-product_id="{{ product.id }}"
-                                                                  ></div>
-                                                                {%- when 'klaviyo-reviews' -%}
-                                                                  <div
-                                                                    class="klaviyo-star-rating-widget"
-                                                                    data-id="{{product.id}}"
-                                                                    data-product-title="{{product.title}}"
-                                                                    data-product-type="{{product.type}}"
-                                                                  ></div>
-                                                                {%- when 'air-reviews' -%}
-                                                                  <div
-                                                                    class="AirReviews-Widget AirReviews-Widget--Stars"
-                                                                    data-review-avg="{{ product.metafields.air_reviews_product.review_avg }}"
-                                                                    data-review-count="{{ product.metafields.air_reviews_product.review_count }}"
-                                                                  ></div>
-                                                                {% else %}
-                                                                  <p>The rating platform not supported</p>
-                                                              {%- endcase -%}
-                                                            {%- else -%}
-                                                              <p>Please select the rating platform in settings</p>
-                                                            {%- endif -%}
-                                                          </div>
-
-                                                          <div class="ecom-collection__product-prices ecom-child-element">
-                                                            {% if product.has_only_default_variant %}
-                                                              <div class="ecom-collection__product-price-wrapper">
-                                                                <span class="ecom-collection__product-price{% if product.compare_at_price > product.price %} ecom-collection__product-price--sale{% endif %}">
-                                                                  {%- if settings.currency_code_enabled == true %}
-                                                                    {{ product.price_min | money_with_currency }}
-                                                                  {% else %}
-                                                                    {{ product.price_min | money }}
-                                                                  {% endif -%}
-                                                                </span>
-                                                                <span
-                                                                  class="ecom-collection__product-price--regular ecom-collection__product--compare-at-price"
-                                                                  {%- if product.compare_at_price == null
-                                                                    or product.compare_at_price <= product.price
-                                                                  -%}
-                                                                    style="display:none; content:'1'"
-                                                                  {%- endif -%}
-                                                                >
-                                                                  {%- if settings.currency_code_enabled == true %}
-                                                                    {{
-                                                                      product.compare_at_price_max
-                                                                      | money_with_currency
-                                                                    }}
-                                                                  {% else %}
-                                                                    {{ product.compare_at_price_max | money }}
-                                                                  {% endif -%}
-                                                                </span>
-                                                                {%- comment -%}
-                                                                  <span class="ecom-collection__product-price--bage-sale">
-                                                                  {% assign sale = product.compare_at_price_max | minus: product.price | times: 100 | divided_by: product.compare_at_price_max | times: 100 | money %}
-                                                                  {{ 'sections.ecom-product-page-product.sale_badge_hh6crmh17g_html' | t: sale:sale }}
-                                                                  </span>
-                                                                {%- endcomment -%}
-                                                              </div>
-
-                                                            {% else %}
-                                                              <div class="ecom-collection__product-price-wrapper">
-                                                                {%- assign target = product.selected_or_first_available_variant -%}
-                                                                <span class="ecom-collection__product-price{% if target.compare_at_price > target.price %} ecom-collection__product-price--sale{% endif %}">
-                                                                  {%- if settings.currency_code_enabled == true %}
-                                                                    {{ target.price | money_with_currency }}
-                                                                  {% else %}
-                                                                    {{ target.price | money }}
-                                                                  {% endif -%}
-                                                                </span>
-                                                                <span
-                                                                  class="ecom-collection__product-price--regular ecom-collection__product--compare-at-price"
-                                                                  {%- if product.compare_at_price == null
-                                                                    or product.compare_at_price <= product.price
-                                                                  -%}
-                                                                    style="display:none"
-                                                                  {% endif %}
-                                                                >
-                                                                  {% if settings.currency_code_enabled == true %}
-                                                                    {{ target.compare_at_price | money_with_currency }}
-                                                                  {% else %}
-                                                                    {{ target.compare_at_price | money }}
-                                                                  {% endif %}
-                                                                </span>
-                                                              </div>
-                                                            {% endif %}
-                                                          </div>
-
-                                                          {% if product_style != 'absolute' %}
-                                                            {{ product_picker }}
-                                                          {% endif %}
-                                                          {% if product_style == 'horizontal'
-                                                            or product_style == 'vertical'
-                                                            or product_layout == 'list'
-                                                          %}
-                                                            {{ product_actions }}
-                                                          {% endif %}
-
-                                                          {% if product.available
-                                                            and product.metafields.ecomposer.countdown
-                                                          %}
-                                                            <div
-                                                              class="ecom-collection__product-countdown ecom-child-element"
-                                                            >
-                                                              <div
-                                                                class="ecom-collection__product-countdown-wrapper"
-                                                              >
-                                                                <div class="ecom-collection__product-countdown-wrapper--title">
-                                                                  {{
-                                                                    'sections.ecom-product-page-product.countdown_title_hh6crmh17g_html'
-                                                                    | t
-                                                                  }}
-                                                                </div>
-                                                                <div class="ecom-product-single__countdown-container">
-                                                                  {%- assign countdown_from = product.metafields.ecomposer.countdown_from -%}
-                                                                  <div
-                                                                    data-product-id="{{product.id}}"
-                                                                    class="ecom-collection__product-countdown-time ecom-collection__product-countdown-time--metafields"
-                                                                    data-ecom-countdown-from="{{ countdown_from }}"
-                                                                    data-ecom-countdown="{{product.metafields.ecomposer.countdown}}"
-                                                                  ></div>
-                                                                </div>
-
-                                                                {% if countdown_from %}
-                                                                  <div class="ecom-collection__product-countdown-progress-bar">
-                                                                    <div class="ecom-collection__product-countdown-progress-bar--wrap">
-                                                                      <div
-                                                                        class="ecom-collection__product-countdown-progress-bar--timer ecom-product-single__countdown-progress-bar--timer"
-                                                                      ></div>
-                                                                    </div>
-                                                                  </div>
-                                                                {% endif %}
-                                                              </div>
-                                                            </div>
-                                                          {% endif %}
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                    {%- if enable_hook -%}
-                                                      {% capture the_ecom_hook %}
+ {% unless the_ecom_hook contains 'Liquid error' %}
+ {{ the_ecom_hook }}
+ {% endunless %}
+ {%- endif -%}
+ 
+ <div
+ class="ecom-collection__product-rating-wrapper ecom-child-element"
+ 
+ data-rating-platform="{{review_platform}}"
+ >
+ {%- if review_platform -%}
+ {%- case review_platform -%}
+ {%- when 'none' -%}
+ {%- when 'ali-reviews' -%}
+ <div product-id="{{ product.id }}" product-handle="{{ product.handle }}" class="alireviews-review-star-rating"></div>
+ {%- when 'opinew-reviews' -%}
+ <div class='opinew-stars-plugin-product-list'>{% render 'opinew_review_stars_lists' product:product %}</div>
+ {%- when 'judgeme' -%}
+ <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}'>
+ {{ product.metafields.judgeme.badge }}
+ </div>
+ {%- when 'product-reviews-addon' -%}
+ <span class=" stamped-product-reviews-badge" data-product-sku="{{ product.handle }}" data-id="{{ product.id }}" style="display:block;">{{- product.metafields.stamped.badge -}}</span>
+ {%- when 'areviews-aliexpress'-%}
+ <div class="areviews_product_item areviews_stars{{ product.id }}" data-product-id="{{ product.id }}"></div>
+ {%- when 'loox'-%}
+ <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
+ {% when 'ryviu'%}
+ <div class="ryviu-collection">
+ <ryviu-widget-total collection=1
+ reviews_data="{{product.metafields.ryviu.product_reviews_info | escape }}"
+ product_id="{{product.id}}" handle="{{product.handle}}">
+ </ryviu-widget-total>
+ </div>
+ {%- when 'yotpo-social-reviews' -%}
+ <div class="yotpo bottomLine" style="display:inline-block" data-product-id="{{ product.id }}"> </div>
+ {%- when 'vital-reviews' -%}
+ <div></div>
+ {%- when 'aliexpress-reviews-importer'-%}
+ <div class="shop-booster-content shop-booster-col-rat" id="shop-booster-pid-d-{{ product.id }}" ></div>
+ {%- when 'rivyo-product-review'-%}
+ <div class="wc_product_review_badge" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div>
+ {%-when 'growave' -%}
+ {% capture the_snippet_review_avg %}{% render 'ssw-widget-avg-rate-listing', product: product %}{% endcapture %}
+ {% unless the_snippet_review_avg contains 'Liquid error' %}
+ {{ the_snippet_review_avg }}
+ {% endunless %}
+ {%- when 'smart-aliexpress-reviews'-%}
+ <div class="scm-reviews-rate" data-rate-version2= {{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo | json}}>
+ </div>
+ {%- when 'photo-reviews' -%}
+ <div class='opinew-stars-plugin-product-list'>{% render 'opinew_review_stars_lists' product:product %}</div>
+ {%- when 'product-reviews' -%}
+ <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+ {%- when 'lai-reviews' -%}
+ {%- if EComBuilderMode -%}
+ <div class="ecom-placeholder-on-builder-mode" data-ecom-placeholder="Lai star rating"></div>
+ {%- endif -%}
+ <div class="scm-reviews-rate" data-rate-version2="{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo | json | escape }}" data-product-id="{{ product.id }}"></div>
+ {%- when 'sealapps-product-review' -%}
+ <div class="ecom-star-rating-sealapp" product-id="{{ product.id }}"></div>
+ {%- when 'rivyo' -%}
+ <div class="wc_product_review_badge" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div>
+ {%- when 'klaviyo-reviews' -%}
+ <div class="klaviyo-star-rating-widget" data-id="{{product.id}}" data-product-title="{{product.title}}" data-product-type="{{product.type}}"></div>
+ {%- when 'air-reviews' -%}
+ <div class="AirReviews-Widget AirReviews-Widget--Stars" data-review-avg="{{ product.metafields.air_reviews_product.review_avg }}" data-review-count="{{ product.metafields.air_reviews_product.review_count }}"></div>
+ {% else %}
+ <p>The rating platform not supported</p>
+ {%-endcase-%}
+ {%- else -%}
+ <p>Please select the rating platform in settings</p>
+ {%- endif -%}
+ </div>
+ 
+ 
+ <div class="ecom-collection__product-prices ecom-child-element" >
+ 
+ {% if product.has_only_default_variant %}
+ <div class="ecom-collection__product-price-wrapper">
+ <span class="ecom-collection__product-price{% if product.compare_at_price > product.price %} ecom-collection__product-price--sale{% endif %}">{% if settings.currency_code_enabled == true %} {{product.price_min | money_with_currency }} {% else %} {{product.price_min | money }} {% endif %}</span>
+ <span class="ecom-collection__product-price--regular ecom-collection__product--compare-at-price"{%- if product.compare_at_price == nil or product.compare_at_price <= product.price -%} style="display:none; content:'1'" {%- endif -%}>{% if settings.currency_code_enabled == true %} {{ product.compare_at_price_max | money_with_currency }} {% else %} {{ product.compare_at_price_max | money }} {% endif %}</span>
+ {%- comment -%}
+ <span class="ecom-collection__product-price--bage-sale">
+ {% assign sale = product.compare_at_price_max | minus: product.price | times: 100 | divided_by: product.compare_at_price_max | times: 100 | money %}
+ {{ 'sections.ecom-product-page-product.sale_badge_hh6crmh17g_html' | t: sale:sale }}
+ </span>
+ {%- endcomment -%}
+ </div>
+ 
+ {% else %}
+ 
+ <div class="ecom-collection__product-price-wrapper">
+ {%- assign target = product.selected_or_first_available_variant -%}
+ <span class="ecom-collection__product-price{% if target.compare_at_price > target.price %} ecom-collection__product-price--sale{% endif %}">{% if settings.currency_code_enabled == true %} {{ target.price | money_with_currency }} {% else %} {{ target.price | money }} {% endif %}</span>
+ <span
+ class="ecom-collection__product-price--regular ecom-collection__product--compare-at-price"
+ {%- if product.compare_at_price == nil or product.compare_at_price <= product.price -%} style="display:none" {% endif %}
+ >
+ {% if settings.currency_code_enabled == true %} {{ target.compare_at_price | money_with_currency }} {% else %} {{ target.compare_at_price | money }} {% endif %}
+ </span>
+ </div>
+ 
+ 
+ {% endif %}
+ 
+ </div>
+ 
+ {% if product_style != 'absolute'%}
+ {{ product_picker }}
+ {% endif %}
+ {% if product_style == 'horizontal' or product_style == 'vertical' or product_layout == 'list' %}
+ {{product_actions}}
+ {% endif %}
+ 
+ {% if product.available and product.metafields.ecomposer.countdown %}
+ <div
+ class="ecom-collection__product-countdown ecom-child-element" 
+ >
+ <div
+ class="ecom-collection__product-countdown-wrapper"
+ >
+ <div class="ecom-collection__product-countdown-wrapper--title">{{ 'sections.ecom-product-page-product.countdown_title_hh6crmh17g_html' | t }}</div>
+ <div class="ecom-product-single__countdown-container" >
+ {%- assign countdown_from = product.metafields.ecomposer.countdown_from -%}
+ <div data-product-id="{{product.id}}" class="ecom-collection__product-countdown-time ecom-collection__product-countdown-time--metafields" data-ecom-countdown-from="{{ countdown_from }}" data-ecom-countdown="{{product.metafields.ecomposer.countdown}}"></div>
+ </div>
+ 
+ {% if countdown_from%}
+ <div class="ecom-collection__product-countdown-progress-bar">
+ <div class="ecom-collection__product-countdown-progress-bar--wrap">
+ <div class="ecom-collection__product-countdown-progress-bar--timer ecom-product-single__countdown-progress-bar--timer"></div>
+ </div>
+ </div>
+ {% endif %}
+ 
+ </div>
+ </div>
+ {% endif %}
+ 
+ </div>
+ </div>
+ </div>
+ {%- if enable_hook -%}
+ {% capture the_ecom_hook %}
  {% render 'ecom_product_loop_after', product: product %}
  {% endcapture %}
-                                                      {% unless the_ecom_hook contains 'Liquid error' %}
-                                                        {{ the_ecom_hook }}
-                                                      {% endunless %}
-                                                    {%- endif -%}
-                                                  </div>
-                                                {% endfor %}
-                                              </div>
-                                            {% else %}
-                                              <div class="ecom-collection__product--wrapper-items ecom-collection-product__layout-grid">
-                                                <div class="ecom-collection__product-item ecom-collection__product--no-item">
-                                                  {{
-                                                    'sections.ecom-product-page-product.no_product_item_hh6crmh17g_html'
-                                                    | t
-                                                  }}
-                                                </div>
-                                              </div>
-                                            {% endif %}
-
-                                            {% if current_product %}
-                                              {% assign product = current_product %}
-                                            {% endif %}
-
-                                            {% assign collection = tmp_collection %}
-                                            {% assign product = tmp_product %}
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="ecom-column__overlay"><div class="ecom-overlay"></div></div>
-                          </div>
-                        </div>
-                        <div class="ecom-section__overlay"><div class="ecom-overlay"></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="ecom-column__overlay"><div class="ecom-overlay"></div></div>
-            </div>
-          </div>
-          <div class="ecom-section__overlay"><div class="ecom-overlay"></div></div>
-        </section>
-        {% unless ecom_has_variant_picker %}
-          <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
-          <script type="application/json" id="product-json-{{product.id}}-ecom-i8xdggf8hj">
-            {%- render "ecom_product_json", product: product -%}
-          </script>
-        {% endunless %}
-      {%- endform -%}
-      {% assign ecom_has_variant_picker = false %}
-    {%- endif -%}
-  </div>
-</div>
+ {% unless the_ecom_hook contains 'Liquid error' %}
+ {{ the_ecom_hook }}
+ {% endunless %}
+ {%- endif -%}
+ </div>
+ {% endfor %}
+ </div>
+ {% else %}
+ <div class="ecom-collection__product--wrapper-items ecom-collection-product__layout-grid" >
+ <div class="ecom-collection__product-item ecom-collection__product--no-item" >
+ {{ 'sections.ecom-product-page-product.no_product_item_hh6crmh17g_html' | t }}
+ </div>
+ </div>
+ {% endif %}
+ 
+ {% if current_product %}
+ {% assign product = current_product %}
+ {% endif %}
+ 
+ 
+ {% assign collection = tmp_collection %}
+ {% assign product = tmp_product %}
+ </div></div></div></div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </section>
+ {% unless ecom_has_variant_picker %}
+ <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}" />
+ <script type="application/json" id="product-json-{{product.id}}-ecom-i8xdggf8hj">
+ {%- render "ecom_product_json", product: product -%}
+ </script>
+ {% endunless %}
+ {%- endform -%}
+ {% assign ecom_has_variant_picker = false %}
+ {%- endif -%}
+ 
+</div></div>
 {% schema %}
 {
  "name": "Product page",
