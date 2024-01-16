@@ -4125,6 +4125,10 @@ text-decoration: none;
     margin-top: -15px!important;
 }
 
+.full-unstyled-link:hover {
+    pointer-events:none
+}
+
 .card-information {
     width: 100%;
     font-weight: 500;
