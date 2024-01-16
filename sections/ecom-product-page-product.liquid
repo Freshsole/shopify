@@ -1143,7 +1143,6 @@
                               </div>
                             </div>
 
-                            {% if isTabActive %}
                             <div
                               id="ecom-5of0211gh7r"
                               class="core__group--item tab__item"
@@ -1190,15 +1189,6 @@
                                     </div>
                                   </div>
                                 </div>
-                                {% else %}
-  <style>
-    #ecom-5of0211gh7r {
-      display: none;
-    }
-  </style>
-{% endif %}
-
-                                
 
                                 <div
                                   class="core__blocks"
@@ -1290,7 +1280,7 @@
                                           <h3 class="ecom__heading ecom-db">{{ targetCollection.title }}</h3>
                                         </div>
                                         <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
-                                          {{ targetCollection.description }}
+                                          Brand Description: {{ targetCollection.description }}
                                         </div>
                                       </div>
                                       <!-- End of brand information -->
