@@ -4137,3 +4137,10 @@ text-decoration: none;
     font-size: 16px;
     font-family: 'Poppins';
 }
+
+
+/* PRODUCT PAGE */
+.ecom__element .ecom-element .element__text{
+    display: flex;
+    flex-direction: column;
+}
