@@ -4087,7 +4087,7 @@ text-decoration: none;
 
 .facet-filters__label {
     margin-top: -10px !important;
-    font-size: 16px;
+    font-size: 16px !important;
     font-weight: 600;
 }
 
