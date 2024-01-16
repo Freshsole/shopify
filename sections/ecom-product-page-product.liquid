@@ -1321,12 +1321,6 @@
                                 {% break %}
                               {% endif %}
                             {% endfor %}
-                            {% for collection in collections %}
-                              <div>
-                                <h4>{{ collection.title }}</h4>
-                                <pre>{{ collection.metafields.custom.sizechart | json }}</pre>
-                              </div>
-                            {% endfor %}
 
                             <div id="ecom-pbm6uh13e39" class="core__group--item tab__item" data-id="ecom-pbm6uh13e39">
                               <div class="core__group--body tabs__body">
@@ -1351,33 +1345,29 @@
                                       data-core-is="block"
                                     >
                                       <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
-                                        {% assign sizeChart = targetCollection.metafields.custom.sizechart
-                                          | json_parse
-                                        %}
-                                        {% if sizeChart %}
-                                          <table>
-                                            <thead>
+                                        {% assign sizeChartText = targetCollection.metafields.custom.sizechart %}
+                                        {% assign rows = sizeChartText | newline_to_br | split: '<br />' %}
+
+                                        <table>
+                                          <thead>
+                                            <tr>
+                                              <th>EUR</th>
+                                              <th>US</th>
+                                              <th>UK</th>
+                                              <th>CM</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            {% for row in rows %}
+                                              {% assign columns = row | split: '   ' %}
                                               <tr>
-                                                <th>EUR</th>
-                                                <th>US</th>
-                                                <th>UK</th>
-                                                <th>CM</th>
+                                                {% for column in columns %}
+                                                  <td>{{ column }}</td>
+                                                {% endfor %}
                                               </tr>
-                                            </thead>
-                                            <tbody>
-                                              {% for size in sizeChart.mens %}
-                                                <tr>
-                                                  <td>{{ size.eur }}</td>
-                                                  <td>{{ size.us }}</td>
-                                                  <td>{{ size.uk }}</td>
-                                                  <td>{{ size.cm }}</td>
-                                                </tr>
-                                              {% endfor %}
-                                            </tbody>
-                                          </table>
-                                        {% else %}
-                                          No size chart available.
-                                        {% endif %}
+                                            {% endfor %}
+                                          </tbody>
+                                        </table>
                                       </div>
                                     </div>
                                   </div>
