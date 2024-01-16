@@ -1347,11 +1347,13 @@
                                       <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
                                         {% if targetCollection %}
                                           {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
-                                          {% assign imageLinks = imageChartText | newline_to_br | split: '<br>' %}
+                                          {% assign imageLinks = imageChartText | newline_to_br | split: '<br />' %}
 
                                           {% for imageLink in imageLinks %}
-                                            <img src="{{ imageLink }}" alt="Image">
-                                            <br>
+                                            {% if imageLink != '' %}
+                                              <img src="{{ imageLink }}" alt="Image">
+                                              <br>
+                                            {% endif %}
                                           {% endfor %}
                                         {% else %}
                                           <p>No target collection found.</p>
