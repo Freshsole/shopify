@@ -1322,12 +1322,12 @@
                               {% endif %}
                             {% endfor %}
 
-                            <div id="ecom-pbm6uh13e39" class="core__group--item tab__item" data-id="ecom-pbm6uh13e39">
+                            <div id="ecom-size-chart" class="core__group--item tab__item" data-id="ecom-size-chart">
                               <div class="core__group--body tabs__body">
                                 <div class="core__blocks" index="3">
                                   <div class="core__blocks--body">
                                     <div
-                                      class="ecom-block ecom-core core__block elmspace ecom-c5bg033ijpl"
+                                      class="ecom-block ecom-core core__block elmspace ecom-size-chart"
                                       data-core-is="block"
                                     >
                                       <div
@@ -1336,40 +1336,44 @@
                                         deep="1"
                                       >
                                         <h3 class="ecom__heading ecom-db">
-                                          {{ 'sections.ecom-product-page-product.headingtext_c5bg033ijpl_html' | t }}
+                                          {{ 'sections.ecom-product-page-product.headingtext_size_chart' | t }}
                                         </h3>
                                       </div>
                                     </div>
                                     <div
-                                      class="ecom-block ecom-core core__block elmspace ecom-fb43t1cm325"
+                                      class="ecom-block ecom-core core__block elmspace ecom-size-chart"
                                       data-core-is="block"
                                     >
                                       <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
-                                        {% assign sizeChartText = targetCollection.metafields.custom.size_chart %}
-                                        {% assign sections = sizeChartText | split: '  ' %}
-                                        {% for section in sections %}
-                                          {% assign rows = section | split: '\n' %}
-                                          <table>
-                                            <thead>
-                                              <tr>
-                                                <th>EUR</th>
-                                                <th>US</th>
-                                                <th>UK</th>
-                                                <th>CM</th>
-                                              </tr>
-                                            </thead>
-                                            <tbody>
-                                              {% for row in rows %}
-                                                {% assign columns = row | split: '   ' %}
+                                        {% assign sizeCharts = targetCollection.metafields.custom.size_charts
+                                          | json_parse
+                                        %}
+                                        {% if sizeCharts %}
+                                          {% for sizeChart in sizeCharts %}
+                                            <table>
+                                              <thead>
                                                 <tr>
-                                                  {% for column in columns %}
-                                                    <td>{{ column }}</td>
-                                                  {% endfor %}
+                                                  <th>EUR</th>
+                                                  <th>US</th>
+                                                  <th>UK</th>
+                                                  <th>CM</th>
                                                 </tr>
-                                              {% endfor %}
-                                            </tbody>
-                                          </table>
-                                        {% endfor %}
+                                              </thead>
+                                              <tbody>
+                                                {% for row in sizeChart.data %}
+                                                  <tr>
+                                                    <td>{{ row.EUR }}</td>
+                                                    <td>{{ row.US }}</td>
+                                                    <td>{{ row.UK }}</td>
+                                                    <td>{{ row.CM }}</td>
+                                                  </tr>
+                                                {% endfor %}
+                                              </tbody>
+                                            </table>
+                                          {% endfor %}
+                                        {% else %}
+                                          No size charts available.
+                                        {% endif %}
                                       </div>
                                     </div>
                                   </div>
