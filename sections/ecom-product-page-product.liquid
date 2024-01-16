@@ -1351,17 +1351,15 @@
                                             <thead>
                                               <tr>
                                                 {% for column in sizeChart[0] %}
-                                                  <th>{{ column[1] }}</th>
+                                                  <th>{{ column[2] }}</th>
                                                 {% endfor %}
                                               </tr>
                                             </thead>
                                             <tbody>
-                                              {% assign reversedSizeChart = sizeChart | reverse %}
-                                              {% assign droppedSizeChart = reversedSizeChart | drop: 1 %}
-                                              {% for row in droppedSizeChart %}
+                                              {% for i in (1..sizeChart.size) %}
                                                 <tr>
-                                                  {% for value in row %}
-                                                    <td>{{ value[1] }}</td>
+                                                  {% for column in sizeChart[0] %}
+                                                    <td>{{ sizeChart[i][column[1]] }}</td>
                                                   {% endfor %}
                                                 </tr>
                                               {% endfor %}
