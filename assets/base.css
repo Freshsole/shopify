@@ -4022,6 +4022,12 @@ text-decoration: none;
 }
  /* SEARCH PAGE */
 
+/* Vysledky hledani */
+.center {
+    font-size: 24px !important;
+    font-weight: 600;
+}
+
 /* Filtrovat */
 .facets__heading {
     color: black !important;
