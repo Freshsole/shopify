@@ -3947,6 +3947,10 @@ text-decoration: none;
     border-radius: 4px !important;
 }
 
+.ecom-collection__filters-group-header svg{
+  margin-right: -50px;
+}
+
  /* Ecom propagovano styl */
 .ecom-core.ecom-jp6s1euv9u .ecom-collection__sorting-select {
     font-size: 16px !important;
