@@ -4124,3 +4124,10 @@ text-decoration: none;
     text-align: left!important;
     margin-top: -15px!important;
 }
+
+.card-information {
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Poppins';
+}
