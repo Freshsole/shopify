@@ -1351,7 +1351,7 @@
                                         {% assign sizeChartText = targetCollection.metafields.custom.sizechart %}
 
                                         <!-- Debugging: Output the raw sizechart JSON -->
-                                        <pre>{{ sizeChartText }}</pre>
+                                        <pre>{{ sizeChartText | newline_to_br }}</pre>
 
                                         {% assign sizeChart = sizeChartText | parse_json %}
 
