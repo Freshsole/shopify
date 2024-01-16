@@ -1121,11 +1121,11 @@
                                     <div class="ecom-block ecom-core core__block ecom-wffte78kdh" data-core-is="block">
                                       <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
                                         <div class="text-content ecom-html has-drop-cap-view-default">
-                                          Název: {{ product.metafields.custom.colorway -}}
+                                          Colorway: {{ product.metafields.custom.colorway -}}
                                           <br>
                                           SKU: {{ product.variants[0].sku -}}
                                           <br>
-                                          Materiál: Kuže kure
+                                          Materiál: {{ collection.metafields.custom.material -}}
                                         </div>
                                       </div>
                                     </div>
@@ -1536,7 +1536,7 @@
                                                             <div class="ecom-collection__product-media--container">
                                                               <div
                                                                 class="
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
                                                                 "
                                                                 style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"
                                                               >
