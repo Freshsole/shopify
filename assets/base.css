@@ -4147,5 +4147,7 @@ text-decoration: none;
 
 .ecom-core.ecom-6tmsuc0db89 .tabs__body {
     max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
     gap: 25px;
 }
