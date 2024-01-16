@@ -4144,3 +4144,8 @@ text-decoration: none;
     display: flex;
     flex-direction: column;
 }
+
+.ecom-core.ecom-6tmsuc0db89 .tabs__body {
+    max-width: 70%;
+    gap: 25px;
+}
