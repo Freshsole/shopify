@@ -1349,6 +1349,8 @@
                                           {% if targetCollection %}
                                             <p>Brand: {{ productBrand }}</p>
                                             <p>Target Collection: {{ targetCollection.title }}</p>
+                                            <p>Debug: {{ targetCollection.metafields.custom.sizechart | json }}</p>
+                                            <!-- Display the size chart for debugging -->
                                             {% assign sizeChart = targetCollection.metafields.custom.sizechart %}
                                             {% if sizeChart and sizeChart.mens %}
                                               <table>
