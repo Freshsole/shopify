@@ -1351,22 +1351,20 @@
                                         <table>
                                           <thead>
                                             <tr>
-                                              <th>EUR</th>
-                                              <th>US</th>
-                                              <th>UK</th>
-                                              <th>CM</th>
+                                              <th>Size</th>
+                                              <th>Value</th>
                                             </tr>
                                           </thead>
                                           <tbody>
                                             {% for row in rows %}
                                               {% assign columns = row | split: ' ' %}
                                               {% if columns.size > 1 %}
-                                                <tr>
-                                                  <td>{{ columns[0] }}</td>
-                                                  <td>{{ columns[1] }}</td>
-                                                  <td>{{ columns[2] }}</td>
-                                                  <td>{{ columns[3] }}</td>
-                                                </tr>
+                                                {% for i in (1..columns.size) %}
+                                                  <tr>
+                                                    <td>{{ columns[0] }}</td>
+                                                    <td>{{ columns[i] }}</td>
+                                                  </tr>
+                                                {% endfor %}
                                               {% endif %}
                                             {% endfor %}
                                           </tbody>
