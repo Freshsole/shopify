@@ -1331,43 +1331,6 @@
                                       data-core-is="block"
                                     >
                                       <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
-                                        Nike - pánské
-                                        <br>
-                                        EUR US UK CM
-                                        {% for size in targetCollection.data[0].data %}
-                                          {{ size.EUR }}
-                                          {{ size.US }}
-                                          {{ size.UK }}
-                                          {{ size.CM }}
-                                          {% unless forloop.last %}<br>{% endunless %}
-                                        {% endfor %}
-
-                                        <br>
-                                        <br>
-                                        Nike - dámské
-                                        <br>
-                                        EUR US UK CM
-                                        {% for size in targetCollection.data[1].data %}
-                                          {{ size.EUR }}
-                                          {{ size.US }}
-                                          {{ size.UK }}
-                                          {{ size.CM }}
-                                          {% unless forloop.last %}<br>{% endunless %}
-                                        {% endfor %}
-
-                                        <br>
-                                        <br>
-                                        Nike - dětské
-                                        <br>
-                                        EUR US UK CM
-                                        {% for size in targetCollection.data[2].data %}
-                                          {{ size.EUR }}
-                                          {{ size.US }}
-                                          {{ size.UK }}
-                                          {{ size.CM }}
-                                          {% unless forloop.last %}<br>{% endunless %}
-                                        {% endfor %}
-
                                         {% assign sizeData = '{"EUR":"40","US":"7","UK":"6","CM":"25"}' | json %}
                                         {{ sizeData.EUR }}
                                         {{ sizeData.US }}
