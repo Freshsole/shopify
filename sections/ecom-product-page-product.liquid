@@ -2,7 +2,7 @@
  EComposer (https://ecomposer.io)
  You SHOULD NOT modify source code in this page because
  It is automatically generated from EComposer
- At 2024-01-16 11:48:11
+ At 2024-01-16 15:48:10
  {% endcomment %} 
  
  {% assign ecom_root_url = routes.root_url %}
@@ -27,7 +27,7 @@
  {% endcomment %}
  {% liquid
  if request.page_type != 'product' or product == blank
- assign selected_product = 'copy-of-adidas-yeezy-slide-onyx'
+ assign selected_product = 'air-jordan-1-retro-high-lucky-green'
  if selected_product == blank or selected_product == '' or all_products[selected_product] == blank
  assign product = collections['all'].products.first
  else
@@ -398,7 +398,7 @@
  </div>
  {%- elsif type == 'video_metafield' -%}
  <div id="ecom-elements__lightbox-content-ecom-f2om6pvcutr" style="height:100%">
- {% assign video = undefined.value.sources %}
+ {% assign video = collection.meafield.custom.size_chart.value.sources %}
  {%- if video.size > 1 -%}
  {% assign video_url = video[1].url %}
  {%- else -%}
@@ -413,7 +413,7 @@
  </video>
  </div>
  {%- elsif type == 'image_metafield' -%}
- {% assign image = undefined %}
+ {% assign image = collection.meafield.custom.size_chart %}
  <div id="ecom-elements__lightbox-content-ecom-f2om6pvcutr" style="height:100%; width: 100%; display:flex;">
  <img src="{{ image | img_url: 'master'}}" alt="" style="object-fit: cover; width: 100%;">
  </div>
@@ -524,7 +524,7 @@
  {% endcomment %}
  {% liquid
  if request.page_type != 'product' or product == blank
- assign selected_product = 'copy-of-adidas-yeezy-slide-onyx'
+ assign selected_product = 'air-jordan-1-retro-high-lucky-green'
  if selected_product == blank or selected_product == '' or all_products[selected_product] == blank
  assign product = collections['all'].products.first
  else
@@ -1046,8 +1046,20 @@
  "product_single_sold_text_bokihj9gjy_html": "Moment\u00e1ln\u011b nedostupn\u00e9",
  "view_more_text_94rgdjzwo2j_html": "View more",
  "view_less_text_94rgdjzwo2j_html": "View less",
+ "add_to_cart_xjksegmq4x8_html": "P\u0159idat do Ko\u0161\u00edku",
+ "pre_order_xjksegmq4x8_html": "Pre Order",
+ "product_unavailable_xjksegmq4x8_html": "Momenat\u00e1ln\u011b nedostupn\u00e9",
+ "out_stock_xjksegmq4x8_html": "Momenat\u00e1ln\u011b nedostupn\u00e9",
+ "added_cart_text_xjksegmq4x8_html": "V ko\u0161\u00edku",
+ "added_cart_message_xjksegmq4x8_html": "Added to cart",
+ "textcontent_1cnqaweecps_html": "Vr\u00e1cen\u00ed zdarma do 14 dn\u00ed od objedn\u00e1n\u00ed.<span style=\"color: rgba(var(--color-foreground), 0.75); font-family: var(--font-body-family); font-size: 1.6rem; font-style: var(--font-body-style); font-weight: var(--font-body-weight); letter-spacing: 0.06rem;\">&nbsp;<\/span>",
+ "lightbox_button_title_f2om6pvcutr_html": "Find your size",
+ "UnderstandaboutEComposer_f2om6pvcutr_html": "Understand about EComposer",
+ "s001p0l2hycpSwwapkW8dea5ttnltwycbDEfftasbtsyaw_f2om6pvcutr_html": "<h2 style=\"margin: 0px 0px 10px; padding: 0px; line-height: 24px;\">EComposer helps you create professional Shopify websites without any programming knowledge. With 80+ design elements and 50+ templates, there\u2019s no limit to what you can build. Download EComposer for free today and start building the store you\u2019ve always wanted<\/h2>",
  "breadcrumbs_home_6253vl84dzp_html": "Home",
  "cart_page_title_6253vl84dzp_html": "Cart",
+ "headingtext_tgzuq6h6xu_html": "Podobn\u00e9 produkty<br>",
+ "textcontent_zr5ofu4xcwf_html": "Produkty, kter\u00e9 by se V\u00e1m mohly l\u00edbit na z\u00e1klad\u011b Va\u0161\u00ed aktivity.",
  "product_option_swatch_hh6crmh17g_html": "Color",
  "view_more_text_hh6crmh17g_html": "View more",
  "added_cart_text_hh6crmh17g_html": "Added to cart",
@@ -1058,18 +1070,6 @@
  "sale_badge_hh6crmh17g_html": "-{{sale}}%",
  "countdown_title_hh6crmh17g_html": "Hurry up! The sale will end on",
  "no_product_item_hh6crmh17g_html": "There are no product yet!",
- "lightbox_button_title_f2om6pvcutr_html": "Find your size",
- "UnderstandaboutEComposer_f2om6pvcutr_html": "Understand about EComposer",
- "s001p0l2hycpSwwapkW8dea5ttnltwycbDEfftasbtsyaw_f2om6pvcutr_html": "<h2 style=\"margin: 0px 0px 10px; padding: 0px; line-height: 24px;\">EComposer helps you create professional Shopify websites without any programming knowledge. With 80+ design elements and 50+ templates, there\u2019s no limit to what you can build. Download EComposer for free today and start building the store you\u2019ve always wanted<\/h2>",
- "add_to_cart_xjksegmq4x8_html": "P\u0159idat do Ko\u0161\u00edku",
- "pre_order_xjksegmq4x8_html": "Pre Order",
- "product_unavailable_xjksegmq4x8_html": "Momenat\u00e1ln\u011b nedostupn\u00e9",
- "out_stock_xjksegmq4x8_html": "Momenat\u00e1ln\u011b nedostupn\u00e9",
- "added_cart_text_xjksegmq4x8_html": "V ko\u0161\u00edku",
- "added_cart_message_xjksegmq4x8_html": "Added to cart",
- "textcontent_1cnqaweecps_html": "Vr\u00e1cen\u00ed zdarma do 14 dn\u00ed od objedn\u00e1n\u00ed.<span style=\"color: rgba(var(--color-foreground), 0.75); font-family: var(--font-body-family); font-size: 1.6rem; font-style: var(--font-body-style); font-weight: var(--font-body-weight); letter-spacing: 0.06rem;\">&nbsp;<\/span>",
- "headingtext_tgzuq6h6xu_html": "Podobn\u00e9 produkty<br>",
- "textcontent_zr5ofu4xcwf_html": "Produkty, kter\u00e9 by se V\u00e1m mohly l\u00edbit na z\u00e1klad\u011b Va\u0161\u00ed aktivity.",
  "text_week_hh6crmh17g_html": "[%-W] week%!W",
  "text_day_hh6crmh17g_html": "[%-d] day%!D",
  "text_hour_hh6crmh17g_html": "[%-H] hour%!H",
@@ -1085,8 +1085,20 @@
  "product_single_sold_text_bokihj9gjy_html": "Moment\u00e1ln\u011b nedostupn\u00e9",
  "view_more_text_94rgdjzwo2j_html": "View more",
  "view_less_text_94rgdjzwo2j_html": "View less",
+ "add_to_cart_xjksegmq4x8_html": "P\u0159idat do Ko\u0161\u00edku",
+ "pre_order_xjksegmq4x8_html": "Pre Order",
+ "product_unavailable_xjksegmq4x8_html": "Momenat\u00e1ln\u011b nedostupn\u00e9",
+ "out_stock_xjksegmq4x8_html": "Momenat\u00e1ln\u011b nedostupn\u00e9",
+ "added_cart_text_xjksegmq4x8_html": "V ko\u0161\u00edku",
+ "added_cart_message_xjksegmq4x8_html": "Added to cart",
+ "textcontent_1cnqaweecps_html": "Vr\u00e1cen\u00ed zdarma do 14 dn\u00ed od objedn\u00e1n\u00ed.<span style=\"color: rgba(var(--color-foreground), 0.75); font-family: var(--font-body-family); font-size: 1.6rem; font-style: var(--font-body-style); font-weight: var(--font-body-weight); letter-spacing: 0.06rem;\">&nbsp;<\/span>",
+ "lightbox_button_title_f2om6pvcutr_html": "Find your size",
+ "UnderstandaboutEComposer_f2om6pvcutr_html": "Understand about EComposer",
+ "s001p0l2hycpSwwapkW8dea5ttnltwycbDEfftasbtsyaw_f2om6pvcutr_html": "<h2 style=\"margin: 0px 0px 10px; padding: 0px; line-height: 24px;\">EComposer helps you create professional Shopify websites without any programming knowledge. With 80+ design elements and 50+ templates, there\u2019s no limit to what you can build. Download EComposer for free today and start building the store you\u2019ve always wanted<\/h2>",
  "breadcrumbs_home_6253vl84dzp_html": "Home",
  "cart_page_title_6253vl84dzp_html": "Cart",
+ "headingtext_tgzuq6h6xu_html": "Podobn\u00e9 produkty<br>",
+ "textcontent_zr5ofu4xcwf_html": "Produkty, kter\u00e9 by se V\u00e1m mohly l\u00edbit na z\u00e1klad\u011b Va\u0161\u00ed aktivity.",
  "product_option_swatch_hh6crmh17g_html": "Color",
  "view_more_text_hh6crmh17g_html": "View more",
  "added_cart_text_hh6crmh17g_html": "Added to cart",
@@ -1097,18 +1109,6 @@
  "sale_badge_hh6crmh17g_html": "-{{sale}}%",
  "countdown_title_hh6crmh17g_html": "Hurry up! The sale will end on",
  "no_product_item_hh6crmh17g_html": "There are no product yet!",
- "lightbox_button_title_f2om6pvcutr_html": "Find your size",
- "UnderstandaboutEComposer_f2om6pvcutr_html": "Understand about EComposer",
- "s001p0l2hycpSwwapkW8dea5ttnltwycbDEfftasbtsyaw_f2om6pvcutr_html": "<h2 style=\"margin: 0px 0px 10px; padding: 0px; line-height: 24px;\">EComposer helps you create professional Shopify websites without any programming knowledge. With 80+ design elements and 50+ templates, there\u2019s no limit to what you can build. Download EComposer for free today and start building the store you\u2019ve always wanted<\/h2>",
- "add_to_cart_xjksegmq4x8_html": "P\u0159idat do Ko\u0161\u00edku",
- "pre_order_xjksegmq4x8_html": "Pre Order",
- "product_unavailable_xjksegmq4x8_html": "Momenat\u00e1ln\u011b nedostupn\u00e9",
- "out_stock_xjksegmq4x8_html": "Momenat\u00e1ln\u011b nedostupn\u00e9",
- "added_cart_text_xjksegmq4x8_html": "V ko\u0161\u00edku",
- "added_cart_message_xjksegmq4x8_html": "Added to cart",
- "textcontent_1cnqaweecps_html": "Vr\u00e1cen\u00ed zdarma do 14 dn\u00ed od objedn\u00e1n\u00ed.<span style=\"color: rgba(var(--color-foreground), 0.75); font-family: var(--font-body-family); font-size: 1.6rem; font-style: var(--font-body-style); font-weight: var(--font-body-weight); letter-spacing: 0.06rem;\">&nbsp;<\/span>",
- "headingtext_tgzuq6h6xu_html": "Podobn\u00e9 produkty<br>",
- "textcontent_zr5ofu4xcwf_html": "Produkty, kter\u00e9 by se V\u00e1m mohly l\u00edbit na z\u00e1klad\u011b Va\u0161\u00ed aktivity.",
  "text_week_hh6crmh17g_html": "[%-W] week%!W",
  "text_day_hh6crmh17g_html": "[%-d] day%!D",
  "text_hour_hh6crmh17g_html": "[%-H] hour%!H",
