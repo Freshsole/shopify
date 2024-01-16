@@ -1345,21 +1345,20 @@
                                       data-core-is="block"
                                     >
                                       <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
-                                        {% assign sizeChartText = targetCollection.metafields.custom.sizechart %}
-                                        {% assign sizeChartData = sizeChartText | json %}
+                                        <!-- Debugging: Output the collection JSON -->
+                                        <pre>{{ targetCollection.metafields.custom.sizechart | json }}</pre>
 
-                                        {% for genderData in sizeChartData %}
-                                          <h3>{{ genderData.gender }}</h3>
-                                          <table>
-                                            <thead>
-                                              <tr>
-                                                <th>EUR</th>
-                                                <th>US</th>
-                                                <th>UK</th>
-                                                <th>CM</th>
-                                              </tr>
-                                            </thead>
-                                            <tbody>
+                                        <table>
+                                          <thead>
+                                            <tr>
+                                              <th>EUR</th>
+                                              <th>US</th>
+                                              <th>UK</th>
+                                              <th>CM</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            {% for genderData in targetCollection.metafields.custom.sizechart %}
                                               {% for size in genderData.data %}
                                                 <tr>
                                                   <td>{{ size.EUR }}</td>
@@ -1368,9 +1367,9 @@
                                                   <td>{{ size.CM }}</td>
                                                 </tr>
                                               {% endfor %}
-                                            </tbody>
-                                          </table>
-                                        {% endfor %}
+                                            {% endfor %}
+                                          </tbody>
+                                        </table>
                                       </div>
                                     </div>
                                   </div>
