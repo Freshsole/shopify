@@ -1345,8 +1345,8 @@
                                       data-core-is="block"
                                     >
                                       <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
-                                        <!-- Debugging: Output the collection JSON -->
-                                        <pre>{{ targetCollection.metafields.custom.sizechart | json }}</pre>
+                                        <!-- Debugging: Output the structure of the sizechart field -->
+                                        <pre>{{ targetCollection.metafields.custom.sizechart | inspect }}</pre>
 
                                         <table>
                                           <thead>
@@ -1358,15 +1358,14 @@
                                             </tr>
                                           </thead>
                                           <tbody>
-                                            {% for genderData in targetCollection.metafields.custom.sizechart %}
-                                              {% for size in genderData.data %}
-                                                <tr>
-                                                  <td>{{ size.EUR }}</td>
-                                                  <td>{{ size.US }}</td>
-                                                  <td>{{ size.UK }}</td>
-                                                  <td>{{ size.CM }}</td>
-                                                </tr>
-                                              {% endfor %}
+                                            {% assign sizeChart = targetCollection.metafields.custom.sizechart.data %}
+                                            {% for size in sizeChart %}
+                                              <tr>
+                                                <td>{{ size.EUR }}</td>
+                                                <td>{{ size.US }}</td>
+                                                <td>{{ size.UK }}</td>
+                                                <td>{{ size.CM }}</td>
+                                              </tr>
                                             {% endfor %}
                                           </tbody>
                                         </table>
