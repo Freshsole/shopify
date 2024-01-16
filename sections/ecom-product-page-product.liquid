@@ -1130,6 +1130,9 @@
                                       </div>
                                     </div>
                                     <!-- Debugging Output -->
+                                    <p>Debug: Product Object - {{ product | json }}</p>
+
+                                    <!-- Debugging Output -->
                                     <p>Debug: Product Name - {{ product.name }}</p>
                                     <p>Debug: Product SKU - {{ product.sku }}</p>
                                   </div>
@@ -1539,7 +1542,7 @@
                                                             <div class="ecom-collection__product-media--container">
                                                               <div
                                                                 class="
-                                                                                                                                                                                                                                                                        ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
+                                                                                                                                                                                                                                                                                                                                          ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
                                                                 "
                                                                 style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"
                                                               >
