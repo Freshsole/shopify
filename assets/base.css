@@ -4235,7 +4235,7 @@ text-decoration: none;
 }
 
   .core__group--item{
-    display:flex;
+    display:flex !important;
     justify-content:center;
   }
   
