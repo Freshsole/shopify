@@ -17,6 +17,7 @@
   --shadow-visible: var(--product-card-shadow-visible);
   --image-padding: var(--product-card-image-padding);
   --text-alignment: var(--product-card-text-alignment);
+    transform:scale(0.892)
 }
 
 .collection-card-wrapper .card,
