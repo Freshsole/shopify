@@ -4105,10 +4105,6 @@ text-decoration: none;
   
   }
 
-.select__select {
-    font-weight: 400;
-}
-
 .facet-filters__sort+.icon-caret {
     right: calc(var(--inputs-border-width) + 1.5rem) !important;
 }
@@ -4116,7 +4112,7 @@ text-decoration: none;
 .facet-filters__field .select__select, .mobile-facets__sort .select__select {
     padding-right: 10;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     color: black !important;
 }
 
