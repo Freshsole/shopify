@@ -4038,12 +4038,6 @@ text-decoration: none;
     font-weight: 600;
 }
 
-
-/* 80% search page width */
-.template-search__results {
-    max-width: 80%;
-}
-
 .facets-container{
     max-width: 80%;
     margin-left:10%;
@@ -4122,8 +4116,13 @@ text-decoration: none;
 .grid__item{
     margin-bottom:-30px;
 }
+
+/* 80% search page width */
+.template-search__results {
+    max-width: 80%;
+}
   
-  }
+}
 
 .facet-filters__sort+.icon-caret {
     right: calc(var(--inputs-border-width) + 1.5rem) !important;
