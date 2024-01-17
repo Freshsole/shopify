@@ -4034,6 +4034,10 @@ text-decoration: none;
     font-weight: 600;
 }
 
+.template-search__results{
+    max-width: 80%;
+}
+
 /* Filtrovat */
 .facets__heading {
     color: black !important;
