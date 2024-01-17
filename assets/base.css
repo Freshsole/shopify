@@ -4074,7 +4074,9 @@ text-decoration: none;
 }
 
 /* filtry right */
-.text-area, .select {
+
+@media screen and (min-width: 750px) {
+  .text-area, .select {
     height: 45px;
     display: flex;
     align-items: center;
@@ -4096,6 +4098,9 @@ text-decoration: none;
     font-size: 16px !important;
     font-weight: 600;
 }
+  }
+
+
 
 .facet-filters__sort+.icon-caret {
     right: calc(var(--inputs-border-width) + 1.5rem) !important;
