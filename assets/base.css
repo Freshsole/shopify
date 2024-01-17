@@ -4220,3 +4220,18 @@ text-decoration: none;
 .ProductHidden{
     display: none !important;
 }
+
+/* Product mobile */
+
+@media screen and (min-width: 750px) {
+
+  .ecom-core.ecom-6tmsuc0db89 .tabs__navs--items {
+    flex-wrap: no-wrap !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
