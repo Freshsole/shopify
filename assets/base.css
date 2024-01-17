@@ -4120,6 +4120,8 @@ text-decoration: none;
 /* 80% search page width */
 .template-search__results {
     max-width: 90%;
+    margin-left:auto;
+    margin-right:auto;
 }
   
 }
