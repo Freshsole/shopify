@@ -4242,6 +4242,10 @@ text-decoration: none;
   .core__group--body{
     flex-direction:column !important;
   }
+
+  .ProductSizeImages {
+    max-width: auto!important;
+}
   
 }
 
