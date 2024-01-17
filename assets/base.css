@@ -4212,9 +4212,13 @@ text-decoration: none;
     max-width: 550px;
 }
 
-  div.ecom-core img {
-    max-width: auto !important;
+.ecom-fb43t1cm325{
+    max-width: 550px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
+  
 }
 .ProductSizeImages{
     height: auto;
