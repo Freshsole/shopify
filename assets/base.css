@@ -4209,7 +4209,7 @@ text-decoration: none;
 
 @media screen and (min-width: 750px){
   .ProductSizeImages{
-    max-width: 550px !important;
+    max-width: 550px;
 }
 }
 .ProductSizeImages{
