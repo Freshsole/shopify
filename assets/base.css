@@ -4115,6 +4115,10 @@ text-decoration: none;
     font-weight: 600!important;
     color: black !important;
 }
+
+.grid__item .scroll-trigger .animate--slide-in{
+    margin-bottom:-10px
+}
   
   }
 
