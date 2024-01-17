@@ -4034,7 +4034,11 @@ text-decoration: none;
     font-weight: 600;
 }
 
-.template-search__results .facets-container{
+.template-search__results {
+    max-width: 80%;
+}
+
+.facets-container{
     max-width: 80%;
 }
 
