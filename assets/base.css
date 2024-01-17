@@ -4240,7 +4240,7 @@ text-decoration: none;
   }
 
   .core__group--body{
-    flex-direction:column;
+    flex-direction:column !important;
   }
   
 }
