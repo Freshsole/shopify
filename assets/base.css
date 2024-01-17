@@ -4211,6 +4211,10 @@ text-decoration: none;
   .ProductSizeImages{
     max-width: 550px;
 }
+
+  div.ecom-core img {
+    max-width: auto !important;
+}
 }
 .ProductSizeImages{
     height: auto;
