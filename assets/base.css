@@ -4101,6 +4101,7 @@ text-decoration: none;
 
   .select__select {
     font-weight: 600!important;
+    color: black !important;
 }
   
   }
@@ -4113,7 +4114,6 @@ text-decoration: none;
     padding-right: 10;
     font-size: 16px;
     font-weight: 400;
-    color: black !important;
 }
 
 .light {
