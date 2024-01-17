@@ -4102,6 +4102,7 @@ text-decoration: none;
   .select__select {
     font-weight: 600!important;
     color: black !important;
+    font-size: 16px;
 }
   
   }
@@ -4112,7 +4113,6 @@ text-decoration: none;
 
 .facet-filters__field .select__select, .mobile-facets__sort .select__select {
     padding-right: 10;
-    font-size: 16px;
     font-weight: 400;
 }
 
