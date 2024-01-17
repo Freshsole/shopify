@@ -4034,6 +4034,8 @@ text-decoration: none;
     font-weight: 600;
 }
 
+
+/* 80% search page width */
 .template-search__results {
     max-width: 80%;
 }
