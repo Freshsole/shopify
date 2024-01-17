@@ -4238,6 +4238,10 @@ text-decoration: none;
     display:flex !important;
     justify-content:center;
   }
+
+  .core__group--body{
+    flex-direction:column;
+  }
   
 }
 
