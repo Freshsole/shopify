@@ -4100,12 +4100,14 @@ text-decoration: none;
 }
 
   .select__select {
-    font-weight: 400!important;
+    font-weight: 600!important;
 }
   
   }
 
-
+.select__select {
+    font-weight: 400;
+}
 
 .facet-filters__sort+.icon-caret {
     right: calc(var(--inputs-border-width) + 1.5rem) !important;
