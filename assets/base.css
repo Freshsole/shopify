@@ -4255,6 +4255,11 @@ text-decoration: none;
     display: flex !important;
 }
 
+  .ecom-core.ecom-6tmsuc0db89 .tabs__wrapper.ecom__element .tabs__nav {
+    display: flex;
+    justify-content: center;
+}
+
   .core__group--body{
     flex-direction:column !important;
   }
