@@ -4307,6 +4307,6 @@ text-decoration: none;
 }
  /* product mobile*/
 .tabs__navs--items {
-    overflow-x: none !important;
+    overflow-x: unset !important;
 }
 
