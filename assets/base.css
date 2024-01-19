@@ -4264,6 +4264,14 @@ text-decoration: none;
     margin-right:0!important;
 }
 
+  .ecom-core.ecom-p38g79du {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
   .core__group--body{
     flex-direction:column !important;
   }
