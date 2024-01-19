@@ -4251,6 +4251,10 @@ text-decoration: none;
     justify-content:center;
   }
 
+  .tab__item.ecom-item-active {
+    display: flex !important;
+}
+
   .core__group--body{
     flex-direction:column !important;
   }
