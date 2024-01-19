@@ -4260,8 +4260,8 @@ text-decoration: none;
   .ecom-core.ecom-6tmsuc0db89 .tabs__wrapper.ecom__element .tabs__nav {
     display: flex;
     justify-content: center;
-    margin-left:0;
-    margin-right:0;
+    margin-left:0 !important;
+    margin-right:0!important;
 }
 
   .core__group--body{
