@@ -4244,6 +4244,7 @@ text-decoration: none;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    gap:10px;
 }
 
   .core__group--item{
