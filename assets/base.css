@@ -4297,3 +4297,12 @@ text-decoration: none;
   
 }
 
+
+@media screen and (max-width: 450px){
+
+.ecom-collection__product-item--information {
+    margin-top: 0;
+}
+  
+}
+
