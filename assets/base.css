@@ -4274,7 +4274,7 @@ text-decoration: none;
 }
 
   .ecom-collection__product-item .ecom-collection__product-item--inner {
-    overflow: visible;
+    overflow: visible !important;
 }
 
   .ecom-collection__product-item--information {
