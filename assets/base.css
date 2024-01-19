@@ -4307,6 +4307,7 @@ text-decoration: none;
 }
  /* product mobile*/
 .tabs__navs--items {
-    overflow-x: visible !important;
+    max-width: 100%;
+    overflow-x: hidden !important;
 }
 
