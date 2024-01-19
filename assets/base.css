@@ -4247,7 +4247,7 @@ text-decoration: none;
 }
 
   .core__group--item{
-    display:flex !important;
+    display:flex;
     justify-content:center;
   }
 
