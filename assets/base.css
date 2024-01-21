@@ -4309,7 +4309,13 @@ text-decoration: none;
     overflow-x: initial !important;
 }
 
-/* Contact page */
+/* CONTACT PAGE */
+
 :root, .color-background-1 {
     --color-foreground: #eaeaea !important;
+}
+
+
+.multicolumn.background-primary .multicolumn-card {
+    background-color: #eaeaea;
 }
