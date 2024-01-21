@@ -4355,7 +4355,7 @@ text-decoration: none;
   
 }
 
-
+/* Product image scroll */
 .pf-slide-main-media.is-current {
     overflow: hidden !important;
     touch-action: none !important;
