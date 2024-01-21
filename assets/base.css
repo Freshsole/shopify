@@ -4361,11 +4361,4 @@ text-decoration: none;
     touch-action: none !important;
 }
 
-@media (max-width: 720px) {
-	.main-navigation-wrapper.main-navigation-wrapper--center {
-		display: none !important;
-	}
-	.wg-drop.country-selector {
-		top: 0 !important;
-	}
-}
+svg.feather.feather-shopping-cart { color: #000 !important; }
