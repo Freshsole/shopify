@@ -4319,3 +4319,7 @@ text-decoration: none;
 .multicolumn.background-primary .multicolumn-card {
     background-color: #eaeaea !important;
 }
+
+.contact .field {
+    border: 1px solid #eaeaea;
+}
