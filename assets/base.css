@@ -4309,3 +4309,7 @@ text-decoration: none;
     overflow-x: initial !important;
 }
 
+/* Contact page */
+:root, .color-background-1 {
+    --color-foreground: #eaeaea !important;
+}
