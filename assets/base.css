@@ -4332,7 +4332,7 @@ text-decoration: none;
 /* MAIN PAGE */
 
 @media (max-width: 767px){
-  .__pf_po5kph63 .pf-422_ {
+  .__pf_po5kph63 .pf-422_, .__pf_po5kph63 .pf-432_ {
     transform: scale(1);
     margin-bottom: 0;
     margin-top: 10px;
