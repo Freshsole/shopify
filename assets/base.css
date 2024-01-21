@@ -4317,5 +4317,5 @@ text-decoration: none;
 
 
 .multicolumn.background-primary .multicolumn-card {
-    background-color: #eaeaea;
+    background-color: #eaeaea !important;
 }
