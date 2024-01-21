@@ -3,7 +3,7 @@
 
 .__pf [style*="--cw"] {
     padding: 0 15px;
-    width: 100%;
+    width: 90%;
     margin: auto;
 }
 
@@ -22,8 +22,8 @@
   
 @media (min-width: 1200px) {
     .__pf [style*="--cw"] {
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 0%;
+        padding-right: 0%;
     }
 
   .QUCIb .nav-style-3.pf-slider-next {
