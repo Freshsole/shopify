@@ -4360,3 +4360,29 @@ text-decoration: none;
     overflow: hidden !important;
     touch-action: none !important;
 }
+
+pf-slider {
+    display: flex;
+    width: 300%; /* Assuming you have 3 slides, adjust accordingly */
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.pf-slide {
+    flex: 1;
+    scroll-snap-align: start;
+}
+
+/* Optionally, you can add animation for a smoother transition */
+.pf-slider {
+    animation: scroll 5s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Assuming you have 3 slides, adjust accordingly */
+    }
+}
