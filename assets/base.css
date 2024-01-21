@@ -3871,8 +3871,8 @@ text-decoration: none;
 
 @media (max-width: 767px){
 .QUCIb .pagination-style-1 button{
-    width: 20px;
-    height: 3px !important;
+    width: 25px;
+    height: 4px !important;
     background: #0006;
 }
 }
