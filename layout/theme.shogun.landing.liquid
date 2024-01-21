@@ -8,14 +8,18 @@ This file can be re-written at any time.
   
 <head>
   
- {%- render 'ecom_header' -%}{% render 'pagefly-head' %}
+    {%- render 'ecom_header' -%}
+    {% render 'pagefly-head' %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Freshsole/customcss/main/21.11.?token=GHSAT0AAAAAACKTRCNMVJEBBB5NYYGGXTS2ZK5CP5A">
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://raw.githubusercontent.com/Freshsole/customcss/main/21.11.?token=GHSAT0AAAAAACKTRCNMVJEBBB5NYYGGXTS2ZK5CP5A"
+    >
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -276,15 +280,16 @@ This file can be re-written at any time.
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  
-  {% render 'shogun-head' %}
-{% render 'gp-head' %}
 
+    {% render 'shogun-head' %}
+    {% render 'gp-head' %}
+    {% include 'mezereon-header-script' %}
+  
 </head>
 
 
   
-<body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+<body class="{% if content_for_header contains '.mezereon' and shop.metafields.mezereon.status == 'enabled' %} mezereon {% endif %}gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
   
   
   {{ content_for_layout }}
