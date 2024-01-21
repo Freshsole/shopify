@@ -3869,6 +3869,15 @@ text-decoration: none;
     background: rgba(0,0,0,.4);
 }
 
+@media (max-width: 767px){
+.ctumYq .pagination-style-1 button, .dehwrh .pagination-style-1 button, .kvAJUf .pagination-style-1 button {
+    width: 25px;
+    height: 3px;
+    background: rgba(0,0,0,.4);
+}
+}
+
+
 /* Filter mobile */
 .ecom-core.ecom-tpy5db6wzrk #button_menu_block {
     gap: 4px;
@@ -4344,9 +4353,5 @@ text-decoration: none;
     margin-left: -5.5vw !important;
 }
   
-}
-
-body {
-  overflow-y: scroll !important;
 }
 
