@@ -152,7 +152,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   }
 
   .page-width--narrow {
-    max-width: 72.6rem;
+    /*max-width: 72.6rem;*/
     padding: 0;
   }
 
@@ -4463,11 +4463,3 @@ text-decoration: none;
               margin: 0;
           }
         }
-
-@media screen and (min-width: 750px)
-.section-template--20156185215307__form-padding {
-    padding-top: 36px;
-    padding-bottom: 36px;
-    margin-left: auto;
-    margin-right: auto;
-}
