@@ -4466,6 +4466,8 @@ text-decoration: none;
 
 @media screen and (min-width: 750px)
 .section-template--20156185215307__form-padding {
-    margin-left: auto !important;
-    margin-right: auto !important;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
 }
