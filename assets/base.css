@@ -4400,7 +4400,7 @@ text-decoration: none;
     min-height: 80px;
     max-height: 80px;
     right: 0;
-    margin-left: -12%;
+    margin-left: -70%;
 }
 
 .ToRow-contact {
@@ -4445,5 +4445,9 @@ text-decoration: none;
               display: flex;
               width: 33% !important;
               justify-content: space-between;
+          }
+
+            .img-contact {
+              margin-left: -12%;
           }
         }
