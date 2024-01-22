@@ -4441,7 +4441,7 @@ text-decoration: none;
 
             .block-contact {
               display: flex;
-              justify-content:center;
+              justify-content:flex-start;
               background-color: #eaeaea;
               height: 150px;
               width: 100% !important;
