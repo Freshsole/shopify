@@ -43,6 +43,7 @@
         "column_Lj6rxU",
         "column_DkT7zJ"
       ],
+      "disabled": true,
       "custom_css": [
 
       ],
@@ -61,6 +62,29 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_DQcckR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jhaTyk": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Kontaktujte nás<\/strong>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jhaTyk"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "17059091643f575a1d": {
@@ -95,6 +119,7 @@
   "order": [
     "main",
     "multicolumn_KGNPeA",
+    "rich_text_DQcckR",
     "17059091643f575a1d",
     "form"
   ]
