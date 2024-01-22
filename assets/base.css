@@ -4365,6 +4365,7 @@ text-decoration: none;
 
 .block-contact {
     display: flex;
+    justify-content:flex-start;
     width: 100% !important;
     text-align: left;
     background-color: #eaeaea;
