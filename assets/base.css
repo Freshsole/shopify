@@ -4360,3 +4360,11 @@ text-decoration: none;
     overflow: hidden !important;
     touch-action: none !important;
 }
+
+.block-contact {
+    display: flex;
+    width: 100% !important;
+    text-align: left;
+    background-color: #eaeaea;
+    height: 150px;
+}
