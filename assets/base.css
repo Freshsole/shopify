@@ -4361,4 +4361,8 @@ text-decoration: none;
     touch-action: none !important;
 }
 
-svg.feather.feather-shopping-cart { color: #000 !important; }
+/* kontakt button */
+.button, .shopify-challenge__button, .customer button {
+    color: black;
+    background-color: #eaeaea;
+}
