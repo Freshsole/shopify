@@ -4458,8 +4458,8 @@ text-decoration: none;
             .img-contact {
               margin-left: -12%;
           }
-
-            .rich-text__wrapper .rich-text__wrapper--left .page-width{
-              margin:0 !important;
-            }
+    
+            .page-width {
+              margin: 0;
+          }
         }
