@@ -4375,7 +4375,7 @@ text-decoration: none;
 .text-contact {
       display: block; /* Zajišťuje, že nadpis a text jsou pod sebou */
       margin-bottom: 10px; /* Mezera mezi nadpisem a textem */
-      min-width: 250px;
+      min-width: 200px;
       padding-left: 5%;
   }
 
