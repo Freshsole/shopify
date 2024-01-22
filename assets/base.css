@@ -4360,9 +4360,3 @@ text-decoration: none;
     overflow: hidden !important;
     touch-action: none !important;
 }
-
-/* kontakt button */
-.button, .shopify-challenge__button, .customer button {
-    color: black;
-    background-color: #eaeaea;
-}
