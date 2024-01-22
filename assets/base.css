@@ -4418,3 +4418,10 @@ text-decoration: none;
 .p-contact a{
       font-weight: 600!important;
   }
+
+@media (max-width: 1200px) {
+            .ToRow-contact {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
