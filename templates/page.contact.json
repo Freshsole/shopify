@@ -13,6 +13,7 @@
         "column_EbigjN": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Package_-_in_box.png",
             "title": "<strong>Email<\/strong>",
             "text": "<p>freshsolecz@gmail.com<\/p>",
             "link_label": "",
