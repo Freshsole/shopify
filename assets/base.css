@@ -4460,6 +4460,6 @@ text-decoration: none;
           }
 
             .rich-text__wrapper .rich-text__wrapper--left .page-width{
-              margin:0;
+              margin:0 !important;
             }
         }
