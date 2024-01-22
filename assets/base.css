@@ -4383,6 +4383,12 @@ text-decoration: none;
     color: black !important;
 }
 
+.NoDesign-contant
+{
+    text-decoration:none;
+    color:black;
+}
+
 .content-contact {
     display: flex;
     /* align-items: center; */
