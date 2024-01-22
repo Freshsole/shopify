@@ -13,7 +13,7 @@
         "column_EbigjN": {
           "type": "column",
           "settings": {
-            "title": "Email",
+            "title": "<strong>Email<\/strong>",
             "text": "<p>freshsolecz@gmail.com<\/p>",
             "link_label": "",
             "link": ""
@@ -22,7 +22,7 @@
         "column_Lj6rxU": {
           "type": "column",
           "settings": {
-            "title": "Telefon",
+            "title": "<strong>Telefon<\/strong>",
             "text": "<p>+420 784 568 167<\/p>",
             "link_label": "",
             "link": ""
@@ -31,7 +31,7 @@
         "column_DkT7zJ": {
           "type": "column",
           "settings": {
-            "title": "Instagram",
+            "title": "<strong>Instagram<\/strong>",
             "text": "<p><a href=\"https:\/\/www.instagram.com\/freshsole.cz\/\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/freshsole.cz\/\">@freshsole.cz<\/a><\/p>",
             "link_label": "",
             "link": ""
