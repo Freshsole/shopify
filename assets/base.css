@@ -4451,6 +4451,7 @@ text-decoration: none;
             .content-contact {
               display: flex;
               width: 33% !important;
+              gap:30px;
               justify-content: space-between;
           }
 
