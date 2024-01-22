@@ -4378,8 +4378,9 @@ text-decoration: none;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 10px;
-    /* min-width: 200px; */
     padding-left: 7%;
+    text-decoration: none !important;
+    color: black !important;
 }
 
 .content-contact {
