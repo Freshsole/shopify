@@ -4443,12 +4443,12 @@ text-decoration: none;
               display: flex;
               background-color: #eaeaea;
               height: 150px;
-              width: 100%;
+              width: 100% !important;
           }
 
             .content-contact {
               display: flex;
-              width: 33%;
+              width: 33% !important;
               justify-content: space-between;
           }
         }
