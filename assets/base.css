@@ -4361,6 +4361,8 @@ text-decoration: none;
     touch-action: none !important;
 }
 
+/* CONTACT STYL*/
+
 .block-contact {
     display: flex;
     width: 100% !important;
@@ -4368,3 +4370,47 @@ text-decoration: none;
     background-color: #eaeaea;
     height: 150px;
 }
+
+.text-contact {
+      display: block; /* Zajišťuje, že nadpis a text jsou pod sebou */
+      margin-bottom: 10px; /* Mezera mezi nadpisem a textem */
+      min-width: 60%;
+      padding-left: 5%;
+  }
+
+  .content-contact {
+      display: flex;
+      align-items: center;
+  }
+
+  .image-contact {
+      display: inline-block;
+      width: 30%; /* Šířka obrazku, můžete upravit podle potřeby */
+      /*border: 2px solid black; /* Ohraničení obrazku */
+      
+  }
+
+  .img-contact {
+      width: 100%; /* Zajistí, že obrázek vyplní celý prostor ve svém kontejneru */
+      height: auto; /* Zajistí responzivní chování obrázku */
+      min-width: 150px;
+      min-height: 150px;
+      display: flex;
+      margin-left: 5%;
+  }
+
+  .ToRow-contact{
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+  }
+
+  h2{
+      font-size: calc(var(--font-heading-scale) * 1.8rem);
+  }
+
+  .p-contact{
+      text-decoration: none!important;
+      font-size: 16px!important;
+      font-weight: 600!important;
+  }
