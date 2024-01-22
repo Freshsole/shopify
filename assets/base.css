@@ -4379,7 +4379,7 @@ text-decoration: none;
     justify-content: center;
     margin-bottom: 10px;
     /* min-width: 200px; */
-    padding-left: 5%;
+    padding-left: 7%;
 }
 
 .content-contact {
@@ -4406,6 +4406,7 @@ text-decoration: none;
     /* margin-left: 0%; */
     right: 0;
     /* align-items: center; */
+    margin-left: -12%;
 }
 
 .ToRow-contact {
