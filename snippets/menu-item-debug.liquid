@@ -1,11 +1,22 @@
-<p>
-  {% for i in (1..menu_item.level) -%}
-    &nbsp;&nbsp;&nbsp;&nbsp;
-  {%- endfor -%}
-  {{- menu_item.title }}
-</p>
-{% if menu_item.links %}
-  {% for sub_menu_item in menu_item.links %}
-    {% include 'menu-item-debug', menu_item: sub_menu_item %}
+{% comment %}
+  This snippet is used to debug the menu items and highlight words with sub-items in red.
+{% endcomment %}
+
+{% assign current_collection_title = current_collection_title | downcase %}
+{% assign menu_item_title = menu_item.title | downcase %}
+
+{% assign has_sub_items = menu_item.links.size > 0 %}
+
+{% assign highlighted_word = has_sub_items and current_collection_title == menu_item_title %}
+
+{% if highlighted_word %}
+  <span style="color: red;">{{ menu_item.title }}</span>
+{% else %}
+  {{ menu_item.title }}
+{% endif %}
+
+{% if has_sub_items %}
+  {% for sub_item in menu_item.links %}
+    {% include 'menu-item-debug', menu_item: sub_item, current_collection_title: current_collection_title %}
   {% endfor %}
 {% endif %}
