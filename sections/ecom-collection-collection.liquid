@@ -60,8 +60,8 @@
             <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
               <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
                 <div class="text-content ecom-html has-drop-cap-view-default">
-                  {% assign current_collection_title = collection.title %}
-                  <p>Debug: Current Collection Title - {{ current_collection_title }}</p>
+                  {% assign current_collection_title = collection.title | downcase %}
+                  <p>Debug: Current Collection Title - {{ collection.title }}</p>
 
                   {% assign menu_handle = 'header-menu' %}
                   {% assign menu_items = linklists[menu_handle].links %}
@@ -75,7 +75,7 @@
                   {% assign breadcrumb_content = "" %}
 
                   {% for menu_item in menu_items %}
-                    {% assign menu_item_title = menu_item.title %}
+                    {% assign menu_item_title = menu_item.title | downcase %}
 
                     {% if menu_item_title == current_collection_title %}
                       {% assign breadcrumb_found = true %}
@@ -84,7 +84,7 @@
 
                     {% if breadcrumb_found %}
                       {% capture breadcrumb_content %}
-                        {% include 'menu-item-debug' menu_item: menu_item %}
+                        {% include 'menu-item-debug' menu_item: menu_item current_collection_title: current_collection_title %}
                         {{ breadcrumb_content }}
                       {% endcapture %}
                     {% endif %}
