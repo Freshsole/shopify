@@ -38,7 +38,7 @@
  endif
  endif
  %}
- <section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
+<section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-a4an9p1e7">
       <div class="core__column--wrapper">
@@ -48,7 +48,7 @@
               <div class="ecom-element ecom-collection ecom-collection__title" deep="1">
                 <div class="ecom-element ecom-collection ecom-collection__title-wrapper">
                   <div class="ecom-element ecom-collection ecom-collection__title-container">
-                    <h2 class="ecom-collection__title--headline ecom__heading">{{collection.title}}</h2>
+                    <h2 class="ecom-collection__title--headline ecom__heading">{{ collection.title }}</h2>
                   </div>
                 </div>
               </div>
@@ -58,10 +58,32 @@
             <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
               <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
                 <div class="text-content ecom-html has-drop-cap-view-default">
-                  <div class="breadcrumb">
+                  <div class="breadcrumb-container">
                     <a href="/">Home</a> /
                     {% if collection %}
-                      <a href="{{ shop.url }}/collections/{{ collection.handle }}">{{ collection.title }}</a> /
+                      <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                          var breadcrumbContainer = document.querySelector('.breadcrumb-container');
+
+                          if (breadcrumbContainer) {
+                            // Define your header menu structure
+                            var headerMenu = {
+                              "Home": "/",
+                              "Sneakers": {
+                                "url": "/sneakers",
+                                "Nike": {
+                                  "url": "/nike",
+                                  "Nike Dunk Low": "/nike-dunk-low"
+                                }
+                              }
+                            };
+
+                            breadcrumbContainer.innerHTML += '<a href="' + headerMenu["Sneakers"]["url"] + '">Sneakers</a> / ';
+                            breadcrumbContainer.innerHTML += '<a href="' + headerMenu["Sneakers"]["Nike"]["url"] + '">Nike</a> / ';
+                            breadcrumbContainer.innerHTML += '<a href="' + headerMenu["Sneakers"]["Nike"]["Nike Dunk Low"] + '">Nike Dunk Low</a>';
+                          }
+                        });
+                      </script>
                     {% endif %}
                     {% if current_tags %}
                       {% for tag in current_tags %}
@@ -87,6 +109,7 @@
     <div class="ecom-overlay"></div>
   </div>
 </section>
+
 
  {% comment %}
  // Reactive
