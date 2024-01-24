@@ -55,10 +55,11 @@
 
 {%- assign menu_structure = menu_structure_json | parse_json -%}
 
-{%- capture current_collection -%}
+{%- capture current_product -%}
+  {% assign target_product = 'Nike Dunk Low' %}
   {%- for category in menu_structure.Sneakers -%}
-    {%- if menu_structure.Sneakers[category] contains 'Nike Dunk Low' -%}
-      {{ category }}
+    {%- if menu_structure.Sneakers[category] contains target_product -%}
+      {% assign current_collection = category %}
     {%- endif -%}
   {%- endfor -%}
 {%- endcapture -%}
@@ -73,7 +74,7 @@
               <div class="ecom-element ecom-collection ecom-collection__title" deep="1">
                 <div class="ecom-element ecom-collection ecom-collection__title-wrapper">
                   <div class="ecom-element ecom-collection ecom-collection__title-container">
-                    <h2 class="ecom-collection__title--headline ecom__heading">{{ current_collection }}</h2>
+                    <h2 class="ecom-collection__title--headline ecom__heading">{{ current_product }}</h2>
                   </div>
                 </div>
               </div>
@@ -87,11 +88,8 @@
                     <a href="/">Home</a> /
                     {% if current_collection %}
                       <a href="{{ shop.url }}/collections/{{ current_collection | handleize }}">{{ current_collection }}</a> /
-                    {% endif %}
-                    {% if current_tags %}
-                      {% for tag in current_tags %}
-                        {{ tag | link_to: tag | append: ' / ' }}
-                      {% endfor %}
+                    {% else %}
+                      <a href="{{ shop.url }}/collections/"></a> /
                     {% endif %}
                     <span>{{ 'collections.general.breadcrumbs.current' | t: title: page_title }}</span>
                   </div>
