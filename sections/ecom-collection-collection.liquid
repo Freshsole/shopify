@@ -79,13 +79,12 @@
 
                     {% if menu_item_title == current_collection_title %}
                       {% assign breadcrumb_found = true %}
-                      {% assign breadcrumb_content = "" %}
+                      {% assign breadcrumb_content = "<a href='" | append: menu_item.url | append: "'>" | append: menu_item.title | append: "</a>" %}
                     {% endif %}
 
                     {% if breadcrumb_found %}
                       {% capture breadcrumb_content %}
-                        {% include 'menu-item-debug' menu_item: menu_item current_collection_title: current_collection_title %}
-                        {{ breadcrumb_content }}
+                        <a href="{{ menu_item.url }}">{{ menu_item.title }}</a> / {{ breadcrumb_content }}
                       {% endcapture %}
                     {% endif %}
                   {% endfor %}
@@ -116,6 +115,7 @@
     <div class="ecom-overlay"></div>
   </div>
 </section>
+
 
 
 
