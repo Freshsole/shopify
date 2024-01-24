@@ -66,6 +66,11 @@
                   {% assign menu_handle = 'header-menu' %}
                   {% assign menu_items = linklists[menu_handle].links %}
 
+                  <p>Debug: Header Menu Structure</p>
+                  {% for menu_item in menu_items %}
+                    {% include 'menu-item-debug' menu_item: menu_item %}
+                  {% endfor %}
+
                   {% assign breadcrumb_found = false %}
 
                   {% for menu_item in menu_items %}
