@@ -47,6 +47,14 @@
   <p>Menu Item Title: {{ menu_item.title }}</p>
   <p>Menu Item URL: {{ menu_item.url }}</p>
   <!-- Add more information if needed -->
+
+  {% unless forloop.last %}
+    <hr> <!-- Optional: Add a separator between menu items -->
+  {% endunless %}
+
+  {% if forloop.last %}
+    <p>Last Menu Item Reached</p>
+  {% endif %}
 {% endfor %}
 
 
