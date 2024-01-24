@@ -1,0 +1,17 @@
+{%- assign category_title = category[0] | downcase -%}
+{%- assign subcategories = category[1] -%}
+
+{%- if category_title == current_collection_title -%}
+  {%- assign breadcrumb_found = true -%}
+  {%- assign breadcrumb_content = '' -%}
+{%- endif -%}
+
+{%- if breadcrumb_found -%}
+  {%- capture breadcrumb_content -%}
+    <a href="#">{{ category_title }}</a>
+    {%- if subcategories.size > 0 -%}
+      {%- include 'menu-subcategories' subcategories: subcategories current_collection_title: current_collection_title -%}
+    {%- endif -%}
+    {{- breadcrumb_content -}}
+  {%- endcapture -%}
+{%- endif -%}
