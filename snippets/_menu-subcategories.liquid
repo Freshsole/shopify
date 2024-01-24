@@ -1,0 +1,16 @@
+{%- assign subcategory_found = false -%}
+{%- assign subcategory_content = '' -%}
+
+{%- for subcategory in subcategories -%}
+  {%- if subcategory | downcase == current_collection_title -%}
+    {%- assign subcategory_found = true -%}
+    {%- assign subcategory_content = '' -%}
+  {%- endif -%}
+
+  {%- if subcategory_found -%}
+    {%- capture subcategory_content -%}
+      <a href="#">{{ subcategory }}</a>
+      {{- subcategory_content -}}
+    {%- endcapture -%}
+  {%- endif -%}
+{%- endfor -%}
