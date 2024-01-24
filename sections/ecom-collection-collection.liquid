@@ -40,81 +40,14 @@
  %}
 
 
-<section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
-  <div data-deep="1" class="core__row--columns">
-    <div class="ecom-column ecom-core core__column--first core__column--last ecom-a4an9p1e7">
-      <div class="core__column--wrapper">
-        <div class="core__blocks" index="0">
-          <div class="core__blocks--body">
-            <div class="ecom-animation ecom-block ecom-core core__block ecom-rjo600f3u59" data-core-is="block">
-              <div class="ecom-element ecom-collection ecom-collection__title" deep="1">
-                <div class="ecom-element ecom-collection ecom-collection__title-wrapper">
-                  <div class="ecom-element ecom-collection ecom-collection__title-container">
-                    <h2 class="ecom-collection__title--headline ecom__heading">{{ collection.title }}</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
+{% assign menu_handle = 'header-menu' %}
+{% assign menu_items = linklists[menu_handle].links %}
 
-            <!-- Debug Output -->
-            <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
-              <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
-                <div class="text-content ecom-html has-drop-cap-view-default">
-                  {% assign current_collection_title = collection.title | downcase %}
-                  <p>Debug: Current Collection Title - {{ collection.title }}</p>
-
-                  {% assign menu_handle = 'header-menu' %}
-                  {% assign menu_items = linklists[menu_handle].links %}
-
-                  <p>Debug: Header Menu Structure</p>
-                  {% for menu_item in menu_items %}
-                    {% include 'menu-item-debug' menu_item: menu_item current_collection_title: current_collection_title %}
-                  {% endfor %}
-
-                  {% assign breadcrumb_found = false %}
-                  {% assign breadcrumb_content = "" %}
-
-                  {% for menu_item in menu_items %}
-                    {% assign menu_item_title = menu_item.title | downcase %}
-
-                    {% if menu_item_title == current_collection_title %}
-                      {% assign breadcrumb_found = true %}
-                      {% assign breadcrumb_content = "<a href='" | append: menu_item.url | append: "'>" | append: menu_item.title | append: "</a>" %}
-                    {% endif %}
-
-                    {% if breadcrumb_found %}
-                      {% capture breadcrumb_content %}
-                        <a href="{{ menu_item.url }}">{{ menu_item.title }}</a> / {{ breadcrumb_content }}
-                      {% endcapture %}
-                    {% endif %}
-                  {% endfor %}
-
-                  {% if breadcrumb_found %}
-                    <p>Debug: Breadcrumb Found - {{ current_collection_title }}</p>
-                    <div class="breadcrumb">
-                      <a href="/">Home</a> /
-                      {{ breadcrumb_content }}
-                    </div>
-                  {% else %}
-                    <p>Debug: Breadcrumb Not Found</p>
-                  {% endif %}
-                </div>
-              </div>
-            </div>
-            <!-- End Debug Output -->
-
-          </div>
-        </div>
-      </div>
-      <div class="ecom-column__overlay">
-        <div class="ecom-overlay"></div>
-      </div>
-    </div>
-  </div>
-  <div class="ecom-section__overlay">
-    <div class="ecom-overlay"></div>
-  </div>
-</section>
+{% for menu_item in menu_items %}
+  <p>Menu Item Title: {{ menu_item.title }}</p>
+  <p>Menu Item URL: {{ menu_item.url }}</p>
+  <!-- Add more information if needed -->
+{% endfor %}
 
 
 
