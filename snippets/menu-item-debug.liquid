@@ -17,6 +17,6 @@
 
 {% if has_sub_items %}
   {% for sub_item in menu_item.links %}
-    {% include 'menu-item-debug', menu_item: sub_item, current_collection_title: current_collection_title %}
+    {% include 'menu-item-debug' menu_item=sub_item current_collection_title=current_collection_title %}
   {% endfor %}
 {% endif %}
