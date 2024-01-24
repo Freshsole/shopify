@@ -1,0 +1,14 @@
+{% assign current_collection_title = current_collection_title | downcase %}
+{% assign menu_item_title = menu_item.title | downcase %}
+
+{% if menu_item_title == current_collection_title %}
+  {% assign breadcrumb_found = true %}
+  {% assign breadcrumb_content = '' %}
+{% endif %}
+
+{% if breadcrumb_found %}
+  {% capture breadcrumb_content %}
+    {% include 'menu-item' menu_item: menu_item current_collection_title: current_collection_title %}
+    {{ breadcrumb_content }}
+  {% endcapture %}
+{% endif %}
