@@ -43,18 +43,15 @@
 {% assign menu_handle = 'header-menu' %}
 {% assign menu_items = linklists[menu_handle].links %}
 
+{% comment %} Recursive function to display menu items {% endcomment %}
+{% assign render_menu_item = "" %}
+{% assign render_menu_item_recursive = "" %}
+{% assign render_menu_item_recursive = "" | replace: "", menu_items | replace: "", 0 %}
+
+{% assign render_menu_item = "" %}
 {% for menu_item in menu_items %}
-  <p>Menu Item Title: {{ menu_item.title }}</p>
-  <p>Menu Item URL: {{ menu_item.url }}</p>
-  <!-- Add more information if needed -->
-
-  {% unless forloop.last %}
-    <hr> <!-- Optional: Add a separator between menu items -->
-  {% endunless %}
-
-  {% if forloop.last %}
-    <p>Last Menu Item Reached</p>
-  {% endif %}
+  {% assign render_menu_item = render_menu_item_recursive | replace: "0", forloop.index0 | replace: "menu_items", menu_item %}
+  {{ render_menu_item }}
 {% endfor %}
 
 
