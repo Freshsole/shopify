@@ -384,8 +384,8 @@
       "cancel": "Zrušit"
     },
     "ecom-collection-collection": {
-      "breadcrumbs_home_uc1dqqcx1hm_html": "Home",
       "headingtext_p4999zdat0o_html": "<b>Collection Name<\/b>",
+      "textcontent_yqa7nu2a5be_html": "Breadcumb from menu here",
       "applied_title_tpy5db6wzrk_html": "Použité filtry:",
       "clear_all_title_tpy5db6wzrk_html": "Vymazat vše",
       "filter_selected_text_tpy5db6wzrk_html": "{{count}} vybráno",
@@ -409,11 +409,7 @@
       "text_hour_up0bxdqndd_html": "[%-H] hr%!H",
       "text_minute_up0bxdqndd_html": "[%-M] min%!M",
       "text_second_up0bxdqndd_html": "[%-S] sec%!S",
-      "sale_up0bxdqndd_html": "-{{sale}}%",
-      "textcontent_dkxrr00sg4l_html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "textcontent_w2bvkx6xrwq_html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "textcontent_sbbwrt0vkjk_html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "textcontent_v9h5ejicmcp_html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "sale_up0bxdqndd_html": "-{{sale}}%"
     },
     "ecom-default-template-quickview": {
       "textcontent_hej9vk0uggt_html": "(100+ hodnocení)",

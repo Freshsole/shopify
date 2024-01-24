@@ -2,7 +2,7 @@
  EComposer (https://ecomposer.io)
  You SHOULD NOT modify source code in this page because
  It is automatically generated from EComposer
- At 2024-01-24 21:41:00
+ At 2024-01-24 21:56:32
  {% endcomment %} 
  
  {% assign ecom_root_url = routes.root_url %}
@@ -20,93 +20,7 @@
  window.EComposer.TEMPLATE_ID="654026877a5fafe7810e57b2";
  window.EComposer.TEMPLATE = {"template_id":"654026877a5fafe7810e57b2","title":"Collection","type":"collection","slug":"ecom-collection","plan_id":1};
  </script>
-<div class="ecom-builder" id="ecom-collection"><div class="ecom-sections" data-section-id="{{section.id}}">
- {% comment %}
- // Reactive
- * this.data.settings.collection
- {% endcomment %}
- {% liquid
- if request.page_type != 'collection' or collection == blank
- assign selected_collection = ''
- if selected_collection == blank or selected_collection == '' or collections[selected_collection] == blank
- assign collection = collections.all
- else
- assign collection = collections[selected_collection]
- if collection.id == blank
- assign collection = collections.all
- endif
- endif
- endif
- %}
- <section class="ecom-row ecom-core ecom-section ecom-31t0x5y2zvs" data-id="ecom-31t0x5y2zvs" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-g0neuzxx9od"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-animation ecom-block ecom-core core__block elmspace ecom-uc1dqqcx1hm" data-core-is="block"><div class="ecom-element ecom-base ecom-base__breadcrumbs--wrapper" deep="1">
- {%- if EComBuilderMode -%}
- {% capture page_type %}collection{% endcapture %}
- {%- else -%}
- {%- assign page_type = request.page_type %}
- {%- endif %}
- {%- capture icon_parent -%}
- 
- {%- endcapture -%}
- {%- capture icon_breadcrumbs -%}
- <span class="ecom-base__breadcrumbs--icon">
- <svg width="7" height="13" viewBox="0 0 7 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.88 0.199999H7L1.33 12.1H0.21L5.88 0.199999Z" fill="white"></path></svg>
- </span>
- 
- {%- endcapture -%}
- {%- unless page_type == 'index' or page_type == 'list-collections' or page_type == '404' -%}
- <nav class="ecom-base__breadcrumbs ecom-flex" role="navigation" aria-label="breadcrumbs">
- <div class="ecom-base__breadcrumbs__list">
- {{ icon_parent }}<a class="ecom-base__breadcrumbs__link" href="/">{{ 'sections.ecom-collection-collection.breadcrumbs_home_uc1dqqcx1hm_html' | t }}</a>
- {%- case page_type -%}
- {%- when 'page' -%}
- {{ icon_breadcrumbs }}
- {%- if EComBuilderMode -%}
- <a class="ecom-base__breadcrumbs__link" href="#" aria-current="page">Untitled</a>
- {%- else -%}
- <a class="ecom-base__breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
- {%- endif -%}
- {%- when 'cart' -%}
- {{ icon_breadcrumbs }}
- <a class="ecom-base__breadcrumbs__link" href="{{ routes.cart_url }}" aria-current="cart"></a>
- {%- when 'product' -%}
- {%- if collection.url -%}
- {{ icon_breadcrumbs }}{{ collection.title | link_to: collection.url }}
- {%- endif -%}
- {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
- {%- when 'collection' and collection.handle -%}
- {%- if current_tags -%}
- {{ icon_breadcrumbs }}{{ collection.title | link_to: collection.url }}
- {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
- {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
- {%- else -%}
- {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
- {%- endif -%}
- {%- when 'blog' -%}
- {%- if current_tags -%}
- {{ icon_breadcrumbs }}{{ blog.title | link_to: blog.url }}
- {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
- {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
- {%- else -%}
- {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ blog.url }}" aria-current="page">{{ blog.title }}</a>
- {%- endif -%}
- {%- when 'article' -%}
- {{ icon_breadcrumbs }}{{ blog.title | link_to: blog.url }}
- {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ article.url }}" aria-current="page">{{ article.title }}</a>
- {%- else -%}
- {{ icon_breadcrumbs }}<a class="ecom-base__breadcrumbs__link" href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
- {%- endcase -%}
- </div>
- </nav>
- {%- endunless -%}{%- assign page_type = request.page_type %}
- {%- if page_type == 'index' -%}
- {%- if EComBuilderMode -%}
- <a class="ecom-base__breadcrumbs__link" href="#" aria-current="index">Home</a>
- {%- else -%}
- <a class="ecom-base__breadcrumbs__link" href="/" aria-current="index">Home</a>
- {%- endif -%}
- {%- endif -%}
- </div></div> <div class="ecom-animation ecom-block ecom-core core__block ecom-rt6sdtizxx" data-core-is="block"><div class="ecom-element ecom-collection ecom-collection__title" deep="1"><div class="ecom-element ecom-collection ecom-collection__title-wrapper"><div class="ecom-element ecom-collection ecom-collection__title-container"><h2 class="ecom-collection__title--headline ecom__heading">{{collection.title}}</h2></div></div></div></div> <div class="ecom-block ecom-core core__block ecom-vct7sywllrc" data-core-is="block"><div class="ecom-element ecom-collection ecom-collection__description" deep="1"><div class="ecom-collection__description-wrapper"><div class="ecom-collection__description-container" content_type="text"><div class="ecom-collection__description--paragraph"><span>{{collection.description | strip_html }}</span></div></div></div></div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </section>
- <section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-a4an9p1e7"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-wy3bx87vn5" data-core-is="row"><div class="ecom-row ecom-core core__block ecom-vz4htl8q4on" data-id="ecom-vz4htl8q4on" style="z-index: inherit;"><div data-deep="2" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-73lh1x8989k"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-p4999zdat0o" data-core-is="block"><div class="ecom__element element__heading ecom-element ecom-html" data-stopdrag="true" deep="2"><h3 class="ecom__heading ecom-db">{{ 'sections.ecom-collection-collection.headingtext_p4999zdat0o_html' | t }}</h3></div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </section>
+<div class="ecom-builder" id="ecom-collection"><div class="ecom-sections" data-section-id="{{section.id}}"><section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-a4an9p1e7"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-wy3bx87vn5" data-core-is="row"><div class="ecom-row ecom-core core__block ecom-vz4htl8q4on" data-id="ecom-vz4htl8q4on" style="z-index: inherit;"><div data-deep="2" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-73lh1x8989k"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-p4999zdat0o" data-core-is="block"><div class="ecom__element element__heading ecom-element ecom-html" data-stopdrag="true" deep="2"><h3 class="ecom__heading ecom-db">{{ 'sections.ecom-collection-collection.headingtext_p4999zdat0o_html' | t }}</h3></div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </div></div> <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block"><div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1"><div class="text-content ecom-html has-drop-cap-view-default">{{ 'sections.ecom-collection-collection.textcontent_yqa7nu2a5be_html' | t }}</div></div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </section>
  {% comment %}
  // Reactive
  * this.data.settings.collection
@@ -892,7 +806,7 @@
  
  {% assign collection = tmp_collection %}
  {% assign product = tmp_product %}
- </div></div><div class="ecom-collection__product-loading ecom-dn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style="margin: auto; background: none; display: block; shape-rendering: auto;"><path d="M10 50A40 40 0 0 0 90 50A40 42 0 0 1 10 50" fill="#0a0a0a" stroke="none"><animateTransform attributeName="transform" type="rotate" dur="0.5434782608695652s" repeatCount="indefinite" keyTimes="0;1" values="0 50 51;360 50 51"></animateTransform></path></svg></div></div></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-dkxrr00sg4l" data-core-is="block"><div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1"><div class="text-content ecom-html has-drop-cap-view-default">{{ 'sections.ecom-collection-collection.textcontent_dkxrr00sg4l_html' | t }}</div></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-w2bvkx6xrwq" data-core-is="block"><div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1"><div class="text-content ecom-html has-drop-cap-view-default">{{ 'sections.ecom-collection-collection.textcontent_w2bvkx6xrwq_html' | t }}</div></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-sbbwrt0vkjk" data-core-is="block"><div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1"><div class="text-content ecom-html has-drop-cap-view-default">{{ 'sections.ecom-collection-collection.textcontent_sbbwrt0vkjk_html' | t }}</div></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-v9h5ejicmcp" data-core-is="block"><div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1"><div class="text-content ecom-html has-drop-cap-view-default">{{ 'sections.ecom-collection-collection.textcontent_v9h5ejicmcp_html' | t }}</div></div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </section>
+ </div></div><div class="ecom-collection__product-loading ecom-dn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style="margin: auto; background: none; display: block; shape-rendering: auto;"><path d="M10 50A40 40 0 0 0 90 50A40 42 0 0 1 10 50" fill="#0a0a0a" stroke="none"><animateTransform attributeName="transform" type="rotate" dur="0.5434782608695652s" repeatCount="indefinite" keyTimes="0;1" values="0 50 51;360 50 51"></animateTransform></path></svg></div></div></div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </section>
  
 </div></div>
 {% schema %}
@@ -900,8 +814,8 @@
  "name": "Collection",
  "locales": {
  "cs": {
- "breadcrumbs_home_uc1dqqcx1hm_html": "Home",
  "headingtext_p4999zdat0o_html": "<b>Collection Name<\/b>",
+ "textcontent_yqa7nu2a5be_html": "Breadcumb from menu here",
  "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry:",
  "clear_all_title_tpy5db6wzrk_html": "Vymazat v\u0161e",
  "filter_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
@@ -925,15 +839,11 @@
  "text_hour_up0bxdqndd_html": "[%-H] hr%!H",
  "text_minute_up0bxdqndd_html": "[%-M] min%!M",
  "text_second_up0bxdqndd_html": "[%-S] sec%!S",
- "sale_up0bxdqndd_html": "-{{sale}}%",
- "textcontent_dkxrr00sg4l_html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
- "textcontent_w2bvkx6xrwq_html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
- "textcontent_sbbwrt0vkjk_html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
- "textcontent_v9h5ejicmcp_html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+ "sale_up0bxdqndd_html": "-{{sale}}%"
  },
  "en": {
- "breadcrumbs_home_uc1dqqcx1hm_html": "Home",
  "headingtext_p4999zdat0o_html": "<b>Collection Name<\/b>",
+ "textcontent_yqa7nu2a5be_html": "Breadcumb from menu here",
  "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry:",
  "clear_all_title_tpy5db6wzrk_html": "Vymazat v\u0161e",
  "filter_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
@@ -957,11 +867,7 @@
  "text_hour_up0bxdqndd_html": "[%-H] hr%!H",
  "text_minute_up0bxdqndd_html": "[%-M] min%!M",
  "text_second_up0bxdqndd_html": "[%-S] sec%!S",
- "sale_up0bxdqndd_html": "-{{sale}}%",
- "textcontent_dkxrr00sg4l_html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
- "textcontent_w2bvkx6xrwq_html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
- "textcontent_sbbwrt0vkjk_html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
- "textcontent_v9h5ejicmcp_html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+ "sale_up0bxdqndd_html": "-{{sale}}%"
  }
  },
  "settings": [
