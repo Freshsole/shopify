@@ -40,28 +40,78 @@
  %}
 
 
-{% assign menu_handle = 'header-menu' %}
-{% assign menu_items = linklists[menu_handle].links %}
+  {%- capture menu_structure_json -%}
+  {
+    "Sneakers": {
+      "Air Jordan": ["Air Jordan 1 High", "Air Jordan 4"],
+      "Nike": ["Nike Dunk Low", "Nike Dunk High", "Nike Air Force 1", "Nike Air Max", "Ostatní Nike"],
+      "Adidas": ["Adidas Samba", "Ostatní Adidas"],
+      "New Balance": ["New Balance 550", "New Balance 2002R", "New Balance 9060", "Ostatní New Balance"],
+      "Yeezy": ["Yeezy Slides"],
+      "Ostatní": []
+    }
+  }
+{%- endcapture -%}
 
-{% assign breadcrumb_found = false %}
-{% assign breadcrumb_content = "" %}
+{%- assign menu_structure = menu_structure_json | parse_json -%}
 
-{% for menu_item in menu_items %}
-  {% include 'menu-item' menu_item: menu_item current_collection_title: current_collection_title %}
-{% endfor %}
+{%- capture current_collection -%}
+  {%- for category in menu_structure.Sneakers -%}
+    {%- if menu_structure.Sneakers[category] contains 'Nike Dunk Low' -%}
+      {{ category }}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
 
-{% if breadcrumb_found %}
-  <p>Debug: Breadcrumb Found - {{ current_collection_title }}</p>
-  <div class="breadcrumb">
-    <a href="/">Home</a> /
-    {{ breadcrumb_content }}
+<section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
+  <div data-deep="1" class="core__row--columns">
+    <div class="ecom-column ecom-core core__column--first core__column--last ecom-a4an9p1e7">
+      <div class="core__column--wrapper">
+        <div class="core__blocks" index="0">
+          <div class="core__blocks--body">
+            <div class="ecom-animation ecom-block ecom-core core__block ecom-rjo600f3u59" data-core-is="block">
+              <div class="ecom-element ecom-collection ecom-collection__title" deep="1">
+                <div class="ecom-element ecom-collection ecom-collection__title-wrapper">
+                  <div class="ecom-element ecom-collection ecom-collection__title-container">
+                    <h2 class="ecom-collection__title--headline ecom__heading">{{ current_collection }}</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Breadcrumb Code -->
+            <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
+              <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
+                <div class="text-content ecom-html has-drop-cap-view-default">
+                  <div class="breadcrumb">
+                    <a href="/">Home</a> /
+                    {% if current_collection %}
+                      <a href="{{ shop.url }}/collections/{{ current_collection | handleize }}">{{ current_collection }}</a> /
+                    {% endif %}
+                    {% if current_tags %}
+                      {% for tag in current_tags %}
+                        {{ tag | link_to: tag | append: ' / ' }}
+                      {% endfor %}
+                    {% endif %}
+                    <span>{{ 'collections.general.breadcrumbs.current' | t: title: page_title }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Breadcrumb Code -->
+
+          </div>
+        </div>
+      </div>
+      <div class="ecom-column__overlay">
+        <div class="ecom-overlay"></div>
+      </div>
+    </div>
   </div>
-{% else %}
-  <p>Debug: Breadcrumb Not Found</p>
-{% endif %}
-
-
-
+  <div class="ecom-section__overlay">
+    <div class="ecom-overlay"></div>
+  </div>
+</section>
 
 
 
