@@ -38,7 +38,9 @@
  endif
  endif
  %}
-<section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
+
+
+  <section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-a4an9p1e7">
       <div class="core__column--wrapper">
@@ -58,38 +60,20 @@
             <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
               <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
                 <div class="text-content ecom-html has-drop-cap-view-default">
-                  <div class="breadcrumb-container">
+                  <div class="breadcrumb">
                     <a href="/">Home</a> /
-                    {% if collection %}
-                      <script>
-                        document.addEventListener("DOMContentLoaded", function() {
-                          var breadcrumbContainer = document.querySelector('.breadcrumb-container');
 
-                          if (breadcrumbContainer) {
-                            // Define your header menu structure
-                            var headerMenu = {
-                              "Home": "/",
-                              "Sneakers": {
-                                "url": "/sneakers",
-                                "Nike": {
-                                  "url": "/nike",
-                                  "Nike Dunk Low": "/nike-dunk-low"
-                                }
-                              }
-                            };
+                    {% assign menu_handle = 'header-menu' %}
+                    {% assign menu_items = linklists[menu_handle].links %}
 
-                            breadcrumbContainer.innerHTML += '<a href="' + headerMenu["Sneakers"]["url"] + '">Sneakers</a> / ';
-                            breadcrumbContainer.innerHTML += '<a href="' + headerMenu["Sneakers"]["Nike"]["url"] + '">Nike</a> / ';
-                            breadcrumbContainer.innerHTML += '<a href="' + headerMenu["Sneakers"]["Nike"]["Nike Dunk Low"] + '">Nike Dunk Low</a>';
-                          }
-                        });
-                      </script>
-                    {% endif %}
-                    {% if current_tags %}
-                      {% for tag in current_tags %}
-                        {{ tag | link_to: tag | append: ' / ' }}
-                      {% endfor %}
-                    {% endif %}
+                    {% for menu_item in menu_items %}
+                      {% if collection and menu_item.title == collection.title %}
+                        {{ menu_item.title }}
+                      {% else %}
+                        <a href="{{ menu_item.url }}">{{ menu_item.title }}</a> /
+                      {% endif %}
+                    {% endfor %}
+
                     <span>{{ 'collections.general.breadcrumbs.current' | t: title: page_title }}</span>
                   </div>
                 </div>
@@ -109,6 +93,7 @@
     <div class="ecom-overlay"></div>
   </div>
 </section>
+
 
 
  {% comment %}
