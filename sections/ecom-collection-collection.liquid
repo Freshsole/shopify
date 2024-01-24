@@ -2,7 +2,7 @@
  EComposer (https://ecomposer.io)
  You SHOULD NOT modify source code in this page because
  It is automatically generated from EComposer
- At 2024-01-24 21:56:32
+ At 2024-01-24 21:58:56
  {% endcomment %} 
  
  {% assign ecom_root_url = routes.root_url %}
@@ -20,7 +20,26 @@
  window.EComposer.TEMPLATE_ID="654026877a5fafe7810e57b2";
  window.EComposer.TEMPLATE = {"template_id":"654026877a5fafe7810e57b2","title":"Collection","type":"collection","slug":"ecom-collection","plan_id":1};
  </script>
-<div class="ecom-builder" id="ecom-collection"><div class="ecom-sections" data-section-id="{{section.id}}"><section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-a4an9p1e7"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-wy3bx87vn5" data-core-is="row"><div class="ecom-row ecom-core core__block ecom-vz4htl8q4on" data-id="ecom-vz4htl8q4on" style="z-index: inherit;"><div data-deep="2" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-73lh1x8989k"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-p4999zdat0o" data-core-is="block"><div class="ecom__element element__heading ecom-element ecom-html" data-stopdrag="true" deep="2"><h3 class="ecom__heading ecom-db">{{ 'sections.ecom-collection-collection.headingtext_p4999zdat0o_html' | t }}</h3></div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </div></div> <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block"><div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1"><div class="text-content ecom-html has-drop-cap-view-default">{{ 'sections.ecom-collection-collection.textcontent_yqa7nu2a5be_html' | t }}</div></div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </section>
+<div class="ecom-builder" id="ecom-collection"><div class="ecom-sections" data-section-id="{{section.id}}">
+ {% comment %}
+ // Reactive
+ * this.data.settings.collection
+ {% endcomment %}
+ {% liquid
+ if request.page_type != 'collection' or collection == blank
+ assign selected_collection = ''
+ if selected_collection == blank or selected_collection == '' or collections[selected_collection] == blank
+ assign collection = collections.all
+ else
+ assign collection = collections[selected_collection]
+ if collection.id == blank
+ assign collection = collections.all
+ endif
+ endif
+ endif
+ %}
+ <section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-a4an9p1e7"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-animation ecom-block ecom-core core__block ecom-rjo600f3u59" data-core-is="block"><div class="ecom-element ecom-collection ecom-collection__title" deep="1"><div class="ecom-element ecom-collection ecom-collection__title-wrapper"><div class="ecom-element ecom-collection ecom-collection__title-container"><h2 class="ecom-collection__title--headline ecom__heading">{{collection.title}}</h2></div></div></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-wy3bx87vn5" data-core-is="row"><div class="ecom-row ecom-core core__block ecom-vz4htl8q4on" data-id="ecom-vz4htl8q4on" style="z-index: inherit;"><div data-deep="2" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-73lh1x8989k"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block"><div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2"><div class="text-content ecom-html has-drop-cap-view-default">{{ 'sections.ecom-collection-collection.textcontent_yqa7nu2a5be_html' | t }}</div></div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </div></div> </div></div></div><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </section>
+ 
  {% comment %}
  // Reactive
  * this.data.settings.collection
@@ -814,16 +833,12 @@
  "name": "Collection",
  "locales": {
  "cs": {
- "headingtext_p4999zdat0o_html": "<b>Collection Name<\/b>",
- "textcontent_yqa7nu2a5be_html": "Breadcumb from menu here",
  "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry:",
  "clear_all_title_tpy5db6wzrk_html": "Vymazat v\u0161e",
  "filter_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
  "filters_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
  "reset_filter_tpy5db6wzrk_html": "Resetovat",
  "max_price_text_tpy5db6wzrk_html": "Maxim\u00e1ln\u00ed cena",
- "filter_title_tpy5db6wzrk_html": "Filter ",
- "sortting_title_jp6s1euv9u_html": " ",
  "product_option_swatch_up0bxdqndd_html": "Color",
  "added_cart_text_up0bxdqndd_html": "Added to cart",
  "added_cart_message_up0bxdqndd_html": "Added to cart",
@@ -834,6 +849,9 @@
  "sale_badge_up0bxdqndd_html": "-{{sale}}%",
  "countdown_title_up0bxdqndd_html": "Hurry up! The sale will end on",
  "no_product_item_up0bxdqndd_html": "There are no product yet!",
+ "textcontent_yqa7nu2a5be_html": "Breadcumb from menu here",
+ "filter_title_tpy5db6wzrk_html": "Filter ",
+ "sortting_title_jp6s1euv9u_html": " ",
  "text_week_up0bxdqndd_html": "[%-W] week%!W",
  "text_day_up0bxdqndd_html": "[%-d] day%!D",
  "text_hour_up0bxdqndd_html": "[%-H] hr%!H",
@@ -842,16 +860,12 @@
  "sale_up0bxdqndd_html": "-{{sale}}%"
  },
  "en": {
- "headingtext_p4999zdat0o_html": "<b>Collection Name<\/b>",
- "textcontent_yqa7nu2a5be_html": "Breadcumb from menu here",
  "applied_title_tpy5db6wzrk_html": "Pou\u017eit\u00e9 filtry:",
  "clear_all_title_tpy5db6wzrk_html": "Vymazat v\u0161e",
  "filter_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
  "filters_selected_text_tpy5db6wzrk_html": "{{count}} vybr\u00e1no",
  "reset_filter_tpy5db6wzrk_html": "Resetovat",
  "max_price_text_tpy5db6wzrk_html": "Maxim\u00e1ln\u00ed cena",
- "filter_title_tpy5db6wzrk_html": "Filter ",
- "sortting_title_jp6s1euv9u_html": " ",
  "product_option_swatch_up0bxdqndd_html": "Color",
  "added_cart_text_up0bxdqndd_html": "Added to cart",
  "added_cart_message_up0bxdqndd_html": "Added to cart",
@@ -862,6 +876,9 @@
  "sale_badge_up0bxdqndd_html": "-{{sale}}%",
  "countdown_title_up0bxdqndd_html": "Hurry up! The sale will end on",
  "no_product_item_up0bxdqndd_html": "There are no product yet!",
+ "textcontent_yqa7nu2a5be_html": "Breadcumb from menu here",
+ "filter_title_tpy5db6wzrk_html": "Filter ",
+ "sortting_title_jp6s1euv9u_html": " ",
  "text_week_up0bxdqndd_html": "[%-W] week%!W",
  "text_day_up0bxdqndd_html": "[%-d] day%!D",
  "text_hour_up0bxdqndd_html": "[%-H] hr%!H",
