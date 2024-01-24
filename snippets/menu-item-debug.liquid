@@ -1,12 +1,15 @@
 {% comment %}
-  This snippet is used to debug the menu items and highlight words with sub-items in red.
+  Tento snippet slouží k ladění položek menu a zdůraznění slov s podprvky červenou barvou.
 {% endcomment %}
 
-{% if menu_item.links.size > 0 %}
-  <span style="color: red;">{{ menu_item.title }}</span>
+{% assign current_item_title = menu_item.title | downcase %}
+{% assign collection_title_lowercase = current_collection_title | downcase %}
+
+{% if current_item_title contains collection_title_lowercase %}
+  <span style="color: red;">{{ current_item_title }}</span>
   {% for sub_item in menu_item.links %}
     {% include 'menu-item-debug' menu_item=sub_item current_collection_title=current_collection_title %}
   {% endfor %}
 {% else %}
-  {{ menu_item.title }}
+  {{ current_item_title }}
 {% endif %}
