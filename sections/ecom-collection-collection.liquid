@@ -40,31 +40,7 @@
  %}
 
 
-  {%- capture menu_structure_json -%}
-  {
-    "Sneakers": {
-      "Air Jordan": ["Air Jordan 1 High", "Air Jordan 4"],
-      "Nike": ["Nike Dunk Low", "Nike Dunk High", "Nike Air Force 1", "Nike Air Max", "Ostatní Nike"],
-      "Adidas": ["Adidas Samba", "Ostatní Adidas"],
-      "New Balance": ["New Balance 550", "New Balance 2002R", "New Balance 9060", "Ostatní New Balance"],
-      "Yeezy": ["Yeezy Slides"],
-      "Ostatní": []
-    }
-  }
-{%- endcapture -%}
-
-{%- assign menu_structure = menu_structure_json | parse_json -%}
-
-{%- capture current_product -%}
-  {% assign target_product = 'Nike Dunk Low' %}
-  {%- for category in menu_structure.Sneakers -%}
-    {%- if menu_structure.Sneakers[category] contains target_product -%}
-      {% assign current_collection = category %}
-    {%- endif -%}
-  {%- endfor -%}
-{%- endcapture -%}
-
-<section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
+  <section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-a4an9p1e7">
       <div class="core__column--wrapper">
@@ -74,21 +50,11 @@
               <div class="ecom-element ecom-collection ecom-collection__title" deep="1">
                 <div class="ecom-element ecom-collection ecom-collection__title-wrapper">
                   <div class="ecom-element ecom-collection ecom-collection__title-container">
-                    <h2 class="ecom-collection__title--headline ecom__heading">{{ current_product }}</h2>
+                    <h2 class="ecom-collection__title--headline ecom__heading">{{ current_collection }}</h2>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Debug Output for JSON Structure -->
-            <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
-              <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
-                <div class="text-content ecom-html has-drop-cap-view-default">
-                  <pre>{{ menu_structure | json }}</pre>
-                </div>
-              </div>
-            </div>
-            <!-- End Debug Output for JSON Structure -->
 
             <!-- Breadcrumb Code -->
             <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
@@ -96,12 +62,10 @@
                 <div class="text-content ecom-html has-drop-cap-view-default">
                   <div class="breadcrumb">
                     <a href="/">Home</a> /
+                    <a href="{{ shop.url }}/collections/sneakers">Sneakers</a> /
                     {% if current_collection %}
-                      <a href="{{ shop.url }}/collections/{{ current_collection | handleize }}">{{ current_collection }}</a> /
-                    {% else %}
-                      <a href="{{ shop.url }}/collections/"></a> /
+                      <a href="{{ shop.url }}/collections/{{ current_collection | handleize }}">{{ current_collection }}</a>
                     {% endif %}
-                    <span>{{ 'collections.general.breadcrumbs.current' | t: title: page_title }}</span>
                   </div>
                 </div>
               </div>
@@ -120,7 +84,6 @@
     <div class="ecom-overlay"></div>
   </div>
 </section>
-
 
 
  {% comment %}
