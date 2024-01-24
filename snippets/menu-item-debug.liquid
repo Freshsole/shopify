@@ -1,0 +1,11 @@
+<p>
+  {% for i in (1..menu_item.level) -%}
+    &nbsp;&nbsp;&nbsp;&nbsp;
+  {%- endfor -%}
+  {{- menu_item.title }}
+</p>
+{% if menu_item.links %}
+  {% for sub_menu_item in menu_item.links %}
+    {% include 'menu-item-debug', menu_item: sub_menu_item %}
+  {% endfor %}
+{% endif %}
