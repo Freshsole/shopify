@@ -63,10 +63,11 @@
 </style>
 
 {% assign matched_collection = false %}
-{% assign collections_hierarchy = collection.all_products.first.collections | reverse %}
 
 <nav class="breadcrumb">
-  {% for col in collections_hierarchy %}
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+
+  {% for col in collection.ancestors %}
     {% if col.title == collection.title %}
       {% assign matched_collection = true %}
       <li class="breadcrumb-item matched">{{ col.title }}</li>
