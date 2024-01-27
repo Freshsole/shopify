@@ -41,7 +41,8 @@
 
 
   <style>
-  .header-menu .bigger-text {
+  .header-menu .bigger-text,
+  .header-menu .matched-collection a.pepik {
     font-size: 32px;
   }
 </style>
@@ -50,7 +51,7 @@
   <ul>
     {% for link in linklists.header-menu.links %}
       <li>
-        <a href="{{ link.url }}">{{ link.title }}</a>
+        <a class="{% if collection and link.title == collection.title %}matched-collection bigger-text{% endif %}" href="{{ link.url }}">{{ link.title }}</a>
 
         {% if link.links.size > 0 %}
           <ul>
@@ -69,7 +70,7 @@
                             {% for subsubsublink in subsublink.links %}
                               <li>
                                 <a class="pepik{% if collection and subsubsublink.title == collection.title %} bigger-text{% endif %}" href="{{ subsubsublink.url }}">{{ subsubsublink.title }}</a>
-                                <!-- Add more nested loops for deeper levels if needed -->
+                                <!-- Přidat další vnořené smyčky pro hlubší úrovně, pokud je to potřeba -->
                               </li>
                             {% endfor %}
                           </ul>
@@ -80,14 +81,14 @@
                   </ul>
                 {% endif %}
 
-                <br> <!-- Add a blank line under each subcategory -->
+                <br> <!-- Přidat prázdný řádek pod každou podkategorii -->
 
               </li>
             {% endfor %}
           </ul>
         {% endif %}
 
-        <br> <!-- Add a blank line under each main category -->
+        <br> <!-- Přidat prázdný řádek pod každou hlavní kategorií -->
 
       </li>
     {% endfor %}
