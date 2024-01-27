@@ -48,20 +48,13 @@
 
         {% if link.links.size > 0 %}
           <ul>
+            {% assign subcategories = "" %}
             {% for sublink in link.links %}
-              <li>
-                <a href="{{ sublink.url }}">{{ sublink.title }}</a>
-
-                {% if sublink.links.size > 0 %}
-                  <ul>
-                    {% for subsublink in sublink.links %}
-                      <li><a href="{{ subsublink.url }}">{{ subsublink.title }}</a></li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-
-              </li>
+              {% capture subcategories %}{{ subcategories }}{{ sublink.title }}, {% endcapture %}
             {% endfor %}
+            {% if subcategories != "" %}
+              <li>{{ subcategories | remove: ',' }}</li>
+            {% endif %}
           </ul>
         {% endif %}
 
