@@ -43,10 +43,22 @@
   <nav class="header-menu">
   <ul>
     {% for link in linklists.header-menu.links %}
-      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      <li>
+        <a href="{{ link.url }}">{{ link.title }}</a>
+
+        {% if link.links.size > 0 %}
+          <ul>
+            {% for sublink in link.links %}
+              <li><a href="{{ sublink.url }}">{{ sublink.title }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+      </li>
     {% endfor %}
   </ul>
 </nav>
+
   
 
   <section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
