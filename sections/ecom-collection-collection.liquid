@@ -41,45 +41,41 @@
 
 
   <style>
-  .header-menu li a {
-    font-size: 16px; /* Set the default font size for menu items */
-  }
-
-  .header-menu li.current-collection a {
-    font-size: 32px; /* Set the font size for the current collection */
+  .header-menu li.matched-collection {
+    font-size: 32px;
   }
 </style>
 
 <nav class="header-menu">
   <ul>
     {% for link in linklists.header-menu.links %}
-      <li>
+      <li class="{% if collection and link.title == collection.title %}matched-collection{% endif %}">
         <a href="{{ link.url }}">{{ link.title }}</a>
 
         {% if link.links.size > 0 %}
           <ul>
             {% for sublink in link.links %}
-              <li>
+              <li class="{% if collection and sublink.title == collection.title %}matched-collection{% endif %}">
                 <a href="{{ sublink.url }}">{{ sublink.title }}</a>
 
                 {% if sublink.links.size > 0 %}
                   <ul>
                     {% for subsublink in sublink.links %}
-                      <li>
-                        <a href="{{ subsublink.url }}" {% if subsublink.title == collection.title %}class="current-collection"{% endif %}>
-                          {{ subsublink.title }}
-                        </a>
+                      <li class="{% if collection and subsublink.title == collection.title %}matched-collection{% endif %}">
+                        <a href="{{ subsublink.url }}">{{ subsublink.title }}</a>
+
+                        {% if subsublink.links.size > 0 %}
+                          <ul>
+                            {% for subsubsublink in subsublink.links %}
+                              <li class="{% if collection and subsubsublink.title == collection.title %}matched-collection{% endif %}">
+                                <a href="{{ subsubsublink.url }}">{{ subsubsublink.title }}</a>
+                                <!-- Add more nested loops for deeper levels if needed -->
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+
                       </li>
-
-                      {% if subsublink.links.size > 0 %}
-                        <ul>
-                          {% for subsubsublink in subsublink.links %}
-                            <li><a href="{{ subsubsublink.url }}">{{ subsubsublink.title }}</a></li>
-                            <!-- Add more nested loops for deeper levels if needed -->
-                          {% endfor %}
-                        </ul>
-                      {% endif %}
-
                     {% endfor %}
                   </ul>
                 {% endif %}
@@ -97,10 +93,6 @@
     {% endfor %}
   </ul>
 </nav>
-
-{% if collection %}
-  <p>Current Collection: {{ collection.title }}</p>
-{% endif %}
 
   
 
