@@ -41,7 +41,8 @@
 
 
   <style>
-  .header-menu li.matched-collection {
+  .header-menu li.matched-collection,
+  .header-menu li.matched-collection-superior {
     font-size: 32px;
   }
 </style>
@@ -49,25 +50,25 @@
 <nav class="header-menu">
   <ul>
     {% for link in linklists.header-menu.links %}
-      <li class="{% if collection and link.title == collection.title %}matched-collection{% endif %}">
+      <li class="{% if collection and link.title == collection.title %}matched-collection{% elsif collection and collection.title contains link.title %}matched-collection-superior{% endif %}">
         <a href="{{ link.url }}">{{ link.title }}</a>
 
         {% if link.links.size > 0 %}
           <ul>
             {% for sublink in link.links %}
-              <li class="{% if collection and sublink.title == collection.title %}matched-collection{% endif %}">
+              <li class="{% if collection and sublink.title == collection.title %}matched-collection{% elsif collection and collection.title contains sublink.title %}matched-collection-superior{% endif %}">
                 <a href="{{ sublink.url }}">{{ sublink.title }}</a>
 
                 {% if sublink.links.size > 0 %}
                   <ul>
                     {% for subsublink in sublink.links %}
-                      <li class="{% if collection and subsublink.title == collection.title %}matched-collection{% endif %}">
+                      <li class="{% if collection and subsublink.title == collection.title %}matched-collection{% elsif collection and collection.title contains subsublink.title %}matched-collection-superior{% endif %}">
                         <a href="{{ subsublink.url }}">{{ subsublink.title }}</a>
 
                         {% if subsublink.links.size > 0 %}
                           <ul>
                             {% for subsubsublink in subsublink.links %}
-                              <li class="{% if collection and subsubsublink.title == collection.title %}matched-collection{% endif %}">
+                              <li class="{% if collection and subsubsublink.title == collection.title %}matched-collection{% elsif collection and collection.title contains subsubsublink.title %}matched-collection-superior{% endif %}">
                                 <a href="{{ subsubsublink.url }}">{{ subsubsublink.title }}</a>
                                 <!-- Add more nested loops for deeper levels if needed -->
                               </li>
