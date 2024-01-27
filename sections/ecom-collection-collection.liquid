@@ -41,12 +41,25 @@
 
 
   <style>
-  .header-menu li.matched-collection,
-  .header-menu li.matched-collection > a {
+  .header-menu li.matched-collection > a,
+  .header-menu li.matched-collection .pepik {
     font-size: 32px;
     /* Add any additional styling for highlighting */
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var pepikElements = document.querySelectorAll('.header-menu li.matched-collection .pepik');
+
+    pepikElements.forEach(function(pepikElement) {
+      var parentAnchor = pepikElement.parentNode.parentNode.querySelector('> a');
+      if (parentAnchor) {
+        parentAnchor.classList.add('matched-collection');
+      }
+    });
+  });
+</script>
 
 <nav class="header-menu">
   <ul>
