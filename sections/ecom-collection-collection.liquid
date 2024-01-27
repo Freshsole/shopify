@@ -41,7 +41,7 @@
 
 
   <style>
-  .header-menu .matched-collection a.pepik {
+  .header-menu .bigger-text {
     font-size: 32px;
   }
 </style>
@@ -55,20 +55,20 @@
         {% if link.links.size > 0 %}
           <ul>
             {% for sublink in link.links %}
-              <li class="{% if collection and sublink.title == collection.title %}matched-collection{% endif %}">
-                <a class="pepik" href="{{ sublink.url }}">{{ sublink.title }}</a>
+              <li>
+                <a class="pepik{% if collection and sublink.title == collection.title %} bigger-text{% endif %}" href="{{ sublink.url }}">{{ sublink.title }}</a>
 
                 {% if sublink.links.size > 0 %}
                   <ul>
                     {% for subsublink in sublink.links %}
-                      <li class="{% if collection and subsublink.title == collection.title %}matched-collection{% endif %}">
-                        <a class="pepik" href="{{ subsublink.url }}">{{ subsublink.title }}</a>
+                      <li>
+                        <a class="pepik{% if collection and subsublink.title == collection.title %} bigger-text{% endif %}" href="{{ subsublink.url }}">{{ subsublink.title }}</a>
 
                         {% if subsublink.links.size > 0 %}
                           <ul>
                             {% for subsubsublink in subsublink.links %}
-                              <li class="{% if collection and subsubsublink.title == collection.title %}matched-collection{% endif %}">
-                                <a class="pepik" href="{{ subsubsublink.url }}">{{ subsubsublink.title }}</a>
+                              <li>
+                                <a class="pepik{% if collection and subsubsublink.title == collection.title %} bigger-text{% endif %}" href="{{ subsubsublink.url }}">{{ subsubsublink.title }}</a>
                                 <!-- Add more nested loops for deeper levels if needed -->
                               </li>
                             {% endfor %}
