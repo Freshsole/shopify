@@ -49,7 +49,18 @@
         {% if link.links.size > 0 %}
           <ul>
             {% for sublink in link.links %}
-              <li><a href="{{ sublink.url }}">{{ sublink.title }}</a></li>
+              <li>
+                <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+
+                {% if sublink.links.size > 0 %}
+                  <ul>
+                    {% for subsublink in sublink.links %}
+                      <li><a href="{{ subsublink.url }}">{{ subsublink.title }}</a></li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+
+              </li>
             {% endfor %}
           </ul>
         {% endif %}
