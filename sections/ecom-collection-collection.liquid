@@ -40,7 +40,17 @@
  %}
 
 
-  <nav class="header-menu">
+  <style>
+  .header-menu li a {
+    font-size: 16px; /* Set the default font size for menu items */
+  }
+
+  .header-menu li.current-collection a {
+    font-size: 32px; /* Set the font size for the current collection */
+  }
+</style>
+
+<nav class="header-menu">
   <ul>
     {% for link in linklists.header-menu.links %}
       <li>
@@ -55,7 +65,11 @@
                 {% if sublink.links.size > 0 %}
                   <ul>
                     {% for subsublink in sublink.links %}
-                      <li><a href="{{ subsublink.url }}">{{ subsublink.title }}</a></li>
+                      <li>
+                        <a href="{{ subsublink.url }}" {% if subsublink.title == collection.title %}class="current-collection"{% endif %}>
+                          {{ subsublink.title }}
+                        </a>
+                      </li>
 
                       {% if subsublink.links.size > 0 %}
                         <ul>
