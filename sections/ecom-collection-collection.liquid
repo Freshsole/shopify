@@ -41,59 +41,43 @@
 
 
   <style>
-  .header-menu .bigger-text,
-  .header-menu .matched-collection > a.pepik,
-  .header-menu .matched-collection ul a.pepik {
-    font-size: 32px;
+  .breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .breadcrumb-item {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .breadcrumb-item a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .breadcrumb-item.matched {
+    font-weight: bold;
   }
 </style>
 
-<nav class="header-menu">
-  <ul>
-    {% for link in linklists.header-menu.links %}
-      <li>
-        <a href="{{ link.url }}" class="pepik{% if collection and link.title == collection.title %} bigger-text{% endif %}">{{ link.title }}</a>
+{% assign breadcrumb_collections = collection.all_products | reverse %}
+{% assign matched_collection = false %}
 
-        {% if link.links.size > 0 %}
-          <ul>
-            {% for sublink in link.links %}
-              <li class="{% if collection and sublink.title == collection.title %}matched-collection{% endif %}">
-                <a href="{{ sublink.url }}" class="pepik{% if collection and sublink.title == collection.title %} bigger-text{% endif %}">{{ sublink.title }}</a>
+<nav class="breadcrumb">
+  {% for col in breadcrumb_collections %}
+    {% if col.title == collection.title %}
+      {% assign matched_collection = true %}
+      <li class="breadcrumb-item matched">{{ col.title }}</li>
+    {% else %}
+      <li class="breadcrumb-item"><a href="{{ col.url }}">{{ col.title }}</a></li>
+    {% endif %}
+  {% endfor %}
 
-                {% if sublink.links.size > 0 %}
-                  <ul>
-                    {% for subsublink in sublink.links %}
-                      <li>
-                        <a href="{{ subsublink.url }}" class="pepik{% if collection and subsublink.title == collection.title %} bigger-text{% endif %}">{{ subsublink.title }}</a>
-
-                        {% if subsublink.links.size > 0 %}
-                          <ul>
-                            {% for subsubsublink in subsublink.links %}
-                              <li>
-                                <a href="{{ subsubsublink.url }}" class="pepik{% if collection and subsubsublink.title == collection.title %} bigger-text{% endif %}">{{ subsubsublink.title }}</a>
-                                <!-- Add more nested loops for deeper levels if needed -->
-                              </li>
-                            {% endfor %}
-                          </ul>
-                        {% endif %}
-
-                      </li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-
-                <br> <!-- Add a blank line under each subcategory -->
-
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-
-        <br> <!-- Add a blank line under each main category -->
-
-      </li>
-    {% endfor %}
-  </ul>
+  {% unless matched_collection %}
+    <li class="breadcrumb-item matched">{{ collection.title }}</li>
+  {% endunless %}
 </nav>
 
   
