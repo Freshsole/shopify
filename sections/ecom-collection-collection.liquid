@@ -41,44 +41,57 @@
 
 
   <style>
-  .breadcrumb {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .breadcrumb-item {
-    display: inline-block;
-    margin-right: 5px;
-  }
-
-  .breadcrumb-item a {
-    text-decoration: none;
-    color: #333;
-  }
-
-  .breadcrumb-item.matched {
-    font-weight: bold;
+  .header-menu .bigger-text {
+    font-size: 32px;
   }
 </style>
 
-{% assign matched_collection = false %}
+<nav class="header-menu">
+  <ul>
+    {% for link in linklists.header-menu.links %}
+      <li>
+        <a href="{{ link.url }}">{{ link.title }}</a>
 
-<nav class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/">Home</a></li>
+        {% if link.links.size > 0 %}
+          <ul>
+            {% for sublink in link.links %}
+              <li>
+                <a class="pepik{% if collection and sublink.title == collection.title %} bigger-text{% endif %}" href="{{ sublink.url }}">{{ sublink.title }}</a>
 
-  {% for col in collection.ancestors %}
-    {% if col.title == collection.title %}
-      {% assign matched_collection = true %}
-      <li class="breadcrumb-item matched">{{ col.title }}</li>
-    {% else %}
-      <li class="breadcrumb-item"><a href="{{ col.url }}">{{ col.title }}</a></li>
-    {% endif %}
-  {% endfor %}
+                {% if sublink.links.size > 0 %}
+                  <ul>
+                    {% for subsublink in sublink.links %}
+                      <li>
+                        <a class="pepik{% if collection and subsublink.title == collection.title %} bigger-text{% endif %}" href="{{ subsublink.url }}">{{ subsublink.title }}</a>
 
-  {% unless matched_collection %}
-    <li class="breadcrumb-item matched">{{ collection.title }}</li>
-  {% endunless %}
+                        {% if subsublink.links.size > 0 %}
+                          <ul>
+                            {% for subsubsublink in subsublink.links %}
+                              <li>
+                                <a class="pepik{% if collection and subsubsublink.title == collection.title %} bigger-text{% endif %}" href="{{ subsubsublink.url }}">{{ subsubsublink.title }}</a>
+                                <!-- Add more nested loops for deeper levels if needed -->
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+
+                <br> <!-- Add a blank line under each subcategory -->
+
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        <br> <!-- Add a blank line under each main category -->
+
+      </li>
+    {% endfor %}
+  </ul>
 </nav>
 
   
