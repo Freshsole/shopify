@@ -57,7 +57,7 @@
           <ul>
             {% for sublink in link.links %}
               <li class="{% if collection and sublink.title == collection.title %}matched-collection{% endif %}">
-                <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                <a class="pepik" href="{{ sublink.url }}">{{ sublink.title }}</a>
 
                 {% if sublink.links.size > 0 %}
                   <ul>
