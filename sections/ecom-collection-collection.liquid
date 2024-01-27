@@ -41,7 +41,8 @@
 
 
   <style>
-  .header-menu .bigger-text {
+  .header-menu .bigger-text,
+  .header-menu .matched-collection > a.pepik {
     font-size: 32px;
   }
 </style>
@@ -50,25 +51,25 @@
   <ul>
     {% for link in linklists.header-menu.links %}
       <li>
-        <a href="{{ link.url }}">{{ link.title }}</a>
+        <a href="{{ link.url }}" class="pepik{% if collection and link.title == collection.title %} bigger-text{% endif %}">{{ link.title }}</a>
 
         {% if link.links.size > 0 %}
           <ul>
             {% for sublink in link.links %}
-              <li>
-                <a class="pepik{% if collection and sublink.title == collection.title %} bigger-text{% endif %}" href="{{ sublink.url }}">{{ sublink.title }}</a>
+              <li class="{% if collection and sublink.title == collection.title %}matched-collection{% endif %}">
+                <a href="{{ sublink.url }}" class="pepik{% if collection and sublink.title == collection.title %} bigger-text{% endif %}">{{ sublink.title }}</a>
 
                 {% if sublink.links.size > 0 %}
                   <ul>
                     {% for subsublink in sublink.links %}
                       <li>
-                        <a class="pepik{% if collection and subsublink.title == collection.title %} bigger-text{% endif %}" href="{{ subsublink.url }}">{{ subsublink.title }}</a>
+                        <a href="{{ subsublink.url }}" class="pepik{% if collection and subsublink.title == collection.title %} bigger-text{% endif %}">{{ subsublink.title }}</a>
 
                         {% if subsublink.links.size > 0 %}
                           <ul>
                             {% for subsubsublink in subsublink.links %}
                               <li>
-                                <a class="pepik{% if collection and subsubsublink.title == collection.title %} bigger-text{% endif %}" href="{{ subsubsublink.url }}">{{ subsubsublink.title }}</a>
+                                <a href="{{ subsubsublink.url }}" class="pepik{% if collection and subsubsublink.title == collection.title %} bigger-text{% endif %}">{{ subsubsublink.title }}</a>
                                 <!-- Add more nested loops for deeper levels if needed -->
                               </li>
                             {% endfor %}
@@ -93,6 +94,7 @@
     {% endfor %}
   </ul>
 </nav>
+
   
 
   <section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
