@@ -45,7 +45,7 @@
   <a href="{{ shop.url }}/collections/">Sneakers</a> /
   {% assign breadcrumbBrand = collection.metafields.custom.breadcrumb_brand %}
   {% if breadcrumbBrand %}
-    <a href="{{ shop.url }}/collections/{{ breadcrumbBrand }}">
+    <a href="{{ shop.url }}/collections/{{ breadcrumbBrand | handle }}">
       {{ breadcrumbBrand }}</a> /
   {% endif %}
   {% if collection %}
