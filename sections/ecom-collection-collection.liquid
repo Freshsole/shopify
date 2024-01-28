@@ -39,63 +39,6 @@
  endif
  %}
 
-
-  <style>
-  .header-menu .bigger-text,
-  .header-menu .matched-collection a.pepik {
-    font-size: 32px;
-  }
-</style>
-
-<nav class="header-menu">
-  <ul>
-    {% for link in linklists.header-menu.links %}
-      <li>
-        <a class="{% if collection and link.title == collection.title %}matched-collection bigger-text{% endif %}" href="{{ link.url }}">{{ link.title }}</a>
-
-        {% if link.links.size > 0 %}
-          <ul>
-            {% for sublink in link.links %}
-              <li>
-                <a class="pepik{% if collection and sublink.title == collection.title %} bigger-text{% endif %}" href="{{ sublink.url }}">{{ sublink.title }}</a>
-
-                {% if sublink.links.size > 0 %}
-                  <ul>
-                    {% for subsublink in sublink.links %}
-                      <li>
-                        <a class="pepik{% if collection and subsublink.title == collection.title %} bigger-text{% endif %}" href="{{ subsublink.url }}">{{ subsublink.title }}</a>
-
-                        {% if subsublink.links.size > 0 %}
-                          <ul>
-                            {% for subsubsublink in subsublink.links %}
-                              <li>
-                                <a class="pepik{% if collection and subsubsublink.title == collection.title %} bigger-text{% endif %}" href="{{ subsubsublink.url }}">{{ subsubsublink.title }}</a>
-                                <!-- Přidat další vnořené smyčky pro hlubší úrovně, pokud je to potřeba -->
-                              </li>
-                            {% endfor %}
-                          </ul>
-                        {% endif %}
-
-                      </li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-
-                <br> <!-- Přidat prázdný řádek pod každou podkategorii -->
-
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-
-        <br> <!-- Přidat prázdný řádek pod každou hlavní kategorií -->
-
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
-  
-
   <section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-a4an9p1e7">
