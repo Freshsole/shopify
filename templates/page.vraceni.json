@@ -31,14 +31,14 @@
         "template--20302240285003__a3de4ecc-69e1-436b-9388-cd2eef4c8378-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Nesedí Vám velikost? Zboží nám můžete bez udání důvodu vrátit v zákonné 14denní lhůtě od data převzetí.",
+            "heading": "<strong>Nesedla vám velikost?<\/strong>",
             "heading_size": "h2"
           }
         },
         "template--20302240285003__a3de4ecc-69e1-436b-9388-cd2eef4c8378-text-1": {
           "type": "text",
           "settings": {
-            "text": "<h5><strong>V případěnákupu na kamenné prodejně či online rezervace lze zboží pouze vyměnit za jiné ve stejné nebo vyšší hodnotě ve 14denní lhůtě od koupě.<\/strong><\/h5>"
+            "text": "<h4>V případě nákupu na kamenné prodejně či online rezervace lze zboží pouze vyměnit za jiné ve stejné nebo vyšší hodnotě ve 14denní lhůtě od koupě.<\/h4>"
           }
         }
       },
@@ -55,10 +55,70 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_xgmCDw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_A3xMYL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Postup vrácení<\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_bwg7FU": {
+          "type": "text",
+          "settings": {
+            "text": "<ol><li>Vyplň formulář, který se nachází níže a odešli ho.<\/li><li>Počkej na naší odpověď, kterou zašleme na email.<\/li><li>Zabal nenošené zboží, nejlépe do krabice, ve které přišlo, aby nedošlo k poškození  zboží.<\/li><li>Nalep štítek a odešli.<\/li><\/ol><p>Nebo nás můžeš kontaktovat, jak je napsáno v sekci Kontakt<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_A3xMYL",
+        "text_bwg7FU"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_HPgere": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_PJtRT9": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Podmínky vrácení<\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_9YWcKV": {
+          "type": "text",
+          "settings": {
+            "text": "<ol><li>Zboží musí být nenošené, nepoškozené a schopné dalšího prodeje.<\/li><li>Vrácení je nutné zahájit do 14 dnů od převzetí zboží.<\/li><li>Zboží musí být zabaleno do původního nepoškozeného  obalu.<\/li><\/ol>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PJtRT9",
+        "text_9YWcKV"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "9f2c755c-76c4-4efc-bf4e-1036867afe27": {
       "type": "contact-form",
       "settings": {
-        "heading": "Vrácení",
+        "heading": "Vrácení - formulář",
         "heading_size": "h2",
         "color_scheme": "",
         "padding_top": 32,
@@ -70,6 +130,8 @@
     "main",
     "235497ed-5196-4df1-8034-9bdae20cd6ef",
     "a3de4ecc-69e1-436b-9388-cd2eef4c8378",
+    "rich_text_xgmCDw",
+    "rich_text_HPgere",
     "9f2c755c-76c4-4efc-bf4e-1036867afe27"
   ]
 }
