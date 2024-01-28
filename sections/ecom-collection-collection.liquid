@@ -53,11 +53,10 @@
         {% endif %}
 </div>
 
+
 {% assign breadcrumb_parts = collection.metafields.custom.breadcrumb_brand | split: ' / ' %}
 
-{% if breadcrumb_parts.size > 1 %}
-  <a href="{{ breadcrumb_parts[1] }}">{{ breadcrumb_parts[0] }}</a>
-{% else %}
+{% if breadcrumb_parts.size > 0 %}
   {{ breadcrumb_parts[0] }}
 {% endif %}
 
