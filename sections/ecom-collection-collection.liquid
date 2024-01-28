@@ -53,6 +53,21 @@
         {% endif %}
 </div>
 
+  <div class="breadcumb-sneakers">
+  <a href="/">Home</a> /
+  <a href="{{ shop.url }}/collections/">Sneakers</a> /
+  {% if collection.metafields.custom.breadcrumb_brand %}
+    {% assign brandHandle = collection.metafields.custom.breadcrumb_brand | handle %}
+    <p>Debug: Breadcrumb Brand Handle - {{ brandHandle }}</p>
+    <a href="{{ shop.url }}/collections/{{ brandHandle }}">
+      {{ collection.metafields.custom.breadcrumb_brand }}</a> /
+  {% endif %}
+  {% if collection %}
+    {{ collection.title }}
+  {% endif %}
+</div>
+
+
   
 
  {% comment %}
