@@ -42,14 +42,14 @@
 
 <div class="breadcumb-sneakers">
   <a href="/">Home</a> /
-  <a href="{{ shop.url }}/collections/">Sneakers</a> /
-  {% if collection.metafields.custom.breadcrumb_brand %}
-    <a href="{{ shop.url }}/collections/{{ collection.handle }}">
-      {{ collection.metafields.custom.breadcrumb_brand }}</a> /
-  {% endif %}
-  {% if collection %}
-    {{ collection.title }}
-  {% endif %}
+        <a href="{{ shop.url }}/collections/sneakers">Sneakers</a> /
+        {% if collection.metafields.custom.breadcumb_brand %}
+          <a href="{{ shop.url }}/collections/{{ collection.metafields.custom.breadcrumb_brand}}">
+          {{ collection.metafields.custom.breadcumb_brand }}</a> /
+        {% endif %}
+        {% if collection %}
+          {{ collection.title }}
+        {% endif %}
 </div>
 
  {% comment %}
