@@ -40,9 +40,9 @@
  %}
 
 
-{% if collection.custom.breadcumb_brand %}
-                                            Material: {{ collection.custom.breadcumb_brand }}
-
+{% if collection.metafields.custom.material %}
+                                            Material: {{ collection.metafields.custom.material }}
+                                            {% assign counter = counter | plus: 1 %}
                                           {% endif %}
 
  {% comment %}
