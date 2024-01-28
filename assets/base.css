@@ -4284,16 +4284,15 @@ text-decoration: none;
     overflow: visible !important;
 }
 
-
-
-  .ProductSizeImages {
-    max-width: auto!important;
+  .ecom-collection__product-item--information {
+    flex: 1;
+    margin-top: 15%;
 }
 
-  .ecom-section>div.core__row--columns {
-    padding-left: 0;
-    padding-right: 0;
-}
+  .core__group--body{
+    flex-direction:column !important;
+  }
+
   
 }
 
