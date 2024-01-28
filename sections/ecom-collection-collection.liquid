@@ -39,51 +39,24 @@
  endif
  %}
 
-<section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
-  <div data-deep="1" class="core__row--columns">
-    <div class="ecom-column ecom-core core__column--first core__column--last ecom-a4an9p1e7">
-      <div class="core__column--wrapper">
-        <div class="core__blocks" index="0">
-          <div class="core__blocks--body">
-            <div class="ecom-animation ecom-block ecom-core core__block ecom-rjo600f3u59" data-core-is="block">
-              <div class="ecom-element ecom-collection ecom-collection__title" deep="1">
-                <div class="ecom-element ecom-collection ecom-collection__title-wrapper">
-                  <div class="ecom-element ecom-collection ecom-collection__title-container">
-                    <h2 class="ecom-collection__title--headline ecom__heading">{{ current_collection }}</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Breadcrumb Code -->
-            <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
-              <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
-                <div class="text-content ecom-html has-drop-cap-view-default">
-                  <div class="breadcrumb">
-                    <a href="/">Home</a> /
-                    <a href="{{ shop.url }}/collections/sneakers">Sneakers</a> /
-                    {% if current_collection %}
-                      <a href="{{ shop.url }}/collections/{{ current_collection | handleize }}">{{ custom.breadcrumb_brand }}</a>
-                    {% endif %}
-                    / Current Collection: {{ current_collection }}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Breadcrumb Code -->
-
-          </div>
-        </div>
-      </div>
-      <div class="ecom-column__overlay">
-        <div class="ecom-overlay"></div>
+<!-- Breadcrumb Code -->
+<div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
+  <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
+    <div class="text-content ecom-html has-drop-cap-view-default">
+      <div class="breadcrumb">
+        <a href="/">Home</a> /
+        <a href="{{ shop.url }}/collections/sneakers">Sneakers</a> /
+        {% if custom.breadcrumb_brand %}
+          <a href="{{ shop.url }}/collections/{{ custom.breadcrumb_brand | handleize }}">{{ custom.breadcrumb_brand }}</a>
+        {% endif %}
+        {% if current_collection %}
+          / Current Collection: {{ current_collection }}
+        {% endif %}
       </div>
     </div>
   </div>
-  <div class="ecom-section__overlay">
-    <div class="ecom-overlay"></div>
-  </div>
-</section>
+</div>
+<!-- End Breadcrumb Code -->
 
 
 
