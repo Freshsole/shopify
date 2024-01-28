@@ -39,16 +39,17 @@
  endif
  %}
 
-<!-- Current Collection Name -->
-<div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
-  <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
-    <div class="text-content ecom-html has-drop-cap-view-default">
-      {{ current_collection }}
+{% if current_collection %}
+  <!-- Current Collection Name -->
+  <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
+    <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
+      <div class="text-content ecom-html has-drop-cap-view-default">
+        {{ current_collection }}
+      </div>
     </div>
   </div>
-</div>
-<!-- End Current Collection Name -->
-
+  <!-- End Current Collection Name -->
+{% endif %}
 
 
  {% comment %}
