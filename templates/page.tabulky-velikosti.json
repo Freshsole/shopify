@@ -23,13 +23,21 @@
         "text_pqfCz9": {
           "type": "text",
           "settings": {
-            "text": ""
+            "text": "<p>Je důležité mít na paměti, že různé značky mohou používat odlišné číslování.<\/p><p>Ideální je vybírat velikosti bot podle délky stélky, která je uváděna v centimetrech.<\/p>"
+          }
+        },
+        "heading_J4UDQM": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Velikostní tabulky:<\/strong>",
+            "heading_size": "h2"
           }
         }
       },
       "block_order": [
         "heading_B3xFaD",
-        "text_pqfCz9"
+        "text_pqfCz9",
+        "heading_J4UDQM"
       ],
       "settings": {
         "desktop_content_position": "left",
