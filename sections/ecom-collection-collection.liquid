@@ -39,24 +39,15 @@
  endif
  %}
 
-<!-- Breadcrumb Code -->
+<!-- Current Collection Name -->
 <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
   <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
     <div class="text-content ecom-html has-drop-cap-view-default">
-      <div class="breadcrumb">
-        <a href="/">Home</a> /
-        <a href="{{ shop.url }}/collections/sneakers">Sneakers</a> /
-        {% if custom.breadcrumb_brand %}
-          <a href="{{ shop.url }}/collections/{{ custom.breadcrumb_brand | handleize }}">{{ custom.breadcrumb_brand }}</a>
-        {% endif %}
-        {% if current_collection %}
-          / Current Collection: {{ current_collection }}
-        {% endif %}
-      </div>
+      {{ current_collection }}
     </div>
   </div>
 </div>
-<!-- End Breadcrumb Code -->
+<!-- End Current Collection Name -->
 
 
 
