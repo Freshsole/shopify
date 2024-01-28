@@ -40,27 +40,7 @@
  %}
 
 
-<!-- Breadcrumb Code -->
-<div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
-  <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
-    <div class="text-content ecom-html has-drop-cap-view-default">
-      <div class="breadcrumb">
-        <a href="/">Home</a> /
-        <a href="{{ shop.url }}/collections/sneakers">Sneakers</a> /
-        {% if collection.metafields.custom.breadcumb_brand %}
-          <a href="{{ shop.url }}/collections/{{ collection.metafields.custom.breadcrumb_brand}}">
-          {{ collection.metafields.custom.breadcumb_brand }}</a> /
-        {% endif %}
-        {% if collection %}
-          {{ collection.title }}
-        {% endif %}
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End Breadcrumb Code -->
-  <p>pepicej</p>
-
+<div class="breadcumb-sneakers">
   <a href="/">Home</a> /
         <a href="{{ shop.url }}/collections/sneakers">Sneakers</a> /
         {% if collection.metafields.custom.breadcumb_brand %}
@@ -70,7 +50,7 @@
         {% if collection %}
           {{ collection.title }}
         {% endif %}
-
+</div>
 
  {% comment %}
  // Reactive
