@@ -105,6 +105,28 @@
         "include_margins": true
       }
     },
+    "rich_text_xxUj8T": {
+      "type": "rich-text",
+      "blocks": {
+        "text_F4Nd7G": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Pokud si přejete vrátit zboží, všechny potřebné informace najdete v sekci <a href=\"https:\/\/www.freshsole.cz\/pages\/vraceni-zbozi\" title=\"https:\/\/www.freshsole.cz\/pages\/vraceni-zbozi\">Vrácení Zboží<\/a><\/h4>"
+          }
+        }
+      },
+      "block_order": [
+        "text_F4Nd7G"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "form": {
       "type": "contact-form",
       "settings": {
@@ -121,6 +143,7 @@
     "multicolumn_KGNPeA",
     "rich_text_DQcckR",
     "17059091643f575a1d",
+    "rich_text_xxUj8T",
     "form"
   ]
 }
