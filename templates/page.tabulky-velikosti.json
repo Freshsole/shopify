@@ -48,19 +48,19 @@
         "padding_bottom": 52
       }
     },
-    "1706470943237d99fe": {
+    "17064717025f105b75": {
       "type": "apps",
       "blocks": {
-        "hura_theme_blocks_html_block_LJpcfw": {
+        "hura_theme_blocks_html_block_KA8Ukm": {
           "type": "shopify:\/\/apps\/hura-theme-blocks\/blocks\/html-block\/5b288e0f-cbe6-47c0-909d-b0904b0ad6dd",
           "settings": {
-            "custom_html": "<section class=\"centered-section\">\n        <img src=\"your-image-url.jpg\" alt=\"Centered Image\">\n    <\/section>\n<style>\n.centered-section {\n            text-align: center;\n        }\n\n        .centered-section img {\n            max-width: 70%;\n            height: auto;\n            border: 1px solid #000; \/* Add border style *\/\n        }\n<\/style>",
+            "custom_html": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0786\/3379\/5915\/files\/Nike_panske.png?v=1705445700\" alt=\"popisek\" class=\"tabulka\">\n\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0786\/3379\/5915\/files\/Nike_damske.png?v=1705445877\" alt=\"popisek\" class=\"tabulka\">\n\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0786\/3379\/5915\/files\/Nike_detske.png?v=1705445700\" alt=\"popisek\" class=\"tabulka\">\n\n<style>\n.tabulka{\ndisplay: flex;\nmargin-left: auto;\nmargin-right: auto;\nwidth:30%;\npadding-bottom: 30px;\n}\n    <\/style>",
             "custom_liquid": ""
           }
         }
       },
       "block_order": [
-        "hura_theme_blocks_html_block_LJpcfw"
+        "hura_theme_blocks_html_block_KA8Ukm"
       ],
       "settings": {
         "include_margins": true
@@ -70,6 +70,6 @@
   "order": [
     "main",
     "rich_text_HceMjj",
-    "1706470943237d99fe"
+    "17064717025f105b75"
   ]
 }
