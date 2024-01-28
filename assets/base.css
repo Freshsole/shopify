@@ -4476,3 +4476,14 @@ text-decoration: none;
 #shopify-section-sections--20156184297803__170647520483e5e1cd{
       background-color:#eaeaea;
 }
+
+/* Breadcumb */
+.breadcumb-sneakers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    height: 100px;
+    font-size: 18px;
+    font-weight: 600;
+}
