@@ -4148,6 +4148,105 @@ text-decoration: none;
 }
 
 
+
+  .core__group--item{
+    display:flex;
+    justify-content:center;
+  }
+
+  .tab__item.ecom-item-active {
+    display: flex !important;
+    text-align:center;
+}
+
+  .ecom-core.ecom-6tmsuc0db89 .tabs__wrapper.ecom__element .tabs__nav {
+    display: flex;
+    justify-content: center;
+    margin-left:0 !important;
+    margin-right:0!important;
+}
+
+  /* Doporucene mobil */
+  .ecom-core.ecom-p38g79du {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  .ecom-collection__product-item .ecom-collection__product-item--inner {
+    overflow: visible !important;
+}
+
+  .ecom-collection__product-item--information {
+    flex: 1;
+    margin-top: 15%;
+}
+
+  .core__group--body{
+    flex-direction:column !important;
+  }
+
+  .ProductSizeImages {
+    max-width: auto!important;
+}
+
+  .ecom-section>div.core__row--columns {
+    padding-left: 0;
+    padding-right: 0;
+}
+  
+}
+
+
+@media screen and (max-width: 450px){
+
+.ecom-collection__product-item--information {
+    margin-top: 0;
+}
+  
+}
+ /* product mobile*/
+.tabs__navs--items {
+    overflow-x: initial !important;
+}
+
+/* CONTACT PAGE */
+
+:root, .color-background-1 {
+    --color-foreground: #eaeaea !important;
+}
+
+
+.multicolumn.background-primary .multicolumn-card {
+    background-color: #eaeaea !important;
+}
+
+.contact .field {
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+}
+
+#ContactForm-body{
+    margin-top:4px;
+}
+
+/* MAIN PAGE */
+
+@media (max-width: 767px){
+  .__pf_po5kph63 .pf-422_, .__pf_po5kph63 .pf-432_ {
+    width: 95vw !important;
+    margin-left: -5.5vw;
+    max-width: 100vw !important;
+}
+
+  .__pf_po5kph63 .pf-224_ {
+    max-width: 100vw;
+    width: 95vw;
+    margin-left: -5.5vw !important;
+}
+  
 }
 
 /* Product image scroll */
