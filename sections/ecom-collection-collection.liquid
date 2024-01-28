@@ -39,7 +39,7 @@
  endif
  %}
 
-  <section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
+<section class="ecom-row ecom-core ecom-section ecom-45hkddt8crh" data-id="ecom-45hkddt8crh" style="z-index: inherit;">
   <div data-deep="1" class="core__row--columns">
     <div class="ecom-column ecom-core core__column--first core__column--last ecom-a4an9p1e7">
       <div class="core__column--wrapper">
@@ -63,8 +63,9 @@
                     <a href="/">Home</a> /
                     <a href="{{ shop.url }}/collections/sneakers">Sneakers</a> /
                     {% if current_collection %}
-                      <a href="{{ shop.url }}/collections/{{ current_collection | handleize }}">{{ current_collection }}</a>
+                      <a href="{{ shop.url }}/collections/{{ current_collection | handleize }}">{{ custom.breadcrumb_brand }}</a>
                     {% endif %}
+                    / Current Collection: {{ current_collection }}
                   </div>
                 </div>
               </div>
@@ -83,6 +84,7 @@
     <div class="ecom-overlay"></div>
   </div>
 </section>
+
 
 
  {% comment %}
