@@ -40,23 +40,10 @@
  %}
 
 
-<!-- Vypsání hodnoty custom.breadcrumb_brand pro aktuální kolekci -->
-<div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
-  <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
-    <div class="text-content ecom-html has-drop-cap-view-default">
-      {% if collection %}
-        {% if collection.metafields.custom.breadcrumb_brand %}
-          <p>Custom Breadcrumb Brand for {{ collection.title }}: {{ collection.metafields.custom.breadcrumb_brand }}</p>
-        {% else %}
-          <p>Custom Breadcrumb Brand is not defined for {{ collection.title }}.</p>
-        {% endif %}
-      {% else %}
-        <p>No current collection found.</p>
-      {% endif %}
-    </div>
-  </div>
-</div>
-<!-- Konec Vypsání hodnoty custom.breadcrumb_brand pro aktuální kolekci -->
+{% if collection.custom.breadcumb_brand %}
+                                            Material: {{ collection.custom.breadcumb_brand }}
+
+                                          {% endif %}
 
  {% comment %}
  // Reactive
