@@ -40,29 +40,23 @@
  %}
 
 
-<!-- Breadcrumb Code with Brand Information -->
+<!-- Vypsání hodnoty custom.breadcrumb_brand pro aktuální kolekci -->
 <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
   <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
     <div class="text-content ecom-html has-drop-cap-view-default">
-      <div class="breadcrumb">
-        <a href="/">Home</a> /
-        <a href="{{ shop.url }}/collections/sneakers">Sneakers</a> /
-        {% if custom.breadcrumb_brand %}
-          <a href="{{ shop.url }}/collections/{{ custom.breadcrumb_brand | handleize }}">{{ custom.breadcrumb_brand }}</a>
-          {% assign counter = counter | plus: 1 %}
+      {% if collection %}
+        {% if collection.metafields.custom.breadcrumb_brand %}
+          <p>Custom Breadcrumb Brand for {{ collection.title }}: {{ collection.metafields.custom.breadcrumb_brand }}</p>
+        {% else %}
+          <p>Custom Breadcrumb Brand is not defined for {{ collection.title }}.</p>
         {% endif %}
-        {% if collection %}
-          / {{ collection.title }}
-          {% if collection.metafields.custom.brand %}
-            / Brand: {{ collection.metafields.custom.brand }}
-          {% endif %}
-        {% endif %}
-      </div>
+      {% else %}
+        <p>No current collection found.</p>
+      {% endif %}
     </div>
   </div>
 </div>
-<!-- End Breadcrumb Code with Brand Information -->
-
+<!-- Konec Vypsání hodnoty custom.breadcrumb_brand pro aktuální kolekci -->
 
  {% comment %}
  // Reactive
