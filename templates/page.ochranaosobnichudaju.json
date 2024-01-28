@@ -32,7 +32,7 @@
           "type": "column",
           "settings": {
             "title": "<strong>Historie Freshsole<\/strong>",
-            "text": "<p>Vítejte na našem eshopu, kde vášeň pro stylové obuvníky spojuje tři mladé nadšence. Jsme skupina vizionářů, kteří přinášejí do světa módy limitované boty s osobitým přístupem. Naše příběhy spočívají ve snech a odvaze vytvořit nezapomenutelné kousky obuvi.<\/p><p>V každém páru bot naleznete pečlivou ruku řemeslníka a touhu po originalitě. Naše cesty spojené s vášní pro design a kvalitu nás dovedly k vytváření bot, které nejsou pouhým módním doplňkem, ale příběhem, který nosíte na svých nohou.<\/p><p><\/p>",
+            "text": "<p>Jméno Freshsole vzniklo před pár lety jako instagramový obchod s teniskami. Po dobu pár let byl zapomenut, dokud jsme se nerozhodli jméno obnovit vytvořením stejnojmenného e-shopu.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -40,7 +40,7 @@
         "template--20156184789323__5ee7c3a8-d286-4063-a26e-9424b8d5c004-column-3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/sunika-liztnl.webp",
+            "image": "shopify:\/\/shop_images\/Fresh_sole-_1__1.svg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -50,8 +50,8 @@
         "85387b4c-acc7-49cf-9d57-a7fef7a26a94": {
           "type": "column",
           "settings": {
-            "title": "<strong>1. 4. 2020 – spuštění e-shopu<\/strong>",
-            "text": "<p>Plán na spuštění e-shopu byl již od samotného začátku section. Hlavní motivace přišla teprve se začátkem covid krize, kdy jsme byli nuceni dočasně uzavřít naší prodejnu a mohli se plně soustředit na tvorbu nového webu. Pod náporem zákazníků, kteří při spuštění v 8 večer hbitě refreshovali své prohlížeče, web zhruba dvě hodiny nefungoval.<\/p>",
+            "title": "<strong>30. 4. 2024 – spuštění e-shopu<\/strong>",
+            "text": "<p>Oficiální spuštění našeho e-shopu.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -60,7 +60,7 @@
           "type": "column",
           "settings": {
             "title": "<strong>Plány do budoucna<\/strong>",
-            "text": "<p>Stále dodávat to nejzajímavější a nejlimitovanější ze světa tenisek a streetwearu. Zvětšovat nabídku a dělat hromadu eventů pro naši komunitu, která je na prvním místě. Pokud se nám vše bude dařit podle plánu, chceme pro Vás otevřít další obchod, který v Česku nebude mít obdoby!<\/p>",
+            "text": "<p>Zatím plánujeme co nejvíce rozšířit naší nabídku, aby si opravdu každý vybral podle svého vkusu. Naším snem ale zůstává si udělat vlastní kamennou pobočku, kam by se každý mohl přijít podívat a boty si vyzkoušet.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -77,8 +77,8 @@
       ],
       "settings": {
         "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
+        "heading_size": "h2",
+        "image_width": "half",
         "image_ratio": "adapt",
         "columns_desktop": 2,
         "column_alignment": "left",
