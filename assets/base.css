@@ -4467,10 +4467,6 @@ text-decoration: none;
 
 
 /* form vraceni zbozi */
-._inline_1qy88_45 ._formContainer_1qy88_30 {
-    min-width: unset;
-    max-width: var(--inline-container-max-width);
-    width: 100%;
-    min-height: var(--inline-container-min-height);
-    background-color:green;
+.page-width .scroll-trigger .animate--slide-in{
+    padding:0;
 }
