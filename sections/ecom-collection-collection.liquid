@@ -47,10 +47,8 @@
       <div class="breadcrumb">
         <a href="/">Home</a> /
         <a href="{{ shop.url }}/collections/sneakers">Sneakers</a> /
-        {% if collection.metafields.custom.breadcrumb_brand %}
-          <a href="{{ shop.url }}/collections/{{ collection.metafields.custom.breadcrumb_brand | handleize }}">
-            {{ collection.metafields.custom.breadcrumb_brand }}
-          </a> /
+        {% if collection.metafields.custom.breadcumb_brand %}
+          {{ collection.metafields.custom.breadcumb_brand }}
         {% endif %}
         {% if collection %}
           {{ collection.title }}
