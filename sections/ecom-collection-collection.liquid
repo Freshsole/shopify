@@ -63,14 +63,14 @@
 {% assign breadcrumb_brand = collection.metafields.custom.breadcumb_brand %}
 <div class="breadcumb-sneakers">
   <a class="breadcumb-a" href="/">Home &nbsp</a> /
-  <a class="breadcumb-a" href="{{ shop.url }}/collections/all"> Sneakers </a> /
+  <a class="breadcumb-a" href="{{ shop.url }}/collections/all">&nbsp Sneakers &nbsp</a> /
   {% if breadcrumb_brand %}
     <a class="breadcumb-a" href="{{ shop.url }}/collections/{{ breadcrumb_brand }}"> 
-      {{ breadcrumb_brand }} </a> /
+     &nbsp {{ breadcrumb_brand }} &nbsp</a> /
   {% endif %}
   {% if collection %}
     <a class="breadcumb-a" href="{{ collection.url }}">
-     {{ collection.title }} </a>
+     &nbsp {{ collection.title }} </a>
   {% endif %}
 </div>
 
