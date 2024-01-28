@@ -1470,7 +1470,7 @@ details[open]>.share-button__fallback {
 
 .share-button__fallback:before {
   background: rgb(var(--color-background));
-  pointer-events: none;
+  /*pointer-events: none;*/
   content: '';
   position: absolute;
   top: 0;
@@ -1607,7 +1607,7 @@ details[open]>.share-button__fallback {
 .customer .field:before,
 .customer select:before,
 .localization-form__select:before {
-  pointer-events: none;
+  /*pointer-events: none;*/
   content: '';
   position: absolute;
   top: 0;
@@ -1624,7 +1624,7 @@ details[open]>.share-button__fallback {
 .customer .field:after,
 .customer select:after,
 .localization-form__select:after {
-  pointer-events: none;
+  /*pointer-events: none;*/
   content: '';
   position: absolute;
   top: var(--inputs-border-width);
@@ -1694,7 +1694,7 @@ details[open]>.share-button__fallback {
 .select .icon-caret,
 .customer select+svg {
   height: 0.6rem;
-  pointer-events: none;
+  /*pointer-events: none;*/
   position: absolute;
   top: calc(50% - 0.2rem);
   right: calc(var(--inputs-border-width) + 1.5rem);
@@ -1741,7 +1741,7 @@ details[open]>.share-button__fallback {
   left: calc(var(--inputs-border-width) + 2rem);
   top: calc(1rem + var(--inputs-border-width));
   margin-bottom: 0;
-  pointer-events: none;
+  /*pointer-events: none;*/
   position: absolute;
   transition: top var(--duration-short) ease, font-size var(--duration-short) ease;
   color: rgba(var(--color-foreground), 0.75);
@@ -3036,7 +3036,7 @@ details-disclosure>details {
   border-radius: var(--media-radius);
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
   z-index: -1;
-  pointer-events: none;
+  /*pointer-events: none;*/
 }
 
 .global-media-settings--no-shadow {
@@ -3423,7 +3423,7 @@ details-disclosure>details {
     background-image: var(--easter-egg);
     background-size: 250px 250px;
     mix-blend-mode: color-dodge;
-    pointer-events: none;
+    /*pointer-events: none;*/
     z-index: 2;
   }
 
@@ -3445,7 +3445,7 @@ details-disclosure>details {
     bottom: 0;
     left: 0;
     opacity: 0;
-    pointer-events: none;
+    /*pointer-events: none;*/
     transition: background-position calc(2 * var(--duration-extended)) ease, opacity var(--duration-default) ease;
     mix-blend-mode: overlay;
     background-size: 400% 100%;
