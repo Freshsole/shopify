@@ -46,7 +46,7 @@
         {% if collection.metafields.custom.breadcumb_brand %}
           <a href="{{ shop.url }}/collections/{{ collection.metafields.custom.breadcrumb_brand}}">
           {{ collection.metafields.custom.breadcumb_brand }}
-          {{ shop.url }}/collections/{{ collection.metafields.custom.breadcrumb_brand}}</a> /
+          {{ shop.url }}/collections/{{collection.metafields.custom.breadcrumb_brand}}</a> /
         {% endif %}
         {% if collection %}
           {{ collection.title }}
@@ -58,13 +58,14 @@
   <a href="{{ shop.url }}/collections/">Sneakers</a> /
   {% if collection.metafields.custom.breadcrumb_brand %}
     <p>Debug: Breadcrumb Brand - {{ collection.metafields.custom.breadcrumb_brand }}</p>
-    <a href="{{ shop.url }}/collections/{{ collection.handle | append: '/' | append: collection.metafields.custom.breadcrumb_brand | handle }}">
+    <a href="{{ shop.url }}/collections/{{ collection.metafields.custom.breadcrumb_brand | replace: ' ', '-' | url_encode }}">
       {{ collection.metafields.custom.breadcrumb_brand }}</a> /
   {% endif %}
   {% if collection %}
     {{ collection.title }}
   {% endif %}
 </div>
+
 
 
 
