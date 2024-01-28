@@ -53,21 +53,14 @@
         {% endif %}
 </div>
 
-<div class="breadcumb-sneakers">
-  <a href="/">Home</a> /
-  <a href="{{ shop.url }}/collections/">Sneakers</a> /
-  {% if collection.metafields.custom.breadcrumb_brand %}
-    {% assign breadcrumbParts = collection.metafields.custom.breadcrumb_brand | split: ' / ' %}
-    {% if breadcrumbParts.size > 1 %}
-      <a href="{{ breadcrumbParts[1] | url_encode }}">{{ breadcrumbParts[0] }}</a> /
-    {% else %}
-      {{ collection.metafields.custom.breadcrumb_brand }}
-    {% endif %}
-  {% endif %}
-  {% if collection %}
-    {{ collection.title }}
-  {% endif %}
-</div>
+{% assign breadcrumb_parts = collection.metafields.custom.breadcrumb_brand | split: ' / ' %}
+
+{% if breadcrumb_parts.size > 1 %}
+  <a href="{{ breadcrumb_parts[1] }}">{{ breadcrumb_parts[0] }}</a>
+{% else %}
+  {{ breadcrumb_parts[0] }}
+{% endif %}
+
 
 
 
