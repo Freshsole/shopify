@@ -48,7 +48,8 @@
         <a href="/">Home</a> /
         <a href="{{ shop.url }}/collections/sneakers">Sneakers</a> /
         {% if collection.metafields.custom.breadcumb_brand %}
-          {{ collection.metafields.custom.breadcumb_brand }} /
+          <a>
+          {{ collection.metafields.custom.breadcumb_brand }} </a> /
         {% endif %}
         {% if collection %}
           {{ collection.title }}
