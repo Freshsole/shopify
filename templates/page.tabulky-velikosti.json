@@ -47,10 +47,29 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "1706470943237d99fe": {
+      "type": "apps",
+      "blocks": {
+        "hura_theme_blocks_html_block_LJpcfw": {
+          "type": "shopify:\/\/apps\/hura-theme-blocks\/blocks\/html-block\/5b288e0f-cbe6-47c0-909d-b0904b0ad6dd",
+          "settings": {
+            "custom_html": "<section class=\"centered-section\">\n        <img src=\"your-image-url.jpg\" alt=\"Centered Image\">\n    <\/section>\n<style>\n.centered-section {\n            text-align: center;\n        }\n\n        .centered-section img {\n            max-width: 70%;\n            height: auto;\n            border: 1px solid #000; \/* Add border style *\/\n        }\n<\/style>",
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "hura_theme_blocks_html_block_LJpcfw"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
-    "rich_text_HceMjj"
+    "rich_text_HceMjj",
+    "1706470943237d99fe"
   ]
 }
