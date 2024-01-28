@@ -4280,7 +4280,9 @@ text-decoration: none;
     margin-right: auto;
 }
 /*dwšdwdwddwdwdhujivchweuhchw*/
- 
+  .ecom-collection__product-item .ecom-collection__product-item--inner {
+    overflow: visible !important;
+}
 
   .ecom-collection__product-item--information {
     flex: 1;
@@ -4300,7 +4302,6 @@ text-decoration: none;
     padding-right: 0;
 }
   
-}
 
 /*dwšdwdwddwdwdhujivchweuhchw*/
 @media screen and (max-width: 450px){
