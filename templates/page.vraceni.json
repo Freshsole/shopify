@@ -68,7 +68,7 @@
         "text_bwg7FU": {
           "type": "text",
           "settings": {
-            "text": "<ol><li>Vyplň formulář, který se nachází níže a odešli ho.<\/li><li>Počkej na naší odpověď, kterou zašleme na email.<\/li><li>Zabal nenošené zboží, nejlépe do krabice, ve které přišlo, aby nedošlo k poškození  zboží.<\/li><li>Nalep štítek a odešli.<\/li><\/ol><p>Nebo nás můžeš kontaktovat, jak je napsáno v sekci Kontakt<\/p>"
+            "text": "<ol><li>Vyplň formulář, který se nachází níže a odešli ho.<\/li><li>Počkej na naší odpověď, kterou zašleme na email.<\/li><li>Zabal nenošené zboží, nejlépe do krabice, ve které přišlo, aby nedošlo k poškození  zboží.<\/li><li>Nalep štítek a odešli.<\/li><\/ol><p>Nebo nás můžeš kontaktovat, jak je napsáno v sekci <a href=\"https:\/\/www.freshsole.cz\/pages\/contact\" title=\"https:\/\/www.freshsole.cz\/pages\/contact\">Kontakt<\/a><\/p>"
           }
         }
       },
