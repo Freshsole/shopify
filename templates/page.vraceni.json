@@ -47,7 +47,7 @@
         "template--20302240285003__a3de4ecc-69e1-436b-9388-cd2eef4c8378-text-1"
       ],
       "settings": {
-        "desktop_content_position": "center",
+        "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
@@ -77,7 +77,7 @@
         "text_bwg7FU"
       ],
       "settings": {
-        "desktop_content_position": "center",
+        "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
@@ -107,7 +107,7 @@
         "text_9YWcKV"
       ],
       "settings": {
-        "desktop_content_position": "center",
+        "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
@@ -117,6 +117,7 @@
     },
     "9f2c755c-76c4-4efc-bf4e-1036867afe27": {
       "type": "contact-form",
+      "disabled": true,
       "settings": {
         "heading": "Vrácení - formulář",
         "heading_size": "h2",
@@ -137,8 +138,8 @@
             "button_label_color": "#FFFFFF",
             "links_color": "#1878B9",
             "errors_color": "#E02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
+            "text_alignment": "left",
+            "form_alignment": "flex-start",
             "padding_top": 0,
             "padding_bottom": 0,
             "padding_right": 0,
