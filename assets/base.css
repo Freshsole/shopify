@@ -4467,11 +4467,11 @@ text-decoration: none;
 
 
 /* form vraceni zbozi */
-._inline_1qy88_45 {
-    min-width: 550px !important;
-    max-width: var(--inline-container-max-width);
-    width: 100%;
-    min-height: var(--inline-container-min-height);
+/** Shopify Forms Popup 🟒 🟒 🟒 **/
+section[data-testid="form-container"]{
+  box-shadow: none !important;
+  border: 0.1rem solid rgba(var(--color-foreground),1) !important;
+  border-radius: 0px !important;
 }
 
 /* footer */
