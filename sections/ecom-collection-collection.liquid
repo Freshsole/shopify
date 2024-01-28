@@ -48,7 +48,7 @@
         <a href="/">Home</a> /
         <a href="{{ shop.url }}/collections/sneakers">Sneakers</a> /
         {% if collection.metafields.custom.breadcumb_brand %}
-          { collection.metafields.custom.breadcumb_brand }}
+          {{collection.metafields.custom.breadcumb_brand }}
           {% assign counter = counter | plus: 1 %}
         {% endif %}
         {% if collection %}
