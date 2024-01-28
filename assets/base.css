@@ -4026,7 +4026,6 @@ text-decoration: none;
 
 /* Ecom no hover */
 .ecom-collection__product-media-image:hover {
-  pointer-events: none !important;
   transition: none !important;
   /* Add any additional styles to override hover effects if necessary */
 }
@@ -4467,7 +4466,12 @@ text-decoration: none;
 
 
 /* form vraceni zbozi */
-
+._inline_1qy88_45 {
+    min-width: 550px !important;
+    max-width: var(--inline-container-max-width);
+    width: 100%;
+    min-height: var(--inline-container-min-height);
+}
 
 /* footer */
 #shopify-section-sections--20156184297803__170647520483e5e1cd{
