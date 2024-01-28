@@ -4255,6 +4255,52 @@ text-decoration: none;
 }
 
 
+@media screen and (max-width: 450px){
+
+.ecom-collection__product-item--information {
+    margin-top: 0;
+}
+  
+}
+ /* product mobile*/
+.tabs__navs--items {
+    overflow-x: initial !important;
+}
+
+/* CONTACT PAGE */
+
+:root, .color-background-1 {
+    --color-foreground: #eaeaea !important;
+}
+
+
+.multicolumn.background-primary .multicolumn-card {
+    background-color: #eaeaea !important;
+}
+
+.contact .field {
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+}
+
+#ContactForm-body{
+    margin-top:4px;
+}
+
+/* MAIN PAGE */
+
+@media (max-width: 767px){
+  .__pf_po5kph63 .pf-422_, .__pf_po5kph63 .pf-432_ {
+    width: 95vw !important;
+    margin-left: -5.5vw;
+    max-width: 100vw !important;
+}
+
+  .__pf_po5kph63 .pf-224_ {
+    max-width: 100vw;
+    width: 95vw;
+    margin-left: -5.5vw !important;
+}
   
 }
 
