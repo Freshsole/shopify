@@ -4467,12 +4467,7 @@ text-decoration: none;
 
 
 /* form vraceni zbozi */
-/** Shopify Forms Popup 🟒 🟒 🟒 **/
-section[data-testid="form-container"]{
-  box-shadow: none !important;
-  border: 0.1rem solid rgba(var(--color-foreground),1) !important;
-  border-radius: 0px !important;
-}
+
 
 /* footer */
 #shopify-section-sections--20156184297803__170647520483e5e1cd{
