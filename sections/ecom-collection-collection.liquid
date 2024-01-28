@@ -40,7 +40,7 @@
  %}
 
 
-<!-- Breadcrumb Code -->
+<!-- Breadcrumb Code with Brand Information -->
 <div class="ecom-block ecom-core core__block elmspace ecom-yqa7nu2a5be" data-core-is="block">
   <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
     <div class="text-content ecom-html has-drop-cap-view-default">
@@ -48,18 +48,21 @@
         <a href="/">Home</a> /
         <a href="{{ shop.url }}/collections/sneakers">Sneakers</a> /
         {% if custom.breadcrumb_brand %}
-          <a href="{{ shop.url }}/collections/{{ custom.breadcrumb_brand | handleize }}">{{ custom.breadcrumb_brand }}</a> /
+          <a href="{{ shop.url }}/collections/{{ custom.breadcrumb_brand | handleize }}">{{ custom.breadcrumb_brand }}</a>
+          {% assign counter = counter | plus: 1 %}
         {% endif %}
         {% if collection %}
-          {{ collection.title }}
+          / {{ collection.title }}
+          {% if collection.metafields.custom.brand %}
+            / Brand: {{ collection.metafields.custom.brand }}
+          {% endif %}
         {% endif %}
       </div>
     </div>
   </div>
 </div>
-<!-- End Breadcrumb Code -->
+<!-- End Breadcrumb Code with Brand Information -->
 
-  
 
  {% comment %}
  // Reactive
