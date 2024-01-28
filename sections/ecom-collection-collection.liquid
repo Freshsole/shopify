@@ -52,6 +52,18 @@
         {% endif %}
 </div>
 
+  <div class="breadcumb-sneakers">
+  <a href="/">Home</a> /
+  <a href="{{ shop.url }}/collections/">Sneakers</a> /
+  {% if collection.metafields.custom.breadcrumb_brand %}
+    <p>Metafields Breadcrumb Brand: {{ collection.metafields.custom.breadcrumb_brand }}</p>
+  {% endif %}
+  {% if collection %}
+    {{ collection.title }}
+  {% endif %}
+</div>
+
+
  {% comment %}
  // Reactive
  * this.data.settings.collection
