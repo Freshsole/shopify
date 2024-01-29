@@ -3942,6 +3942,12 @@ text-decoration: none;
     min-height: 40px !important;
 }
 
+/* Ecom cena */
+.ecom-collection__product-price{
+    font-size:16px;
+    font-weight: 500;
+}
+
 /* Ecom no hover on product title */
 .ecom-collection__product-item-information-title:hover {
     color:black !important;
