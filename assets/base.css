@@ -3933,10 +3933,10 @@ text-decoration: none;
 
 /* Ecom product title */
 .ecom-collection__product-item-information-title {
-    font-size: 15px !important;
+    font-size: 15px !important; /* 16 */
     text-transform: initial !important;
     font-family: Poppins !important;
-    font-weight: 500 !important;
+    font-weight: 500 !important; /* 700 */
     text-align: left !important;
     margin-top: -15px !important;
     min-height: 40px !important;
