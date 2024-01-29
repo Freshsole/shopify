@@ -4354,6 +4354,14 @@ text-decoration: none;
   
 }
 
+.__pf_po5kph63 .pf-91_ {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-transform: initial;
+    font-family: Poppins;
+    font-weight: 400;
+    text-align: left;
+}
 /* Product image scroll */
 .pf-slide-main-media.is-current {
     overflow: hidden !important;
