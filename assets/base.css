@@ -3946,6 +3946,9 @@ text-decoration: none;
 .ecom-collection__product-prices{
     font-size:16px !important;
     font-weight: 500 !important;
+    background-color:blue;
+
+
 }
 
 /* Ecom no hover on product title */
