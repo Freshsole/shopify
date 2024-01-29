@@ -3943,12 +3943,9 @@ text-decoration: none;
 }
 
 /* Ecom cena */
-.ecom-collection__product-prices{
+.ecom-collection__product-prices span{
     font-size:16px !important;
     font-weight: 500 !important;
-    background-color:blue;
-
-
 }
 
 /* Ecom no hover on product title */
