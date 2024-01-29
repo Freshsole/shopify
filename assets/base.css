@@ -3944,8 +3944,8 @@ text-decoration: none;
 
 /* Ecom cena */
 .ecom-collection__product-prices{
-    font-size:16px;
-    font-weight: 500;
+    font-size:16px !important;
+    font-weight: 500 !important;
 }
 
 /* Ecom no hover on product title */
