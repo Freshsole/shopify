@@ -4533,7 +4533,7 @@ footer{
 }
 
 /* search border fix */
-.card--card, .card--standard .card__inner {
+.card--card.card--standard.card__inner {
     border: 0 !important;
     background-color: white !important;
 }
