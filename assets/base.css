@@ -4559,7 +4559,9 @@ footer{
     border: 0 !important;
     background-color: white;
 }
-
+@media screen and (max-width: 750px){
 .search .field{
     border: 1px solid !important;
+    border-radius: 5 px
+}
 }
