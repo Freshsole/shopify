@@ -4565,13 +4565,12 @@ footer{
     border: 1px solid !important;
     border-radius: 5px !important;
 }
+
+.ecom-collection__product-price-wrapper {
+    padding-top: 10px !important;
+    margin-top: -10px !important;
+}
+  
 }
 
 /* Collection page text nahled */
-.ecom-collection__product-item-information-title{
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: var(--ecom-webkit-line-clamp, 2);
-    text-overflow: ellipsis;
-    overflow: hidden;
-} 
