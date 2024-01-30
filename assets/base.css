@@ -4032,7 +4032,7 @@ text-decoration: none;
 /* Pagination up*/
 
 .ecom-collection__sorting-select{
-  margin-top:50px !important; /*25 bottom*/
+  margin-bottom:50px !important; /*25*/
 }
 
 /* Ecom no hover */
