@@ -4069,6 +4069,13 @@ text-decoration: none;
     height: 45px;
 }
 
+@media screen and (max-width: 750px) {
+
+  .ecom-core.ecom-tpy5db6wzrk .ecom-modal-content {
+    height: auto;
+}
+}
+
  /* SEARCH PAGE */
 
 /* Vysledky hledani */
@@ -4311,7 +4318,7 @@ text-decoration: none;
     margin-left: auto;
     margin-right: auto;
 }
-/*dwšdwdwddwdwdhujivchweuhchw*/
+
   .ecom-collection__product-item .ecom-collection__product-item--inner {
     overflow: visible !important;
 }
@@ -4334,8 +4341,6 @@ text-decoration: none;
     padding-right: 0;
 }
   
-
-/*dwšdwdwddwdwdhujivchweuhchw*/
 @media screen and (max-width: 450px){
 
 .ecom-collection__product-item--information {
