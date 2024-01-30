@@ -248,20 +248,6 @@
                                                   }}
                                                 </div>
                                               {% endfor %}
-                                              <script>
-    function zoomImage(element, event) {
-      const img = element.querySelector('img');
-      const rect = img.getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
-
-      const transformOriginX = (x / rect.width) * 100;
-      const transformOriginY = (y / rect.height) * 100;
-
-      const transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
-      img.style.transformOrigin = transformOrigin;
-    }
-                                              </script>
 
                                               {%- for media in product.media -%}
                                                 {% assign media_ration = 1
