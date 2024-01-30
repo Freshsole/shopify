@@ -4548,6 +4548,7 @@ footer{
 
   .footer-flex-container {
     height: auto;
+    padding:10px;
 }
   
 }
