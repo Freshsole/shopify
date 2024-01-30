@@ -4565,6 +4565,11 @@ footer{
     border: 1px solid !important;
     border-radius: 5px !important;
 }
+  
+}
+
+/* Collection page text tri tecky spodek */
+@media screen and (max-width: 894px){
 
 .ecom-collection__product-price-wrapper {
     padding-top: 13px !important;
@@ -4573,5 +4578,3 @@ footer{
 }
   
 }
-
-/* Collection page text nahled */
