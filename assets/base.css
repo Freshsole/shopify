@@ -4563,6 +4563,6 @@ footer{
 @media screen and (max-width: 894px){
 .search .field{
     border: 1px solid !important;
-    border-radius: 5 px;
+    border-radius: 5px !important;
 }
 }
