@@ -4554,8 +4554,12 @@ footer{
 }
 
 /* search border fix */
-/*.card__inner {
+.card__inner {
     width: 100%;
     border: 0 !important;
     background-color: white;
-}*/
+}
+
+.search__input field__input{
+    border: 1px solid;
+}
