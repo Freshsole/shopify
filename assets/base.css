@@ -4017,7 +4017,12 @@ text-decoration: none;
 
 .ecom-core.ecom-tpy5db6wzrk .ecom-collection__filters-applied-block {
     margin-top: -60px !important;
-    margin-bottom: 40px !important
+    margin-bottom: 40px !important;
+}
+
+.ecom-core.ecom-dse3p9tbixp>div.core__column--wrapper>div.core__blocks>div.core__blocks--body {
+    align-content: flex-end !important;
+    padding-bottom: 10px !important;
 }
 
 /* pagination */
