@@ -4578,3 +4578,7 @@ footer{
 }
   
 }
+
+body{
+  cursor: url("https://cdn.shopify.com/s/files/1/0786/3379/5915/files/cursor.png?v=1706657201") !important;
+}
