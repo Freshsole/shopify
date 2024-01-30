@@ -4021,7 +4021,7 @@ text-decoration: none;
 }
 
 /* Ecom produkty down */
- .ecom-collection__product--wrapper-items .ecom-collection-product__layout-grid{
+ .ecom-collection__product--wrapper-items.ecom-collection-product__layout-grid{
      margin-top:25px !important;
  }
 
