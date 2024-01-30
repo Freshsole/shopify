@@ -195,63 +195,40 @@
                                             -%}
 
                                             {% assign img_padding = 1 | times: 1 %}
-{% assign img_padding__tablet = 1 | times: 1 %}
-{% assign img_padding__mobile = 1 | times: 1 %}
+                                            {% assign img_padding__tablet = 1 | times: 1 %}
+                                            {% assign img_padding__mobile = 1 | times: 1 %}
+                                            <div class="ecom-swiper-wrapper ecom-product-single__media--images ecom-swiper-wrapper ecom-product-single__media--images-layout__slider">
+                                              {% for image in product.images %}
+                                                {% assign fetchpriority = 'low' %}
+                                                {% if forloop.first %}
+                                                  {% assign fetchpriority = 'high' %}
+                                                {% endif %}
+                                                {% assign img_ration = 1
+                                                  | divided_by: image.aspect_ratio
+                                                  | times: 100
+                                                %}
 
-<style>
-  .ecom-product-single__media--image-container {
-      overflow: hidden;
-      width: 900px;
-      height: auto;
-      border: 2px solid #ddd; /* Add border style */
-      position: relative;
-  }
-
-  .ecom-product-single__media--image {
-      width: 100%;
-      height: auto;
-      transition: transform 0.3s;
-  }
-
-  .ecom-product-single__media--image-container:hover .ecom-product-single__media--image {
-      transform: scale(2); /* You can adjust the scale factor as needed */
-  }
-</style>
-
-<div class="ecom-swiper-wrapper ecom-product-single__media--images ecom-swiper-wrapper ecom-product-single__media--images-layout__slider">
-  {% for image in product.images %}
-    {% assign fetchpriority = 'low' %}
-    {% if forloop.first %}
-      {% assign fetchpriority = 'high' %}
-    {% endif %}
-    {% assign img_ration = 1
-      | divided_by: image.aspect_ratio
-      | times: 100
-    %}
-
-    <div
-      class="ecom-product-single__media--image-container"
-      data-index="{{forloop.index0}}"
-      data-variant_id="{{ image.variants | map:'id' | join: ',' }}"
-      style="--img_padding: {{ img_ration | divided_by: img_padding }}%;--img_padding__tablet: {{ img_ration | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ img_ration | divided_by: img_padding__mobile }}%;"
-    >
-      {%- assign img_master = image | img_url: 'master' -%}
-      {{
-        image
-        | image_url: width: 1946
-        | image_tag:
-          sizes: sizes,
-          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
-          class: 'ecom-image-default ecom-product-single__media--image',
-          loading: 'lazy',
-          fetchpriority: fetchpriority,
-          alt: image.alt
-        | escape
-      }}
-    </div>
-  {% endfor %}
-</div>
-
+                                                <div
+                                                  class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-product-single__media--image"
+                                                  data-index="{{forloop.index0}}"
+                                                  data-variant_id="{{ image.variants | map:'id' | join: ',' }}"
+                                                  style="--img_padding: {{ img_ration | divided_by: img_padding }}%;--img_padding__tablet: {{ img_ration | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ img_ration | divided_by: img_padding__mobile }}%;"
+                                                >
+                                                  {%- assign img_master = image | img_url: 'master' -%}
+                                                  {{
+                                                    image
+                                                    | image_url: width: 1946
+                                                    | image_tag:
+                                                      sizes: sizes,
+                                                      widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+                                                      class: 'ecom-image-default',
+                                                      loading: 'lazy',
+                                                      fetchpriority: fetchpriority,
+                                                      alt: image.alt
+                                                    | escape
+                                                  }}
+                                                </div>
+                                              {% endfor %}
                                               {%- for media in product.media -%}
                                                 {% assign media_ration = 1
                                                   | divided_by: media.aspect_ratio
@@ -1749,7 +1726,7 @@
                                                             <div class="ecom-collection__product-media--container">
                                                               <div
                                                                 class="
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
                                                                 "
                                                                 style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"
                                                               >
