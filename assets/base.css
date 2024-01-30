@@ -4544,6 +4544,13 @@ text-decoration: none;
 footer{
     display:none !important;
 }
+@media (max-width: 894px){
+
+  .footer-flex-container {
+    height: auto;
+}
+  
+}
 
 /* search border fix */
 .card__inner {
