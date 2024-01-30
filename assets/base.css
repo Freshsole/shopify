@@ -4566,3 +4566,8 @@ footer{
     border-radius: 5px !important;
 }
 }
+
+/* Collection page text nahled */
+.ecom-collection__product-item-information-title{
+    overflow: hidden !important;
+} 
