@@ -4569,5 +4569,9 @@ footer{
 
 /* Collection page text nahled */
 .ecom-collection__product-item-information-title{
-    overflow: scroll !important;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--ecom-webkit-line-clamp, 2);
+    text-overflow: ellipsis;
+    overflow: hidden;
 } 
