@@ -4569,5 +4569,5 @@ footer{
 
 /* Collection page text nahled */
 .ecom-collection__product-item-information-title{
-    overflow: hidden !important;
+    overflow: scroll !important;
 } 
