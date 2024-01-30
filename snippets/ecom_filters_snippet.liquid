@@ -22,9 +22,9 @@
                         
                                 {% if EComBuilderMode %}
                                     <div class="ecom-collection__filters-applied-block">
-                                        <h3 class="ecom-collection__filters-applied-heading">
+                                        <div class="ecom-collection__filters-applied-heading">
                                             Použité filtry:
-                                        </h3>
+                                        </div>
                                         <div class="ecom-collection-filters--active_values">
                                             <ul class="ecom-collection-filters--active_values-list" role="list">
                                                 {% for filter in collection.filters %}
@@ -50,9 +50,9 @@
                                 {%- endfor -%}
                                 {%- if has_filter -%}
                                 <div class="ecom-collection__filters-applied-block">
-                                    <h3 class="ecom-collection__filters-applied-heading">
+                                    <div class="ecom-collection__filters-applied-heading">
                                         Použité filtry:
-                                    </h3>
+                                    </div>
                                     <div class="ecom-collection-filters--active_values">
                                         <ul class="ecom-collection-filters--active_values-list" role="list">
                                             {%- for filter in collection.filters -%}
