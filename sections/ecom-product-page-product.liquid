@@ -229,28 +229,6 @@
                                                   }}
                                                 </div>
                                               {% endfor %}
-                                              <script>
-  // Přidejte event listener pro každý obrázek
-  document.addEventListener('DOMContentLoaded', function() {
-    {% for image in product.images %}
-      const container{{ forloop.index0 }} = document.getElementById('container_{{ forloop.index0 }}');
-      const img{{ forloop.index0 }} = container{{ forloop.index0 }}.querySelector('img');
-
-      container{{ forloop.index0 }}.addEventListener('mousemove', function(e) {
-        const rect = img{{ forloop.index0 }}.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const transformOriginX = (x / rect.width) * 100;
-        const transformOriginY = (y / rect.height) * 100;
-
-        const transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
-        img{{ forloop.index0 }}.style.transformOrigin = transformOrigin;
-      });
-    {% endfor %}
-  });
-                                              </script>
-
                                               {%- for media in product.media -%}
                                                 {% assign media_ration = 1
                                                   | divided_by: media.aspect_ratio
