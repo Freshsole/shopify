@@ -4503,7 +4503,7 @@ text-decoration: none;
 @media screen and (max-width: 750px){
 
 .breadcumb-sneakers{
-    font-size: 16px;
+    font-size: 16px !important;
 }
   
 }
