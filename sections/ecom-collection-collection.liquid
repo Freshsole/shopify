@@ -41,8 +41,8 @@
 
 
 <style>
-
-.breadcumb-sneakers{
+    /* Default styles for larger screens */
+    .breadcumb-sneakers {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,27 +50,38 @@
     height: 100px;
     font-size: 18px;
     font-weight: 600;
-}
+    }
 
-  .breadcumb-a{
+    .breadcumb-a {
+    margin-right: 5px;
     text-decoration: none;
     color: black;
-}
+    }
 
-  
-</style>
+    /* Media query for smaller screens (adjust the max-width as needed) */
+    @media (max-width: 768px) {
+      .breadcumb-sneakers {
+        flex-wrap: wrap;
+      }
+
+      .breadcumb-a {
+        display: block;
+        margin: 5px 0;
+      }
+    }
+  </style>
 
 {% assign breadcrumb_brand = collection.metafields.custom.breadcumb_brand %}
 <div class="breadcumb-sneakers">
-  <a class="breadcumb-a" href="/">Home &nbsp</a> /
-  <a class="breadcumb-a" href="{{ shop.url }}/collections/all">&nbsp Sneakers &nbsp</a> /
+  <a class="breadcumb-a" href="/">Home &nbsp</a> /&nbsp
+  <a class="breadcumb-a" href="{{ shop.url }}/collections/all"> Sneakers &nbsp</a> /&nbsp
   {% if breadcrumb_brand %}
     <a class="breadcumb-a" href="{{ shop.url }}/collections/{{ breadcrumb_brand }}"> 
-     &nbsp {{ breadcrumb_brand }} &nbsp</a> /
+      {{ breadcrumb_brand }} &nbsp</a> /&nbsp
   {% endif %}
   {% if collection %}
     <a class="breadcumb-a" href="{{ collection.url }}">
-     &nbsp {{ collection.title }} </a>
+      {{ collection.title }} </a>
   {% endif %}
 </div>
 
@@ -105,16 +116,26 @@
   document.addEventListener('DOMContentLoaded', function() {
     var filtersList = document.querySelector('.ecom-collection-filters--active_values-list');
     var sortingSelect = document.querySelector('.ecom-core.ecom-jp6s1euv9u .ecom-collection__sorting-select');
-    
+    var productWrapper = document.querySelector('.ecom-collection__product--wrapper-items.ecom-collection-product__layout-grid');
+
     if (filtersList) {
       // If ecom-collection-filters--active_values-list is present, set marginTop to 70px
       sortingSelect.style.marginTop = '70px';
+      // Set margin top to 50px for ecom-collection__product--wrapper-items when it exists
+      if (productWrapper) {
+        productWrapper.style.marginTop = '50px';
+      }
     } else {
       // If ecom-collection-filters--active_values-list is not present, set marginTop to -25px
       sortingSelect.style.marginTop = '-25px';
+      // Set margin top to auto for ecom-collection__product--wrapper-items when it doesn't exist
+      if (productWrapper) {
+        productWrapper.style.marginTop = 'auto';
+      }
     }
   });
 </script>
+
 
    
  {% if template contains '.' %}
