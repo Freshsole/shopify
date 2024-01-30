@@ -4560,6 +4560,6 @@ footer{
     background-color: white;
 }
 
-.search__input field__input{
+.search.field{
     border: 1px solid !important;
 }
