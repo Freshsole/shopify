@@ -4547,8 +4547,8 @@ footer{
 @media (max-width: 894px){
 
   .footer-flex-container {
-    height: auto;
-    padding:10px;
+    height: auto !important;
+    padding:10px !important;
 }
   
 }
