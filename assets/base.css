@@ -4567,8 +4567,9 @@ footer{
 }
 
 .ecom-collection__product-price-wrapper {
-    padding-top: 10px !important;
-    margin-top: -10px !important;
+    padding-top: 20px !important;
+    margin-top: -20px !important;
+    background-color:black;
 }
   
 }
