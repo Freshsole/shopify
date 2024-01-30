@@ -158,6 +158,10 @@
   </div>
 </section>
 
+{% for filter in filters %}
+  {{ filter.name }}: {{ filter.value }}
+{% endfor %}
+
 
 
  {% if template contains '.' %}
