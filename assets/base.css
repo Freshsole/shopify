@@ -3897,6 +3897,8 @@ text-decoration: none;
     background-color: white;
     text-decoration: none;
     color: black;
+    margin-top: 50px;
+    margin-bottom: 0 !important;
 
 }
 /* cart neviditelny obrazek */ 
