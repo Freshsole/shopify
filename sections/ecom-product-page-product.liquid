@@ -253,50 +253,18 @@
                                               {% endfor %}
 
                                               <script>
-  function zoomImage(element, event) {
-    const img = element.querySelector('img');
-    const rect = img.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-
-    const transformOriginX = (x / rect.width) * 100;
-    const transformOriginY = (y / rect.height) * 100;
-
-    const transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
-    img.style.transformOrigin = transformOrigin;
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const gallerySwiper = new Swiper('.ecom-product-single__media--featured', {
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.ecom-swiper-button-next',
-        prevEl: '.ecom-swiper-button-prev',
-      },
-    });
-
-    const thumbnailSwiper = new Swiper('.ecom-product-single__media--thumbs', {
-      spaceBetween: 15,
-      slidesPerView: 4,
-      watchSlidesProgress: true,
-      navigation: {
-        nextEl: '.ecom-swiper-button-next-thumb',
-        prevEl: '.ecom-swiper-button-prev-thumb',
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 4,
-        },
-        1025: {
-          slidesPerView: 4,
-          spaceBetween: 15,
-        },
-      },
-    });
-
-    gallerySwiper.controller.control = thumbnailSwiper;
-    thumbnailSwiper.controller.control = gallerySwiper;
-  });
+                                                function zoomImage(element, event) {
+                                                  const img = element.querySelector('img');
+                                                  const rect = img.getBoundingClientRect();
+                                                  const x = event.clientX - rect.left;
+                                                  const y = event.clientY - rect.top;
+                                            
+                                                  const transformOriginX = (x / rect.width) * 100;
+                                                  const transformOriginY = (y / rect.height) * 100;
+                                            
+                                                  const transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
+                                                  img.style.transformOrigin = transformOrigin;
+                                                }
                                               </script>
 
                                               {%- for media in product.media -%}
