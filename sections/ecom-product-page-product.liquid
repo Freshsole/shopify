@@ -213,43 +213,8 @@
                                               }
 
                                               .ecom-product-single__media--image:hover img {
-                                                transform: scale(2);
+                                                transform: scale(2); /* You can adjust the scale factor as needed */
                                                 cursor: zoom-in;
-                                              }
-
-                                              .zoom-overlay {
-                                                display: none;
-                                                position: fixed;
-                                                top: 0;
-                                                left: 0;
-                                                width: 100%;
-                                                height: 100%;
-                                                background: rgba(0, 0, 0, 0.7);
-                                                z-index: 9999;
-                                                justify-content: center;
-                                                align-items: center;
-                                              }
-
-                                              .zoom-overlay img {
-                                                max-width: 90%;
-                                                max-height: 90%;
-                                              }
-
-                                              .zoom-overlay .arrow {
-                                                position: absolute;
-                                                top: 50%;
-                                                transform: translateY(-50%);
-                                                color: white;
-                                                font-size: 24px;
-                                                cursor: pointer;
-                                              }
-
-                                              .arrow.left {
-                                                left: 20px;
-                                              }
-
-                                              .arrow.right {
-                                                right: 20px;
                                               }
                                             </style>
 
@@ -259,13 +224,17 @@
                                                 {% if forloop.first %}
                                                   {% assign fetchpriority = 'high' %}
                                                 {% endif %}
-                                                {% assign img_ratio = 1 | divided_by: image.aspect_ratio | times: 100 %}
+                                                {% assign img_ration = 1
+                                                  | divided_by: image.aspect_ratio
+                                                  | times: 100
+                                                %}
 
                                                 <div
                                                   class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-product-single__media--image"
                                                   data-index="{{forloop.index0}}"
                                                   data-variant_id="{{ image.variants | map:'id' | join: ',' }}"
-                                                  onclick="showZoomedView(this)"
+                                                  style="--img_padding: {{ img_ration | divided_by: img_padding }}%;--img_padding__tablet: {{ img_ration | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ img_ration | divided_by: img_padding__mobile }}%;"
+                                                  onmousemove="zoomImage(this, event)"
                                                 >
                                                   {%- assign img_master = image | img_url: 'master' -%}
                                                   {{
@@ -283,30 +252,18 @@
                                                 </div>
                                               {% endfor %}
 
-                                              <div class="zoom-overlay" onclick="hideZoomedView()">
-                                                <img id="zoomedImage">
-                                                <div class="arrow left" onclick="navigateZoomedView('prev')">‹</div>
-                                                <div class="arrow right" onclick="navigateZoomedView('next')">›</div>
-                                              </div>
-
                                               <script>
-                                                function showZoomedView(element) {
-                                                  const imgSrc = element.querySelector('img').src;
-                                                  const zoomedImage = document.getElementById('zoomedImage');
-                                                  zoomedImage.src = imgSrc;
-
-                                                  const overlay = document.querySelector('.zoom-overlay');
-                                                  overlay.style.display = 'flex';
-                                                }
-
-                                                function hideZoomedView() {
-                                                  const overlay = document.querySelector('.zoom-overlay');
-                                                  overlay.style.display = 'none';
-                                                }
-
-                                                function navigateZoomedView(direction) {
-                                                  // Implement your logic to navigate through images (prev/next)
-                                                  // You may need to keep track of the current image index and update the zoomed view accordingly.
+                                                function zoomImage(element, event) {
+                                                  const img = element.querySelector('img');
+                                                  const rect = img.getBoundingClientRect();
+                                                  const x = event.clientX - rect.left;
+                                                  const y = event.clientY - rect.top;
+                                            
+                                                  const transformOriginX = (x / rect.width) * 100;
+                                                  const transformOriginY = (y / rect.height) * 100;
+                                            
+                                                  const transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
+                                                  img.style.transformOrigin = transformOrigin;
                                                 }
                                               </script>
 
