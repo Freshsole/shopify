@@ -4,7 +4,8 @@
       "type": "main-search",
       "custom_css": [
         "* {font-family: Poppins !important;}",
-        ".card__inner {width: 100%; border: 0 !important; background-color: white;}"
+        ".card__inner {width: 100%; border: 0 !important; background-color: white;}",
+        ".mobile-facets__disclosure{border: 1px solid #eaeaea !important; border-radius: 5px !important; padding: 10px !important; margin-left: -30px !important;}"
       ],
       "settings": {
         "columns_desktop": 5,
