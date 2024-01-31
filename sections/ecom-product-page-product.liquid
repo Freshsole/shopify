@@ -290,35 +290,28 @@
                                               {% endfor %}
 
                                               <script>
-    let currentIndex = 0;
-    const images = document.querySelectorAll('.ecom-product-single__media--image img');
-    const overlay = document.getElementById('overlay');
-    const overlay2 = document.getElementById('overlay2');
-
-    function showImage(index) {
-      const img = images[index];
+                                                function zoomImage(element, event) {
+      const img = element.querySelector('img');
       const rect = img.getBoundingClientRect();
-      const x = rect.width / 2;
-      const y = rect.height / 2;
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
 
       const transformOriginX = (x / rect.width) * 100;
       const transformOriginY = (y / rect.height) * 100;
 
       const transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
       img.style.transformOrigin = transformOrigin;
-
-      overlay.innerHTML = '<img src="' + img.src + '" alt="Zoomed Image">';
-      overlay.style.display = 'block';
-      overlay2.style.display = 'block';
-      currentIndex = index;
     }
 
     document.addEventListener('click', function (event) {
-      const imgContainer = event.target.closest('.ecom-product-single__media--image');
+      const img = document.querySelector('.ecom-product-single__media--image img');
+      const overlay = document.getElementById('overlay');
+      const overlay2 = document.getElementById('overlay2');
 
-      if (imgContainer) {
-        const index = parseInt(imgContainer.dataset.index);
-        showImage(index);
+      if (event.target.matches('.ecom-product-single__media--image img')) {
+        overlay.innerHTML = '<img src="' + img.src + '" alt="Zoomed Image">';
+        overlay.style.display = 'block';
+        overlay2.style.display = 'block';
       } else if (event.target.matches('#overlay2')) {
         overlay.style.display = 'none';
         overlay2.style.display = 'none';
@@ -326,8 +319,10 @@
     });
 
     document.addEventListener('mousemove', function (event) {
+      const img = document.querySelector('.ecom-product-single__media--image img');
+      const overlay = document.getElementById('overlay');
+
       if (overlay.style.display === 'block') {
-        const img = images[currentIndex];
         const rect = img.getBoundingClientRect();
         const x = event.clientX - rect.left;
         const y = event.clientY - rect.top;
@@ -337,18 +332,6 @@
 
         const transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
         img.style.transformOrigin = transformOrigin;
-      }
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (overlay.style.display === 'block') {
-        if (event.key === 'ArrowRight') {
-          currentIndex = (currentIndex + 1) % images.length;
-          showImage(currentIndex);
-        } else if (event.key === 'ArrowLeft') {
-          currentIndex = (currentIndex - 1 + images.length) % images.length;
-          showImage(currentIndex);
-        }
       }
     });
                                               </script>
