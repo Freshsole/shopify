@@ -1446,13 +1446,15 @@
                                 <div class="core__blocks" index="2">
                                   <div class="core__blocks--body">
                                     {% assign productTag = product.tags | first %}
-                                    {% assign targetCollection = collections
-                                      | where: 'metafields.custom.brand_tag', productTag
-                                      | first
-                                    %}
+                                    {% assign targetCollection = null %}
 
+                                    {% for collection in collections %}
+                                      {% if collection.metafields.custom.brand_tag == productTag %}
+                                        {% assign targetCollection = collection %}
+                                        {% break %}
+                                      {% endif %}
+                                    {% endfor %}
                                     <p>pepik:{{ targetCollection.title }}</p>
-
                                     {% if targetCollection %}
                                       <!-- Add your brand information here for the product with matching tags -->
                                       <div
