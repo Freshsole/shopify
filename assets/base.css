@@ -4593,11 +4593,3 @@ footer{
   
 }
 
-/* Product page doporucene */
-  .ecom-collection__product-item-information-title {
-    height: 50px !important;
-}
-.ecom-collection__product-prices {
-    display: flex !important;
-    margin-top: -10px !important;
-}
