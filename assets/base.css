@@ -4091,6 +4091,10 @@ text-decoration: none;
   display: flex ;
     align-items: end ;
 }
+
+.ecom-core.ecom-iqzw6e0xzbs div.core__row--columns {
+    margin-top: -100px !important;
+}
   
 }
 
