@@ -157,7 +157,7 @@
       },
       "3127803799193547933": {
         "type": "shopify:\/\/apps\/kaching-custom-cursor\/blocks\/app-embed-block\/8e414c2f-e094-4ca5-85c3-6c0df939a019",
-        "disabled": false,
+        "disabled": true,
         "settings": {
         }
       }
