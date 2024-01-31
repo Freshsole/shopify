@@ -4170,10 +4170,10 @@ text-decoration: none;
 }
 
 .mobile-facets__disclosure .disclosure-has-popup{
-    border: 1px solid #eaeaea;
-    border-radius: 5px;
-    padding: 10px;
-    margin-left: -30px;
+    border: 1px solid #eaeaea !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+    margin-left: -30px !important;
 }
 
 .facet-filters__label {
