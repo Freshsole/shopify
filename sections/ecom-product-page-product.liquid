@@ -1518,51 +1518,55 @@
                               {% endif %}
                             {% endfor %}
 
-                            {% if targetCollection %}
-                              {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
-                              {% assign imageLinks = imageChartText | newline_to_br | split: '<br />' %}
+                            {% assign imageChartText = '' %}
+                            {% assign imageLinks = '' %}
 
+                            {% for productTag in product.tags %}
+                              {% for collection in collections %}
+                                {% if collection.metafields.custom.brand_tag == productTag %}
+                                  {% assign targetCollection = collection %}
+                                  {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
+                                  {% assign imageLinks = imageChartText | newline_to_br | split: '<br />' %}
+                                  {% break %}
+                                {% endif %}
+                              {% endfor %}
                               {% if imageChartText != '' %}
-                                <div
-                                  id="ecom-pbm6uh13e39"
-                                  class="core__group--item tab__item"
-                                  data-id="ecom-pbm6uh13e39"
-                                >
-                                  <div class="core__group--body tabs__body">
-                                    <div class="core__blocks" index="3">
-                                      <div class="core__blocks--body">
+                                {% break %}
+                              {% endif %}
+                            {% endfor %}
+
+                            {% if imageChartText != '' %}
+                              <div id="ecom-pbm6uh13e39" class="core__group--item tab__item" data-id="ecom-pbm6uh13e39">
+                                <div class="core__group--body tabs__body">
+                                  <div class="core__blocks" index="3">
+                                    <div class="core__blocks--body">
+                                      <div
+                                        class="ecom-block ecom-core core__block elmspace ecom-c5bg033ijpl"
+                                        data-core-is="block"
+                                      >
                                         <div
-                                          class="ecom-block ecom-core core__block elmspace ecom-c5bg033ijpl"
-                                          data-core-is="block"
-                                        >
-                                          <div
-                                            class="ecom__element element__heading ecom-element ecom-html"
-                                            data-stopdrag="true"
-                                            deep="1"
-                                          ></div>
-                                        </div>
-                                        <div
-                                          class="ecom-block ecom-core core__block elmspace ecom-fb43t1cm325"
-                                          data-core-is="block"
-                                        >
-                                          <div
-                                            class="ecom__element ecom-element element__text"
-                                            data-stopdrag=""
-                                            deep="1"
-                                          >
-                                            {% for imageLink in imageLinks %}
-                                              {% if imageLink != '' %}
-                                                <img src="{{ imageLink }}" alt="Image" class="ProductSizeImages">
-                                                <br>
-                                              {% endif %}
-                                            {% endfor %}
-                                          </div>
+                                          class="ecom__element element__heading ecom-element ecom-html"
+                                          data-stopdrag="true"
+                                          deep="1"
+                                        ></div>
+                                      </div>
+                                      <div
+                                        class="ecom-block ecom-core core__block elmspace ecom-fb43t1cm325"
+                                        data-core-is="block"
+                                      >
+                                        <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
+                                          {% for imageLink in imageLinks %}
+                                            {% if imageLink != '' %}
+                                              <img src="{{ imageLink }}" alt="Image" class="ProductSizeImages">
+                                              <br>
+                                            {% endif %}
+                                          {% endfor %}
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                              {% endif %}
+                              </div>
                             {% endif %}
                           </div>
                           <a></a>
