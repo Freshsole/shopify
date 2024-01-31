@@ -131,20 +131,15 @@
     var styleTag = document.createElement('style');
     styleTag.innerHTML = `
       @media screen and (max-width: 1024px) {
-        .ecom-core.ecom-tpy5db6wzrk .ecom-modal-content--mobile,
-        .ecom-core.ecom-tpy5db6wzrk .ecom-modal-content,
-        .ecom-core.ecom-tpy5db6wzrk .ecom-collection__filters-push_down {
-          padding-top: 70px !important;
-        }
 
         .ecom-column.ecom-core.core__column--first.ecom-dse3p9tbixp {
           display: flex;
           align-items: end;
         }
 
-        /*.ecom-core.ecom-iqzw6e0xzbs div.core__row--columns {
+        .ecom-core.ecom-iqzw6e0xzbs div.core__row--columns {
           margin-top: -100px !important;
-        }*/
+        }
       }
     `;
     document.head.insertAdjacentElement('beforeend', styleTag);
