@@ -213,27 +213,48 @@
                                               }
 
                                               .ecom-product-single__media--image:hover img {
-                                                transform: scale(2); /* You can adjust the scale factor as needed */
+                                                transform: scale(1.5); /* Adjust the scale factor as needed */
                                                 cursor: zoom-in;
+                                              }
+
+                                              .ecom-swiper-button-prev,
+                                              .ecom-swiper-button-next {
+                                                position: absolute;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                                width: 30px;
+                                                height: 30px;
+                                                background-color: #fff;
+                                                border: 1px solid #ccc;
+                                                cursor: pointer;
+                                                z-index: 1;
+                                              }
+
+                                              .ecom-swiper-button-prev {
+                                                left: 10px;
+                                              }
+
+                                              .ecom-swiper-button-next {
+                                                right: 10px;
                                               }
                                             </style>
 
                                             <div class="ecom-swiper-wrapper ecom-product-single__media--images ecom-swiper-wrapper ecom-product-single__media--images-layout__slider">
+                                              <div class="ecom-swiper-button-prev"></div>
+                                              <div class="ecom-swiper-button-next"></div>
+
                                               {% for image in product.images %}
                                                 {% assign fetchpriority = 'low' %}
                                                 {% if forloop.first %}
                                                   {% assign fetchpriority = 'high' %}
                                                 {% endif %}
-                                                {% assign img_ration = 1
-                                                  | divided_by: image.aspect_ratio
-                                                  | times: 100
-                                                %}
+                                                {% assign img_ratio = 1 | divided_by: image.aspect_ratio | times: 100 %}
 
                                                 <div
                                                   class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-product-single__media--image"
                                                   data-index="{{forloop.index0}}"
                                                   data-variant_id="{{ image.variants | map:'id' | join: ',' }}"
-                                                  style="--img_padding: {{ img_ration | divided_by: img_padding }}%;--img_padding__tablet: {{ img_ration | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ img_ration | divided_by: img_padding__mobile }}%;"
+                                                  style="--img_padding: {{ img_ratio | divided_by: img_padding }}%;--img_padding__tablet: {{ img_ratio | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ img_ratio | divided_by: img_padding__mobile }}%;"
                                                   onmousemove="zoomImage(this, event)"
                                                 >
                                                   {%- assign img_master = image | img_url: 'master' -%}
@@ -253,18 +274,50 @@
                                               {% endfor %}
 
                                               <script>
-                                                function zoomImage(element, event) {
-                                                  const img = element.querySelector('img');
-                                                  const rect = img.getBoundingClientRect();
-                                                  const x = event.clientX - rect.left;
-                                                  const y = event.clientY - rect.top;
-                                            
-                                                  const transformOriginX = (x / rect.width) * 100;
-                                                  const transformOriginY = (y / rect.height) * 100;
-                                            
-                                                  const transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
-                                                  img.style.transformOrigin = transformOrigin;
-                                                }
+  function zoomImage(element, event) {
+    const img = element.querySelector('img');
+    const rect = img.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    const transformOriginX = (x / rect.width) * 100;
+    const transformOriginY = (y / rect.height) * 100;
+
+    const transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
+    img.style.transformOrigin = transformOrigin;
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const gallerySwiper = new Swiper('.ecom-product-single__media--featured', {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.ecom-swiper-button-next',
+        prevEl: '.ecom-swiper-button-prev',
+      },
+    });
+
+    const thumbnailSwiper = new Swiper('.ecom-product-single__media--thumbs', {
+      spaceBetween: 15,
+      slidesPerView: 4,
+      watchSlidesProgress: true,
+      navigation: {
+        nextEl: '.ecom-swiper-button-next-thumb',
+        prevEl: '.ecom-swiper-button-prev-thumb',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 4,
+        },
+        1025: {
+          slidesPerView: 4,
+          spaceBetween: 15,
+        },
+      },
+    });
+
+    gallerySwiper.controller.control = thumbnailSwiper;
+    thumbnailSwiper.controller.control = gallerySwiper;
+  });
                                               </script>
 
                                               {%- for media in product.media -%}
@@ -1764,7 +1817,7 @@
                                                             <div class="ecom-collection__product-media--container">
                                                               <div
                                                                 class="
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ecom-child-element ecom-collection__product-media ecom-collection__product-media--adapt
                                                                 "
                                                                 style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"
                                                               >
