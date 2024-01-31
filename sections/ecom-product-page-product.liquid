@@ -210,62 +210,31 @@
                                                 width: 100%;
                                                 height: auto;
                                                 transition: transform 0.3s;
-                                                cursor: pointer;
                                               }
 
-                                              .ecom-modal {
-                                                display: none;
-                                                position: fixed;
-                                                top: 50%;
-                                                left: 50%;
-                                                transform: translate(-50%, -50%);
-                                                z-index: 2;
-                                              }
-
-                                              .ecom-modal img {
-                                                max-width: 100%;
-                                                max-height: 100%;
-                                              }
-
-                                              .ecom-swiper-button-prev,
-                                              .ecom-swiper-button-next {
-                                                position: absolute;
-                                                top: 50%;
-                                                transform: translateY(-50%);
-                                                width: 30px;
-                                                height: 30px;
-                                                background-color: #fff;
-                                                border: 1px solid #ccc;
-                                                cursor: pointer;
-                                                z-index: 1;
-                                              }
-
-                                              .ecom-swiper-button-prev {
-                                                left: 10px;
-                                              }
-
-                                              .ecom-swiper-button-next {
-                                                right: 10px;
+                                              .ecom-product-single__media--image:hover img {
+                                                transform: scale(2); /* You can adjust the scale factor as needed */
+                                                cursor: zoom-in;
                                               }
                                             </style>
 
                                             <div class="ecom-swiper-wrapper ecom-product-single__media--images ecom-swiper-wrapper ecom-product-single__media--images-layout__slider">
-                                              <div class="ecom-swiper-button-prev"></div>
-                                              <div class="ecom-swiper-button-next"></div>
-
                                               {% for image in product.images %}
                                                 {% assign fetchpriority = 'low' %}
                                                 {% if forloop.first %}
                                                   {% assign fetchpriority = 'high' %}
                                                 {% endif %}
-                                                {% assign img_ratio = 1 | divided_by: image.aspect_ratio | times: 100 %}
+                                                {% assign img_ration = 1
+                                                  | divided_by: image.aspect_ratio
+                                                  | times: 100
+                                                %}
 
                                                 <div
                                                   class="ecom-product-single__media--image ecom-swiper-slide ecom-flex ecom-image-align- ecom-image-align---tablet ecom-image-align---mobile ecom-product-single__media--image"
                                                   data-index="{{forloop.index0}}"
                                                   data-variant_id="{{ image.variants | map:'id' | join: ',' }}"
-                                                  style="--img_padding: {{ img_ratio | divided_by: img_padding }}%;--img_padding__tablet: {{ img_ratio | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ img_ratio | divided_by: img_padding__mobile }}%;"
-                                                  onclick="openModal('{{ image | img_url: 'master' }}', '{{ image.alt }}')"
+                                                  style="--img_padding: {{ img_ration | divided_by: img_padding }}%;--img_padding__tablet: {{ img_ration | divided_by: img_padding__tablet }}%;--img_padding__mobile: {{ img_ration | divided_by: img_padding__mobile }}%;"
+                                                  onmousemove="zoomImage(this, event)"
                                                 >
                                                   {%- assign img_master = image | img_url: 'master' -%}
                                                   {{
@@ -283,56 +252,19 @@
                                                 </div>
                                               {% endfor %}
 
-                                              <div class="ecom-modal" id="ecomModal">
-                                                <span class="ecom-swiper-button-prev" onclick="plusSlides(-1)"></span>
-                                                <img class="ecom-modal-content" id="modalImage">
-                                                <span class="ecom-swiper-button-next" onclick="plusSlides(1)"></span>
-                                              </div>
-
                                               <script>
-                                                let modalIndex = 0;
-
-                                                function openModal(imgUrl, altText) {
-                                                  modalIndex = Array.from(document.querySelectorAll('.ecom-product-single__media--image')).findIndex(
-                                                    (element) => element.querySelector('img').src === imgUrl
-                                                  );
-
-                                                  document.getElementById('modalImage').src = imgUrl;
-                                                  document.getElementById('modalImage').alt = altText;
-                                                  document.getElementById('ecomModal').style.display = 'block';
+                                                function zoomImage(element, event) {
+                                                  const img = element.querySelector('img');
+                                                  const rect = img.getBoundingClientRect();
+                                                  const x = event.clientX - rect.left;
+                                                  const y = event.clientY - rect.top;
+                                            
+                                                  const transformOriginX = (x / rect.width) * 100;
+                                                  const transformOriginY = (y / rect.height) * 100;
+                                            
+                                                  const transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
+                                                  img.style.transformOrigin = transformOrigin;
                                                 }
-
-                                                function closeAndResetModal() {
-                                                  document.getElementById('ecomModal').style.display = 'none';
-                                                  modalIndex = 0;
-                                                }
-
-                                                function plusSlides(n) {
-                                                  modalIndex += n;
-                                                  const images = Array.from(document.querySelectorAll('.ecom-product-single__media--image img'));
-                                                  if (modalIndex >= images.length) {
-                                                    modalIndex = 0;
-                                                  } else if (modalIndex < 0) {
-                                                    modalIndex = images.length - 1;
-                                                  }
-
-                                                  document.getElementById('modalImage').src = images[modalIndex].src;
-                                                  document.getElementById('modalImage').alt = images[modalIndex].alt;
-                                                }
-
-                                                document.addEventListener('DOMContentLoaded', function () {
-                                                  const swiper = new Swiper('.ecom-swiper-wrapper', {
-                                                    navigation: {
-                                                      nextEl: '.ecom-swiper-button-next',
-                                                      prevEl: '.ecom-swiper-button-prev',
-                                                    },
-                                                  });
-
-                                                  document.getElementById('ecomModal').addEventListener('click', closeAndResetModal);
-                                                  document.querySelector('.ecom-modal-content').addEventListener('click', function (e) {
-                                                    e.stopPropagation();
-                                                  });
-                                                });
                                               </script>
 
                                               {%- for media in product.media -%}
