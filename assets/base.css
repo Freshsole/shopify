@@ -4026,7 +4026,6 @@ text-decoration: none;
  }
 
 
-
 /* pagination */
 
 .QUCIb .pf-slider-nav button {
@@ -4082,6 +4081,12 @@ text-decoration: none;
   
 }
 
+
+@media screen and (max-width: 1024px){
+.ecom-core.ecom-tpy5db6wzrk .ecom-modal-content--mobile, .ecom-core.ecom-tpy5db6wzrk .ecom-modal-content, .ecom-core.ecom-tpy5db6wzrk .ecom-collection__filters-push_down {
+    padding-top: 70px !important;
+}
+}
 
  /* SEARCH PAGE */
 
