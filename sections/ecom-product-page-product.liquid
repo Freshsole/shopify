@@ -279,41 +279,50 @@
                                               {% endfor %}
 
                                               <script>
-                                                const container = document.getElementById('container');
-        const img = document.getElementById('zoomedImage');
-        const overlay = document.getElementById('overlay');
-        const overlay2 = document.getElementById('overlay2');
-    
-        document.getElementById('container').addEventListener('mousemove', function(e) {
-            const img = document.getElementById('zoomedImage');
-            const rect = img.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-    
-            const transformOriginX = (x / rect.width) * 100;
-            const transformOriginY = (y / rect.height) * 100;
-    
-            const transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
-            img.style.transformOrigin = transformOrigin;
-        });
-    
-        img.addEventListener('click', function() {
-            overlay.innerHTML = '<img src="' + this.src + '" alt="Zoomed Image">';
-            overlay.style.display = 'block';
-            overlay2.style.display = 'block';
-        });
-    
-        overlay.addEventListener('mousemove', function(e) {
-            // Prevent the overlay from capturing mousemove events
-            e.stopPropagation();
-        });
-    
+                                                function zoomImage(element, event) {
+      const img = element.querySelector('img');
+      const rect = img.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
 
-    
-        overlay2.addEventListener('click', function() {
-            overlay.style.display = 'none';
-            overlay2.style.display = 'none';
-        });
+      const transformOriginX = (x / rect.width) * 100;
+      const transformOriginY = (y / rect.height) * 100;
+
+      const transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
+      img.style.transformOrigin = transformOrigin;
+    }
+
+    document.addEventListener('click', function (event) {
+      const img = document.querySelector('.ecom-product-single__media--image img');
+      const overlay = document.getElementById('overlay');
+      const overlay2 = document.getElementById('overlay2');
+
+      if (event.target.matches('.ecom-product-single__media--image img')) {
+        overlay.innerHTML = '<img src="' + img.src + '" alt="Zoomed Image">';
+        overlay.style.display = 'block';
+        overlay2.style.display = 'block';
+      } else if (event.target.matches('#overlay2')) {
+        overlay.style.display = 'none';
+        overlay2.style.display = 'none';
+      }
+    });
+
+    document.addEventListener('mousemove', function (event) {
+      const img = document.querySelector('.ecom-product-single__media--image img');
+      const overlay = document.getElementById('overlay');
+
+      if (overlay.style.display === 'block') {
+        const rect = img.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        const transformOriginX = (x / rect.width) * 100;
+        const transformOriginY = (y / rect.height) * 100;
+
+        const transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
+        img.style.transformOrigin = transformOrigin;
+      }
+    });
                                               </script>
 
                                               {%- for media in product.media -%}
