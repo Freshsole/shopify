@@ -4597,8 +4597,7 @@ footer{
   .ecom-collection__product-item-information-title {
     height: 50px !important;
 }
-
-.ecom-core.ecom-hh6crmh17g .ecom-collection__product-prices {
+.ecom-collection__product-prices {
     display: flex !important;
     margin-top: -10px !important;
 }
