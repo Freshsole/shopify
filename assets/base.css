@@ -4169,7 +4169,7 @@ text-decoration: none;
     border: 1px solid #eaeaea;
 }
 
-.mobile-facets__disclosure .disclosure-has-popup{
+.mobile-facets__disclosure{
     border: 1px solid #eaeaea !important;
     border-radius: 5px !important;
     padding: 10px !important;
