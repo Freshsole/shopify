@@ -1523,45 +1523,54 @@
                             {% endfor %}
 
                             {% if targetCollection %}
-                              <div id="ecom-pbm6uh13e39" class="core__group--item tab__item" data-id="ecom-pbm6uh13e39">
-                                <div class="core__group--body tabs__body">
-                                  <div class="core__blocks" index="3">
-                                    <div class="core__blocks--body">
-                                      <div
-                                        class="ecom-block ecom-core core__block elmspace ecom-c5bg033ijpl"
-                                        data-core-is="block"
-                                      >
+                              {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
+                              {% assign imageLinks = imageChartText | newline_to_br | split: '<br />' %}
+
+                              {% if imageChartText != '' %}
+                                <div
+                                  id="ecom-pbm6uh13e39"
+                                  class="core__group--item tab__item"
+                                  data-id="ecom-pbm6uh13e39"
+                                >
+                                  <div class="core__group--body tabs__body">
+                                    <div class="core__blocks" index="3">
+                                      <div class="core__blocks--body">
                                         <div
-                                          class="ecom__element element__heading ecom-element ecom-html"
-                                          data-stopdrag="true"
-                                          deep="1"
+                                          class="ecom-block ecom-core core__block elmspace ecom-c5bg033ijpl"
+                                          data-core-is="block"
                                         >
-                                          {{ targetCollection.title }}
+                                          <div
+                                            class="ecom__element element__heading ecom-element ecom-html"
+                                            data-stopdrag="true"
+                                            deep="1"
+                                          ></div>
                                         </div>
-                                      </div>
-                                      <div
-                                        class="ecom-block ecom-core core__block elmspace ecom-fb43t1cm325"
-                                        data-core-is="block"
-                                      >
-                                        <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="1">
-                                          {{ targetCollection.description }}
+                                        <div
+                                          class="ecom-block ecom-core core__block elmspace ecom-fb43t1cm325"
+                                          data-core-is="block"
+                                        >
+                                          <div
+                                            class="ecom__element ecom-element element__text"
+                                            data-stopdrag=""
+                                            deep="1"
+                                          >
+                                            <!-- Add image chart information to the description -->
+                                            {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
+                                            {% assign imageLinks = imageChartText | newline_to_br | split: '<br />' %}
 
-                                          <!-- Add image chart information to the description -->
-                                          {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
-                                          {% assign imageLinks = imageChartText | newline_to_br | split: '<br />' %}
-
-                                          {% for imageLink in imageLinks %}
-                                            {% if imageLink != '' %}
-                                              <img src="{{ imageLink }}" alt="Image" class="ProductSizeImages">
-                                              <br>
-                                            {% endif %}
-                                          {% endfor %}
+                                            {% for imageLink in imageLinks %}
+                                              {% if imageLink != '' %}
+                                                <img src="{{ imageLink }}" alt="Image" class="ProductSizeImages">
+                                                <br>
+                                              {% endif %}
+                                            {% endfor %}
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              {% endif %}
                             {% endif %}
                           </div>
                           <a></a>
