@@ -1482,6 +1482,10 @@
                                           deep="1"
                                         >
                                           {{ targetCollection.description }}
+                                          <!-- Add image chart information to the description -->
+                                          {% assign imageChartText = targetCollection.metafields.custom.imagechart %}
+                                          {% assign imageLinks = imageChartText | newline_to_br | split: '<br />' %}
+
                                           {% for imageLink in imageLinks %}
                                             {% if imageLink != '' %}
                                               <img src="{{ imageLink }}" alt="Image" class="ProductSizeImages">
