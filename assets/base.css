@@ -4088,8 +4088,8 @@ text-decoration: none;
 }
 
 .ecom-column.ecom-core .core__column--first .ecom-dse3p9tbixp{
-  display: flex;
-    align-items: end;
+  display: flex !important;
+    align-items: end !important;
 }
   
 }
