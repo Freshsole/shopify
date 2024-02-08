@@ -46,6 +46,7 @@
         "subtotal",
         "buttons"
       ],
+      "disabled": true,
       "custom_css": [
         ".tax-note {display: none;}",
         ".Jk692hbroeK5lg6b_t4v {display: none;}",
