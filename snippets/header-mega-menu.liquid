@@ -1,126 +1,123 @@
 <style>
-    nav.header__inline-menu {
+      nav.header__inline-menu {
 
-    }
+      }
 
-    .list-menu {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px; /* Adjust the gap between columns */
-        justify-content: space-between;
-    }
+      .list-menu {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px; /* Adjust the gap between columns */
+          justify-content: space-between;
+      }
 
-    .list-menu__column {
-        flex: 0 1 calc(25% - 20px); /* Adjust the width of each column */
-    }
+      .list-menu__column {
+          flex: 0 1 calc(25% - 20px); /* Adjust the width of each column */
+      }
 
-    .list-menu:nth-child(4) {
-        /* Styles for the 4th list-menu (sizes) */
-        background-color: #f0f0f0;
-        padding: 20px;
-    }
+      .list-menu:nth-child(4) {
+          /* Styles for the 4th list-menu (sizes) */
+          background-color: #f0f0f0;
+          padding: 20px;
+      }
 
-  .megamenusection{
-    width: 100%;
-}
+    .megamenusection{
+      width: 100%;
+  }
 
-    .mega-menu__content {
-    display: flex;
-    flex-direction: column;
-}
+      .mega-menu__content {
+      display: flex;
+      flex-direction: column;
+  }
 
- .mega-menu__content2 {
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-    width: 65%;
-    margin-left: 17.5%;
-}
+   .mega-menu__content2 {
+      display: flex;
+      justify-content: center;
+      gap: 10%;
+      width: 65%;
+      margin-left: 17.5%;
+  }
 
-    .mega-menu__list {
-        list-style-type: none;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        gap:0;
-    }
+      .mega-menu__list {
+          list-style-type: none;
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          gap:0;
+      }
+
+      .mega-menu__list li {
+          box-sizing: border-box;
+          padding: 10px;
+          width: 100%; /* Make each li take full width */
+          text-align: center;
+      }
+
+    .notcolumn{
+          display: flex;
+          flex-direction: row;
+
+      }
+
+    .Vyfiltruj{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: 'Poppins';
+      color: black;
+  }
+
+    a:not([href]) {
+      cursor: unset;
+  }
+
+  .sizestorow {
+      width: 80%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+    .vyfiltrujcolumn {
+      display: flex;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1200px;
+  }
+
+
+
+    .procent {
+      display: flex;
+      width: 25%;
+      justify-content: flex-start;
+  }
+
+
+  @media (max-width: 990px) {
+      .list-menu {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: space-between;
+        backgroun-color:aqua;
+  }
+  }
 
     .mega-menu__list li {
-        box-sizing: border-box;
-        padding: 10px;
-        width: 100%; /* Make each li take full width */
-        text-align: center;
-    }
-  
-  .notcolumn{
-        display: flex;
-        flex-direction: row;
-  
-    }
-
-  .Vyfiltruj{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-size: 16px;
-    font-weight: 700;
-    font-family: 'Poppins';
-    color: black;
-}
-
-  a:not([href]) {
-    cursor: unset;
-}
-
-.sizestorow {
-    width: 80%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-  .vyfiltrujcolumn {
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
-}
-
-  
-
-  .procent {
-    display: flex;
-    width: 25%;
-    justify-content: flex-start;
-}
-
-
-@media (max-width: 990px) {
-    .list-menu {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: space-between;
-      backgroun-color:aqua;
-}
-}
-
-  .mega-menu__list li {
-    box-sizing: border-box;
-    padding: 10px;
-    padding-left: 0;
-    width: 100%;
-    text-align: left;
-}
-  .menu_li_25{
-    width:25% !important;
-}
-  
+      box-sizing: border-box;
+      padding: 10px;
+      padding-left: 0;
+      width: 100%;
+      text-align: left;
+  }
+    .menu_li_25{
+      width:25% !important;
+  }
 </style>
-
-
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
@@ -146,75 +143,70 @@
                 </span>
                 {% render 'icon-caret' %}
               </summary>
-              
+
               <div
                 id="MegaMenu-Content-{{ forloop.index }}"
                 class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
                 tabindex="-1"
               >
-                
                 <article class="sizestorow">
-
                   {%- if link.handle == 'velikosti' -%}
- 
                     <section class="vyfiltrujcolumn">
-                    <div class="procent"><a class="Vyfiltruj">Vyfiltruj si svou velikost!</a></div>
-                    <div class="procent"><a href=""></a></div>
-                    <div class="procent"><a href=""></a></div>
-                    <div class="procent"><a href=""></a></div>
-                  </section>
-    
-                  
-                {%- endif -%}
-                      <!-- Your sizestorow content goes here -->
-                    
-                <section class="megamenusection">
-                  <ul class="mega-menu__list page-width" role="list">
-                    {%- assign item_counter = 0 -%}
-                    {%- for childlink in link.links -%}
-                      <li class="menu_li_25">
-                        <a
-                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                          href="{{ childlink.url }}"
-                          class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                          {% if childlink.current %}
-                            aria-current="page"
-                          {% endif %}
-                        >
-                          {{ childlink.title | escape }}
-                        </a>
-                        {%- if childlink.links != blank -%}
-                          <ul class="list-unstyled" role="list">
-                            {%- for grandchildlink in childlink.links -%}
-                              <li class ="list-li">
-                                <a
-                                  id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                  href="{{ grandchildlink.url }}"
-                                  class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                  {% if grandchildlink.current %}
-                                    aria-current="page"
-                                  {% endif %}
-                                >
-                                  {{ grandchildlink.title | escape }}
-                                </a>
-                              </li>
-                            {%- endfor -%}
+                      <div class="procent"><a href="" class="Vyfiltruj">Vyfiltruj si svou velikost!</a></div>
+                      <div class="procent"><a href=""></a></div>
+                      <div class="procent"><a href=""></a></div>
+                      <div class="procent"><a href=""></a></div>
+                    </section>
+                  {%- endif -%}
+                  <!-- Your sizestorow content goes here -->
+
+                  <section class="megamenusection">
+                    <ul class="mega-menu__list page-width" role="list">
+                      {%- assign item_counter = 0 -%}
+                      {%- for childlink in link.links -%}
+                        <li class="menu_li_25">
+                          <a
+                            id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                            href="{{ childlink.url }}"
+                            class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                            {% if childlink.current %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            {{ childlink.title | escape }}
+                          </a>
+                          {%- if childlink.links != blank -%}
+                            <ul class="list-unstyled" role="list">
+                              {%- for grandchildlink in childlink.links -%}
+                                <li class="list-li">
+                                  <a
+                                    id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                    href="{{ grandchildlink.url }}"
+                                    class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                    {% if grandchildlink.current %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    {{ grandchildlink.title | escape }}
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          {%- endif -%}
+                        </li>
+                        {%- assign item_counter = item_counter | plus: 1 -%}
+                        {%- if item_counter == 4 and forloop.last == false -%}
                           </ul>
+                          <!-- Close the existing section -->
+                          </section>
+                          <!-- Open a new section -->
+                          <section class="megamenusection">
+                            <ul class="mega-menu__list page-width" role="list">
+                              {%- assign item_counter = 0 -%}
                         {%- endif -%}
-                      </li>
-                      {%- assign item_counter = item_counter | plus: 1 -%}
-                      {%- if item_counter == 4 and forloop.last == false -%}
-                        </ul>
-                        <!-- Close the existing section -->
-                        </section>
-                        <!-- Open a new section -->
-                        <section class="megamenusection">
-                        <ul class="mega-menu__list page-width" role="list">
-                        {%- assign item_counter = 0 -%}
-                      {%- endif -%}
-                    {%- endfor -%}
-                  </ul>
-                </section>
+                      {%- endfor -%}
+                    </ul>
+                  </section>
                 </article>
               </div>
             </details>
@@ -241,13 +233,3 @@
     {%- endfor -%}
   </ul>
 </nav>
-
-
-
-
-
-
-
-
-
-
