@@ -116,7 +116,7 @@
     "currency_code_enabled": true,
     "cart_type": "drawer",
     "show_vendor": false,
-    "show_cart_note": false,
+    "show_cart_note": true,
     "cart_drawer_collection": "",
     "checkout_layout": "onepage",
     "sections": {
@@ -440,7 +440,7 @@
       ".password-main {padding-top: 40px; background-color: #f0f0f0 !important;}",
       ".footer {text-decoration: none;}",
       "* {font-family: Poppins;}",
-      "body{cursor:image-set(\"https:\/\/d7agjysiompp7.cloudfront.net\/xtiremzrewvdsxz06g3d8cmkchgj\" 3x), auto}"
+      "body {cursor: image-set( \"https:\/\/d7agjysiompp7.cloudfront.net\/xtiremzrewvdsxz06g3d8cmkchgj\" 3x ), auto;}"
     ]
   }
 }
