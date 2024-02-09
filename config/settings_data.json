@@ -118,7 +118,12 @@
     "show_vendor": false,
     "show_cart_note": true,
     "cart_drawer_collection": "",
-    "checkout_layout": "onepage",
+    "checkout_header_image": "shopify:\/\/shop_images\/Universal_collection.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "large",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_color": "#ffffff",
+    "checkout_layout": "threepage",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
