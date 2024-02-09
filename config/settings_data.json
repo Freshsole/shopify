@@ -156,18 +156,6 @@
         "disabled": false,
         "settings": {
         }
-      },
-      "7241659924025436803": {
-        "type": "shopify:\/\/apps\/avada-size-chart-size-guide\/blocks\/app-embed\/305100b1-3599-492a-a54d-54f196ff1f94",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "3127803799193547933": {
-        "type": "shopify:\/\/apps\/kaching-custom-cursor\/blocks\/app-embed-block\/8e414c2f-e094-4ca5-85c3-6c0df939a019",
-        "disabled": true,
-        "settings": {
-        }
       }
     },
     "color_schemes": {
