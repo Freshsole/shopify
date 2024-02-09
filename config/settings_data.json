@@ -123,6 +123,9 @@
     "checkout_logo_size": "large",
     "checkout_input_background_color_mode": "white",
     "checkout_sidebar_background_color": "#ffffff",
+    "checkout_accent_color": "#000000",
+    "checkout_button_color": "#000000",
+    "checkout_error_color": "#000000",
     "checkout_layout": "onepage",
     "sections": {
       "main-password-header": {
