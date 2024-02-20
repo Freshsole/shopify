@@ -77,66 +77,77 @@
         {%- if settings.predictive_search_enabled -%}
           <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
         {%- endif -%}
-            <main-search>
-              <form action="{{ routes.search_url }}" method="get" role="search" class="search">
-                <div class="field">
-                  <input
-                    class="search__input field__input"
-                    id="Search-In-Template"
-                    type="search"
-                    name="q"
-                    value="{{ search.terms | escape }}"
-                    placeholder="{{ 'general.search.search' | t }}"
-                    {%- if settings.predictive_search_enabled -%}
-                      role="combobox"
-                      aria-expanded="false"
-                      aria-owns="predictive-search-results"
-                      aria-controls="predictive-search-results"
-                      aria-haspopup="listbox"
-                      aria-autocomplete="list"
-                      autocorrect="off"
-                      autocomplete="off"
-                      autocapitalize="off"
-                      spellcheck="false"
-                    {%- endif -%}
-                  >
-                  <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
-                  <input name="options[prefix]" type="hidden" value="last">
+        <main-search>
+          <form action="{{ routes.search_url }}" method="get" role="search" class="search">
+            <div class="field">
+              <input
+                class="search__input field__input"
+                id="Search-In-Template"
+                type="search"
+                name="q"
+                value="{{ search.terms | escape }}"
+                placeholder="{{ 'general.search.search' | t }}"
+                {%- if settings.predictive_search_enabled -%}
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-owns="predictive-search-results"
+                  aria-controls="predictive-search-results"
+                  aria-haspopup="listbox"
+                  aria-autocomplete="list"
+                  autocorrect="off"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                {%- endif -%}
+              >
+              <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
+              <input name="options[prefix]" type="hidden" value="last">
 
-                  {%- if settings.predictive_search_enabled -%}
-                    <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
-                      <div class="predictive-search__loading-state">
-                        <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                        </svg>
-                      </div>
-                    </div>
-
-                    <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
-                  {%- endif -%}
-
-                  <button type="reset" class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}" aria-label="{{ 'general.search.reset' | t }}">
-                    <svg class="icon icon-close" aria-hidden="true" focusable="false">
-                      <use xlink:href="#icon-reset">
+              {%- if settings.predictive_search_enabled -%}
+                <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
+                  <div class="predictive-search__loading-state">
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      class="spinner"
+                      viewBox="0 0 66 66"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
                     </svg>
-                  </button>
-                  <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-                    <svg class="icon icon-search" aria-hidden="true" focusable="false">
-                      <use xlink:href="#icon-search">
-                    </svg>
-                  </button>
+                  </div>
                 </div>
-              </form>
-            </main-search>
+
+                <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+              {%- endif -%}
+
+              <button
+                type="reset"
+                class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+                aria-label="{{ 'general.search.reset' | t }}"
+              >
+                <svg class="icon icon-close" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-reset">
+                </svg>
+              </button>
+              <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                <svg class="icon icon-search" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-search">
+                </svg>
+              </button>
+            </div>
+          </form>
+        </main-search>
         {%- if settings.predictive_search_enabled -%}
           </predictive-search>
         {%- endif -%}
-
       </div>
       {%- if search.performed -%}
         {%- unless section.settings.enable_filtering or section.settings.enable_sorting -%}
           {%- if search.results_count > 0 -%}
-            <p role="status">{{ 'templates.search.results_with_count_and_term' | t: terms: search.terms, count: search.results_count }}</p>
+            <p role="status">
+              {{ 'templates.search.results_with_count_and_term' | t: terms: search.terms, count: search.results_count }}
+            </p>
           {%- endif -%}
         {%- endunless -%}
         {%- if search.results_count == 0 and search.filters == empty -%}
@@ -145,7 +156,10 @@
       {%- endif -%}
     </div>
     {%- if search.performed -%}
-      {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' and search.filters != empty -%}
+      {%- if section.settings.enable_sorting
+        and section.settings.filter_type == 'vertical'
+        and search.filters != empty
+      -%}
         <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
           <form class="facets-vertical-form" id="FacetSortForm">
             <div class="facet-filters sorting caption">
@@ -155,16 +169,30 @@
                 </h2>
                 <div class="select">
                   {%- assign sort_by = search.sort_by | default: search.default_sort_by -%}
-                  <select name="sort_by" class="facet-filters__sort select__select caption-large" id="SortBy" aria-describedby="a11y-refresh-page-message">
+                  <select
+                    name="sort_by"
+                    class="facet-filters__sort select__select caption-large"
+                    id="SortBy"
+                    aria-describedby="a11y-refresh-page-message"
+                  >
                     {%- for option in search.sort_options -%}
-                      <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
+                      <option
+                        value="{{ option.value | escape }}"
+                        {% if option.value == sort_by %}
+                          selected="selected"
+                        {% endif %}
+                      >
+                        {{ option.name | escape }}
+                      </option>
                     {%- endfor -%}
                   </select>
                   {% render 'icon-caret' %}
                 </div>
               </div>
               <noscript>
-                <button type="submit" class="facets__button-no-js button button--secondary">{{ 'products.facets.sort_button' | t }}</button>
+                <button type="submit" class="facets__button-no-js button button--secondary">
+                  {{ 'products.facets.sort_button' | t }}
+                </button>
               </noscript>
             </div>
 
@@ -176,12 +204,21 @@
                   {%- elsif search.products_count == search.all_products_count -%}
                     {{ 'products.facets.product_count_simple' | t: count: search.products_count }}
                   {%- else -%}
-                    {{ 'products.facets.product_count' | t: product_count: search.products_count, count: search.all_products_count }}
+                    {{
+                      'products.facets.product_count'
+                      | t: product_count: search.products_count, count: search.all_products_count
+                    }}
                   {%- endif -%}
                 </span>
               </h2>
               <div class="loading-overlay__spinner">
-                <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  class="spinner"
+                  viewBox="0 0 66 66"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
                 </svg>
               </div>
@@ -189,41 +226,72 @@
           </form>
         </facet-filters-form>
       {%- endif -%}
-      <div{% if section.settings.filter_type == 'vertical' %} class="facets-vertical page-width"{% endif %}>
+      <div
+        {% if section.settings.filter_type == 'vertical' %}
+          class="facets-vertical page-width"
+        {% endif %}
+      >
         {%- if search.filters != empty -%}
           {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-            <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-search-filters" data-id="{{ section.id }}">
-              {% render 'facets', results: search, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type, paginate: paginate %}
+            <aside
+              aria-labelledby="verticalTitle"
+              class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+              id="main-search-filters"
+              data-id="{{ section.id }}"
+            >
+              {% render 'facets',
+                results: search,
+                enable_filtering: section.settings.enable_filtering,
+                enable_sorting: section.settings.enable_sorting,
+                filter_type: section.settings.filter_type,
+                paginate: paginate
+              %}
             </aside>
           {%- endif -%}
         {%- endif -%}
-       <section class="ecom-row ecom-core ecom-section ecom-waiksxax8i" data-id="ecom-waiksxax8i" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first core__column--last ecom-2uxpfzmd"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-dudtfsd3hhi" data-core-is="row"><div class="ecom-row ecom-core core__block ecom-iqzw6e0xzbs" data-id="ecom-iqzw6e0xzbs" style="z-index: inherit;"><div data-deep="2" class="core__row--columns"><div class="ecom-column ecom-core core__column--first ecom-dse3p9tbixp"><div class="core__column--wrapper"><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block ecom-tpy5db6wzrk" data-core-is="block" id="#filters"><div class="ecom-element ecom-collection ecom-collection__filters" deep="2"><div class="ecom-collection__filters-wrapper"><div class="ecom-collection__filters-container ecom-collection__filters-dropdown"><button id="button_menu_block" class="ecom-button-filter-collapse button_menu_block--mobile" type="button"><span class="ecom-filter-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M 5 4 L 5 6.34375 L 5.21875 6.625 L 13 16.34375 L 13 28 L 14.59375 26.8125 L 18.59375 23.8125 L 19 23.5 L 19 16.34375 L 26.78125 6.625 L 27 6.34375 L 27 4 Z M 7.28125 6 L 24.71875 6 L 17.53125 15 L 14.46875 15 Z M 15 17 L 17 17 L 17 22.5 L 15 24 Z"></path></svg></span><span>Filter </span></button><div id="ecom-modal-block" class="ecom-modal-block--mobile"><div class="ecom-modal-content--mobile ecom-scroll_bar ecom-modal-content"><div class="modal-header"><span id="ecom-modal-close" class="ecom-collapse-close ecom-collapse-close--mobile"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></span></div><span class="ecom-collection__filters-heading">{{ 'sections.ecom-collection-collection.filter_title_tpy5db6wzrk_html' | t }}</span><form method="GET" class="ecom-collection__filters-form ecom-click" data-stopdrag="true">
 
         <div class="product-grid-container" id="ProductGridContainer">
           {%- if search.results.size == 0 and search.filters != empty -%}
-            <div class="template-search__results collection collection--empty{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
+            <div
+              class="template-search__results collection collection--empty{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+              id="product-grid"
+              data-id="{{ section.id }}"
+            >
               <div class="loading-overlay gradient"></div>
               <div class="title-wrapper center">
                 <h2 class="title title--primary">
-                  {{ 'sections.collection_template.empty' | t }}<br>
-                  {{ 'sections.collection_template.use_fewer_filters_html' | t: link: search_url, class: "underlined-link link" }}
+                  {{ 'sections.collection_template.empty' | t -}}
+                  <br>
+                  {{
+                    'sections.collection_template.use_fewer_filters_html'
+                    | t: link: search_url, class: 'underlined-link link'
+                  }}
                 </h2>
               </div>
             </div>
           {%- else -%}
-            <div class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
+            <div
+              class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+              id="product-grid"
+              data-id="{{ section.id }}"
+            >
               <div class="loading-overlay gradient"></div>
-              <ul class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
+              <ul
+                class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
+                role="list"
+              >
                 {%- for item in search.results -%}
                   {% assign lazy_load = false %}
                   {%- if forloop.index > 2 -%}
                     {%- assign lazy_load = true -%}
                   {%- endif -%}
 
-                  <li class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  <li
+                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                     {% if settings.animations_reveal_on_scroll %}
                       data-cascade
-                    {% endif %}>
+                    {% endif %}
+                  >
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
                         {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
@@ -248,7 +316,10 @@
                         %}
                       {%- when 'page' -%}
                         <div class="article-card-wrapper card-wrapper underline-links-hover">
-                          <div class="card card--card card--text ratio color-{{ settings.blog_card_color_scheme }}" style="--ratio-percent: 100%;">
+                          <div
+                            class="card card--card card--text ratio color-{{ settings.blog_card_color_scheme }}"
+                            style="--ratio-percent: 100%;"
+                          >
                             <div class="card__content">
                               <div class="card__information">
                                 <h3 class="card__heading">
@@ -258,7 +329,9 @@
                                 </h3>
                               </div>
                               <div class="card__badge {{ settings.badge_position }}">
-                                <span class="badge color-{{ settings.color_schemes | first }}">{{ 'templates.search.page' | t }}</span>
+                                <span class="badge color-{{ settings.color_schemes | first }}">
+                                  {{- 'templates.search.page' | t -}}
+                                </span>
                               </div>
                             </div>
                           </div>
