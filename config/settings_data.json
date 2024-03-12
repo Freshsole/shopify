@@ -443,7 +443,8 @@
       ".footer {text-decoration: none;}",
       "* {font-family: Poppins;}",
       "body {cursor: image-set( \"https:\/\/d7agjysiompp7.cloudfront.net\/xtiremzrewvdsxz06g3d8cmkchgj\" 3x ), auto;}",
-      "@media only screen and (min-width: 1170px) {.__pf [style*=\"--cw\"] {padding: 0 15px; width: 100%; margin: auto; max-width: 85%; }}"
+      "@media only screen and (min-width: 1170px) {.__pf [style*=\"--cw\"] {padding: 0 15px; width: 100%; margin: auto; max-width: 85%; }}",
+      ".pf-slider-nav button {border-radius: 15px;}"
     ]
   }
 }
