@@ -4593,3 +4593,11 @@ footer{
   
 }
 
+
+.eylTQQ .pf-slider-nav button, .iHqjYk .pf-slider-nav button {
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 5px;
+}
