@@ -902,6 +902,9 @@
                                                 {% assign similarity = product.title
                                                   | string_similarity: collection.title
                                                 %}
+                                                <div>
+                                                  Collection: {{ collection.title }} - Similarity: {{ similarity }}
+                                                </div>
                                                 {% if similarity > max_similarity %}
                                                   {% assign max_similarity = similarity %}
                                                   {% assign similar_collection = collection %}
