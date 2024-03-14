@@ -896,17 +896,19 @@
                                             {% if product.description %}
                                               <div>{{ product.description | strip_html }}</div>
                                             {% else %}
-                                              {% assign max_similarity = 0 %}
+                                              {% assign max_common_words = 0 %}
                                               {% assign similar_collection = '' %}
+                                              {% assign product_words = product.title | split: ' ' %}
                                               {% for collection in collections %}
-                                                {% assign similarity = product.title
-                                                  | string_similarity: collection.title
-                                                %}
-                                                <div>
-                                                  Collection: {{ collection.title }} - Similarity: {{ similarity }}
-                                                </div>
-                                                {% if similarity > max_similarity %}
-                                                  {% assign max_similarity = similarity %}
+                                                {% assign collection_words = collection.title | split: ' ' %}
+                                                {% assign common_words = 0 %}
+                                                {% for word in product_words %}
+                                                  {% if collection_words contains word %}
+                                                    {% assign common_words = common_words | plus: 1 %}
+                                                  {% endif %}
+                                                {% endfor %}
+                                                {% if common_words > max_common_words %}
+                                                  {% assign max_common_words = common_words %}
                                                   {% assign similar_collection = collection %}
                                                 {% endif %}
                                               {% endfor %}
