@@ -910,9 +910,11 @@
                                                   {% assign similar_collection = collection %}
                                                 {% endif %}
                                               {% endfor %}
-                                              <div>{{ similar_collection.description | strip_html }}</div>
-                                              <!-- Debugging line to display the name of the selected collection -->
-                                              <div>Selected Collection: {{ similar_collection.title }}</div>
+                                              {% if similar_collection != '' %}
+                                                <div>{{ similar_collection.description | strip_html }}</div>
+                                                <!-- Debugging line to display the name of the selected collection -->
+                                                <div>Selected Collection: {{ similar_collection.title }}</div>
+                                              {% endif %}
                                             {% endif %}
                                           </div>
                                         </div>
