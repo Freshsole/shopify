@@ -1003,14 +1003,15 @@
                                                   </ul>
                                                   <script>
                                                     document.addEventListener("DOMContentLoaded", function() {
-                                                      const activeListItem = document.querySelector('.ecom-core.ecom-jhuufdr221g .ecom-product-single__picker-radio-list-item.ecom-button-active');
+                                                      const activeListItem = document.querySelector('.ecom-product-single__picker-radio-list-item.ecom-button-active');
                                                       if (activeListItem) {
                                                         const greenDot = activeListItem.querySelector('.green-dot');
-                                                        if (greenDot) {
+                                                        const instantDeliveryDiv = document.querySelector('.instant-delivery');
+                                                        if (greenDot && instantDeliveryDiv) {
+                                                          instantDeliveryDiv.style.display = 'block';
                                                           console.log("Green dot found in active list item");
-                                                          const div = document.createElement('div');
-                                                          div.textContent = 'ihned k odeslani';
-                                                          document.body.appendChild(div);
+                                                        } else {
+                                                          instantDeliveryDiv.style.display = 'none';
                                                         }
                                                       }
                                                     });
