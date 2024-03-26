@@ -992,17 +992,25 @@
                                                               z-index: 9999;
                                                               border-radius: 5px;
                                                               position: absolute;
+                                                              /* top: -10px; */
                                                               margin-top: 23px;
                                                               margin-left: 32px;
                                                             "
                                                           ></span>
-                                                          {% if value == variant_selected[index] %}
-                                                            <div class="ihned-k-odeslani">ihned k odeslani</div>
-                                                          {% endif %}
                                                         {% endif %}
                                                       </li>
                                                     {% endfor %}
                                                   </ul>
+                                                  <script>
+                                                    document.addEventListener("DOMContentLoaded", function() {
+                                                      const activeListItem = document.querySelector('.ecom-core.ecom-jhuufdr221g .ecom-product-single__picker-radio-list-item.ecom-button-active');
+                                                      if (activeListItem) {
+                                                        const div = document.createElement('div');
+                                                        div.textContent = 'ihned k odeslani';
+                                                        document.body.appendChild(div);
+                                                      }
+                                                    });
+                                                  </script>
                                                 </div>
                                               {%- endfor -%}
                                             {% endunless %}
