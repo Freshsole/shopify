@@ -982,9 +982,6 @@
                                                       >
                                                         {{ value }}
                                                         {% if variant_available %}
-                                                          <script>
-                                                            document.querySelector('.instant-delivery').style.display = 'flex';
-                                                          </script>
                                                           <span
                                                             class="green-dot"
                                                             style="
@@ -999,16 +996,29 @@
                                                               margin-left: 32px;
                                                             "
                                                           ></span>
-                                                        {% else %}
-                                                          <script>
-                                                            document.querySelector('.instant-delivery').style.display = 'none';
-                                                          </script>
                                                         {% endif %}
                                                       </li>
                                                     {% endfor %}
                                                   </ul>
 
                                                   <div class="instant-delivery">Doruceni do druheho dne!</div>
+
+                                                  <script>
+                                                    // Add event listener to all size options
+                                                    var sizeOptions = document.querySelectorAll('.ecom-product-single__picker-radio-list-item');
+                                                    sizeOptions.forEach(function(option) {
+                                                      option.addEventListener('click', function() {
+                                                        // Check if this size option is selected and has the green dot
+                                                        if (option.classList.contains('ecom-button-active') && option.querySelector('.green-dot')) {
+                                                          // If yes, display the instant delivery message
+                                                          document.querySelector('.instant-delivery').style.display = 'block';
+                                                        } else {
+                                                          // Otherwise, hide the instant delivery message
+                                                          document.querySelector('.instant-delivery').style.display = 'none';
+                                                        }
+                                                      });
+                                                    });
+                                                  </script>
                                                 </div>
                                               {%- endfor -%}
                                             {% endunless %}
