@@ -964,47 +964,49 @@
                                                       {{- option.name -}}
                                                     </span>
                                                   </span>
-                                                  <ul class="ecom-product-single__picker-radio-list">
-                                                    {% for value in option.values %}
-                                                      {% assign variant_available = false %}
-                                                      {% for variant in product.variants %}
-                                                        {% if variant.title == value %}
-                                                          {% if variant.inventory_quantity == 9 %}
-                                                            {% assign variant_available = true %}
-                                                            {% break %}
-                                                          {% endif %}
+                                                  {% assign green_dot_active = false %}
+                                                  {% for value in option.values %}
+                                                    {% assign variant_available = false %}
+                                                    {% for variant in product.variants %}
+                                                      {% if variant.title == value %}
+                                                        {% if variant.inventory_quantity == 9 %}
+                                                          {% assign variant_available = true %}
+                                                          {% break %}
                                                         {% endif %}
-                                                      {% endfor %}
-                                                      <li
-                                                        class="ecom-product-single__swatch-item ecom-product-single__picker-radio-list-item {% if value == variant_selected[index] %}ecom-button-active{% endif %}"
-                                                        data-option-index="{{ option_index }}"
-                                                        data-value="{{ value | escape }}"
-                                                      >
-                                                        {{ value }}
-                                                        {% if variant_available %}
-                                                          <span
-                                                            class="green-dot"
-                                                            style="
-                                                              display: flex;
-                                                              width: 10px;
-                                                              height: 10px;
-                                                              background-color: #70e000;
-                                                              z-index: 9999;
-                                                              border-radius: 5px;
-                                                              position: absolute;
-                                                              /* top: -10px; */
-                                                              margin-top: 23px;
-                                                              margin-left: 32px;
-                                                            "
-                                                          ></span>
-                                                        {% endif %}
-                                                      </li>
-                                                      {% if value == variant_selected[index] %}
-                                                        <div class="instant-delivery">Ihned k odeslani</div>
-                                                      {% endif -%}
-                                                      "
+                                                      {% endif %}
                                                     {% endfor %}
-                                                  </ul>
+                                                    <li
+                                                      class="ecom-product-single__swatch-item ecom-product-single__picker-radio-list-item {% if value == variant_selected[index] %}ecom-button-active{% endif %}"
+                                                      data-option-index="{{ option_index }}"
+                                                      data-value="{{ value | escape }}"
+                                                    >
+                                                      {{ value }}
+                                                      {% if variant_available %}
+                                                        <span
+                                                          class="green-dot"
+                                                          style="
+                                                            display: flex;
+                                                            width: 10px;
+                                                            height: 10px;
+                                                            background-color: #70e000;
+                                                            z-index: 9999;
+                                                            border-radius: 5px;
+                                                            position: absolute;
+                                                            /* top: -10px; */
+                                                            margin-top: 23px;
+                                                            margin-left: 32px;
+                                                          "
+                                                        ></span>
+                                                        {% if value == variant_selected[index] %}
+                                                          {% assign green_dot_active = true %}
+                                                        {% endif %}
+                                                      {% endif %}
+                                                    </li>
+                                                  {% endfor %}
+
+                                                  {% if green_dot_active %}
+                                                    <div class="instant-delivery">Ihned k odeslani</div>
+                                                  {% endif %}
                                                 </div>
                                               {%- endfor -%}
                                             {% endunless %}
