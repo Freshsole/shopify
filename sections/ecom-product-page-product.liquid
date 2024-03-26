@@ -1095,19 +1095,7 @@
                                   >
                                     <div class="ecom__element ecom-element element__text" data-stopdrag="" deep="2">
                                       <div class="text-content ecom-html has-drop-cap-view-default">
-                                        {% if variant_selected[index] != blank %}
-                                          {% assign selected_variant_title = variant_selected[index] %}
-                                          {% for variant in product.variants %}
-                                            {% if variant.title == selected_variant_title %}
-                                              {% if variant.inventory_quantity == 9 %}
-                                                {{
-                                                  'sections.ecom-product-page-product.textcontent_1cnqaweecps_html'
-                                                  | t
-                                                }}
-                                              {% endif %}
-                                            {% endif %}
-                                          {% endfor %}
-                                        {% endif %}
+                                        {{ 'sections.ecom-product-page-product.textcontent_1cnqaweecps_html' | t }}
                                       </div>
                                     </div>
                                   </div>
