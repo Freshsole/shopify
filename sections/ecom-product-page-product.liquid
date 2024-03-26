@@ -979,6 +979,7 @@
                                                         class="ecom-product-single__swatch-item ecom-product-single__picker-radio-list-item"
                                                         data-option-index="{{ option_index }}"
                                                         data-value="{{ value | escape }}"
+                                                        onclick="showInstantDelivery()"
                                                       >
                                                         {{ value }}
                                                         {% if variant_available %}
@@ -995,7 +996,6 @@
                                                               margin-top: 23px;
                                                               margin-left: 32px;
                                                             "
-                                                            onclick="showInstantDelivery()"
                                                           ></span>
                                                         {% endif %}
                                                       </li>
@@ -1011,6 +1011,15 @@
                                                       // Display the instant delivery message
                                                       document.querySelector('.instant-delivery').style.display = 'block';
                                                     }
+
+                                                    // Add event listener to all swatch items
+                                                    var swatchItems = document.querySelectorAll('.ecom-product-single__swatch-item');
+                                                    swatchItems.forEach(function(item) {
+                                                      item.addEventListener('click', function() {
+                                                        // Hide the instant delivery message
+                                                        document.querySelector('.instant-delivery').style.display = 'none';
+                                                      });
+                                                    });
                                                   </script>
                                                 </div>
                                               {%- endfor -%}
