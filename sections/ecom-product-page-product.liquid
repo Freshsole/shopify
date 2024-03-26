@@ -982,8 +982,9 @@
                                                       >
                                                         {{ value }}
                                                         {% if variant_available %}
-                                                          document.querySelector('.instant-delivery').style.display =
-                                                          'flex';
+                                                          <script>
+                                                            document.querySelector('.instant-delivery').style.display = 'flex';
+                                                          </script>
                                                           <span
                                                             class="green-dot"
                                                             style="
@@ -994,14 +995,14 @@
                                                               z-index: 9999;
                                                               border-radius: 5px;
                                                               position: absolute;
-                                                              /* top: -10px; */
                                                               margin-top: 23px;
                                                               margin-left: 32px;
                                                             "
                                                           ></span>
                                                         {% else %}
-                                                          document.querySelector('.instant-delivery').style.display =
-                                                          'none';
+                                                          <script>
+                                                            document.querySelector('.instant-delivery').style.display = 'none';
+                                                          </script>
                                                         {% endif %}
                                                       </li>
                                                     {% endfor %}
