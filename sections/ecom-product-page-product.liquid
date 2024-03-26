@@ -986,9 +986,17 @@
                                                             class="green-dot"
                                                             style="display: flex; width: 10px; height: 10px; background-color: #70e000; z-index: 9999; border-radius: 5px; position: absolute; margin-top: 23px; margin-left: 32px;"
                                                           ></span>
-                                                          {% if value == variant_selected[index] %}
-                                                            <div class="instant-delivery">Doruceni do druheho dne!</div>
-                                                          {% endif %}
+                                                          <script>
+                                                            {% if value == variant_selected[index] %}
+                                                              document.querySelector('.instant-delivery').style.display = 'flex';
+                                                            {% else %}
+                                                              document.querySelector('.instant-delivery').style.display = 'none';
+                                                            {% endif %}
+                                                          </script>
+                                                        {% else %}
+                                                          <script>
+                                                            document.querySelector('.instant-delivery').style.display = 'none';
+                                                          </script>
                                                         {% endif %}
                                                       </li>
                                                     {% endfor %}
