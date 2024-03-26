@@ -999,23 +999,12 @@
                                                           ></span>
                                                         {% endif %}
                                                       </li>
+                                                      {% if value == variant_selected[index] %}
+                                                        <div class="instant-delivery">Ihned k odeslani</div>
+                                                      {% endif -%}
+                                                      "
                                                     {% endfor %}
                                                   </ul>
-                                                  <script>
-                                                    document.addEventListener("DOMContentLoaded", function() {
-                                                      const activeListItem = document.querySelector('.ecom-product-single__picker-radio-list-item.ecom-button-active');
-                                                      if (activeListItem) {
-                                                        const greenDot = activeListItem.querySelector('.green-dot');
-                                                        const instantDeliveryDiv = document.querySelector('.instant-delivery');
-                                                        if (greenDot && instantDeliveryDiv) {
-                                                          instantDeliveryDiv.style.display = 'block';
-                                                          console.log("Green dot found in active list item");
-                                                        } else {
-                                                          instantDeliveryDiv.style.display = 'none';
-                                                        }
-                                                      }
-                                                    });
-                                                  </script>
                                                 </div>
                                               {%- endfor -%}
                                             {% endunless %}
