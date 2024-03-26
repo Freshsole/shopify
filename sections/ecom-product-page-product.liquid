@@ -982,33 +982,25 @@
                                                       >
                                                         {{ value }}
                                                         {% if variant_available %}
-                                                          <span class="green-dot"></span>
+                                                          <span
+                                                            class="green-dot"
+                                                            style="
+                                                              display: flex;
+                                                              width: 10px;
+                                                              height: 10px;
+                                                              background-color: #70e000;
+                                                              z-index: 9999;
+                                                              border-radius: 5px;
+                                                              position: absolute;
+                                                              /* top: -10px; */
+                                                              margin-top: 23px;
+                                                              margin-left: 32px;
+                                                            "
+                                                          ></span>
                                                         {% endif %}
                                                       </li>
                                                     {% endfor %}
                                                   </ul>
-
-                                                  <div
-                                                    class="ecom__element ecom-element element__text"
-                                                    data-stopdrag=""
-                                                    deep="2"
-                                                  >
-                                                    <div class="text-content ecom-html has-drop-cap-view-default">
-                                                      {% if variant_selected[index] != blank %}
-                                                        {% assign selected_variant_title = variant_selected[index] %}
-                                                        {% for variant in product.variants %}
-                                                          {% if variant.title == selected_variant_title %}
-                                                            {% if variant.inventory_quantity == 9 %}
-                                                              {{
-                                                                'sections.ecom-product-page-product.textcontent_1cnqaweecps_html'
-                                                                | t
-                                                              }}
-                                                            {% endif %}
-                                                          {% endif %}
-                                                        {% endfor %}
-                                                      {% endif %}
-                                                    </div>
-                                                  </div>
                                                 </div>
                                               {%- endfor -%}
                                             {% endunless %}
