@@ -966,11 +966,22 @@
                                                   </span>
                                                   <ul class="ecom-product-single__picker-radio-list">
                                                     {% for value in option.values %}
-                                                      <li
-                                                        class="ecom-product-single__swatch-item ecom-product-single__picker-radio-list-item {% if value == variant_selected[index] %}ecom-button-active{% endif %}"
-                                                        data-option-index="{{ option_index }}"
-                                                        data-value="{{ value | escape }}"
-                                                      >
+                                                      {% for variant in variants %}
+  {% assign size = variant.option1 %}
+  {% if variant.inventory_quantity == 9 %}
+    <!-- Display size with green dot -->
+    <li class="ecom-product-single__swatch-item ecom-product-single__picker-radio-list-item ecom-button-active" data-option-index="{{ option_index }}" data-value="{{ size | escape }}">
+      {{ size }}
+      <span class="green-dot"></span>
+    </li>
+  {% else %}
+    <!-- Display size without green dot -->
+    <li class="ecom-product-single__swatch-item ecom-product-single__picker-radio-list-item" data-option-index="{{ option_index }}" data-value="{{ size | escape }}">
+      {{ size }}
+    </li>
+  {% endif %}
+{% endfor %}
+
                                                         {{ value }}
                                                       </li>
                                                     {% endfor %}
