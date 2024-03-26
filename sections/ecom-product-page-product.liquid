@@ -1001,28 +1001,6 @@
                                                     {% endfor %}
                                                   </ul>
 
-                                                  <div class="instant-delivery" style="display: none;">
-                                                    Doruceni do druheho dne!
-                                                  </div>
-
-                                                  <script>
-                                                    // Add event listener to all size options
-                                                    var sizeOptions = document.querySelectorAll('.ecom-product-single__picker-radio-list-item');
-                                                    sizeOptions.forEach(function(option) {
-                                                      option.addEventListener('click', function() {
-                                                        // Check if any size option has the ecom-button-active class and contains a green dot
-                                                        var activeSizeOption = document.querySelector('.ecom-button-active .green-dot');
-                                                        if (activeSizeOption) {
-                                                          // If yes, display the instant delivery message
-                                                          document.querySelector('.instant-delivery').style.display = 'block';
-                                                        } else {
-                                                          // Otherwise, hide the instant delivery message
-                                                          document.querySelector('.instant-delivery').style.display = 'none';
-                                                        }
-                                                      });
-                                                    });
-                                                  </script>
-
                                                   <div class="instant-delivery">Doruceni do druheho dne!</div>
 
                                                   <script>
