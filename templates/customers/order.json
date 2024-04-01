@@ -7,7 +7,7 @@
         "h1 {font-size: 32px; font-weight: 600;}",
         "h2 {font-size: 22px; font-weight: 600;}",
         "a {text-decoration: none;}",
-        "td{min-height:50px;}"
+        "tr {min-height: 50px;}"
       ],
       "settings": {
         "padding_top": 36,
