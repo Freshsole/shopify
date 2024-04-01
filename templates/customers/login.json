@@ -4,12 +4,12 @@
       "type": "main-login",
       "custom_css": [
         "* {font-family: \"Poppins\";}",
-        ".login a {text-decoration: none; color: black;}",
+        ".login a {text-decoration: none; color: black; font-weight: 600;}",
         ".customer button,.customer button:after {border-radius: 30px;}",
         "h1 {font-size: 32px; font-weight: 600;}",
         "h2 {font-size: 22px; font-weight: 600;}",
         ".customer h2.form__message {font-size: 20px !important; color: black; font-weight: 500;}",
-        ".errors{color: black; font-size: 16px;}"
+        ".errors {color: black; font-size: 16px;}"
       ],
       "settings": {
         "padding_top": 36,
