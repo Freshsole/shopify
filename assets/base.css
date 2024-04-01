@@ -4374,6 +4374,10 @@ text-decoration: none;
 
 /* CONTACT PAGE */
 
+:root, .color-background-1 {
+    --color-foreground: #eaeaea !important;
+}
+
 
 .multicolumn.background-primary .multicolumn-card {
     background-color: #eaeaea !important;
@@ -4585,4 +4589,10 @@ footer{
     background-color:white;
 }
   
+}
+
+/* menu mobil sipky */
+.menu-drawer summary.menu-drawer__menu-item {
+    display: flex;
+    justify-content: space-between;
 }
