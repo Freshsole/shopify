@@ -6,10 +6,10 @@
         "* {font-family: \"Poppins\";}",
         "h1 {font-size: 32px; font-weight: 600;}",
         "h2 {font-size: 22px; font-weight: 600;}",
-        "a {text-decoration: none;}",
+        "a {text-decoration: none; color: black; font-weight: 600;}",
         "tr {height: 60px;}",
         ".customer table {color: black; opacity: 1; text-decoration: none;}",
-        "@media only screen and (max-width: 750px) {tr {height: auto;}}"
+        "@media only screen and (max-width: 750px) {tr {height: auto; }}"
       ],
       "settings": {
         "padding_top": 36,
