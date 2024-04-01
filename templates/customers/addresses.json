@@ -4,12 +4,12 @@
       "type": "main-addresses",
       "custom_css": [
         ".addresses ul p {margin-bottom: 0; display: flex; justify-content: center; text-align: left;}",
-        ".addresses a {text-decoration: none; color: black;}",
+        ".addresses a {text-decoration: none; color: black; font-weight: 600;}",
         "* {font-family: \"Poppins\"; font-size: 16px;}",
         "h1 {font-size: 32px; font-weight: 600;}",
         "h2 {font-size: 22px; font-weight: 600;}",
         ".customer button {border-radius: 30px;}",
-        ".customer button:after{border-radius: 30px;}"
+        ".customer button:after {border-radius: 30px;}"
       ],
       "settings": {
         "padding_top": 36,
