@@ -3,7 +3,9 @@
     "main": {
       "type": "main-login",
       "custom_css": [
-        "* {font-family: 'Poppins';}"
+        "* {font-family: \"Poppins\";}",
+        ".login a {text-decoration: none; color: black;}",
+        ".customer button, .customer button:after {border-radius: 30px;}"
       ],
       "settings": {
         "padding_top": 36,
