@@ -7,7 +7,8 @@
         "h1 {font-size: 32px; font-weight: 600;}",
         "h2 {font-size: 22px; font-weight: 600;}",
         "a {text-decoration: none;}",
-        "tr {height: 50px;}"
+        "tr {height: 60px;}",
+        ".customer table {color: black; opacity: 1; text-decoration: none;}"
       ],
       "settings": {
         "padding_top": 36,
