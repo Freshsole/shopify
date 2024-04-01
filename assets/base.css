@@ -4596,3 +4596,7 @@ footer{
     display: flex;
     justify-content: space-between;
 }
+
+.menu-drawer__close-button {
+    gap: 10px;
+}
