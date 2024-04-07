@@ -4595,3 +4595,8 @@ footer{
 .menu-drawer__close-button {
     gap: 10px;
 }
+
+/* smazat doporuzeni zmeny lokace */
+.recommendation-modal__container {
+    display: none !important ;
+}
