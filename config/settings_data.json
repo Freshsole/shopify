@@ -162,6 +162,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "7161394637304097644": {
+        "type": "shopify:\/\/apps\/cvc-multi-currency-converter\/blocks\/switcher_embed_block\/f5c93801-24e1-4f0e-89db-62f45c9c55b5",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
