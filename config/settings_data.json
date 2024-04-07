@@ -445,7 +445,7 @@
       "body {cursor: image-set( \"https:\/\/d7agjysiompp7.cloudfront.net\/xtiremzrewvdsxz06g3d8cmkchgj\" 3x ), auto;}",
       "@media only screen and (min-width: 1170px) {.__pf [style*=\"--cw\"] {padding: 0 15px; width: 100%; margin: auto; max-width: 80%; }}",
       ".pf-slider-nav button {border-radius: 5px;}",
-      ".recommendation-modal__content {display: none !important;}"
+      ".recommendation-modal__content, .recommendation-modal__close-button-container {display: none !important;}"
     ]
   }
 }
