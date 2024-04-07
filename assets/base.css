@@ -4597,6 +4597,6 @@ footer{
 }
 
 /* smazat doporuzeni zmeny lokace */
-.recommendation-modal__container {
-    display: none !important ;
+.recommendation-modal__content {
+    display: none !important;
 }
