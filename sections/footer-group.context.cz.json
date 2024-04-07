@@ -1,1 +1,8 @@
-{"parent":"footer-group.json","context":{"market":"cz"},"sections":{"footer":{"settings":{"newsletter_heading":"Odebírejte novinky!"},"blocks":{"82624dfd-61df-40b5-b644-da4cb1da4a30":{"settings":{"heading":"Kontaktujte nás!","subtext":"<p>Pokud máte dotazy, můžete nás kontaktovat <a href=\"https:\/\/www.freshsole.cz\/pages\/contact\" title=\"Kontakt\">zde<\/a>.<\/p>"}}}}}}
+{
+  "parent": "footer-group.json",
+  "context": {
+    "market": "cz"
+  },
+  "sections": {
+  }
+}
