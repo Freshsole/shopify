@@ -1552,36 +1552,34 @@
                                             {% endif %}
                                           {% endfor %}
                                           {% if targetCollection %}
+                                            <!-- Add your brand information here for the product with matching tags -->
+                                            <div
+                                              class="ecom-block ecom-core core__block elmspace ecom-brand-info"
+                                              data-core-is="block"
+                                            >
+                                              <div
+                                                class="ecom__element element__heading ecom-element ecom-html"
+                                                data-stopdrag="true"
+                                                deep="1"
+                                              >
+                                                <h3 class="ecom__heading ecom-db ProductBrandHeader">
+                                                  {{ targetCollection.title }}
+                                                </h3>
+                                              </div>
+                                              <div
+                                                class="ecom__element ecom-element element__text ProductBrandDescription"
+                                                data-stopdrag=""
+                                                deep="1"
+                                              >
+                                                {{ targetCollection.description }}
+                                              </div>
+                                            </div>
+                                            <!-- End of brand information -->
+                                            {% assign targetCollection = null %}
                                             {% break %}
                                           {% endif %}
                                         {% endif %}
                                       {% endfor %}
-                                      {% if targetCollection %}
-                                        <!-- Add your brand information here for the product with matching tags -->
-                                        <div
-                                          class="ecom-block ecom-core core__block elmspace ecom-brand-info"
-                                          data-core-is="block"
-                                        >
-                                          <div
-                                            class="ecom__element element__heading ecom-element ecom-html"
-                                            data-stopdrag="true"
-                                            deep="1"
-                                          >
-                                            <h3 class="ecom__heading ecom-db ProductBrandHeader">
-                                              {{ targetCollection.title }}
-                                            </h3>
-                                          </div>
-                                          <div
-                                            class="ecom__element ecom-element element__text ProductBrandDescription"
-                                            data-stopdrag=""
-                                            deep="1"
-                                          >
-                                            {{ targetCollection.description }}
-                                          </div>
-                                        </div>
-                                        <!-- End of brand information -->
-                                        {% break %}
-                                      {% endif %}
                                     {% endfor %}
                                     {% if targetCollection == null %}
                                       <!-- Display this if no matching collection is found -->
