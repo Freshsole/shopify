@@ -1540,6 +1540,21 @@
                                 <div class="core__blocks" index="2">
                                   <div class="core__blocks--body">
                                     <!-- DEBUG: Displaying productTag and collection.metafields.custom.brand_tag -->
+                                    <p>Debug Information:</p>
+                                    <p>
+                                      productTag:
+                                      {% for productTag in product.tags %}
+                                        {{ productTag }},
+                                      {% endfor %}
+                                    </p>
+                                    <p>
+                                      collection.metafields.custom.brand_tag:
+                                      {% for collection in collections %}
+                                        {% if collection.metafields.custom.brand_tag %}
+                                          {{ collection.metafields.custom.brand_tag }},
+                                        {% endif %}
+                                      {% endfor %}
+                                    </p>
                                     {% assign targetCollection = null %}
                                     {% for productTag in product.tags %}
                                       {% for collection in collections %}
