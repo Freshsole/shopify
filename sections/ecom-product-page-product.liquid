@@ -1550,16 +1550,25 @@
                                     <p>
                                       collection.metafields.custom.brand_tag:
                                       {% for collection in collections %}
-                                        {% if collection.metafields.custom.brand_tag %}
-                                          {{ collection.metafields.custom.brand_tag }},
-                                        {% endif %}
+                                        {% assign brandTags = collection.metafields.custom.brand_tag | split: ',' %}
+                                        {% for brandTag in brandTags %}
+                                          {{ brandTag }},
+                                        {% endfor %}
                                       {% endfor %}
                                     </p>
                                     {% assign targetCollection = null %}
                                     {% for productTag in product.tags %}
                                       {% for collection in collections %}
-                                        {% if collection.metafields.custom.brand_tag == productTag %}
-                                          {% assign targetCollection = collection %}
+                                        {% assign brandTags = collection.metafields.custom.brand_tag | split: ',' %}
+                                        {% for brandTag in brandTags %}
+                                          {% capture downcasedBrandTag %}{{ brandTag | downcase }}{% endcapture %}
+                                          {% capture downcasedProductTag %}{{ productTag | downcase }}{% endcapture %}
+                                          {% if downcasedBrandTag == downcasedProductTag %}
+                                            {% assign targetCollection = collection %}
+                                            {% break %}
+                                          {% endif %}
+                                        {% endfor %}
+                                        {% if targetCollection %}
                                           {% break %}
                                         {% endif %}
                                       {% endfor %}
