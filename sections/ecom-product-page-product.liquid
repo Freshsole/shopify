@@ -1547,6 +1547,7 @@
                                       <p>Trying to find collection for tag: {{ tagValue }}</p>
                                       {% for collection in collections %}
                                         {% if collection.metafields.custom.brand_tag == tagValue %}
+                                          <p>Comparing with brand tag: {{ collection.metafields.custom.brand_tag }}</p>
                                           {% assign targetCollection = collection %}
                                           {% break %}
                                         {% endif %}
