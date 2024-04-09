@@ -1540,47 +1540,44 @@
                                 <div class="core__blocks" index="2">
                                   <div class="core__blocks--body">
                                     {% assign targetCollection = null %}
-                                    {% assign productTags = product.tags | split: '",' %}
-                                    {% for productTag in productTags %}
-                                      {% assign tagValue = productTag | replace: '["', '' %}
-                                      {% assign tagValue = tagValue | replace: '"]', '' %}
-                                      <p>Trying to find collection for tag: {{ tagValue }}</p>
+
+                                    {% for productTag in product.tags %}
                                       {% for collection in collections %}
-                                        {% if collection.metafields.custom.brand_tag == tagValue %}
-                                          <p>Comparing with brand tag: {{ collection.metafields.custom.brand_tag }}</p>
+                                        {% if collection.metafields.custom.brand_tag == productTag %}
                                           {% assign targetCollection = collection %}
                                           {% break %}
                                         {% endif %}
                                       {% endfor %}
-                                      {% unless targetCollection == null %}
-                                        <!-- Add your brand information here for the product with matching tags -->
-                                        <div
-                                          class="ecom-block ecom-core core__block elmspace ecom-brand-info"
-                                          data-core-is="block"
-                                        >
-                                          <div
-                                            class="ecom__element element__heading ecom-element ecom-html"
-                                            data-stopdrag="true"
-                                            deep="1"
-                                          >
-                                            <h3 class="ecom__heading ecom-db ProductBrandHeader">
-                                              {{ targetCollection.title }}
-                                            </h3>
-                                          </div>
-                                          <div
-                                            class="ecom__element ecom-element element__text ProductBrandDescription"
-                                            data-stopdrag=""
-                                            deep="1"
-                                          >
-                                            {{ targetCollection.description }}
-                                          </div>
-                                        </div>
-                                        <!-- End of brand information -->
-                                        {% assign targetCollection = null %}
+                                      {% if targetCollection %}
                                         {% break %}
-                                      {% endunless %}
+                                      {% endif %}
                                     {% endfor %}
-                                    {% if targetCollection == null %}
+
+                                    {% if targetCollection %}
+                                      <!-- Add your brand information here for the product with matching tags -->
+                                      <div
+                                        class="ecom-block ecom-core core__block elmspace ecom-brand-info"
+                                        data-core-is="block"
+                                      >
+                                        <div
+                                          class="ecom__element element__heading ecom-element ecom-html"
+                                          data-stopdrag="true"
+                                          deep="1"
+                                        >
+                                          <h3 class="ecom__heading ecom-db ProductBrandHeader">
+                                            {{ targetCollection.title }}
+                                          </h3>
+                                        </div>
+                                        <div
+                                          class="ecom__element ecom-element element__text ProductBrandDescription"
+                                          data-stopdrag=""
+                                          deep="1"
+                                        >
+                                          {{ targetCollection.description }}
+                                        </div>
+                                      </div>
+                                      <!-- End of brand information -->
+                                    {% else %}
                                       <!-- Display this if no matching collection is found -->
                                       <div
                                         class="ecom-block ecom-core core__block elmspace ecom-brand-info"
