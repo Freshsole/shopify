@@ -4259,9 +4259,8 @@ text-decoration: none;
 
 .ProductBrandHeader{
     color: black;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 600;
-    text-decoration:underline 2px solid black;
     margin-bottom: 5px;
 }
 
