@@ -1540,11 +1540,13 @@
                                 <div class="core__blocks" index="2">
                                   <div class="core__blocks--body">
                                     {% assign targetCollection = null %}
-                                    {% assign productTags = product.tags | split: ',' %}
+                                    {% assign productTags = product.tags | split: '",' %}
                                     {% for productTag in productTags %}
-                                      <p>Trying to find collection for tag: {{ productTag }}</p>
+                                      {% assign tagValue = productTag | replace: '["', '' %}
+                                      {% assign tagValue = tagValue | replace: '"]', '' %}
+                                      <p>Trying to find collection for tag: {{ tagValue }}</p>
                                       {% for collection in collections %}
-                                        {% if collection.metafields.custom.brand_tag == productTag %}
+                                        {% if collection.metafields.custom.brand_tag == tagValue %}
                                           {% assign targetCollection = collection %}
                                           {% break %}
                                         {% endif %}
