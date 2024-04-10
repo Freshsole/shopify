@@ -4478,6 +4478,14 @@ text-decoration: none;
 .p-contact a{
       font-weight: 600!important;
   }
+  
+
+   /* Login socials */
+.h_buttons {
+    gap: 10px !important;
+    margin-top: 15px !important; 
+}
+
 
 @media (max-width: 1200px) {
             .ToRow-contact {
@@ -4594,10 +4602,4 @@ footer{
 
 .menu-drawer__close-button {
     gap: 10px;
-}
-
-  /* Login socials */
-.h_buttons {
-    gap: 10px !important;
-    margin-top: 15px !important; 
 }
