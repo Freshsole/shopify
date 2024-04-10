@@ -4486,6 +4486,15 @@ text-decoration: none;
     margin-top: 15px !important; 
 }
 
+  @media (min-width: 750px) {
+
+.h_buttons {
+    gap: 10px !important;
+    margin-top: 15px !important; 
+}
+    
+  }
+
 
 @media (max-width: 1200px) {
             .ToRow-contact {
