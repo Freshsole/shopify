@@ -4598,6 +4598,6 @@ footer{
 
   /* Login socials */
 .h_buttons {
-    gap: 10px;
-    margin-top: 15px;
+    gap: 10px !important;
+    margin-top: 15px !important; 
 }
