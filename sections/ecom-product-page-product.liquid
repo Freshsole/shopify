@@ -5,6 +5,12 @@
   At 2024-01-16 16:35:58
 {% endcomment %}
 
+{%- style -%}
+  * {
+    font-family: 'Poppins', sans-serif !important;
+}
+{%- endstyle -%}
+
 {% assign ecom_root_url = routes.root_url %}
 {% if ecom_root_url != '/' %}
   {% assign ecom_root_url = routes.root_url | append: '/' %}
