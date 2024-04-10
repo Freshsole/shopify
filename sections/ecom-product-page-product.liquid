@@ -1048,6 +1048,46 @@
                                               {%- endfor -%}
                                             {% endunless %}
                                           </div>
+
+                                          <div class="ecom-block ecom-core core__block ecom-94rgdjzwo2j" data-core-is="block">
+                                    <div
+                                      class="ecom-element ecom-product-single ecom-product-single__description"
+                                      deep="2"
+                                    >
+                                      <div class="ecom-product-single__description-wrapper">
+                                        <div class="ecom-product-single__description-container" data-show-type="full">
+                                          <div class="ecom-product-single__description--paragraph">
+                                            {% if product.description %}
+                                              <div>{{ product.description | strip_html }}</div>
+                                            {% else %}
+                                              {% assign max_common_words = 0 %}
+                                              {% assign similar_collection = '' %}
+                                              {% assign product_words = product.title | split: ' ' %}
+                                              {% for collection in collections %}
+                                                {% assign collection_words = collection.title | split: ' ' %}
+                                                {% assign common_words = 0 %}
+                                                {% for word in product_words %}
+                                                  {% if collection_words contains word %}
+                                                    {% assign common_words = common_words | plus: 1 %}
+                                                  {% endif %}
+                                                {% endfor %}
+                                                {% if common_words > max_common_words %}
+                                                  {% assign max_common_words = common_words %}
+                                                  {% assign similar_collection = collection %}
+                                                {% endif %}
+                                              {% endfor %}
+                                              {% if similar_collection != '' %}
+                                                <div>{{ similar_collection.description | strip_html }}</div>
+                                                <!-- Debugging line to display the name of the selected collection -->
+                                                <!-- <div>Selected Collection: {{ similar_collection.title }}</div> -->
+                                              {% endif %}
+                                            {% endif %}
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                          
                                           <div class="ecom-product-single__variant-picker--options">
                                             <select
                                               name="id"
