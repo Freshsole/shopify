@@ -4317,7 +4317,7 @@ text-decoration: none;
 }
 
   .ProductBrandDescription{
-    text-align: left;
+    text-align: left !important;
   }
 
   .core__group--item{
