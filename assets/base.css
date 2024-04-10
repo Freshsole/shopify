@@ -4316,6 +4316,10 @@ text-decoration: none;
     gap:15px;
 }
 
+  .ProductBrandDescription{
+    text-align: left;
+  }
+
   .core__group--item{
     display:flex;
     justify-content:center;
