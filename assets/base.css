@@ -4595,3 +4595,9 @@ footer{
 .menu-drawer__close-button {
     gap: 10px;
 }
+
+  /* Login socials */
+.h_buttons {
+    gap: 10px;
+    margin-top: 15px;
+}
