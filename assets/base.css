@@ -4324,6 +4324,10 @@ text-decoration: none;
     margin-top: -70px !important;
   }
 
+  .tabs__navs tabs__navs--horizontal{
+    margin-bottom: 25px !important;
+  }
+
   .ecom-trbushc8{
     margin-top: -70px !important;
   }
