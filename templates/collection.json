@@ -23,6 +23,9 @@
       "block_order": [
         "hura_theme_blocks_html_block_743BAT"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
         "include_margins": true
       }
@@ -35,7 +38,8 @@
         ".facets__wrapper {row-gap: 15px;}",
         ".pagination__item--current:after {display: none;}",
         ".pagination__item {font-family: \"Poppins\"; color: black; opacity: 1; font-size: 20px; font-weight: 500;}",
-        ".pagination__item--current {font-weight: 600; font-size: 22px;}"
+        ".pagination__item--current {font-weight: 600; font-size: 22px;}",
+        "a > svg {height: 10px;}"
       ],
       "settings": {
         "products_per_page": 16,
