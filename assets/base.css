@@ -4668,6 +4668,10 @@ footer{
     gap: 10px;
 }
 
-.pagination__item--next .icon {
+.pagination__item--next{
     transform: rotate(90deg) scale(1.7) !important;
+}
+
+ .pagination__item--prev {
+  transform: rotate(270deg) scale(1.7) !important;
 }
