@@ -111,6 +111,20 @@
  endif
  endif
  %}
+
+  {% assign breadcrumb_brand = collection.metafields.custom.breadcumb_brand %}
+<div class="breadcumb-sneakers">
+  <a class="breadcumb-a" href="/">Home &nbsp</a> /&nbsp
+  <a class="breadcumb-a" href="{{ shop.url }}/collections/all"> Sneakers &nbsp</a> /&nbsp
+  {% if breadcrumb_brand %}
+    <a class="breadcumb-a" href="{{ shop.url }}/collections/{{ breadcrumb_brand | replace: ' ', '-' | downcase }}"> 
+      {{ breadcrumb_brand }} &nbsp</a> /&nbsp
+  {% endif %}
+  {% if collection %}
+    <a class="breadcumb-a" href="{{ collection.url }}">
+      {{ collection.title }} </a>
+  {% endif %}
+</div>
 <div{% if section.settings.filter_type == 'vertical' %} class="facets-vertical page-width"{% endif %}>
         {%- if search.filters != empty -%}
           {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
