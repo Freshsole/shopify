@@ -4667,3 +4667,7 @@ footer{
 .menu-drawer__close-button {
     gap: 10px;
 }
+
+.pagination__item--next .icon {
+    transform: rotate(90deg) scale(1.7) !important;
+}
