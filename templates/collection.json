@@ -29,6 +29,12 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "custom_css": [
+        "* {font-family: Poppins !important;}",
+        ".card__inner {width: 100%; border: 0 !important; background-color: white;}",
+        ".mobile-facets__disclosure {border: 1px solid #eaeaea !important; border-radius: 5px !important; padding: 10px !important; margin-left: -30px !important;}",
+        ".facets__wrapper {row-gap: 15px;}"
+      ],
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 5,
