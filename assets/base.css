@@ -3928,7 +3928,7 @@ text-decoration: none;
 
 /* Ecom 80% width 5 items */
 .ecom-section>div.core__row--columns {
-    max-width: 1300px !important; /* 100% */
+    max-width: 80% !important; /* 100% */ /* 1300px */
     /*padding-left: 10%;
     padding-right: 10%;*/
 }
