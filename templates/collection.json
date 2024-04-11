@@ -2,26 +2,45 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
         "color_scheme": "background-1"
       }
     },
+    "171284734305334d55": {
+      "type": "apps",
+      "blocks": {
+        "hura_theme_blocks_html_block_743BAT": {
+          "type": "shopify:\/\/apps\/hura-theme-blocks\/blocks\/html-block\/5b288e0f-cbe6-47c0-909d-b0904b0ad6dd",
+          "settings": {
+            "custom_html": "",
+            "custom_liquid": "<style>\n    \/* Default styles for larger screens *\/\n    .breadcumb-sneakers {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    font-family: 'Poppins';\n    height: 100px;\n    font-size: 18px;\n    font-weight: 600;\n    }\n\n    .breadcumb-a {\n    margin-right: 5px;\n    text-decoration: none;\n    color: black;\n    }\n\n    \/* Media query for smaller screens (adjust the max-width as needed) *\/\n    @media (max-width: 768px) {\n      .breadcumb-sneakers {\n        flex-wrap: wrap;\n      }\n\n      .breadcumb-a {\n        display: block;\n        margin: 5px 0;\n      }\n    }\n  <\/style>\n\n{% assign breadcrumb_brand = collection.metafields.custom.breadcumb_brand %}\n<div class=\"breadcumb-sneakers\">\n  <a class=\"breadcumb-a\" href=\"\/\">Home &nbsp<\/a> \/&nbsp\n  <a class=\"breadcumb-a\" href=\"{{ shop.url }}\/collections\/all\"> Sneakers &nbsp<\/a> \/&nbsp\n  {% if breadcrumb_brand %}\n    <a class=\"breadcumb-a\" href=\"{{ shop.url }}\/collections\/{{ breadcrumb_brand | replace: ' ', '-' | downcase }}\"> \n      {{ breadcrumb_brand }} &nbsp<\/a> \/&nbsp\n  {% endif %}\n  {% if collection %}\n    <a class=\"breadcumb-a\" href=\"{{ collection.url }}\">\n      {{ collection.title }} <\/a>\n  {% endif %}\n<\/div>"
+          }
+        }
+      },
+      "block_order": [
+        "hura_theme_blocks_html_block_743BAT"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 16,
-        "columns_desktop": 4,
-        "image_ratio": "square",
+        "columns_desktop": 5,
+        "image_ratio": "adapt",
         "image_shape": "default",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false,
-        "enable_filtering": false,
+        "enable_filtering": true,
         "filter_type": "horizontal",
-        "enable_sorting": false,
+        "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 12,
         "padding_bottom": 36
@@ -30,6 +49,7 @@
   },
   "order": [
     "banner",
+    "171284734305334d55",
     "product-grid"
   ]
 }
