@@ -3933,6 +3933,14 @@ text-decoration: none;
     padding-right: 10%;*/
 }
 
+@media screen and (min-width: 2000px){
+
+  .ecom-section>div.core__row--columns {
+    max-width: 80% !important;
+}
+  
+}
+
 /* Ecom product title */
 .ecom-collection__product-item-information-title {
     font-size: 15px !important; /* 16 */
