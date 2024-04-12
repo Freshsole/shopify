@@ -13,7 +13,7 @@
   overflow-y: auto;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 750px) {
   .facets-container > * + * {
     margin-top: 0;
   }
