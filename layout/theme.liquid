@@ -327,7 +327,8 @@
 
 
 
-{% include 'pagefly-app-header' %}</head>
+{% include 'pagefly-app-header' %}  {% render 'rapid-search-settings' %}
+</head>
 
   <body class="{% if content_for_header contains '.mezereon' and shop.metafields.mezereon.status == 'enabled' %} mezereon {% endif %}gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
